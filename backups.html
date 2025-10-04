@@ -1,0 +1,244 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Backups - MRZ Connect CDN</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Courier New', monospace;
+            background: #0a0a0a;
+            color: #e0e0e0;
+            padding: 40px 20px;
+            font-size: 14px;
+            line-height: 1.6;
+        }
+
+        .container {
+            max-width: 900px;
+            margin: 0 auto;
+        }
+
+        h1 {
+            color: #00ff00;
+            font-size: 1.8em;
+            margin-bottom: 10px;
+            font-weight: normal;
+        }
+
+        .back-link {
+            color: #00aaff;
+            text-decoration: none;
+            margin-bottom: 30px;
+            display: inline-block;
+        }
+
+        .back-link:hover {
+            text-decoration: underline;
+        }
+
+        .info {
+            background: #1a1a1a;
+            border-left: 3px solid #00aaff;
+            padding: 12px;
+            margin: 20px 0;
+            color: #aaa;
+        }
+
+        .backups-list {
+            margin-top: 20px;
+        }
+
+        .backup-item {
+            background: #111;
+            border: 1px solid #333;
+            padding: 15px;
+            margin-bottom: 10px;
+            border-radius: 3px;
+        }
+
+        .backup-semester {
+            color: #00ff00;
+            font-size: 1.1em;
+            margin-bottom: 8px;
+        }
+
+        .backup-date {
+            color: #666;
+            font-size: 0.9em;
+            margin-bottom: 10px;
+        }
+
+        .backup-links {
+            display: flex;
+            gap: 10px;
+            flex-wrap: wrap;
+        }
+
+        .backup-link {
+            color: #00aaff;
+            text-decoration: none;
+            padding: 5px 12px;
+            border: 1px solid #00aaff;
+            border-radius: 3px;
+            font-size: 0.9em;
+            transition: all 0.2s;
+        }
+
+        .backup-link:hover {
+            background: #00aaff;
+            color: #0a0a0a;
+        }
+
+        .no-backups {
+            text-align: center;
+            padding: 40px;
+            color: #666;
+        }
+
+        @media (max-width: 768px) {
+            body {
+                padding: 20px 15px;
+            }
+
+            h1 {
+                font-size: 1.5em;
+            }
+
+            .backup-links {
+                flex-direction: column;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>$ Backups</h1>
+        <a href="index.html" class="back-link">← back</a>
+
+        <div class="info">
+            Backups are created automatically when mid exam dates change for a new semester.
+            <br>Current semester: <strong>Fall 2025</strong>
+        </div>
+
+        <div class="backups-list" id="backups">
+            <div class="no-backups">Loading backups...</div>
+        </div>
+    </div>
+
+    <script>
+        async function loadBackups() {
+            const container = document.getElementById('backups');
+            
+            try {
+                // Try to fetch backups directory via GitHub API
+                const pathParts = window.location.pathname.split('/').filter(p => p);
+                const username = window.location.hostname.split('.')[0];
+                const repo = pathParts[0] || 'mrz-cdn';
+                
+                const apiUrl = `https://api.github.com/repos/${username}/${repo}/contents/backups`;
+                const response = await fetch(apiUrl);
+                
+                if (!response.ok) {
+                    container.innerHTML = `
+                        <div class="no-backups">
+                            No backups available yet.<br>
+                            <span style="font-size: 0.9em; color: #666;">
+                                Backups will be created when exam dates change.
+                            </span>
+                        </div>
+                    `;
+                    return;
+                }
+                
+                const files = await response.json();
+                const backupFiles = files.filter(f => f.name.endsWith('.json') && f.name.includes('_'));
+                
+                if (backupFiles.length === 0) {
+                    container.innerHTML = `
+                        <div class="no-backups">
+                            No backups available yet.
+                        </div>
+                    `;
+                    return;
+                }
+                
+                // Group backups by semester
+                const backups = {};
+                backupFiles.forEach(file => {
+                    // Parse filename: 20251104_1200_Fall2025_connect.json
+                    const match = file.name.match(/^(\d{8})_(\d{4})_([^_]+)_(\w+)\.json$/);
+                    if (match) {
+                        const [, date, time, semester, type] = match;
+                        const key = `${date}_${time}_${semester}`;
+                        if (!backups[key]) {
+                            backups[key] = { date, time, semester, files: {} };
+                        }
+                        backups[key].files[type] = file.name;
+                    }
+                });
+                
+                // Sort by date descending
+                const sortedKeys = Object.keys(backups).sort().reverse();
+                
+                if (sortedKeys.length === 0) {
+                    container.innerHTML = `
+                        <div class="no-backups">
+                            No valid backups found.
+                        </div>
+                    `;
+                    return;
+                }
+                
+                // Render backups
+                let html = '';
+                sortedKeys.forEach(key => {
+                    const backup = backups[key];
+                    const dateStr = `${backup.date.slice(0,4)}-${backup.date.slice(4,6)}-${backup.date.slice(6,8)}`;
+                    const timeStr = `${backup.time.slice(0,2)}:${backup.time.slice(2,4)}`;
+                    
+                    html += `
+                        <div class="backup-item">
+                            <div class="backup-semester">${backup.semester}</div>
+                            <div class="backup-date">Backed up: ${dateStr} at ${timeStr} UTC</div>
+                            <div class="backup-links">
+                    `;
+                    
+                    if (backup.files.connect) {
+                        html += `<a href="backups/${backup.files.connect}" class="backup-link" download>connect.json</a>`;
+                    }
+                    if (backup.files.exams) {
+                        html += `<a href="backups/${backup.files.exams}" class="backup-link" download>exams.json</a>`;
+                    }
+                    
+                    html += `
+                            </div>
+                        </div>
+                    `;
+                });
+                
+                container.innerHTML = html;
+                
+            } catch (error) {
+                console.error('Error loading backups:', error);
+                container.innerHTML = `
+                    <div class="no-backups">
+                        No backups available yet.<br>
+                        <span style="font-size: 0.9em; color: #666;">
+                            Check the <a href="backups/" style="color: #00aaff;">backups directory</a> manually.
+                        </span>
+                    </div>
+                `;
+            }
+        }
+
+        loadBackups();
+    </script>
+</body>
+</html>

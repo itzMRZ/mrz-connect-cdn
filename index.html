@@ -1,0 +1,288 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="MRZ Connect CDN - Course and exam data API">
+    <title>MRZ Connect CDN</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Courier New', monospace;
+            background: #0a0a0a;
+            color: #e0e0e0;
+            padding: 40px 20px;
+            font-size: 14px;
+            line-height: 1.6;
+        }
+
+        .container {
+            max-width: 900px;
+            margin: 0 auto;
+        }
+
+        h1 {
+            color: #00ff00;
+            font-size: 1.8em;
+            margin-bottom: 10px;
+            font-weight: normal;
+        }
+
+        .status {
+            color: #888;
+            margin-bottom: 30px;
+        }
+
+        .status span {
+            color: #00ff00;
+        }
+
+        .section {
+            margin-bottom: 40px;
+        }
+
+        .section h2 {
+            color: #00aaff;
+            font-size: 1.2em;
+            margin-bottom: 15px;
+            font-weight: normal;
+        }
+
+        .endpoint {
+            background: #111;
+            border: 1px solid #333;
+            padding: 12px;
+            margin-bottom: 10px;
+            border-radius: 3px;
+        }
+
+        .endpoint-url {
+            color: #00aaff;
+            word-break: break-all;
+            display: block;
+            margin-bottom: 5px;
+        }
+
+        .endpoint-label {
+            color: #666;
+            font-size: 0.85em;
+        }
+
+        .code-block {
+            background: #111;
+            border: 1px solid #333;
+            border-radius: 3px;
+            padding: 15px;
+            margin: 10px 0;
+            overflow-x: auto;
+        }
+
+        .code-block pre {
+            color: #e0e0e0;
+            font-size: 0.9em;
+        }
+
+        .code-block .comment {
+            color: #666;
+        }
+
+        .links {
+            display: flex;
+            gap: 15px;
+            flex-wrap: wrap;
+            margin-top: 15px;
+        }
+
+        .link {
+            color: #00ff00;
+            text-decoration: none;
+            border: 1px solid #00ff00;
+            padding: 8px 16px;
+            border-radius: 3px;
+            transition: all 0.2s;
+        }
+
+        .link:hover {
+            background: #00ff00;
+            color: #0a0a0a;
+        }
+
+        .info {
+            background: #1a1a1a;
+            border-left: 3px solid #00aaff;
+            padding: 12px;
+            margin: 15px 0;
+            color: #aaa;
+        }
+
+        .stats {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+            gap: 10px;
+            margin-top: 10px;
+        }
+
+        .stat {
+            background: #111;
+            border: 1px solid #333;
+            padding: 10px;
+            border-radius: 3px;
+        }
+
+        .stat-label {
+            color: #666;
+            font-size: 0.85em;
+        }
+
+        .stat-value {
+            color: #00ff00;
+            font-size: 1.1em;
+            margin-top: 3px;
+        }
+
+        footer {
+            margin-top: 50px;
+            padding-top: 20px;
+            border-top: 1px solid #333;
+            text-align: center;
+            color: #666;
+            font-size: 0.9em;
+        }
+
+        @media (max-width: 768px) {
+            body {
+                padding: 20px 15px;
+            }
+
+            h1 {
+                font-size: 1.5em;
+            }
+
+            .links {
+                flex-direction: column;
+            }
+
+            .link {
+                text-align: center;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>$ MRZ Connect CDN</h1>
+        <div class="status">Status: <span id="status">Loading...</span></div>
+
+        <!-- API Endpoints -->
+        <div class="section">
+            <h2>// API Endpoints</h2>
+            <div class="endpoint">
+                <div class="endpoint-url">https://connect-cdn.itzmrz.xyz/connect.json</div>
+                <div class="endpoint-label">Full course data with metadata (~3.4 MB, auto-compressed to 137 KB)</div>
+            </div>
+            <div class="endpoint">
+                <div class="endpoint-url">https://connect-cdn.itzmrz.xyz/exams.json</div>
+                <div class="endpoint-label">Exam schedules only (~516 KB, auto-compressed to 20 KB)</div>
+            </div>
+        </div>
+
+        <!-- Usage -->
+        <div class="section">
+            <h2>// Usage</h2>
+            <div class="code-block">
+                <pre><span class="comment">// JavaScript</span>
+fetch('https://connect-cdn.itzmrz.xyz/connect.json')
+  .then(r => r.json())
+  .then(data => console.log(data.metadata));</pre>
+            </div>
+
+            <div class="code-block">
+                <pre><span class="comment"># Python</span>
+import requests
+data = requests.get('https://connect-cdn.itzmrz.xyz/connect.json').json()
+print(data['metadata'])</pre>
+            </div>
+        </div>
+
+        <!-- Stats -->
+        <div class="section">
+            <h2>// Current Data</h2>
+            <div id="stats-container">
+                <div class="info">Loading statistics...</div>
+            </div>
+        </div>
+
+        <!-- Downloads -->
+        <div class="section">
+            <h2>// Downloads</h2>
+            <div class="links">
+                <a href="connect.json" class="link" download>connect.json</a>
+                <a href="exams.json" class="link" download>exams.json</a>
+                <a href="backups.html" class="link">backups</a>
+            </div>
+        </div>
+
+        <footer>
+            Auto-updates every 7 days • Backups on semester change • Fall 2025
+        </footer>
+    </div>
+
+    <script>
+        async function loadData() {
+            try {
+                const response = await fetch('connect.json');
+                if (!response.ok) throw new Error('Failed to load');
+                
+                const data = await response.json();
+                const m = data.metadata;
+                
+                document.getElementById('status').textContent = 'Online';
+                
+                const formatDate = (d) => d ? new Date(d).toLocaleDateString('en-US', { 
+                    month: 'short', day: 'numeric', year: 'numeric' 
+                }) : 'N/A';
+                
+                document.getElementById('stats-container').innerHTML = `
+                    <div class="stats">
+                        <div class="stat">
+                            <div class="stat-label">Sections</div>
+                            <div class="stat-value">${m.totalSections}</div>
+                        </div>
+                        <div class="stat">
+                            <div class="stat-label">Enrolled</div>
+                            <div class="stat-value">${m.totalConsumedSeats}</div>
+                        </div>
+                        <div class="stat">
+                            <div class="stat-label">Available</div>
+                            <div class="stat-value">${m.totalEmptySeats}</div>
+                        </div>
+                        <div class="stat">
+                            <div class="stat-label">Updated</div>
+                            <div class="stat-value" style="font-size: 0.9em;">${formatDate(m.lastUpdated)}</div>
+                        </div>
+                    </div>
+                    <div class="info" style="margin-top: 15px;">
+                        Mid Exams: ${formatDate(m.midExamStartDate)} - ${formatDate(m.midExamEndDate)}<br>
+                        Final Exams: ${formatDate(m.finalExamStartDate)} - ${formatDate(m.finalExamEndDate)}
+                    </div>
+                `;
+                
+            } catch (error) {
+                document.getElementById('status').textContent = 'Offline';
+                document.getElementById('stats-container').innerHTML = `
+                    <div class="info" style="border-left-color: #ff0000;">
+                        Unable to load data. Run: python update_cdn.py
+                    </div>
+                `;
+            }
+        }
+
+        loadData();
+    </script>
+</body>
+</html>

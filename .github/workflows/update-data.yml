@@ -1,0 +1,103 @@
+name: Update USIS Data
+
+on:
+  schedule:
+    # Run every 7 days at 6 AM UTC (12 PM Bangladesh Time)
+    - cron: '0 6 */7 * *'
+  workflow_dispatch: # Allow manual trigger from Actions tab
+
+jobs:
+  update:
+    runs-on: ubuntu-latest
+    
+    steps:
+    - name: Checkout repository
+      uses: actions/checkout@v4
+      with:
+        fetch-depth: 0  # Fetch all history for backup comparison
+      
+    - name: Set up Python
+      uses: actions/setup-python@v5
+      with:
+        python-version: '3.x'
+        
+    - name: Install dependencies
+      run: pip install requests
+    
+    - name: Check for exam date changes and create backup
+      run: |
+        # Check if connect.json exists and extract old mid exam start date
+        if [ -f "connect.json" ]; then
+          OLD_MID_DATE=$(python3 -c "import json; data=json.load(open('connect.json')); print(data['metadata'].get('midExamStartDate', ''))" 2>/dev/null || echo "")
+          echo "Old mid exam start date: $OLD_MID_DATE"
+          echo "OLD_MID_DATE=$OLD_MID_DATE" >> $GITHUB_ENV
+        else
+          echo "No existing connect.json found"
+          echo "OLD_MID_DATE=" >> $GITHUB_ENV
+        fi
+      
+    - name: Run update script
+      run: python update_cdn.py
+    
+    - name: Create backup if exam dates changed
+      run: |
+        if [ -n "$OLD_MID_DATE" ]; then
+          # Get new mid exam start date
+          NEW_MID_DATE=$(python3 -c "import json; data=json.load(open('connect.json')); print(data['metadata'].get('midExamStartDate', ''))" 2>/dev/null || echo "")
+          echo "New mid exam start date: $NEW_MID_DATE"
+          
+          # Compare dates and create backup if changed
+          if [ "$OLD_MID_DATE" != "$NEW_MID_DATE" ] && [ -n "$NEW_MID_DATE" ]; then
+            echo "📅 Mid exam date changed from $OLD_MID_DATE to $NEW_MID_DATE"
+            echo "Creating backups..."
+            
+            # Create backups directory if it doesn't exist
+            mkdir -p backups
+            
+            # Format: YYYYMMDD_HHMM_Semester (e.g., 20251104_1200_Fall2025)
+            BACKUP_DATE=$(date +"%Y%m%d")
+            BACKUP_TIME=$(date +"%H%M")
+            
+            # Determine semester based on current date
+            MONTH=$(date +%m)
+            YEAR=$(date +%Y)
+            
+            if [ $MONTH -ge 1 ] && [ $MONTH -le 4 ]; then
+              SEMESTER="Spring${YEAR}"
+            elif [ $MONTH -ge 5 ] && [ $MONTH -le 8 ]; then
+              SEMESTER="Summer${YEAR}"
+            else
+              SEMESTER="Fall${YEAR}"
+            fi
+            
+            BACKUP_PREFIX="${BACKUP_DATE}_${BACKUP_TIME}_${SEMESTER}"
+            
+            # Get the previous version from git and create backups
+            git show HEAD:connect.json > "backups/${BACKUP_PREFIX}_connect.json" 2>/dev/null || cp connect.json "backups/${BACKUP_PREFIX}_connect.json"
+            git show HEAD:exams.json > "backups/${BACKUP_PREFIX}_exams.json" 2>/dev/null || cp exams.json "backups/${BACKUP_PREFIX}_exams.json"
+            
+            echo "✓ Backups created: ${BACKUP_PREFIX}_connect.json and ${BACKUP_PREFIX}_exams.json"
+            
+            # Add backups to git
+            git add backups/
+          else
+            echo "No exam date change detected. Skipping backup."
+          fi
+        else
+          echo "First run - no backup needed"
+        fi
+      
+    - name: Commit and push changes
+      run: |
+        git config --local user.email "github-actions[bot]@users.noreply.github.com"
+        git config --local user.name "github-actions[bot]"
+        git add connect.json connect.json.gz exams.json exams.json.gz
+        
+        # Check if there are changes to commit
+        if git diff --quiet && git diff --staged --quiet; then
+          echo "No changes to commit"
+        else
+          git commit -m "Auto-update data - $(date -u +'%Y-%m-%d %H:%M:%S UTC')"
+          git push
+          echo "✓ Changes pushed successfully"
+        fi
