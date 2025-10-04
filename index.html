@@ -121,6 +121,14 @@
             color: #aaa;
         }
 
+        .info code {
+            background: #0a0a0a;
+            padding: 2px 6px;
+            border-radius: 3px;
+            color: #00ff00;
+            font-family: 'Courier New', monospace;
+        }
+
         .stats {
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
@@ -195,17 +203,40 @@
         <!-- Usage -->
         <div class="section">
             <h2>// Usage</h2>
+            
+            <div class="info">
+                <strong>Compression:</strong> Use <code>.gz</code> files for 96% smaller downloads (3.4 MB → 137 KB).<br>
+                Regular files work directly, gzipped files need manual decompression.
+            </div>
+
             <div class="code-block">
-                <pre><span class="comment">// JavaScript</span>
+                <pre><span class="comment">// JavaScript - Regular</span>
 fetch('https://connect-cdn.itzmrz.xyz/connect.json')
   .then(r => r.json())
   .then(data => console.log(data.metadata));</pre>
             </div>
 
             <div class="code-block">
-                <pre><span class="comment"># Python</span>
+                <pre><span class="comment">// JavaScript - Gzipped (smaller, faster)</span>
+fetch('https://connect-cdn.itzmrz.xyz/connect.json.gz')
+  .then(r => r.blob())
+  .then(blob => blob.stream().pipeThrough(new DecompressionStream('gzip')))
+  .then(stream => new Response(stream).json())
+  .then(data => console.log(data.metadata));</pre>
+            </div>
+
+            <div class="code-block">
+                <pre><span class="comment"># Python - Regular</span>
 import requests
 data = requests.get('https://connect-cdn.itzmrz.xyz/connect.json').json()
+print(data['metadata'])</pre>
+            </div>
+
+            <div class="code-block">
+                <pre><span class="comment"># Python - Gzipped (smaller, faster)</span>
+import requests, gzip, json
+r = requests.get('https://connect-cdn.itzmrz.xyz/connect.json.gz')
+data = json.loads(gzip.decompress(r.content))
 print(data['metadata'])</pre>
             </div>
         </div>

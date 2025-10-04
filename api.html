@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>API Proxy</title>
+    <script>
+        // Auto-serve compressed JSON via JavaScript
+        async function serveCompressed() {
+            const path = window.location.search.substring(1) || 'connect';
+            
+            try {
+                // Fetch the .gz file
+                const response = await fetch(`${path}.json.gz`);
+                const blob = await response.blob();
+                
+                // Decompress
+                const ds = new DecompressionStream('gzip');
+                const decompressedStream = blob.stream().pipeThrough(ds);
+                const decompressed = await new Response(decompressedStream).text();
+                
+                // Serve as JSON
+                document.body.innerHTML = `<pre>${decompressed}</pre>`;
+                document.body.style.fontFamily = 'monospace';
+                document.body.style.whiteSpace = 'pre-wrap';
+                document.body.style.wordWrap = 'break-word';
+                
+            } catch (error) {
+                document.body.innerHTML = `Error: ${error.message}`;
+            }
+        }
+        
+        serveCompressed();
+    </script>
+</head>
+<body>Loading...</body>
+</html>

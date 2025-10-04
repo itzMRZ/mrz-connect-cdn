@@ -18,6 +18,8 @@ https://connect-cdn.itzmrz.xyz/exams.json        (~516 KB, gzipped to 20 KB)
 
 ## Usage
 
+### Regular Files
+
 **JavaScript:**
 ```js
 fetch('https://connect-cdn.itzmrz.xyz/connect.json')
@@ -29,6 +31,25 @@ fetch('https://connect-cdn.itzmrz.xyz/connect.json')
 ```python
 import requests
 data = requests.get('https://connect-cdn.itzmrz.xyz/connect.json').json()
+print(data['metadata']['totalSections'])
+```
+
+### Gzipped Files (96% smaller, faster)
+
+**JavaScript:**
+```js
+fetch('https://connect-cdn.itzmrz.xyz/connect.json.gz')
+  .then(r => r.blob())
+  .then(blob => blob.stream().pipeThrough(new DecompressionStream('gzip')))
+  .then(stream => new Response(stream).json())
+  .then(data => console.log(data.metadata));
+```
+
+**Python:**
+```python
+import requests, gzip, json
+r = requests.get('https://connect-cdn.itzmrz.xyz/connect.json.gz')
+data = json.loads(gzip.decompress(r.content))
 print(data['metadata']['totalSections'])
 ```
 
