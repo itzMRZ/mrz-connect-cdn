@@ -46,6 +46,10 @@ pip install requests
 python update_cdn.py
 ```
 
+## Credits
+
+Data source provided by [@eniamza](https://github.com/eniamza) via [usis-cdn.eniamza.com](https://usis-cdn.eniamza.com/connect.json)
+
 ## License
 
 MIT
