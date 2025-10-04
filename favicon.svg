@@ -1,0 +1,9 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64">
+  <rect width="64" height="64" fill="#0a0a0a"/>
+  <path d="M18 10 L38 10 L46 18 L46 54 L18 54 Z" fill="none" stroke="#00ff00" stroke-width="2.5"/>
+  <polyline points="38,10 38,18 46,18" fill="none" stroke="#00ff00" stroke-width="2.5"/>
+  <line x1="24" y1="26" x2="40" y2="26" stroke="#00ff00" stroke-width="2" opacity="0.7"/>
+  <line x1="24" y1="32" x2="40" y2="32" stroke="#00ff00" stroke-width="2" opacity="0.7"/>
+  <line x1="24" y1="38" x2="36" y2="38" stroke="#00ff00" stroke-width="2" opacity="0.7"/>
+  <text x="32" y="49" font-family="monospace" font-size="8" fill="#00aaff" text-anchor="middle">JSON</text>
+</svg>

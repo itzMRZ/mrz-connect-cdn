@@ -1,51 +1,51 @@
 # MRZ Connect CDN
 
-Static CDN for course and exam data with auto-updates and backups.
+Course and exam data API with automatic updates and backups.
 
-## 🚀 Features
+## Links
 
-- **96% compression** with gzip (3.4 MB → 137 KB)
-- **Auto-updates** every 7 days
-- **Semester backups** when exam dates change
-- **Free hosting** on GitHub Pages
+- **Website**: https://connect-cdn.itzmrz.xyz/
+- **Backups**: https://connect-cdn.itzmrz.xyz/backups.html
+- **GitHub**: https://github.com/itzmrz/mrz-connect-cdn
+- **Source Data**: https://usis-cdn.eniamza.com/connect.json
 
-## 🌐 Live API
+## API Endpoints
 
 ```
-https://connect-cdn.itzmrz.xyz/connect.json
-https://connect-cdn.itzmrz.xyz/exams.json
+https://connect-cdn.itzmrz.xyz/connect.json      (~3.4 MB, gzipped to 137 KB)
+https://connect-cdn.itzmrz.xyz/exams.json        (~516 KB, gzipped to 20 KB)
 ```
 
-## 💻 Usage
+## Usage
 
-### JavaScript
-```javascript
+**JavaScript:**
+```js
 fetch('https://connect-cdn.itzmrz.xyz/connect.json')
   .then(r => r.json())
   .then(data => console.log(data.metadata));
 ```
 
-### Python
+**Python:**
 ```python
 import requests
 data = requests.get('https://connect-cdn.itzmrz.xyz/connect.json').json()
 print(data['metadata']['totalSections'])
 ```
 
-## 📊 Data
+## Features
 
-- **2,100** sections
-- **63,061** enrolled students
-- **1,907** exam schedules
-- Updates automatically every 7 days
+- Auto-updates every 7 days via GitHub Actions
+- Automatic semester-based backups when exam dates change
+- Gzip compression (96% size reduction)
+- Free hosting on GitHub Pages
 
-## 🔧 Local Setup
+## Run Locally
 
 ```bash
 pip install requests
 python update_cdn.py
 ```
 
-## 📄 License
+## License
 
 MIT
