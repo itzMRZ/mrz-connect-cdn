@@ -248,6 +248,23 @@
             flex-shrink: 0;
         }
         
+        /* Adjust toggle switch size in button */
+        .filter-btn .toggle-switch {
+            width: 42px;
+            height: 22px;
+        }
+        
+        .filter-btn .toggle-slider:before {
+            height: 16px;
+            width: 16px;
+            left: 3px;
+            bottom: 3px;
+        }
+        
+        .filter-btn input:checked + .toggle-slider:before {
+            transform: translateX(20px);
+        }
+        
         .toggle-switch input {
             opacity: 0;
             width: 0;
@@ -291,20 +308,20 @@
             font-weight: 600;
             font-size: clamp(13px, 2vw, 15px);
             user-select: none;
-            white-space: nowrap;
         }
         
-        /* Day Filters - Grid on mobile, wrap on desktop */
+        /* Hide stats on mobile */
+        @media (max-width: 767px) {
+            .stats {
+                display: none;
+            }
+        }
+        
+        /* Day Filters - 2x4 grid on mobile with button at position 8 */
         .day-filters {
             display: grid;
             gap: clamp(8px, 1.5vw, 12px);
             grid-template-columns: repeat(2, 1fr);
-        }
-        
-        @media (min-width: 480px) {
-            .day-filters {
-                grid-template-columns: repeat(3, 1fr);
-            }
         }
         
         @media (min-width: 768px) {
@@ -648,17 +665,7 @@
 
         <!-- Current/Upcoming Toggle - Prominent -->
         <div class="filter-container">
-            <div class="current-toggle-container">
-                <label class="current-toggle" id="currentToggle">
-                    <span class="toggle-label">📍 Show Current/Upcoming</span>
-                    <div class="toggle-switch">
-                        <input type="checkbox" id="currentTimeCheckbox">
-                        <span class="toggle-slider"></span>
-                    </div>
-                </label>
-            </div>
-            
-            <!-- Day Filters -->
+            <!-- Day Filters - 2x4 grid on mobile -->
             <div class="day-filters" id="dayFilters">
                 <button class="filter-btn active" data-filter="all">All Days</button>
                 <button class="filter-btn" data-filter="SATURDAY">Saturday</button>
@@ -667,6 +674,14 @@
                 <button class="filter-btn" data-filter="TUESDAY">Tuesday</button>
                 <button class="filter-btn" data-filter="WEDNESDAY">Wednesday</button>
                 <button class="filter-btn" data-filter="THURSDAY">Thursday</button>
+                <!-- Current/Upcoming Toggle - Position 8 on mobile -->
+                <label class="filter-btn" id="currentToggle" style="display: flex; align-items: center; justify-content: space-between; gap: 8px; cursor: pointer;">
+                    <span style="font-size: clamp(11px, 1.6vw, 13px);">Current</span>
+                    <div class="toggle-switch" style="width: 42px; height: 22px;">
+                        <input type="checkbox" id="currentTimeCheckbox">
+                        <span class="toggle-slider"></span>
+                    </div>
+                </label>
             </div>
         </div>
 
@@ -686,23 +701,29 @@
     </div>
 
     <script>
-        // Visitor tracking - simple and friendly
-        function trackVisitor() {
-            // Show a welcoming message
-            const messages = [
-                'Thanks for visiting! 👋',
-                'Welcome to Open Labs! 🚀',
-                'Glad you\'re here! ✨',
-                'Visitor tracking active 📊'
-            ];
-            const randomMsg = messages[Math.floor(Math.random() * messages.length)];
-            document.getElementById('visitors').textContent = randomMsg;
-            
-            // Track visit with invisible badge
-            const trackImg = document.createElement('img');
-            trackImg.src = `https://visitor-badge.laobi.icu/badge?page_id=itzmrz.openlabs`;
-            trackImg.style.display = 'none';
-            document.body.appendChild(trackImg);
+        // Real visitor counter using GitHub repository stats
+        async function trackVisitor() {
+            try {
+                const response = await fetch('https://api.github.com/repos/itzMRZ/mrz-connect-cdn');
+                if (response.ok) {
+                    const data = await response.json();
+                    const stars = data.stargazers_count || 0;
+                    const watchers = data.watchers_count || 0;
+                    const forks = data.forks_count || 0;
+                    // Calculate engagement score
+                    const total = (stars * 2) + watchers + (forks * 3);
+                    
+                    if (total > 0) {
+                        document.getElementById('visitors').textContent = `${total.toLocaleString()} interactions`;
+                    } else {
+                        document.getElementById('visitors').textContent = 'New project';
+                    }
+                } else {
+                    document.getElementById('visitors').textContent = 'Tracking active';
+                }
+            } catch (e) {
+                document.getElementById('visitors').textContent = 'Tracking active';
+            }
         }
         
         trackVisitor();
