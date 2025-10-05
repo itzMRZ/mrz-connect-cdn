@@ -251,8 +251,10 @@ def generate_exams_json(sections: List[Dict], output_path: str = "exams.json"):
             "sectionType": section.get('sectionType'),
             "midExamDate": mid_date,
             "midExamTime": mid_time,
+            "midExamRoom": None,  # To be updated later
             "finalExamDate": final_date,
-            "finalExamTime": final_time
+            "finalExamTime": final_time,
+            "finalExamRoom": None  # To be updated later
         }
         
         exams.append(exam_entry)
