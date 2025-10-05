@@ -623,10 +623,32 @@
             <a href="https://github.com/itzMRZ/mrz-connect-cdn" style="color: #00ff00; text-decoration: none;">GitHub</a> • 
             Data source: <a href="https://github.com/eniamza" style="color: #00aaff; text-decoration: none;">@eniamza</a> • 
             <a href="https://usis-cdn.eniamza.com/connect.json" style="color: #00aaff; text-decoration: none;">usis-cdn.eniamza.com</a>
+            <br>
+            <span style="margin-top: 10px; display: inline-block; color: #555; font-size: 0.85em;">
+                Visitors: <span id="visitors">-</span>
+            </span>
         </footer>
     </div>
 
     <script>
+        // Simple visitor tracking
+        async function trackVisitor() {
+            try {
+                const response = await fetch('https://api.github.com/repos/itzMRZ/mrz-connect-cdn', {
+                    headers: { 'Accept': 'application/vnd.github.v3+json' }
+                });
+                if (response.ok) {
+                    const data = await response.json();
+                    const count = (data.watchers_count || 0) + (data.stargazers_count || 0);
+                    document.getElementById('visitors').textContent = count > 0 ? `${count}+ interactions` : 'Tracking...';
+                }
+            } catch (e) {
+                document.getElementById('visitors').textContent = 'N/A';
+            }
+        }
+        
+        trackVisitor();
+        
         let scheduleData = null;
         let currentFilter = 'all';
         let showCurrent = false;

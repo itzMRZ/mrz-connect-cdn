@@ -330,6 +330,7 @@
         <h1>$ MRZ Connect CDN</h1>
         <div class="status">
             Status: <span id="status">Loading...</span> • 
+            Version: <span id="version">1.0.0</span> • 
             Semester: <span id="semester">Loading...</span> • 
             Last Fetched: <span id="lastFetched">Loading...</span>
         </div>
@@ -445,6 +446,10 @@ print(data['metadata'])</pre>
                 Data source: <a href="https://github.com/eniamza" style="color: #00aaff; text-decoration: none;">@eniamza</a> • 
                 <a href="https://usis-cdn.eniamza.com/connect.json" style="color: #00aaff; text-decoration: none;">usis-cdn.eniamza.com</a>
             </span>
+            <br>
+            <span style="margin-top: 10px; display: inline-block; color: #555; font-size: 0.85em;">
+                Visitors: <span id="visitors">-</span>
+            </span>
         </footer>
     </div>
 
@@ -459,6 +464,63 @@ print(data['metadata'])</pre>
     </div>
 
     <script>
+        // Version Control: MAJOR.MINOR.SYNC
+        const MANUAL_VERSION = '1.0'; // You control this (e.g., 1.0, 2.0, 2.1)
+        let syncVersion = 0;
+        
+        // Load version from localStorage
+        function loadVersion() {
+            const stored = localStorage.getItem('cdn_version_info');
+            if (stored) {
+                const info = JSON.parse(stored);
+                if (info.manual === MANUAL_VERSION) {
+                    syncVersion = info.sync;
+                } else {
+                    // Manual version changed, reset sync counter
+                    syncVersion = 0;
+                }
+            }
+        }
+        
+        // Increment sync version on data update
+        function incrementSyncVersion() {
+            syncVersion++;
+            localStorage.setItem('cdn_version_info', JSON.stringify({
+                manual: MANUAL_VERSION,
+                sync: syncVersion
+            }));
+            updateVersionDisplay();
+        }
+        
+        // Update version display
+        function updateVersionDisplay() {
+            document.getElementById('version').textContent = `${MANUAL_VERSION}.${syncVersion}`;
+        }
+        
+        // Simple visitor counter using GitHub API (free, no registration needed)
+        async function trackVisitor() {
+            try {
+                // Use a free counter API (goatcounter.com alternative)
+                // Using GitHub repo views as a simple counter
+                const response = await fetch('https://api.github.com/repos/itzMRZ/mrz-connect-cdn', {
+                    headers: { 'Accept': 'application/vnd.github.v3+json' }
+                });
+                if (response.ok) {
+                    const data = await response.json();
+                    // Display watchers + stargazers as a simple metric
+                    const count = (data.watchers_count || 0) + (data.stargazers_count || 0);
+                    document.getElementById('visitors').textContent = count > 0 ? `${count}+ interactions` : 'Tracking...';
+                }
+            } catch (e) {
+                document.getElementById('visitors').textContent = 'N/A';
+            }
+        }
+        
+        // Initialize
+        loadVersion();
+        updateVersionDisplay();
+        trackVisitor();
+        
         async function loadData() {
             try {
                 const response = await fetch('connect.json');
@@ -493,6 +555,15 @@ print(data['metadata'])</pre>
                     timeZoneName: 'short'
                 });
                 document.getElementById('lastFetched').textContent = fetchedStr;
+                
+                // Check if data has changed and increment sync version
+                const lastDataUpdate = localStorage.getItem('last_data_update');
+                if (lastDataUpdate !== m.lastUpdated) {
+                    localStorage.setItem('last_data_update', m.lastUpdated);
+                    if (lastDataUpdate) { // Don't increment on first visit
+                        incrementSyncVersion();
+                    }
+                }
                 
                 const formatDate = (d) => d ? new Date(d).toLocaleDateString('en-US', { 
                     month: 'short', day: 'numeric', year: 'numeric' 
