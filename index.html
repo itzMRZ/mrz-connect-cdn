@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0, viewport-fit=cover">
     <meta name="description" content="Open source CDN for USIS course data, exam schedules, and lab availability. JSON APIs updated weekly with automatic backups.">
     <link rel="icon" type="image/svg+xml" href="favicon.svg">
     
@@ -273,7 +273,9 @@
 
         footer {
             margin-top: clamp(32px, 6vw, 50px);
+            margin-bottom: clamp(16px, 4vw, 24px);
             padding-top: var(--space-lg);
+            padding-bottom: max(var(--space-lg), env(safe-area-inset-bottom));
             border-top: 1px solid var(--border-primary);
             text-align: center;
             color: var(--text-secondary);
@@ -283,6 +285,7 @@
         
         footer a {
             transition: opacity 0.2s ease;
+            word-break: break-word;
         }
         
         footer a:hover {
