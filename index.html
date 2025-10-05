@@ -563,8 +563,8 @@ print(data['metadata'])</pre>
                 <a href="https://usis-cdn.eniamza.com/connect.json" style="color: #00aaff; text-decoration: none;">usis-cdn.eniamza.com</a>
             </span>
             <br>
-            <span style="margin-top: 10px; display: inline-block; color: #555; font-size: 0.85em;">
-                Visitors: <span id="visitors">-</span>
+            <span style="margin-top: 10px; display: inline-block; color: var(--text-secondary); font-size: 0.85em;">
+                <span id="visitorCounter">Loading...</span>
             </span>
         </footer>
     </div>
@@ -613,29 +613,40 @@ print(data['metadata'])</pre>
             document.getElementById('version').textContent = `${MANUAL_VERSION}.${syncVersion}`;
         }
         
-        // Real visitor counter using GitHub repository stats
-        async function trackVisitor() {
-            try {
-                const response = await fetch('https://api.github.com/repos/itzMRZ/mrz-connect-cdn');
-                if (response.ok) {
-                    const data = await response.json();
-                    const stars = data.stargazers_count || 0;
-                    const watchers = data.watchers_count || 0;
-                    const forks = data.forks_count || 0;
-                    // Calculate engagement score
-                    const total = (stars * 2) + watchers + (forks * 3);
-                    
-                    if (total > 0) {
-                        document.getElementById('visitors').textContent = `${total.toLocaleString()} interactions`;
+        // Hit counter with custom styling (no branding)
+        function trackVisitor() {
+            // Create invisible hit counter element
+            const hitContainer = document.createElement('div');
+            hitContainer.id = 'hitCounterContainer';
+            hitContainer.style.display = 'none';
+            document.body.appendChild(hitContainer);
+            
+            // Load hit counter script
+            const script = document.createElement('script');
+            script.src = 'https://visitorshitcounter.com/js/hitCounter.js?v=' + Date.now();
+            script.onload = function() {
+                // Extract count from the loaded counter and display it
+                setTimeout(() => {
+                    const counterEl = document.querySelector('.hitCounter');
+                    if (counterEl) {
+                        const countText = counterEl.textContent.match(/\d+/);
+                        if (countText) {
+                            document.getElementById('visitorCounter').textContent = `${parseInt(countText[0]).toLocaleString()} visits`;
+                        } else {
+                            document.getElementById('visitorCounter').textContent = 'Counting visitors';
+                        }
                     } else {
-                        document.getElementById('visitors').textContent = 'New project';
+                        document.getElementById('visitorCounter').textContent = 'Counting visitors';
                     }
-                } else {
-                    document.getElementById('visitors').textContent = 'Tracking active';
-                }
-            } catch (e) {
-                document.getElementById('visitors').textContent = 'Tracking active';
-            }
+                }, 500);
+            };
+            script.onerror = function() {
+                document.getElementById('visitorCounter').textContent = 'Counting visitors';
+            };
+            
+            // Add hidden counter link
+            hitContainer.innerHTML = '<a class="hitCounter" href="#" style="display:none;" data-name="b8750f06fadabb243de20c0a370b77e4|5|external|1|#0099cc|#f5f5f5|small|s-hit"></a>';
+            document.body.appendChild(script);
         }
         
         // Initialize
