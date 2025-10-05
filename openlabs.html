@@ -631,32 +631,29 @@
     </div>
 
     <script>
-        // Simple visitor tracking using localStorage
-        function trackVisitor() {
+        // Global visitor tracking using CountAPI
+        async function trackVisitor() {
             try {
-                // Get or initialize visitor count
-                let visits = parseInt(localStorage.getItem('openlabs_visitor_count') || '0');
+                // Use CountAPI with a unique namespace for your site
+                const namespace = 'itzmrz';
+                const key = 'openlabs-page';
                 
-                // Check if this is a new session (hasn't visited in last 30 minutes)
-                const lastVisit = localStorage.getItem('openlabs_last_visit');
-                const now = new Date().getTime();
-                const thirtyMinutes = 30 * 60 * 1000;
+                // Hit the counter (increments and returns count)
+                const response = await fetch(`https://api.countapi.xyz/hit/${namespace}/${key}`);
                 
-                if (!lastVisit || (now - parseInt(lastVisit)) > thirtyMinutes) {
-                    visits++;
-                    localStorage.setItem('openlabs_visitor_count', visits.toString());
-                }
-                
-                localStorage.setItem('openlabs_last_visit', now.toString());
-                
-                // Display with a friendly message
-                if (visits === 1) {
-                    document.getElementById('visitors').textContent = 'Your first visit! 🎉';
+                if (response.ok) {
+                    const data = await response.json();
+                    const count = data.value || 0;
+                    
+                    // Display global visitor count
+                    document.getElementById('visitors').textContent = `${count.toLocaleString()}+ global visits`;
                 } else {
-                    document.getElementById('visitors').textContent = `${visits} visits from this browser`;
+                    // Fallback: just show the counter is active
+                    document.getElementById('visitors').textContent = 'Counting visitors...';
                 }
             } catch (e) {
-                document.getElementById('visitors').textContent = 'Counter unavailable';
+                // If API fails, show a friendly message
+                document.getElementById('visitors').textContent = 'Tracking active';
             }
         }
         
