@@ -82,6 +82,40 @@
             display: flex;
             gap: 10px;
             flex-wrap: wrap;
+            align-items: center;
+        }
+
+        .current-checkbox {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            background: #1a1a1a;
+            border: 1px solid #00ff00;
+            padding: 8px 16px;
+            border-radius: 3px;
+            cursor: pointer;
+            transition: all 0.2s;
+        }
+
+        .current-checkbox:hover {
+            background: #00ff00;
+            color: #0a0a0a;
+        }
+
+        .current-checkbox input[type="checkbox"] {
+            cursor: pointer;
+            width: 16px;
+            height: 16px;
+        }
+
+        .current-checkbox label {
+            cursor: pointer;
+            color: #00ff00;
+            margin: 0;
+        }
+
+        .current-checkbox:hover label {
+            color: #0a0a0a;
         }
 
         .filter-btn {
@@ -125,12 +159,31 @@
             border-bottom: 1px solid #333;
         }
 
+        .day-header.current-day {
+            border-bottom-color: #00ff00;
+        }
+
         .slot-card {
             background: #0a0a0a;
             border: 1px solid #333;
             padding: 12px;
             margin-bottom: 10px;
             border-radius: 3px;
+        }
+
+        .slot-card.current-slot {
+            border: 2px solid #00ff00;
+            background: #1a1a1a;
+        }
+
+        .current-badge {
+            background: #00ff00;
+            color: #0a0a0a;
+            padding: 2px 8px;
+            border-radius: 3px;
+            font-size: 0.75em;
+            font-weight: bold;
+            margin-left: 10px;
         }
 
         .slot-header {
@@ -295,6 +348,10 @@
             <button class="filter-btn" data-filter="TUESDAY">Tuesday</button>
             <button class="filter-btn" data-filter="WEDNESDAY">Wednesday</button>
             <button class="filter-btn" data-filter="THURSDAY">Thursday</button>
+            <div class="current-checkbox">
+                <input type="checkbox" id="currentTimeCheckbox">
+                <label for="currentTimeCheckbox">Show Current/Upcoming</label>
+            </div>
         </div>
 
         <div class="schedule-container" id="schedule">
@@ -311,6 +368,7 @@
     <script>
         let scheduleData = null;
         let currentFilter = 'all';
+        let showCurrent = false;
 
         async function loadFreeLabs() {
             try {
@@ -349,6 +407,60 @@
             }
         }
 
+        function getCurrentDayAndSlot() {
+            const now = new Date();
+            const dayNames = ['SUNDAY', 'MONDAY', 'TUESDAY', 'WEDNESDAY', 'THURSDAY', 'FRIDAY', 'SATURDAY'];
+            const currentDay = dayNames[now.getDay()];
+            const currentTime = now.getHours() * 60 + now.getMinutes(); // minutes since midnight
+            
+            // Convert to Bangladesh time (UTC+6)
+            const bdOffset = 6 * 60;
+            const bdTime = currentTime + bdOffset;
+            const bdHours = Math.floor(bdTime / 60) % 24;
+            const bdMinutes = bdTime % 60;
+            const bdCurrentTime = bdHours * 60 + bdMinutes;
+            
+            return { day: currentDay, time: bdCurrentTime };
+        }
+        
+        function parseSlotTime(timeStr) {
+            const [h, m] = timeStr.split(':').map(Number);
+            return h * 60 + m;
+        }
+        
+        function findCurrentOrUpcoming(schedule) {
+            const { day: currentDay, time: currentTime } = getCurrentDayAndSlot();
+            const days = ['SATURDAY', 'SUNDAY', 'MONDAY', 'TUESDAY', 'WEDNESDAY', 'THURSDAY'];
+            
+            // Start from current day
+            let dayIndex = days.indexOf(currentDay);
+            if (dayIndex === -1) dayIndex = 0; // Default to Saturday if not found (Friday)
+            
+            // Check current day first
+            for (let i = 0; i < days.length; i++) {
+                const checkDay = days[(dayIndex + i) % days.length];
+                if (!schedule[checkDay]) continue;
+                
+                const slots = Object.keys(schedule[checkDay]).sort();
+                
+                for (const slotKey of slots) {
+                    const slot = schedule[checkDay][slotKey];
+                    const slotStart = parseSlotTime(slot.startTime);
+                    const slotEnd = parseSlotTime(slot.endTime);
+                    
+                    // If checking current day, only show current or future slots
+                    if (i === 0 && slotEnd < currentTime) continue;
+                    
+                    // Return first valid slot
+                    if (slot.freeLabs.length > 0) {
+                        return { day: checkDay, slotKey: slotKey };
+                    }
+                }
+            }
+            
+            return null;
+        }
+
         function renderSchedule(schedule, filterDay = null) {
             const container = document.getElementById('schedule');
             
@@ -358,24 +470,46 @@
             }
             
             let html = '';
-            const days = filterDay ? [filterDay] : Object.keys(schedule);
+            let days = filterDay ? [filterDay] : Object.keys(schedule);
+            let currentSlotInfo = null;
+            
+            // If showing current/upcoming, find and filter
+            if (showCurrent) {
+                currentSlotInfo = findCurrentOrUpcoming(schedule);
+                if (currentSlotInfo) {
+                    days = [currentSlotInfo.day];
+                } else {
+                    container.innerHTML = '<div class="no-labs">No free labs available in current or upcoming slots.</div>';
+                    return;
+                }
+            }
             
             days.forEach(day => {
                 const slots = schedule[day];
+                const isCurrentDay = currentSlotInfo && currentSlotInfo.day === day;
+                
                 html += `
                     <div class="day-section">
-                        <div class="day-header">${day}</div>
+                        <div class="day-header ${isCurrentDay ? 'current-day' : ''}">${day}${isCurrentDay ? ' <span style="color: #00aaff; font-size: 0.8em;">(Current/Upcoming)</span>' : ''}</div>
                 `;
                 
-                Object.keys(slots).forEach(slotKey => {
+                const slotKeys = showCurrent && currentSlotInfo && currentSlotInfo.day === day 
+                    ? [currentSlotInfo.slotKey] 
+                    : Object.keys(slots);
+                
+                slotKeys.forEach(slotKey => {
                     const slot = slots[slotKey];
                     const freeCount = slot.freeLabs.length;
                     const occupiedCount = slot.occupiedLabs.length;
+                    const isCurrent = currentSlotInfo && currentSlotInfo.day === day && currentSlotInfo.slotKey === slotKey;
                     
                     html += `
-                        <div class="slot-card">
+                        <div class="slot-card ${isCurrent ? 'current-slot' : ''}">
                             <div class="slot-header">
-                                <div class="slot-time">${formatTime(slot.startTime)} - ${formatTime(slot.endTime)}</div>
+                                <div class="slot-time">
+                                    ${formatTime(slot.startTime)} - ${formatTime(slot.endTime)}
+                                    ${isCurrent ? '<span class="current-badge">NOW/UPCOMING</span>' : ''}
+                                </div>
                                 <div class="slot-counts">
                                     <div class="slot-count">Free: <span>${freeCount}</span></div>
                                     <div class="slot-count">Occupied: <span>${occupiedCount}</span></div>
@@ -437,6 +571,28 @@
                     btn.classList.add('active');
                     filterSchedule(btn.dataset.filter);
                 });
+            });
+            
+            // Current time checkbox handling
+            const currentCheckbox = document.getElementById('currentTimeCheckbox');
+            currentCheckbox.addEventListener('change', (e) => {
+                showCurrent = e.target.checked;
+                if (showCurrent) {
+                    // Disable day filters when showing current
+                    filterBtns.forEach(b => {
+                        b.classList.remove('active');
+                        b.disabled = true;
+                        b.style.opacity = '0.5';
+                    });
+                } else {
+                    // Re-enable filters
+                    filterBtns.forEach(b => {
+                        b.disabled = false;
+                        b.style.opacity = '1';
+                    });
+                    filterBtns[0].classList.add('active');
+                }
+                filterSchedule(currentFilter);
             });
         });
 
