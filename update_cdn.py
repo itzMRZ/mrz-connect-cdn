@@ -344,10 +344,19 @@ def main():
         # Generate exams.json
         generate_exams_json(sections)
         
+        # Generate backup index
+        print("\n" + "=" * 60)
+        print("Generating Backup Index")
+        print("=" * 60)
+        
+        from generate_backup_index import generate_backup_index
+        generate_backup_index()
+        
         print("\n" + "=" * 60)
         print("✓ All files generated successfully!")
         print("=" * 60)
         print(f"\nCurrent semester backup: {curr_backup_name}")
+        print("Backup index: connect_backup.json")
         print("\nNext steps:")
         print("1. Review the generated JSON files")
         print("2. Commit and push to GitHub")
