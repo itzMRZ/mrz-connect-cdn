@@ -8,11 +8,14 @@ import json
 import os
 import gzip
 import requests
+import shutil
+import glob
 from datetime import datetime, timezone
 from typing import Dict, List, Optional
 
 # Get the directory where this script is located
 SCRIPT_DIR = os.path.dirname(os.path.abspath(__file__))
+BACKUPS_DIR = os.path.join(SCRIPT_DIR, "backups")
 
 
 def fetch_mrz_data() -> List[Dict]:
@@ -120,6 +123,101 @@ def generate_connect_json(sections: List[Dict], output_path: str = "connect.json
     print(f"  Gzipped: {gzip_size:.1f} KB (saved {compression_ratio:.1f}%)")
 
 
+def get_current_semester(mid_exam_start: str) -> str:
+    """Determine current semester based on mid exam start date."""
+    if not mid_exam_start:
+        return "Unknown"
+    
+    try:
+        date = datetime.strptime(mid_exam_start, "%Y-%m-%d")
+        month = date.month
+        year = date.year
+        
+        # Determine semester
+        if 1 <= month <= 4:
+            return f"Spring{year}"
+        elif 5 <= month <= 8:
+            return f"Summer{year}"
+        else:  # 9-12
+            return f"Fall{year}"
+    except:
+        return "Unknown"
+
+
+def manage_current_backup(metadata: Dict, sections: List[Dict]):
+    """Manage current semester backup with smart renaming."""
+    print("\n" + "=" * 60)
+    print("Managing Current Semester Backup")
+    print("=" * 60)
+    
+    # Ensure backups directory exists
+    os.makedirs(BACKUPS_DIR, exist_ok=True)
+    
+    # Get current semester info
+    mid_exam_start = metadata.get('midExamStartDate')
+    current_semester = get_current_semester(mid_exam_start)
+    
+    print(f"\nCurrent Semester: {current_semester}")
+    print(f"Mid Exam Start: {mid_exam_start}")
+    
+    # Look for existing "curr_" backup
+    curr_backups = glob.glob(os.path.join(BACKUPS_DIR, "curr_*_connect.json"))
+    
+    if curr_backups:
+        old_curr_backup = curr_backups[0]
+        print(f"\nFound existing current backup: {os.path.basename(old_curr_backup)}")
+        
+        # Load old backup to check if exam dates changed
+        try:
+            with open(old_curr_backup, 'r', encoding='utf-8') as f:
+                old_data = json.load(f)
+                old_mid_exam = old_data['metadata'].get('midExamStartDate')
+                old_semester = get_current_semester(old_mid_exam)
+            
+            # Check if semester changed (exam dates different)
+            if mid_exam_start != old_mid_exam:
+                print(f"\n📅 Exam dates changed!")
+                print(f"   Old: {old_mid_exam} ({old_semester})")
+                print(f"   New: {mid_exam_start} ({current_semester})")
+                
+                # Rename old backup with final exam date
+                old_final_exam = old_data['metadata'].get('finalExamEndDate')
+                if old_final_exam:
+                    final_date_obj = datetime.strptime(old_final_exam, "%Y-%m-%d")
+                    date_prefix = final_date_obj.strftime("%Y%m%d_2359")
+                    new_backup_name = f"{date_prefix}_{old_semester}_connect.json"
+                    new_backup_path = os.path.join(BACKUPS_DIR, new_backup_name)
+                    
+                    # Rename the old current backup
+                    shutil.move(old_curr_backup, new_backup_path)
+                    print(f"✓ Archived old backup as: {new_backup_name}")
+                else:
+                    print(f"⚠️  No final exam date in old backup, removing...")
+                    os.remove(old_curr_backup)
+            else:
+                print(f"✓ Same semester, updating current backup...")
+        except Exception as e:
+            print(f"⚠️  Error reading old backup: {e}")
+    
+    # Create new current backup
+    curr_backup_name = f"curr_{current_semester}_connect.json"
+    curr_backup_path = os.path.join(BACKUPS_DIR, curr_backup_name)
+    
+    backup_data = {
+        "metadata": metadata,
+        "sections": sections
+    }
+    
+    with open(curr_backup_path, 'w', encoding='utf-8') as f:
+        json.dump(backup_data, f, indent=2, ensure_ascii=False)
+    
+    file_size = os.path.getsize(curr_backup_path) / 1024
+    print(f"\n✓ Created/Updated: {curr_backup_name} ({file_size:.1f} KB)")
+    print(f"  This will be renamed when semester ends")
+    
+    return curr_backup_name
+
+
 def generate_exams_json(sections: List[Dict], output_path: str = "exams.json"):
     """Generate exams.json with exam schedule data."""
     # Ensure output path is in the script directory
@@ -213,21 +311,52 @@ def main():
         # Fetch data from API
         sections = fetch_mrz_data()
         
+        # Calculate metadata first (needed for backup management)
+        metadata = calculate_connect_metadata(sections)
+        
+        # Manage current semester backup
+        curr_backup_name = manage_current_backup(metadata, sections)
+        
         # Generate both JSON files
-        generate_connect_json(sections)
+        output_data = {
+            "metadata": metadata,
+            "sections": sections
+        }
+        
+        # Write connect.json
+        connect_path = os.path.join(SCRIPT_DIR, "connect.json")
+        with open(connect_path, 'w', encoding='utf-8') as f:
+            json.dump(output_data, f, indent=2, ensure_ascii=False)
+        
+        # Write gzipped version
+        gzip_path = connect_path + '.gz'
+        with gzip.open(gzip_path, 'wt', encoding='utf-8') as f:
+            json.dump(output_data, f, separators=(',', ':'), ensure_ascii=False)
+        
+        regular_size = os.path.getsize(connect_path) / 1024
+        gzip_size = os.path.getsize(gzip_path) / 1024
+        compression_ratio = ((regular_size - gzip_size) / regular_size * 100)
+        
+        print(f"\n✓ connect.json created successfully")
+        print(f"  Regular: {regular_size:.1f} KB")
+        print(f"  Gzipped: {gzip_size:.1f} KB (saved {compression_ratio:.1f}%)")
+        
+        # Generate exams.json
         generate_exams_json(sections)
         
         print("\n" + "=" * 60)
         print("✓ All files generated successfully!")
         print("=" * 60)
+        print(f"\nCurrent semester backup: {curr_backup_name}")
         print("\nNext steps:")
         print("1. Review the generated JSON files")
-        print("2. Open index.html in a browser to test")
-        print("3. Commit and push to GitHub")
-        print("4. Enable GitHub Pages in repository settings")
+        print("2. Commit and push to GitHub")
+        print("3. Backups will auto-archive when semester ends")
         
     except Exception as e:
         print(f"\n✗ Error: {e}")
+        import traceback
+        traceback.print_exc()
         return 1
     
     return 0
