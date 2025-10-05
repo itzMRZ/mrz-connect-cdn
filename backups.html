@@ -52,6 +52,25 @@
             color: #aaa;
         }
 
+        .current-badge {
+            background: #00ff00;
+            color: #0a0a0a;
+            padding: 2px 8px;
+            border-radius: 3px;
+            font-size: 0.8em;
+            font-weight: bold;
+            margin-left: 10px;
+        }
+
+        footer {
+            margin-top: 50px;
+            padding-top: 20px;
+            border-top: 1px solid #333;
+            text-align: center;
+            color: #666;
+            font-size: 0.9em;
+        }
+
         .backups-list {
             margin-top: 20px;
         }
@@ -165,7 +184,7 @@
                 }
                 
                 const files = await response.json();
-                const backupFiles = files.filter(f => f.name.endsWith('.json') && f.name.includes('_'));
+                const backupFiles = files.filter(f => f.name.endsWith('.json'));
                 
                 if (backupFiles.length === 0) {
                     container.innerHTML = `
@@ -176,25 +195,39 @@
                     return;
                 }
                 
-                // Group backups by semester
-                const backups = {};
+                // Separate current and archived backups
+                const currentBackups = [];
+                const archivedBackups = [];
+                
                 backupFiles.forEach(file => {
-                    // Parse filename: 20251104_1200_Fall2025_connect.json
-                    const match = file.name.match(/^(\d{8})_(\d{4})_([^_]+)_(\w+)\.json$/);
-                    if (match) {
-                        const [, date, time, semester, type] = match;
-                        const key = `${date}_${time}_${semester}`;
-                        if (!backups[key]) {
-                            backups[key] = { date, time, semester, files: {} };
-                        }
-                        backups[key].files[type] = file.name;
+                    // Check for current backup: curr_Fall2025_connect.json
+                    const currMatch = file.name.match(/^curr_([^_]+)_connect\.json$/);
+                    if (currMatch) {
+                        currentBackups.push({
+                            semester: currMatch[1],
+                            file: file.name,
+                            isCurrent: true
+                        });
+                        return;
+                    }
+                    
+                    // Check for archived backup: 20251104_1200_Fall2025_connect.json
+                    const archiveMatch = file.name.match(/^(\d{8})_(\d{4})_([^_]+)_connect\.json$/);
+                    if (archiveMatch) {
+                        archivedBackups.push({
+                            date: archiveMatch[1],
+                            time: archiveMatch[2],
+                            semester: archiveMatch[3],
+                            file: file.name,
+                            isCurrent: false
+                        });
                     }
                 });
                 
-                // Sort by date descending
-                const sortedKeys = Object.keys(backups).sort().reverse();
+                // Sort archived backups by date descending
+                archivedBackups.sort((a, b) => b.date.localeCompare(a.date));
                 
-                if (sortedKeys.length === 0) {
+                if (currentBackups.length === 0 && archivedBackups.length === 0) {
                     container.innerHTML = `
                         <div class="no-backups">
                             No valid backups found.
@@ -205,26 +238,34 @@
                 
                 // Render backups
                 let html = '';
-                sortedKeys.forEach(key => {
-                    const backup = backups[key];
+                
+                // Render current backup first
+                currentBackups.forEach(backup => {
+                    html += `
+                        <div class="backup-item">
+                            <div class="backup-semester">
+                                ${backup.semester}
+                                <span class="current-badge">CURRENT</span>
+                            </div>
+                            <div class="backup-date">Updates weekly • Ongoing semester</div>
+                            <div class="backup-links">
+                                <a href="backups/${backup.file}" class="backup-link" download>connect.json</a>
+                            </div>
+                        </div>
+                    `;
+                });
+                
+                // Render archived backups
+                archivedBackups.forEach(backup => {
                     const dateStr = `${backup.date.slice(0,4)}-${backup.date.slice(4,6)}-${backup.date.slice(6,8)}`;
                     const timeStr = `${backup.time.slice(0,2)}:${backup.time.slice(2,4)}`;
                     
                     html += `
                         <div class="backup-item">
                             <div class="backup-semester">${backup.semester}</div>
-                            <div class="backup-date">Backed up: ${dateStr} at ${timeStr} UTC</div>
+                            <div class="backup-date">Archived: ${dateStr} at ${timeStr} UTC</div>
                             <div class="backup-links">
-                    `;
-                    
-                    if (backup.files.connect) {
-                        html += `<a href="backups/${backup.files.connect}" class="backup-link" download>connect.json</a>`;
-                    }
-                    if (backup.files.exams) {
-                        html += `<a href="backups/${backup.files.exams}" class="backup-link" download>exams.json</a>`;
-                    }
-                    
-                    html += `
+                                <a href="backups/${backup.file}" class="backup-link" download>connect.json</a>
                             </div>
                         </div>
                     `;
