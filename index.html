@@ -179,6 +179,127 @@
             font-size: 0.9em;
         }
 
+        .readme-btn {
+            display: inline-block;
+            margin-top: 15px;
+            padding: 10px 20px;
+            background: #111;
+            border: 1px solid #00aaff;
+            color: #00aaff;
+            text-decoration: none;
+            border-radius: 3px;
+            cursor: pointer;
+            transition: all 0.2s;
+            font-family: 'Courier New', monospace;
+        }
+
+        .readme-btn:hover {
+            background: #00aaff;
+            color: #0a0a0a;
+        }
+
+        .modal {
+            display: none;
+            position: fixed;
+            z-index: 1000;
+            left: 0;
+            top: 0;
+            width: 100%;
+            height: 100%;
+            overflow: auto;
+            background-color: rgba(0, 0, 0, 0.9);
+        }
+
+        .modal-content {
+            background-color: #0a0a0a;
+            margin: 2% auto;
+            padding: 30px;
+            border: 1px solid #333;
+            border-radius: 5px;
+            width: 90%;
+            max-width: 1000px;
+            max-height: 85vh;
+            overflow-y: auto;
+            color: #e0e0e0;
+        }
+
+        .close {
+            color: #666;
+            float: right;
+            font-size: 32px;
+            font-weight: bold;
+            line-height: 20px;
+            cursor: pointer;
+            transition: color 0.2s;
+        }
+
+        .close:hover,
+        .close:focus {
+            color: #00ff00;
+        }
+
+        .modal-content h1 {
+            color: #00ff00;
+            margin-top: 10px;
+        }
+
+        .modal-content h2 {
+            color: #00aaff;
+            margin-top: 20px;
+            margin-bottom: 10px;
+        }
+
+        .modal-content h3 {
+            color: #00aaff;
+            margin-top: 15px;
+            margin-bottom: 8px;
+        }
+
+        .modal-content p {
+            margin: 10px 0;
+            line-height: 1.6;
+        }
+
+        .modal-content code {
+            background: #111;
+            padding: 2px 6px;
+            border-radius: 3px;
+            color: #00ff00;
+            font-family: 'Courier New', monospace;
+        }
+
+        .modal-content pre {
+            background: #111;
+            border: 1px solid #333;
+            border-radius: 3px;
+            padding: 15px;
+            overflow-x: auto;
+            margin: 10px 0;
+        }
+
+        .modal-content pre code {
+            background: transparent;
+            padding: 0;
+        }
+
+        .modal-content a {
+            color: #00aaff;
+            text-decoration: none;
+        }
+
+        .modal-content a:hover {
+            text-decoration: underline;
+        }
+
+        .modal-content ul, .modal-content ol {
+            margin: 10px 0;
+            padding-left: 30px;
+        }
+
+        .modal-content li {
+            margin: 5px 0;
+        }
+
         @media (max-width: 768px) {
             body {
                 padding: 20px 15px;
@@ -194,6 +315,12 @@
 
             .link {
                 text-align: center;
+            }
+
+            .modal-content {
+                width: 95%;
+                padding: 20px;
+                margin: 5% auto;
             }
         }
     </style>
@@ -264,6 +391,7 @@
                 <div class="endpoint-url">https://connect-cdn.itzmrz.xyz/free_labs.json</div>
                 <div class="endpoint-label">Free lab slots by day/time (~387 KB, generated on semester change)</div>
             </div>
+            <button class="readme-btn" onclick="openReadme()">📖 View README.md</button>
         </div>
 
         <!-- Usage -->
@@ -317,6 +445,16 @@ print(data['metadata'])</pre>
                 <a href="https://usis-cdn.eniamza.com/connect.json" style="color: #00aaff; text-decoration: none;">usis-cdn.eniamza.com</a>
             </span>
         </footer>
+    </div>
+
+    <!-- README Modal -->
+    <div id="readmeModal" class="modal">
+        <div class="modal-content">
+            <span class="close" onclick="closeReadme()">&times;</span>
+            <div id="readmeContent">
+                <p style="text-align: center; color: #666;">Loading README...</p>
+            </div>
+        </div>
     </div>
 
     <script>
@@ -395,6 +533,59 @@ print(data['metadata'])</pre>
         }
 
         loadData();
+
+        // README Modal Functions
+        async function openReadme() {
+            const modal = document.getElementById('readmeModal');
+            modal.style.display = 'block';
+            
+            const content = document.getElementById('readmeContent');
+            content.innerHTML = '<p style="text-align: center; color: #666;">Loading README...</p>';
+            
+            try {
+                // Fetch README from GitHub
+                const response = await fetch('https://api.github.com/repos/itzMRZ/mrz-connect-cdn/readme', {
+                    headers: {
+                        'Accept': 'application/vnd.github.v3.html'
+                    }
+                });
+                
+                if (!response.ok) throw new Error('Failed to load README');
+                
+                const html = await response.text();
+                content.innerHTML = html;
+                
+            } catch (error) {
+                console.error('Error loading README:', error);
+                content.innerHTML = `
+                    <p style="text-align: center; color: #ff0000;">Failed to load README</p>
+                    <p style="text-align: center;">
+                        <a href="https://github.com/itzMRZ/mrz-connect-cdn#readme" target="_blank" style="color: #00aaff;">
+                            View on GitHub →
+                        </a>
+                    </p>
+                `;
+            }
+        }
+
+        function closeReadme() {
+            document.getElementById('readmeModal').style.display = 'none';
+        }
+
+        // Close modal when clicking outside of it
+        window.onclick = function(event) {
+            const modal = document.getElementById('readmeModal');
+            if (event.target == modal) {
+                closeReadme();
+            }
+        }
+
+        // Close modal with Escape key
+        document.addEventListener('keydown', function(event) {
+            if (event.key === 'Escape') {
+                closeReadme();
+            }
+        });
     </script>
 </body>
 </html>
