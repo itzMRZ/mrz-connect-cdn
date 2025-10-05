@@ -9,11 +9,25 @@ Course and exam data API with automatic updates and backups.
 - **GitHub**: https://github.com/itzmrz/mrz-connect-cdn
 - **Source Data**: https://usis-cdn.eniamza.com/connect.json
 
-## API Endpoints
+## 📡 API Endpoints
 
+### Current Data
 ```
-https://connect-cdn.itzmrz.xyz/connect.json      (~3.4 MB, gzipped to 137 KB)
-https://connect-cdn.itzmrz.xyz/exams.json        (~516 KB, gzipped to 20 KB)
+https://connect-cdn.itzmrz.xyz/connect.json         # Full course data (~3.4 MB)
+https://connect-cdn.itzmrz.xyz/exams.json           # Exam schedules (~516 KB)
+https://connect-cdn.itzmrz.xyz/connect_backup.json  # Backups index
+```
+
+### Current Semester Backup
+```
+https://connect-cdn.itzmrz.xyz/backups/curr_Fall2025_connect.json
+```
+
+### Historical Backups
+```
+https://connect-cdn.itzmrz.xyz/backups/20250831_2359_Summer2025_connect.json
+https://connect-cdn.itzmrz.xyz/backups/20250531_2359_Spring2025_connect.json
+# ... see connect_backup.json for full list
 ```
 
 ## Usage

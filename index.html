@@ -185,7 +185,35 @@
 <body>
     <div class="container">
         <h1>$ MRZ Connect CDN</h1>
-        <div class="status">Status: <span id="status">Loading...</span></div>
+        <div class="status">Status: <span id="status">Loading...</span> • Semester: <span id="semester">Loading...</span></div>
+
+        <!-- Stats -->
+        <div class="section">
+            <h2>// Current Data</h2>
+            <div id="stats-container">
+                <div class="info">Loading statistics...</div>
+            </div>
+        </div>
+
+        <!-- CDN Links -->
+        <div class="section">
+            <h2>// CDN Links</h2>
+            <div class="links">
+                <a href="https://connect-cdn.itzmrz.xyz/connect.json" class="link" target="_blank">view connect.json</a>
+                <a href="https://connect-cdn.itzmrz.xyz/exams.json" class="link" target="_blank">view exams.json</a>
+                <a href="https://connect-cdn.itzmrz.xyz/connect_backup.json" class="link" target="_blank">view backups index</a>
+                <a href="backups.html" class="link">all backups</a>
+            </div>
+        </div>
+
+        <!-- Downloads -->
+        <div class="section">
+            <h2>// Downloads</h2>
+            <div class="links">
+                <a href="connect.json" class="link" download>download connect.json</a>
+                <a href="exams.json" class="link" download>download exams.json</a>
+            </div>
+        </div>
 
         <!-- API Endpoints -->
         <div class="section">
@@ -197,6 +225,10 @@
             <div class="endpoint">
                 <div class="endpoint-url">https://connect-cdn.itzmrz.xyz/exams.json</div>
                 <div class="endpoint-label">Exam schedules only (~516 KB, auto-compressed to 20 KB)</div>
+            </div>
+            <div class="endpoint">
+                <div class="endpoint-url">https://connect-cdn.itzmrz.xyz/connect_backup.json</div>
+                <div class="endpoint-label">Backups index with all historical data links</div>
             </div>
         </div>
 
@@ -241,34 +273,6 @@ print(data['metadata'])</pre>
             </div>
         </div>
 
-        <!-- Stats -->
-        <div class="section">
-            <h2>// Current Data</h2>
-            <div id="stats-container">
-                <div class="info">Loading statistics...</div>
-            </div>
-        </div>
-
-        <!-- CDN -->
-        <div class="section">
-            <h2>// CDN</h2>
-            <div class="links">
-                <a href="https://connect-cdn.itzmrz.xyz/connect.json" class="link" target="_blank">connect.json</a>
-                <a href="https://connect-cdn.itzmrz.xyz/connect.json.gz" class="link" target="_blank">connect.json.gz</a>
-                <a href="https://connect-cdn.itzmrz.xyz/exams.json" class="link" target="_blank">exams.json</a>
-                <a href="https://connect-cdn.itzmrz.xyz/exams.json.gz" class="link" target="_blank">exams.json.gz</a>
-            </div>
-        </div>
-
-        <!-- Downloads -->
-        <div class="section">
-            <h2>// Downloads</h2>
-            <div class="links">
-                <a href="connect.json" class="link" download>connect.json</a>
-                <a href="exams.json" class="link" download>exams.json</a>
-                <a href="backups.html" class="link">backups</a>
-            </div>
-        </div>
 
         <footer>
             Auto-updates every 7 days • Backups on semester change • Fall 2025
@@ -291,6 +295,18 @@ print(data['metadata'])</pre>
                 const m = data.metadata;
                 
                 document.getElementById('status').textContent = 'Online';
+                
+                // Detect semester from mid exam start date
+                let semester = 'Unknown';
+                if (m.midExamStartDate) {
+                    const date = new Date(m.midExamStartDate);
+                    const month = date.getMonth() + 1;
+                    const year = date.getFullYear();
+                    if (month >= 1 && month <= 4) semester = `Spring ${year}`;
+                    else if (month >= 5 && month <= 8) semester = `Summer ${year}`;
+                    else semester = `Fall ${year}`;
+                }
+                document.getElementById('semester').textContent = semester;
                 
                 const formatDate = (d) => d ? new Date(d).toLocaleDateString('en-US', { 
                     month: 'short', day: 'numeric', year: 'numeric' 
