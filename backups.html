@@ -163,12 +163,12 @@
             const container = document.getElementById('backups');
             
             try {
-                // Try to fetch backups directory via GitHub API
-                const pathParts = window.location.pathname.split('/').filter(p => p);
-                const username = window.location.hostname.split('.')[0];
-                const repo = pathParts[0] || 'mrz-cdn';
+                // Hardcoded repository info for reliability
+                const username = 'itzMRZ';
+                const repo = 'mrz-connect-cdn';
                 
                 const apiUrl = `https://api.github.com/repos/${username}/${repo}/contents/backups`;
+                console.log('Fetching from:', apiUrl);
                 const response = await fetch(apiUrl);
                 
                 if (!response.ok) {
