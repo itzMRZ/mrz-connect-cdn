@@ -1,0 +1,401 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/svg+xml" href="favicon.svg">
+    <title>Free Labs - MRZ Connect CDN</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Courier New', monospace;
+            background: #0a0a0a;
+            color: #e0e0e0;
+            padding: 40px 20px;
+            font-size: 14px;
+            line-height: 1.6;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        h1 {
+            color: #00ff00;
+            font-size: 1.8em;
+            margin-bottom: 10px;
+            font-weight: normal;
+        }
+
+        .back-link {
+            color: #00aaff;
+            text-decoration: none;
+            margin-bottom: 30px;
+            display: inline-block;
+        }
+
+        .back-link:hover {
+            text-decoration: underline;
+        }
+
+        .info {
+            background: #1a1a1a;
+            border-left: 3px solid #00aaff;
+            padding: 12px;
+            margin: 20px 0;
+            color: #aaa;
+        }
+
+        .stats {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+            gap: 10px;
+            margin-bottom: 20px;
+        }
+
+        .stat {
+            background: #111;
+            border: 1px solid #333;
+            padding: 12px;
+            border-radius: 3px;
+        }
+
+        .stat-label {
+            color: #666;
+            font-size: 0.85em;
+        }
+
+        .stat-value {
+            color: #00ff00;
+            font-size: 1.2em;
+            margin-top: 3px;
+        }
+
+        .filters {
+            margin: 20px 0;
+            display: flex;
+            gap: 10px;
+            flex-wrap: wrap;
+        }
+
+        .filter-btn {
+            background: #111;
+            border: 1px solid #333;
+            color: #00aaff;
+            padding: 8px 16px;
+            border-radius: 3px;
+            cursor: pointer;
+            transition: all 0.2s;
+        }
+
+        .filter-btn:hover {
+            background: #00aaff;
+            color: #0a0a0a;
+        }
+
+        .filter-btn.active {
+            background: #00ff00;
+            color: #0a0a0a;
+            border-color: #00ff00;
+        }
+
+        .labs-container {
+            margin-top: 20px;
+        }
+
+        .lab-card {
+            background: #111;
+            border: 1px solid #333;
+            padding: 15px;
+            margin-bottom: 15px;
+            border-radius: 3px;
+        }
+
+        .lab-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 10px;
+            flex-wrap: wrap;
+            gap: 10px;
+        }
+
+        .lab-room {
+            color: #00ff00;
+            font-size: 1.2em;
+        }
+
+        .lab-stats {
+            display: flex;
+            gap: 15px;
+            font-size: 0.9em;
+        }
+
+        .lab-stat-item {
+            color: #666;
+        }
+
+        .lab-stat-item span {
+            color: #00aaff;
+        }
+
+        .departments {
+            display: flex;
+            gap: 5px;
+            margin: 10px 0;
+            flex-wrap: wrap;
+        }
+
+        .dept-badge {
+            background: #1a1a1a;
+            border: 1px solid #00aaff;
+            color: #00aaff;
+            padding: 2px 8px;
+            border-radius: 3px;
+            font-size: 0.85em;
+        }
+
+        .slots-section {
+            margin-top: 10px;
+        }
+
+        .slots-title {
+            color: #00aaff;
+            margin-bottom: 5px;
+            font-size: 0.9em;
+        }
+
+        .time-slots {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+            gap: 5px;
+            margin-top: 5px;
+        }
+
+        .time-slot {
+            background: #0a0a0a;
+            border: 1px solid #00ff00;
+            padding: 5px 8px;
+            border-radius: 3px;
+            font-size: 0.85em;
+            color: #00ff00;
+        }
+
+        .no-labs {
+            text-align: center;
+            padding: 40px;
+            color: #666;
+        }
+
+        footer {
+            margin-top: 50px;
+            padding-top: 20px;
+            border-top: 1px solid #333;
+            text-align: center;
+            color: #666;
+            font-size: 0.9em;
+        }
+
+        @media (max-width: 768px) {
+            body {
+                padding: 20px 15px;
+            }
+
+            h1 {
+                font-size: 1.5em;
+            }
+
+            .filters {
+                flex-direction: column;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>$ Free Labs</h1>
+        <a href="index.html" class="back-link">← back</a>
+
+        <div class="info">
+            <strong>Showing free lab time slots for <span id="semester">Loading...</span></strong><br>
+            Updated: <span id="lastUpdated">Loading...</span>
+        </div>
+
+        <div class="stats" id="stats">
+            <div class="stat">
+                <div class="stat-label">Total Labs</div>
+                <div class="stat-value">-</div>
+            </div>
+            <div class="stat">
+                <div class="stat-label">Free Slots</div>
+                <div class="stat-value">-</div>
+            </div>
+            <div class="stat">
+                <div class="stat-label">Occupied Slots</div>
+                <div class="stat-value">-</div>
+            </div>
+            <div class="stat">
+                <div class="stat-label">Avg Utilization</div>
+                <div class="stat-value">-</div>
+            </div>
+        </div>
+
+        <div class="filters">
+            <button class="filter-btn active" data-filter="all">All Labs</button>
+            <button class="filter-btn" data-filter="free">Has Free Slots</button>
+            <button class="filter-btn" data-filter="cse">CSE</button>
+            <button class="filter-btn" data-filter="eee">EEE</button>
+            <button class="filter-btn" data-filter="phy">PHY</button>
+            <button class="filter-btn" data-filter="other">Other</button>
+        </div>
+
+        <div class="labs-container" id="labs">
+            <div class="no-labs">Loading labs data...</div>
+        </div>
+
+        <footer>
+            <a href="https://github.com/itzMRZ/mrz-connect-cdn" style="color: #00ff00; text-decoration: none;">GitHub</a> • 
+            Data source: <a href="https://github.com/eniamza" style="color: #00aaff; text-decoration: none;">@eniamza</a> • 
+            <a href="https://usis-cdn.eniamza.com/connect.json" style="color: #00aaff; text-decoration: none;">usis-cdn.eniamza.com</a>
+        </footer>
+    </div>
+
+    <script>
+        let allLabs = [];
+        let currentFilter = 'all';
+
+        async function loadFreeLabs() {
+            try {
+                const response = await fetch('free_labs.json');
+                if (!response.ok) throw new Error('Failed to load');
+                
+                const data = await response.json();
+                const m = data.metadata;
+                
+                // Update stats
+                document.getElementById('semester').textContent = m.semester || 'Unknown';
+                document.getElementById('lastUpdated').textContent = new Date(m.lastUpdated).toLocaleString();
+                
+                const stats = document.querySelectorAll('.stat-value');
+                stats[0].textContent = m.totalLabs;
+                stats[1].textContent = m.totalFreeSlots;
+                stats[2].textContent = m.totalOccupiedSlots;
+                stats[3].textContent = m.averageUtilization + '%';
+                
+                // Store labs data
+                allLabs = data.labs;
+                
+                // Render labs
+                renderLabs(allLabs);
+                
+            } catch (error) {
+                console.error('Error loading free labs:', error);
+                document.getElementById('labs').innerHTML = `
+                    <div class="no-labs">
+                        Unable to load free labs data.<br>
+                        <span style="font-size: 0.9em; color: #666;">
+                            Make sure free_labs.json exists.
+                        </span>
+                    </div>
+                `;
+            }
+        }
+
+        function renderLabs(labs) {
+            const container = document.getElementById('labs');
+            
+            if (labs.length === 0) {
+                container.innerHTML = '<div class="no-labs">No labs match the current filter.</div>';
+                return;
+            }
+            
+            let html = '';
+            
+            labs.forEach(lab => {
+                html += `
+                    <div class="lab-card">
+                        <div class="lab-header">
+                            <div class="lab-room">${lab.labRoom}</div>
+                            <div class="lab-stats">
+                                <div class="lab-stat-item">Free: <span>${lab.freeSlotCount}</span></div>
+                                <div class="lab-stat-item">Occupied: <span>${lab.occupiedSlotCount}</span></div>
+                                <div class="lab-stat-item">Utilization: <span>${lab.utilizationPercent}%</span></div>
+                            </div>
+                        </div>
+                        
+                        <div class="departments">
+                            ${lab.departments.map(dept => `<span class="dept-badge">${dept}</span>`).join('')}
+                        </div>
+                        
+                        ${lab.freeSlotCount > 0 ? `
+                        <div class="slots-section">
+                            <div class="slots-title">Free Slots:</div>
+                            <div class="time-slots">
+                                ${lab.freeSlots.slice(0, 12).map(slot => 
+                                    `<div class="time-slot">${slot.day.substring(0, 3)}: ${formatTime(slot.startTime)} - ${formatTime(slot.endTime)}</div>`
+                                ).join('')}
+                                ${lab.freeSlots.length > 12 ? `<div class="time-slot">+ ${lab.freeSlots.length - 12} more...</div>` : ''}
+                            </div>
+                        </div>
+                        ` : '<div style="color: #666; margin-top: 10px;">No free slots available</div>'}
+                    </div>
+                `;
+            });
+            
+            container.innerHTML = html;
+        }
+
+        function formatTime(timeStr) {
+            const [h, m] = timeStr.split(':');
+            const hour = parseInt(h);
+            const ampm = hour >= 12 ? 'PM' : 'AM';
+            const hour12 = hour % 12 || 12;
+            return `${hour12}:${m} ${ampm}`;
+        }
+
+        function filterLabs(filterType) {
+            currentFilter = filterType;
+            
+            let filtered = allLabs;
+            
+            if (filterType === 'free') {
+                filtered = allLabs.filter(lab => lab.freeSlotCount > 0);
+            } else if (filterType === 'cse') {
+                filtered = allLabs.filter(lab => lab.departments.includes('CSE'));
+            } else if (filterType === 'eee') {
+                filtered = allLabs.filter(lab => lab.departments.includes('EEE'));
+            } else if (filterType === 'phy') {
+                filtered = allLabs.filter(lab => lab.departments.includes('PHY'));
+            } else if (filterType === 'other') {
+                filtered = allLabs.filter(lab => 
+                    !lab.departments.includes('CSE') && 
+                    !lab.departments.includes('EEE') && 
+                    !lab.departments.includes('PHY')
+                );
+            }
+            
+            renderLabs(filtered);
+        }
+
+        // Filter button handling
+        document.addEventListener('DOMContentLoaded', () => {
+            const filterBtns = document.querySelectorAll('.filter-btn');
+            filterBtns.forEach(btn => {
+                btn.addEventListener('click', () => {
+                    filterBtns.forEach(b => b.classList.remove('active'));
+                    btn.classList.add('active');
+                    filterLabs(btn.dataset.filter);
+                });
+            });
+        });
+
+        loadFreeLabs();
+    </script>
+</body>
+</html>

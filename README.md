@@ -11,23 +11,6 @@ Course and exam data API with automatic updates and backups.
 
 ## 📡 API Endpoints
 
-### `free_labs.json` - Free Lab Slots
-```
-https://connect-cdn.itzmrz.xyz/free_labs.json
-```
-**What it contains:**
-- Day and time slot-based free lab room availability
-- Department assignments for each lab (auto-detected from course usage)
-- Free and occupied time slots for all labs
-- Lab utilization statistics
-- Size: ~387 KB
-
-**Use this for:** Finding free lab rooms, scheduling lab sessions, lab utilization analysis
-
-**Note:** Auto-generated only when semester changes (exam dates differ)
-
----
-
 ### `connect.json` - Full Course Data
 ```
 https://connect-cdn.itzmrz.xyz/connect.json
@@ -40,20 +23,6 @@ https://connect-cdn.itzmrz.xyz/connect.json
 - Size: ~3.4 MB (137 KB gzipped)
 
 **Use this for:** Building course registration tools, seat availability checkers, full course catalogs
-
----
-
-### `exams.json` - Exam Schedules Only
-```
-https://connect-cdn.itzmrz.xyz/exams.json
-```
-**What it contains:**
-- Filtered exam schedule data (no seat/faculty info)
-- Course codes and section names with exam dates/times
-- Metadata: exam date ranges, total exam entries
-- Size: ~516 KB (20 KB gzipped)
-
-**Use this for:** Exam calendars, schedule conflict checkers, exam timetable apps
 
 ---
 
@@ -98,6 +67,37 @@ https://connect-cdn.itzmrz.xyz/backups/20250531_2359_Spring2025_connect.json
 - Same structure as `connect.json`
 
 **Use this for:** Historical analysis, semester comparisons, archival research
+
+---
+
+### `exams.json` - Exam Schedules Only
+```
+https://connect-cdn.itzmrz.xyz/exams.json
+```
+**What it contains:**
+- Filtered exam schedule data (no seat/faculty info)
+- Course codes and section names with exam dates/times
+- Metadata: exam date ranges, total exam entries
+- Size: ~516 KB (20 KB gzipped)
+
+**Use this for:** Exam calendars, schedule conflict checkers, exam timetable apps
+
+---
+
+### `free_labs.json` - Free Lab Slots
+```
+https://connect-cdn.itzmrz.xyz/free_labs.json
+```
+**What it contains:**
+- Day and time slot-based free lab room availability
+- Department assignments for each lab (auto-detected from course usage)
+- Free and occupied time slots for all labs
+- Lab utilization statistics
+- Size: ~387 KB
+
+**Use this for:** Finding free lab rooms, scheduling lab sessions, lab utilization analysis
+
+**Note:** Auto-generated only when semester changes (exam dates differ)
 
 ## Usage
 
