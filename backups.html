@@ -144,7 +144,7 @@
 
         <div class="info">
             Backups are created automatically when mid exam dates change for a new semester.
-            <br>Current semester: <strong>Fall 2025</strong>
+            <br>Current semester: <strong id="currentSemester">Loading...</strong> • Last fetched: <strong id="lastFetched">Loading...</strong>
         </div>
 
         <div class="backups-list" id="backups">
@@ -159,6 +159,44 @@
     </div>
 
     <script>
+        // Load current semester info from connect.json
+        async function loadCurrentInfo() {
+            try {
+                const response = await fetch('connect.json');
+                if (response.ok) {
+                    const data = await response.json();
+                    const m = data.metadata;
+                    
+                    // Detect semester
+                    let semester = 'Unknown';
+                    if (m.midExamStartDate) {
+                        const date = new Date(m.midExamStartDate);
+                        const month = date.getMonth() + 1;
+                        const year = date.getFullYear();
+                        if (month >= 1 && month <= 4) semester = `Spring ${year}`;
+                        else if (month >= 5 && month <= 8) semester = `Summer ${year}`;
+                        else semester = `Fall ${year}`;
+                    }
+                    
+                    document.getElementById('currentSemester').textContent = semester;
+                    
+                    // Format last fetched time
+                    const lastUpdated = new Date(m.lastUpdated);
+                    const fetchedStr = lastUpdated.toLocaleString('en-US', {
+                        month: 'short',
+                        day: 'numeric',
+                        year: 'numeric',
+                        hour: '2-digit',
+                        minute: '2-digit',
+                        timeZoneName: 'short'
+                    });
+                    document.getElementById('lastFetched').textContent = fetchedStr;
+                }
+            } catch (error) {
+                console.error('Error loading current info:', error);
+            }
+        }
+        
         async function loadBackups() {
             const container = document.getElementById('backups');
             
@@ -249,7 +287,8 @@
                             </div>
                             <div class="backup-date">Updates weekly • Ongoing semester</div>
                             <div class="backup-links">
-                                <a href="backups/${backup.file}" class="backup-link" download>connect.json</a>
+                                <a href="https://connect-cdn.itzmrz.xyz/backups/${backup.file}" class="backup-link" target="_blank">view</a>
+                                <a href="backups/${backup.file}" class="backup-link" download>download</a>
                             </div>
                         </div>
                     `;
@@ -287,6 +326,7 @@
             }
         }
 
+        loadCurrentInfo();
         loadBackups();
     </script>
 </body>
