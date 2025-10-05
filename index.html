@@ -509,7 +509,8 @@ print(data['metadata'])</pre>
                     const data = await response.json();
                     // Display watchers + stargazers as a simple metric
                     const count = (data.watchers_count || 0) + (data.stargazers_count || 0);
-                    document.getElementById('visitors').textContent = count > 0 ? `${count}+ interactions` : 'Tracking...';
+                    // Show count even if zero, or display 'Just launched!'
+                    document.getElementById('visitors').textContent = count > 0 ? `${count} GitHub interactions` : 'Just launched! 🚀';
                 }
             } catch (e) {
                 document.getElementById('visitors').textContent = 'N/A';
