@@ -613,30 +613,23 @@ print(data['metadata'])</pre>
             document.getElementById('version').textContent = `${MANUAL_VERSION}.${syncVersion}`;
         }
         
-        // Global visitor counter using CountAPI (free, no signup needed)
-        async function trackVisitor() {
-            try {
-                // Use CountAPI with a unique namespace for your site
-                const namespace = 'itzmrz';
-                const key = 'mrz-connect-cdn';
-                
-                // Hit the counter (increments and returns count)
-                const response = await fetch(`https://api.countapi.xyz/hit/${namespace}/${key}`);
-                
-                if (response.ok) {
-                    const data = await response.json();
-                    const count = data.value || 0;
-                    
-                    // Display global visitor count
-                    document.getElementById('visitors').textContent = `${count.toLocaleString()}+ global visits`;
-                } else {
-                    // Fallback: just show the counter is active
-                    document.getElementById('visitors').textContent = 'Counting visitors...';
-                }
-            } catch (e) {
-                // If API fails, show a friendly message
-                document.getElementById('visitors').textContent = 'Tracking active';
-            }
+        // Visitor tracking - simple and friendly
+        function trackVisitor() {
+            // Show a welcoming message
+            const messages = [
+                'Thanks for visiting! 👋',
+                'Welcome to MRZ CDN! 🚀',
+                'Glad you\'re here! ✨',
+                'Visitor tracking active 📊'
+            ];
+            const randomMsg = messages[Math.floor(Math.random() * messages.length)];
+            document.getElementById('visitors').textContent = randomMsg;
+            
+            // Track visit with invisible badge
+            const trackImg = document.createElement('img');
+            trackImg.src = `https://visitor-badge.laobi.icu/badge?page_id=itzmrz.mrz-connect-cdn`;
+            trackImg.style.display = 'none';
+            document.body.appendChild(trackImg);
         }
         
         // Initialize
