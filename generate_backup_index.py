@@ -6,7 +6,7 @@ Generate connect_backup.json - Static index of all available backups
 import json
 import os
 import glob
-from datetime import datetime
+from datetime import datetime, timezone
 
 SCRIPT_DIR = os.path.dirname(os.path.abspath(__file__))
 BACKUPS_DIR = os.path.join(SCRIPT_DIR, "backups")
@@ -113,7 +113,7 @@ def generate_backup_index():
             "totalBackups": len(backups),
             "currentBackups": sum(1 for b in backups if b['isCurrent']),
             "archivedBackups": sum(1 for b in backups if not b['isCurrent']),
-            "lastUpdated": datetime.utcnow().isoformat() + "Z",
+            "lastUpdated": datetime.now(timezone.utc).isoformat(),
             "cdnBaseUrl": CDN_BASE_URL
         },
         "backups": backups

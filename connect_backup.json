@@ -1,9 +1,9 @@
 {
   "metadata": {
-    "totalBackups": 7,
+    "totalBackups": 6,
     "currentBackups": 1,
-    "archivedBackups": 6,
-    "lastUpdated": "2025-10-05T00:39:15.981348Z",
+    "archivedBackups": 5,
+    "lastUpdated": "2025-10-05T00:49:44.551350Z",
     "cdnBaseUrl": "https://connect-cdn.itzmrz.xyz/backups"
   },
   "backups": [
@@ -30,14 +30,6 @@
       "cdnLink": "https://connect-cdn.itzmrz.xyz/backups/20250531_2359_Spring2025_connect.json",
       "isCurrent": false,
       "filename": "20250531_2359_Spring2025_connect.json"
-    },
-    {
-      "semester": "Fall2025",
-      "totalSections": 2100,
-      "backupTime": "2025-10-05T05:18:00Z",
-      "cdnLink": "https://connect-cdn.itzmrz.xyz/backups/20251005_0518_Fall2025_connect.json",
-      "isCurrent": false,
-      "filename": "20251005_0518_Fall2025_connect.json"
     },
     {
       "semester": "Fall2025",
