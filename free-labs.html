@@ -105,19 +105,35 @@
             border-color: #00ff00;
         }
 
-        .labs-container {
+        .schedule-container {
             margin-top: 20px;
         }
 
-        .lab-card {
+        .day-section {
             background: #111;
             border: 1px solid #333;
             padding: 15px;
-            margin-bottom: 15px;
+            margin-bottom: 20px;
             border-radius: 3px;
         }
 
-        .lab-header {
+        .day-header {
+            color: #00ff00;
+            font-size: 1.3em;
+            margin-bottom: 15px;
+            padding-bottom: 10px;
+            border-bottom: 1px solid #333;
+        }
+
+        .slot-card {
+            background: #0a0a0a;
+            border: 1px solid #333;
+            padding: 12px;
+            margin-bottom: 10px;
+            border-radius: 3px;
+        }
+
+        .slot-header {
             display: flex;
             justify-content: space-between;
             align-items: center;
@@ -126,39 +142,64 @@
             gap: 10px;
         }
 
-        .lab-room {
-            color: #00ff00;
-            font-size: 1.2em;
+        .slot-time {
+            color: #00aaff;
+            font-size: 1.1em;
         }
 
-        .lab-stats {
+        .slot-counts {
             display: flex;
             gap: 15px;
             font-size: 0.9em;
         }
 
-        .lab-stat-item {
+        .slot-count {
             color: #666;
         }
 
-        .lab-stat-item span {
-            color: #00aaff;
+        .slot-count span {
+            color: #00ff00;
         }
 
-        .departments {
+        .labs-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+            gap: 8px;
+            margin-top: 10px;
+        }
+
+        .lab-item {
+            background: #1a1a1a;
+            border: 1px solid #333;
+            padding: 8px 12px;
+            border-radius: 3px;
             display: flex;
-            gap: 5px;
-            margin: 10px 0;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .lab-item.free {
+            border-color: #00ff00;
+        }
+
+        .lab-name {
+            color: #00ff00;
+            font-weight: bold;
+        }
+
+        .dept-badges {
+            display: flex;
+            gap: 3px;
             flex-wrap: wrap;
         }
 
         .dept-badge {
-            background: #1a1a1a;
+            background: #0a0a0a;
             border: 1px solid #00aaff;
             color: #00aaff;
-            padding: 2px 8px;
+            padding: 1px 6px;
             border-radius: 3px;
-            font-size: 0.85em;
+            font-size: 0.75em;
         }
 
         .slots-section {
@@ -247,16 +288,17 @@
         </div>
 
         <div class="filters">
-            <button class="filter-btn active" data-filter="all">All Labs</button>
-            <button class="filter-btn" data-filter="free">Has Free Slots</button>
-            <button class="filter-btn" data-filter="cse">CSE</button>
-            <button class="filter-btn" data-filter="eee">EEE</button>
-            <button class="filter-btn" data-filter="phy">PHY</button>
-            <button class="filter-btn" data-filter="other">Other</button>
+            <button class="filter-btn active" data-filter="all">All Days</button>
+            <button class="filter-btn" data-filter="SATURDAY">Saturday</button>
+            <button class="filter-btn" data-filter="SUNDAY">Sunday</button>
+            <button class="filter-btn" data-filter="MONDAY">Monday</button>
+            <button class="filter-btn" data-filter="TUESDAY">Tuesday</button>
+            <button class="filter-btn" data-filter="WEDNESDAY">Wednesday</button>
+            <button class="filter-btn" data-filter="THURSDAY">Thursday</button>
         </div>
 
-        <div class="labs-container" id="labs">
-            <div class="no-labs">Loading labs data...</div>
+        <div class="schedule-container" id="schedule">
+            <div class="no-labs">Loading schedule...</div>
         </div>
 
         <footer>
@@ -267,7 +309,7 @@
     </div>
 
     <script>
-        let allLabs = [];
+        let scheduleData = null;
         let currentFilter = 'all';
 
         async function loadFreeLabs() {
@@ -288,15 +330,15 @@
                 stats[2].textContent = m.totalOccupiedSlots;
                 stats[3].textContent = m.averageUtilization + '%';
                 
-                // Store labs data
-                allLabs = data.labs;
+                // Store schedule data
+                scheduleData = data.schedule;
                 
-                // Render labs
-                renderLabs(allLabs);
+                // Render schedule
+                renderSchedule(scheduleData);
                 
             } catch (error) {
                 console.error('Error loading free labs:', error);
-                document.getElementById('labs').innerHTML = `
+                document.getElementById('schedule').innerHTML = `
                     <div class="no-labs">
                         Unable to load free labs data.<br>
                         <span style="font-size: 0.9em; color: #666;">
@@ -307,45 +349,62 @@
             }
         }
 
-        function renderLabs(labs) {
-            const container = document.getElementById('labs');
+        function renderSchedule(schedule, filterDay = null) {
+            const container = document.getElementById('schedule');
             
-            if (labs.length === 0) {
-                container.innerHTML = '<div class="no-labs">No labs match the current filter.</div>';
+            if (!schedule) {
+                container.innerHTML = '<div class="no-labs">No schedule data.</div>';
                 return;
             }
             
             let html = '';
+            const days = filterDay ? [filterDay] : Object.keys(schedule);
             
-            labs.forEach(lab => {
+            days.forEach(day => {
+                const slots = schedule[day];
                 html += `
-                    <div class="lab-card">
-                        <div class="lab-header">
-                            <div class="lab-room">${lab.labRoom}</div>
-                            <div class="lab-stats">
-                                <div class="lab-stat-item">Free: <span>${lab.freeSlotCount}</span></div>
-                                <div class="lab-stat-item">Occupied: <span>${lab.occupiedSlotCount}</span></div>
-                                <div class="lab-stat-item">Utilization: <span>${lab.utilizationPercent}%</span></div>
-                            </div>
-                        </div>
-                        
-                        <div class="departments">
-                            ${lab.departments.map(dept => `<span class="dept-badge">${dept}</span>`).join('')}
-                        </div>
-                        
-                        ${lab.freeSlotCount > 0 ? `
-                        <div class="slots-section">
-                            <div class="slots-title">Free Slots:</div>
-                            <div class="time-slots">
-                                ${lab.freeSlots.slice(0, 12).map(slot => 
-                                    `<div class="time-slot">${slot.day.substring(0, 3)}: ${formatTime(slot.startTime)} - ${formatTime(slot.endTime)}</div>`
-                                ).join('')}
-                                ${lab.freeSlots.length > 12 ? `<div class="time-slot">+ ${lab.freeSlots.length - 12} more...</div>` : ''}
-                            </div>
-                        </div>
-                        ` : '<div style="color: #666; margin-top: 10px;">No free slots available</div>'}
-                    </div>
+                    <div class="day-section">
+                        <div class="day-header">${day}</div>
                 `;
+                
+                Object.keys(slots).forEach(slotKey => {
+                    const slot = slots[slotKey];
+                    const freeCount = slot.freeLabs.length;
+                    const occupiedCount = slot.occupiedLabs.length;
+                    
+                    html += `
+                        <div class="slot-card">
+                            <div class="slot-header">
+                                <div class="slot-time">${formatTime(slot.startTime)} - ${formatTime(slot.endTime)}</div>
+                                <div class="slot-counts">
+                                    <div class="slot-count">Free: <span>${freeCount}</span></div>
+                                    <div class="slot-count">Occupied: <span>${occupiedCount}</span></div>
+                                </div>
+                            </div>
+                    `;
+                    
+                    if (freeCount > 0) {
+                        html += `
+                            <div style="color: #00aaff; margin: 8px 0; font-size: 0.9em;">Free Labs:</div>
+                            <div class="labs-grid">
+                                ${slot.freeLabs.map(lab => `
+                                    <div class="lab-item free">
+                                        <span class="lab-name">${lab.labRoom}</span>
+                                        <div class="dept-badges">
+                                            ${lab.departments.map(dept => `<span class="dept-badge">${dept}</span>`).join('')}
+                                        </div>
+                                    </div>
+                                `).join('')}
+                            </div>
+                        `;
+                    } else {
+                        html += '<div style="color: #666; margin-top: 8px;">No free labs</div>';
+                    }
+                    
+                    html += '</div>';
+                });
+                
+                html += '</div>';
             });
             
             container.innerHTML = html;
@@ -359,28 +418,14 @@
             return `${hour12}:${m} ${ampm}`;
         }
 
-        function filterLabs(filterType) {
+        function filterSchedule(filterType) {
             currentFilter = filterType;
             
-            let filtered = allLabs;
-            
-            if (filterType === 'free') {
-                filtered = allLabs.filter(lab => lab.freeSlotCount > 0);
-            } else if (filterType === 'cse') {
-                filtered = allLabs.filter(lab => lab.departments.includes('CSE'));
-            } else if (filterType === 'eee') {
-                filtered = allLabs.filter(lab => lab.departments.includes('EEE'));
-            } else if (filterType === 'phy') {
-                filtered = allLabs.filter(lab => lab.departments.includes('PHY'));
-            } else if (filterType === 'other') {
-                filtered = allLabs.filter(lab => 
-                    !lab.departments.includes('CSE') && 
-                    !lab.departments.includes('EEE') && 
-                    !lab.departments.includes('PHY')
-                );
+            if (filterType === 'all') {
+                renderSchedule(scheduleData);
+            } else {
+                renderSchedule(scheduleData, filterType);
             }
-            
-            renderLabs(filtered);
         }
 
         // Filter button handling
@@ -390,7 +435,7 @@
                 btn.addEventListener('click', () => {
                     filterBtns.forEach(b => b.classList.remove('active'));
                     btn.classList.add('active');
-                    filterLabs(btn.dataset.filter);
+                    filterSchedule(btn.dataset.filter);
                 });
             });
         });

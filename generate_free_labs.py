@@ -138,66 +138,53 @@ def analyze_lab_usage(sections: List[Dict]) -> Dict:
     return lab_occupancy, lab_departments
 
 
-def find_free_slots(lab_occupancy: Dict, lab_departments: Dict) -> List[Dict]:
-    """Find free time slots for each lab."""
+def find_free_slots(lab_occupancy: Dict, lab_departments: Dict) -> Dict:
+    """Find free time slots organized by day and time slot."""
     
-    free_labs = []
+    # Structure: {day: {slot: {free: [{lab, depts}], occupied: [{lab, course, dept}]}}}
+    slots_data = {}
     
-    for lab_room in sorted(lab_occupancy.keys()):
-        lab_data = {
-            'labRoom': lab_room,
-            'departments': sorted(list(lab_departments[lab_room])),
-            'freeSlots': [],
-            'occupiedSlots': []
-        }
+    for day in DAYS:
+        slots_data[day] = {}
         
-        # Analyze each day
-        for day in DAYS:
-            occupied_times = lab_occupancy[lab_room].get(day, [])
+        for slot_start, slot_end in TIME_SLOTS:
+            slot_key = f"{slot_start}-{slot_end}"
+            slots_data[day][slot_key] = {
+                'startTime': slot_start,
+                'endTime': slot_end,
+                'freeLabs': [],
+                'occupiedLabs': []
+            }
             
-            # Check each time slot
-            for slot_start, slot_end in TIME_SLOTS:
+            # Check each lab for this day/slot
+            for lab_room in sorted(lab_occupancy.keys()):
+                occupied_times = lab_occupancy[lab_room].get(day, [])
                 is_free = True
+                occupied_info = None
                 
                 # Check if this slot overlaps with any occupied time
                 for occupied in occupied_times:
-                    if time_overlaps(slot_start, slot_end, 
+                    if time_overlaps(slot_start, slot_end,
                                    occupied['startTime'], occupied['endTime']):
                         is_free = False
-                        
-                        # Add to occupied slots
-                        lab_data['occupiedSlots'].append({
-                            'day': day,
-                            'startTime': slot_start,
-                            'endTime': slot_end,
-                            'courseCode': occupied['courseCode'],
-                            'sectionName': occupied['sectionName'],
-                            'department': occupied['department']
-                        })
+                        occupied_info = occupied
                         break
                 
                 if is_free:
-                    lab_data['freeSlots'].append({
-                        'day': day,
-                        'startTime': slot_start,
-                        'endTime': slot_end
+                    slots_data[day][slot_key]['freeLabs'].append({
+                        'labRoom': lab_room,
+                        'departments': sorted(list(lab_departments[lab_room]))
                     })
-        
-        # Calculate statistics
-        total_slots = len(DAYS) * len(TIME_SLOTS)
-        lab_data['totalSlots'] = total_slots
-        lab_data['freeSlotCount'] = len(lab_data['freeSlots'])
-        lab_data['occupiedSlotCount'] = len(lab_data['occupiedSlots'])
-        lab_data['utilizationPercent'] = round(
-            (lab_data['occupiedSlotCount'] / total_slots * 100), 2
-        )
-        
-        free_labs.append(lab_data)
+                else:
+                    slots_data[day][slot_key]['occupiedLabs'].append({
+                        'labRoom': lab_room,
+                        'departments': sorted(list(lab_departments[lab_room])),
+                        'courseCode': occupied_info['courseCode'],
+                        'sectionName': occupied_info['sectionName'],
+                        'department': occupied_info['department']
+                    })
     
-    # Sort by lab room name
-    free_labs.sort(key=lambda x: x['labRoom'])
-    
-    return free_labs
+    return slots_data
 
 
 def generate_free_labs_json():
@@ -228,28 +215,35 @@ def generate_free_labs_json():
     
     # Find free slots
     print("\nFinding free time slots...")
-    free_labs = find_free_slots(lab_occupancy, lab_departments)
+    slots_data = find_free_slots(lab_occupancy, lab_departments)
     
     # Calculate overall statistics
-    total_labs = len(free_labs)
-    total_free_slots = sum(lab['freeSlotCount'] for lab in free_labs)
-    total_occupied_slots = sum(lab['occupiedSlotCount'] for lab in free_labs)
-    avg_utilization = sum(lab['utilizationPercent'] for lab in free_labs) / total_labs if total_labs > 0 else 0
+    total_labs = len(lab_occupancy)
+    total_free_count = 0
+    total_occupied_count = 0
+    
+    for day in slots_data:
+        for slot_key in slots_data[day]:
+            total_free_count += len(slots_data[day][slot_key]['freeLabs'])
+            total_occupied_count += len(slots_data[day][slot_key]['occupiedLabs'])
+    
+    total_possible = total_labs * len(DAYS) * len(TIME_SLOTS)
+    avg_utilization = (total_occupied_count / total_possible * 100) if total_possible > 0 else 0
     
     # Create output structure
     output = {
         'metadata': {
             'semester': get_current_semester(metadata.get('midExamStartDate')),
             'totalLabs': total_labs,
-            'totalFreeSlots': total_free_slots,
-            'totalOccupiedSlots': total_occupied_slots,
+            'totalFreeSlots': total_free_count,
+            'totalOccupiedSlots': total_occupied_count,
             'averageUtilization': round(avg_utilization, 2),
             'timeSlots': TIME_SLOTS,
             'days': DAYS,
             'lastUpdated': datetime.now(timezone.utc).isoformat(),
             'sourceDataUpdated': metadata.get('lastUpdated')
         },
-        'labs': free_labs
+        'schedule': slots_data
     }
     
     # Write to file
@@ -259,9 +253,9 @@ def generate_free_labs_json():
     
     file_size = os.path.getsize(output_path) / 1024
     
-    print(f"\n✓ free_labs.json created ({file_size:.1f} KB)")
+    print(f"\n\u2713 free_labs.json created ({file_size:.1f} KB)")
     print(f"  Total labs: {total_labs}")
-    print(f"  Total free slots: {total_free_slots}")
+    print(f"  Total free slot entries: {total_free_count}")
     print(f"  Average utilization: {avg_utilization:.1f}%")
     print("\n" + "=" * 60)
     
