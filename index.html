@@ -23,179 +23,292 @@
     
     <title>MRZ Connect CDN</title>
     <style>
-        * {
+        /* CSS Variables for consistent theming */
+        :root {
+            color-scheme: dark;
+            
+            /* Eye-soothing color palette */
+            --bg-primary: #1a1a1a;
+            --bg-secondary: #262626;
+            --bg-tertiary: #1c1c1c;
+            --border-primary: #30363d;
+            --border-accent: #58a6ff;
+            --border-success: #56d364;
+            
+            --text-primary: #c9d1d9;
+            --text-secondary: #8b949e;
+            --text-accent: #79c0ff;
+            --text-link: #58a6ff;
+            --text-success: #56d364;
+            
+            /* Spacing */
+            --space-xs: clamp(4px, 0.5vw, 6px);
+            --space-sm: clamp(8px, 1vw, 12px);
+            --space-md: clamp(12px, 1.5vw, 16px);
+            --space-lg: clamp(16px, 2vw, 24px);
+            --space-xl: clamp(20px, 2.5vw, 32px);
+            --space-2xl: clamp(32px, 4vw, 48px);
+            
+            /* Radius */
+            --radius-sm: 3px;
+            --radius-md: 6px;
+            --radius-lg: 12px;
+        }
+        
+        /* Reset & Base Styles */
+        *, *::before, *::after {
             margin: 0;
             padding: 0;
             box-sizing: border-box;
         }
+        
+        html {
+            -webkit-text-size-adjust: 100%;
+            text-size-adjust: 100%;
+        }
 
         body {
             font-family: 'Courier New', monospace;
-            background: #0a0a0a;
-            color: #e0e0e0;
-            padding: 40px 20px;
-            font-size: 14px;
+            background: var(--bg-primary);
+            color: var(--text-primary);
+            padding: clamp(16px, 4vw, 40px) clamp(12px, 3vw, 20px);
+            font-size: clamp(13px, 1.8vw, 14px);
             line-height: 1.6;
+            letter-spacing: 0.01em;
         }
 
         .container {
-            max-width: 900px;
+            width: 100%;
+            max-width: 1200px;
             margin: 0 auto;
+            padding-left: max(0px, env(safe-area-inset-left));
+            padding-right: max(0px, env(safe-area-inset-right));
         }
 
         h1 {
-            color: #00ff00;
-            font-size: 1.8em;
-            margin-bottom: 10px;
+            color: var(--text-link);
+            font-size: clamp(1.3em, 4vw, 1.8em);
+            margin-bottom: clamp(8px, 2vw, 10px);
             font-weight: normal;
+            line-height: 1.2;
+            letter-spacing: -0.01em;
         }
 
         .status {
-            color: #888;
-            margin-bottom: 30px;
+            color: var(--text-secondary);
+            margin-bottom: var(--space-xl);
+            font-size: clamp(12px, 1.6vw, 14px);
+            display: flex;
+            flex-wrap: wrap;
+            gap: clamp(8px, 1.5vw, 12px);
+            align-items: center;
         }
 
         .status span {
-            color: #00ff00;
+            color: var(--text-success);
+        }
+        
+        .status-item {
+            display: inline-flex;
+            align-items: center;
         }
 
         .section {
-            margin-bottom: 40px;
+            margin-bottom: var(--space-2xl);
         }
 
         .section h2 {
-            color: #00aaff;
-            font-size: 1.2em;
-            margin-bottom: 15px;
+            color: var(--text-link);
+            font-size: clamp(1.1em, 3vw, 1.3em);
+            margin-bottom: var(--space-lg);
             font-weight: normal;
+            line-height: 1.3;
         }
 
         .endpoint {
-            background: #111;
-            border: 1px solid #333;
-            padding: 12px;
-            margin-bottom: 10px;
-            border-radius: 3px;
+            background: var(--bg-secondary);
+            border: 1px solid var(--border-primary);
+            padding: clamp(10px, 2.5vw, 14px);
+            margin-bottom: var(--space-md);
+            border-radius: var(--radius-md);
+            transition: transform 0.2s ease, box-shadow 0.2s ease;
+        }
+        
+        .endpoint:hover {
+            transform: translateY(-1px);
+            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.3);
         }
 
         .endpoint-url {
-            color: #00aaff;
+            color: var(--text-accent);
             word-break: break-all;
             display: block;
             margin-bottom: 5px;
+            font-size: clamp(12px, 1.6vw, 14px);
         }
 
         .endpoint-label {
-            color: #666;
-            font-size: 0.85em;
+            color: var(--text-secondary);
+            font-size: clamp(11px, 1.4vw, 12px);
         }
 
         .code-block {
-            background: #111;
-            border: 1px solid #333;
-            border-radius: 3px;
-            padding: 15px;
-            margin: 10px 0;
+            background: var(--bg-secondary);
+            border: 1px solid var(--border-primary);
+            border-radius: var(--radius-md);
+            padding: clamp(12px, 2.5vw, 15px);
+            margin: var(--space-md) 0;
             overflow-x: auto;
         }
 
         .code-block pre {
-            color: #e0e0e0;
-            font-size: 0.9em;
+            color: var(--text-primary);
+            font-size: clamp(12px, 1.6vw, 13px);
+            line-height: 1.5;
         }
 
         .code-block .comment {
-            color: #666;
+            color: var(--text-secondary);
         }
 
         .links {
             display: flex;
-            gap: 15px;
+            gap: clamp(10px, 2vw, 15px);
             flex-wrap: wrap;
-            margin-top: 15px;
+            margin-top: var(--space-md);
         }
 
         .link {
-            color: #00ff00;
+            color: var(--text-success);
             text-decoration: none;
-            border: 1px solid #00ff00;
-            padding: 8px 16px;
-            border-radius: 3px;
-            transition: all 0.2s;
+            border: 1px solid var(--border-success);
+            padding: var(--space-sm) var(--space-md);
+            border-radius: var(--radius-md);
+            transition: all 0.2s ease;
+            font-size: clamp(12px, 1.6vw, 14px);
+            display: inline-flex;
+            align-items: center;
+            gap: 6px;
         }
 
         .link:hover {
-            background: #00ff00;
-            color: #0a0a0a;
+            background: var(--text-success);
+            color: var(--bg-primary);
+            transform: translateY(-1px);
+            box-shadow: 0 2px 8px rgba(86, 211, 100, 0.3);
+        }
+        
+        :focus-visible {
+            outline: 2px solid var(--border-accent);
+            outline-offset: 2px;
         }
 
         .info {
-            background: #1a1a1a;
-            border-left: 3px solid #00aaff;
-            padding: 12px;
-            margin: 15px 0;
-            color: #aaa;
+            background: var(--bg-secondary);
+            border-left: 3px solid var(--border-accent);
+            padding: clamp(10px, 2vw, 12px);
+            margin: var(--space-lg) 0;
+            color: var(--text-secondary);
+            border-radius: var(--radius-sm);
+            font-size: clamp(12px, 1.6vw, 14px);
+            line-height: 1.5;
         }
 
         .info code {
-            background: #0a0a0a;
+            background: var(--bg-tertiary);
             padding: 2px 6px;
-            border-radius: 3px;
-            color: #00ff00;
+            border-radius: var(--radius-sm);
+            color: var(--text-success);
             font-family: 'Courier New', monospace;
+        }
+        
+        .info strong {
+            color: var(--text-link);
         }
 
         .stats {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
-            gap: 10px;
-            margin-top: 10px;
+            gap: clamp(8px, 2vw, 12px);
+            margin-bottom: var(--space-xl);
+            grid-template-columns: repeat(2, 1fr);
+        }
+        
+        @media (max-width: 360px) {
+            .stats {
+                grid-template-columns: 1fr;
+            }
+        }
+
+        @media (min-width: 600px) {
+            .stats {
+                grid-template-columns: repeat(4, 1fr);
+            }
         }
 
         .stat {
-            background: #111;
-            border: 1px solid #333;
-            padding: 10px;
-            border-radius: 3px;
+            background: var(--bg-secondary);
+            border: 1px solid var(--border-primary);
+            padding: clamp(10px, 2.5vw, 14px);
+            border-radius: var(--radius-md);
+            transition: transform 0.2s ease, box-shadow 0.2s ease;
+        }
+        
+        .stat:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
         }
 
         .stat-label {
-            color: #666;
-            font-size: 0.85em;
+            color: var(--text-secondary);
+            font-size: clamp(11px, 1.5vw, 12px);
+            margin-bottom: 4px;
         }
 
         .stat-value {
-            color: #00ff00;
-            font-size: 1.1em;
-            margin-top: 3px;
+            color: var(--text-success);
+            font-size: clamp(18px, 3.5vw, 22px);
+            margin-top: 4px;
+            font-weight: bold;
         }
 
         footer {
-            margin-top: 50px;
-            padding-top: 20px;
-            border-top: 1px solid #333;
+            margin-top: clamp(32px, 6vw, 50px);
+            padding-top: var(--space-lg);
+            border-top: 1px solid var(--border-primary);
             text-align: center;
-            color: #666;
-            font-size: 0.9em;
+            color: var(--text-secondary);
+            font-size: clamp(12px, 1.6vw, 13px);
+            line-height: 1.6;
+        }
+        
+        footer a {
+            transition: opacity 0.2s ease;
+        }
+        
+        footer a:hover {
+            opacity: 0.8;
         }
 
         .readme-btn {
             display: inline-block;
-            margin-top: 15px;
-            padding: 10px 20px;
-            background: #111;
-            border: 1px solid #00aaff;
-            color: #00aaff;
+            margin-top: var(--space-md);
+            padding: var(--space-sm) var(--space-lg);
+            background: var(--bg-secondary);
+            border: 1px solid var(--border-accent);
+            color: var(--text-link);
             text-decoration: none;
-            border-radius: 3px;
+            border-radius: var(--radius-md);
             cursor: pointer;
-            transition: all 0.2s;
+            transition: all 0.2s ease;
             font-family: 'Courier New', monospace;
+            font-size: clamp(12px, 1.6vw, 14px);
         }
 
         .readme-btn:hover {
-            background: #00aaff;
-            color: #0a0a0a;
+            background: var(--border-accent);
+            color: var(--bg-primary);
+            transform: translateY(-1px);
+            box-shadow: 0 2px 8px rgba(88, 166, 255, 0.3);
         }
 
         .modal {
@@ -497,23 +610,32 @@ print(data['metadata'])</pre>
             document.getElementById('version').textContent = `${MANUAL_VERSION}.${syncVersion}`;
         }
         
-        // Simple visitor counter using GitHub API (free, no registration needed)
-        async function trackVisitor() {
+        // Simple visitor counter using localStorage
+        function trackVisitor() {
             try {
-                // Use a free counter API (goatcounter.com alternative)
-                // Using GitHub repo views as a simple counter
-                const response = await fetch('https://api.github.com/repos/itzMRZ/mrz-connect-cdn', {
-                    headers: { 'Accept': 'application/vnd.github.v3+json' }
-                });
-                if (response.ok) {
-                    const data = await response.json();
-                    // Display watchers + stargazers as a simple metric
-                    const count = (data.watchers_count || 0) + (data.stargazers_count || 0);
-                    // Show count even if zero, or display 'Just launched!'
-                    document.getElementById('visitors').textContent = count > 0 ? `${count} GitHub interactions` : 'Just launched! 🚀';
+                // Get or initialize visitor count
+                let visits = parseInt(localStorage.getItem('cdn_visitor_count') || '0');
+                
+                // Check if this is a new session (hasn't visited in last 30 minutes)
+                const lastVisit = localStorage.getItem('cdn_last_visit');
+                const now = new Date().getTime();
+                const thirtyMinutes = 30 * 60 * 1000;
+                
+                if (!lastVisit || (now - parseInt(lastVisit)) > thirtyMinutes) {
+                    visits++;
+                    localStorage.setItem('cdn_visitor_count', visits.toString());
+                }
+                
+                localStorage.setItem('cdn_last_visit', now.toString());
+                
+                // Display with a friendly message
+                if (visits === 1) {
+                    document.getElementById('visitors').textContent = 'Your first visit! 🎉';
+                } else {
+                    document.getElementById('visitors').textContent = `${visits} visits from this browser`;
                 }
             } catch (e) {
-                document.getElementById('visitors').textContent = 'N/A';
+                document.getElementById('visitors').textContent = 'Counter unavailable';
             }
         }
         

@@ -631,20 +631,32 @@
     </div>
 
     <script>
-        // Simple visitor tracking
-        async function trackVisitor() {
+        // Simple visitor tracking using localStorage
+        function trackVisitor() {
             try {
-                const response = await fetch('https://api.github.com/repos/itzMRZ/mrz-connect-cdn', {
-                    headers: { 'Accept': 'application/vnd.github.v3+json' }
-                });
-                if (response.ok) {
-                    const data = await response.json();
-                    const count = (data.watchers_count || 0) + (data.stargazers_count || 0);
-                    // Show count even if zero, or display 'Just launched!'
-                    document.getElementById('visitors').textContent = count > 0 ? `${count} GitHub interactions` : 'Just launched! 🚀';
+                // Get or initialize visitor count
+                let visits = parseInt(localStorage.getItem('openlabs_visitor_count') || '0');
+                
+                // Check if this is a new session (hasn't visited in last 30 minutes)
+                const lastVisit = localStorage.getItem('openlabs_last_visit');
+                const now = new Date().getTime();
+                const thirtyMinutes = 30 * 60 * 1000;
+                
+                if (!lastVisit || (now - parseInt(lastVisit)) > thirtyMinutes) {
+                    visits++;
+                    localStorage.setItem('openlabs_visitor_count', visits.toString());
+                }
+                
+                localStorage.setItem('openlabs_last_visit', now.toString());
+                
+                // Display with a friendly message
+                if (visits === 1) {
+                    document.getElementById('visitors').textContent = 'Your first visit! 🎉';
+                } else {
+                    document.getElementById('visitors').textContent = `${visits} visits from this browser`;
                 }
             } catch (e) {
-                document.getElementById('visitors').textContent = 'N/A';
+                document.getElementById('visitors').textContent = 'Counter unavailable';
             }
         }
         
