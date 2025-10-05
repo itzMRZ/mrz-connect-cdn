@@ -156,6 +156,7 @@ def manage_current_backup(metadata: Dict, sections: List[Dict]):
     # Get current semester info
     mid_exam_start = metadata.get('midExamStartDate')
     current_semester = get_current_semester(mid_exam_start)
+    semester_changed = False
     
     print(f"\nCurrent Semester: {current_semester}")
     print(f"Mid Exam Start: {mid_exam_start}")
@@ -176,6 +177,7 @@ def manage_current_backup(metadata: Dict, sections: List[Dict]):
             
             # Check if semester changed (exam dates different)
             if mid_exam_start != old_mid_exam:
+                semester_changed = True
                 print(f"\n📅 Exam dates changed!")
                 print(f"   Old: {old_mid_exam} ({old_semester})")
                 print(f"   New: {mid_exam_start} ({current_semester})")
@@ -198,6 +200,9 @@ def manage_current_backup(metadata: Dict, sections: List[Dict]):
                 print(f"✓ Same semester, updating current backup...")
         except Exception as e:
             print(f"⚠️  Error reading old backup: {e}")
+    else:
+        # No previous backup found, this is a new semester
+        semester_changed = True
     
     # Create new current backup
     curr_backup_name = f"curr_{current_semester}_connect.json"
@@ -215,7 +220,7 @@ def manage_current_backup(metadata: Dict, sections: List[Dict]):
     print(f"\n✓ Created/Updated: {curr_backup_name} ({file_size:.1f} KB)")
     print(f"  This will be renamed when semester ends")
     
-    return curr_backup_name
+    return curr_backup_name, semester_changed
 
 
 def generate_exams_json(sections: List[Dict], output_path: str = "exams.json"):
@@ -317,7 +322,7 @@ def main():
         metadata = calculate_connect_metadata(sections)
         
         # Manage current semester backup
-        curr_backup_name = manage_current_backup(metadata, sections)
+        curr_backup_name, semester_changed = manage_current_backup(metadata, sections)
         
         # Generate both JSON files
         output_data = {
@@ -354,11 +359,28 @@ def main():
         from generate_backup_index import generate_backup_index
         generate_backup_index()
         
+        # Generate free labs CDN if semester changed
+        if semester_changed:
+            print("\n" + "=" * 60)
+            print("🆕 Semester changed - Generating Free Labs CDN")
+            print("=" * 60)
+            try:
+                from generate_free_labs import generate_free_labs_json
+                generate_free_labs_json()
+            except Exception as e:
+                print(f"⚠️  Error generating free labs: {e}")
+                import traceback
+                traceback.print_exc()
+        else:
+            print("\n⏭️  Same semester - Skipping free labs generation")
+        
         print("\n" + "=" * 60)
         print("✓ All files generated successfully!")
         print("=" * 60)
         print(f"\nCurrent semester backup: {curr_backup_name}")
         print("Backup index: connect_backup.json")
+        if semester_changed:
+            print("Free labs CDN: free_labs.json")
         print("\nNext steps:")
         print("1. Review the generated JSON files")
         print("2. Commit and push to GitHub")
