@@ -247,13 +247,13 @@ def generate_free_labs_json():
     }
     
     # Write to file
-    output_path = os.path.join(SCRIPT_DIR, "free_labs.json")
+    output_path = os.path.join(SCRIPT_DIR, "open_labs.json")
     with open(output_path, 'w', encoding='utf-8') as f:
         json.dump(output, f, indent=2, ensure_ascii=False)
     
     file_size = os.path.getsize(output_path) / 1024
     
-    print(f"\n\u2713 free_labs.json created ({file_size:.1f} KB)")
+    print(f"\n\u2713 open_labs.json created ({file_size:.1f} KB)")
     print(f"  Total labs: {total_labs}")
     print(f"  Total free slot entries: {total_free_count}")
     print(f"  Average utilization: {avg_utilization:.1f}%")

@@ -84,18 +84,18 @@ https://connect-cdn.itzmrz.xyz/exams.json
 
 ---
 
-### `free_labs.json` - Free Lab Slots
+### `open_labs.json` - Open Lab Slots
 ```
-https://connect-cdn.itzmrz.xyz/free_labs.json
+https://connect-cdn.itzmrz.xyz/open_labs.json
 ```
 **What it contains:**
-- Day and time slot-based free lab room availability
+- Day and time slot-based open lab room availability
 - Department assignments for each lab (auto-detected from course usage)
-- Free and occupied time slots for all labs
+- Open and occupied time slots for all labs
 - Lab utilization statistics
 - Size: ~387 KB
 
-**Use this for:** Finding free lab rooms, scheduling lab sessions, lab utilization analysis
+**Use this for:** Finding open lab rooms, scheduling lab sessions, lab utilization analysis
 
 **Note:** Auto-generated only when semester changes (exam dates differ)
 

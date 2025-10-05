@@ -380,7 +380,7 @@ def main():
         print(f"\nCurrent semester backup: {curr_backup_name}")
         print("Backup index: connect_backup.json")
         if semester_changed:
-            print("Free labs CDN: free_labs.json")
+            print("Open labs CDN: open_labs.json")
         print("\nNext steps:")
         print("1. Review the generated JSON files")
         print("2. Commit and push to GitHub")

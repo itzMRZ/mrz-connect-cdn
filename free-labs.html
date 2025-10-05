@@ -2,336 +2,583 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Find open lab rooms by day and time. Real-time lab availability with department filters and current slot detection.">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+    <meta name="description" content="If not on your lap, let it be an open lab. All open labs over the week, currently open labs, and department tags. Based on MRZ CDN.">
     <link rel="icon" type="image/svg+xml" href="favicon.svg">
     
-    <!-- Open Graph -->
-    <meta property="og:title" content="Open BRAC University Labs Finder - MRZ Connect CDN">
-    <meta property="og:description" content="Find available lab rooms instantly. Filter by day, check current availability, 50 labs tracked.">
-    <meta property="og:image" content="https://connect-cdn.itzmrz.xyz/banner.png">
-    <meta property="og:url" content="https://connect-cdn.itzmrz.xyz/free-labs.html">
+    <!-- Open Graph Meta Tags -->
     <meta property="og:type" content="website">
-    <meta property="og:logo" content="https://connect-cdn.itzmrz.xyz/favicon.svg">
+    <meta property="og:site_name" content="Open Labs - MRZ CDN">
+    <meta property="og:title" content="</OPEN LABS> - Based on MRZ CDN">
+    <meta property="og:description" content="If not on your lap, let it be an open lab. All open labs over the week, currently open labs, and department tags. Based on MRZ CDN.">
+    <meta property="og:url" content="https://connect-cdn.itzmrz.xyz/open-labs.html">
+    <meta property="og:image" content="https://connect-cdn.itzmrz.xyz/banner.png">
+    <meta property="og:image:secure_url" content="https://connect-cdn.itzmrz.xyz/banner.png">
+    <meta property="og:image:type" content="image/png">
+    <meta property="og:image:width" content="1200">
+    <meta property="og:image:height" content="630">
+    <meta property="og:image:alt" content="Open Labs - All open labs over the week">
+    <meta property="og:locale" content="en_US">
+    <meta property="og:updated_time" content="2025-10-05T14:33:30Z">
     
-    <!-- Twitter Card -->
+    <!-- Twitter Card Meta Tags -->
     <meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:title" content="Open BRAC University Labs Finder - MRZ Connect CDN">
-    <meta name="twitter:description" content="Find available lab rooms instantly. Filter by day, check current availability, 50 labs tracked.">
+    <meta name="twitter:site" content="@itzmrz">
+    <meta name="twitter:creator" content="@itzmrz">
+    <meta name="twitter:title" content="</OPEN LABS> - Based on MRZ CDN">
+    <meta name="twitter:description" content="If not on your lap, let it be an open lab. All open labs over the week, currently open labs, and department tags. Based on MRZ CDN.">
     <meta name="twitter:image" content="https://connect-cdn.itzmrz.xyz/banner.png">
+    <meta name="twitter:image:alt" content="Open Labs - All open labs over the week">
     
-    <title>Free Labs - MRZ Connect CDN</title>
+    <!-- Additional Meta Tags -->
+    <meta name="author" content="itzMRZ - OpenSource">
+    <meta name="robots" content="index, follow">
+    <meta name="keywords" content="BRAC University, open labs, lab availability, currently open labs, department tags, university schedule, open source">
+    
+    <title>Open Labs - MRZ CDN | All Open Labs Over The Week</title>
     <style>
-        * {
+        /* CSS Variables for consistent theming and spacing */
+        :root {
+            color-scheme: dark;
+            
+            /* Colors - preserving original theme */
+            --bg-primary: #1a1a1a;
+            --bg-secondary: #262626;
+            --bg-tertiary: #1c1c1c;
+            --border-primary: #30363d;
+            --border-accent: #58a6ff;
+            --border-success: #56d364;
+            
+            --text-primary: #c9d1d9;
+            --text-secondary: #8b949e;
+            --text-accent: #79c0ff;
+            --text-link: #58a6ff;
+            --text-success: #56d364;
+            
+            /* Spacing - fluid using clamp */
+            --space-xs: clamp(4px, 0.5vw, 6px);
+            --space-sm: clamp(8px, 1vw, 12px);
+            --space-md: clamp(12px, 1.5vw, 16px);
+            --space-lg: clamp(16px, 2vw, 24px);
+            --space-xl: clamp(20px, 2.5vw, 32px);
+            --space-2xl: clamp(32px, 4vw, 48px);
+            
+            /* Radius */
+            --radius-sm: 3px;
+            --radius-md: 6px;
+            --radius-lg: 12px;
+            
+            /* Touch targets */
+            --min-touch-target: 44px;
+        }
+        
+        /* Reset & Base Styles */
+        *, *::before, *::after {
             margin: 0;
             padding: 0;
             box-sizing: border-box;
         }
+        
+        html {
+            -webkit-text-size-adjust: 100%;
+            text-size-adjust: 100%;
+        }
 
         body {
             font-family: 'Courier New', monospace;
-            background: #1a1a1a;
-            color: #c9d1d9;
-            padding: 40px 20px;
-            font-size: 14px;
+            background: var(--bg-primary);
+            color: var(--text-primary);
+            padding: clamp(16px, 4vw, 40px) clamp(12px, 3vw, 20px);
+            font-size: clamp(13px, 1.8vw, 14px);
             line-height: 1.6;
+            letter-spacing: 0.01em;
         }
 
-
+        /* Container with safe-area insets */
         .container {
+            width: 100%;
             max-width: 1200px;
             margin: 0 auto;
+            padding-left: max(0px, env(safe-area-inset-left));
+            padding-right: max(0px, env(safe-area-inset-right));
         }
 
+        /* Fluid Typography */
         h1 {
-            color: #58a6ff;
-            font-size: 1.8em;
-            margin-bottom: 10px;
+            color: var(--text-link);
+            font-size: clamp(1.3em, 4vw, 1.8em);
+            margin-bottom: clamp(8px, 2vw, 10px);
             font-weight: normal;
+            line-height: 1.2;
+            letter-spacing: -0.01em;
         }
 
+        /* Links */
         .back-link {
-            color: #79c0ff;
+            color: var(--text-accent);
             text-decoration: none;
-            margin-bottom: 30px;
+            margin-bottom: var(--space-xl);
             display: inline-block;
+            padding: var(--space-sm);
+            margin-left: calc(var(--space-sm) * -1);
+            min-height: var(--min-touch-target);
+            display: inline-flex;
+            align-items: center;
+            transition: color 0.2s ease;
         }
 
         .back-link:hover {
             text-decoration: underline;
         }
-
-        .info {
-            background: #262626;
-            border-left: 3px solid: #58a6ff;
-            padding: 12px;
-            margin: 20px 0;
-            color: #8b949e;
+        
+        /* Focus styles for accessibility */
+        :focus-visible {
+            outline: 2px solid var(--border-accent);
+            outline-offset: 2px;
         }
 
+        /* Info Banner */
+        .info {
+            background: var(--bg-secondary);
+            border-left: 3px solid var(--border-accent);
+            padding: clamp(10px, 2vw, 12px);
+            margin: var(--space-lg) 0;
+            color: var(--text-secondary);
+            border-radius: var(--radius-sm);
+            font-size: clamp(12px, 1.6vw, 14px);
+            line-height: 1.5;
+        }
+
+        /* Stats Grid - Responsive */
         .stats {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
-            gap: 10px;
-            margin-bottom: 20px;
+            gap: clamp(8px, 2vw, 12px);
+            margin-bottom: var(--space-xl);
+            /* Mobile: 1 column on very small, 2 columns on small */
+            grid-template-columns: 1fr 1fr;
+        }
+        
+        @media (max-width: 360px) {
+            .stats {
+                grid-template-columns: 1fr;
+            }
+        }
+
+        @media (min-width: 600px) {
+            .stats {
+                grid-template-columns: repeat(4, 1fr);
+            }
         }
 
         .stat {
-            background: #262626;
-            border: 1px solid #30363d;
-            padding: 12px;
-            border-radius: 3px;
+            background: var(--bg-secondary);
+            border: 1px solid var(--border-primary);
+            padding: clamp(10px, 2.5vw, 14px);
+            border-radius: var(--radius-md);
+            transition: transform 0.2s ease, box-shadow 0.2s ease;
+        }
+        
+        .stat:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
         }
 
         .stat-label {
-            color: #8b949e;
-            font-size: 0.85em;
+            color: var(--text-secondary);
+            font-size: clamp(11px, 1.5vw, 12px);
+            margin-bottom: 4px;
         }
 
         .stat-value {
-            color: #56d364;
-            font-size: 1.2em;
-            margin-top: 3px;
+            color: var(--text-success);
+            font-size: clamp(18px, 3.5vw, 22px);
+            margin-top: 4px;
+            font-weight: bold;
         }
 
+        /* Filters - Horizontally scrollable on mobile */
         .filters {
-            margin: 20px 0;
+            margin: var(--space-lg) 0;
             display: flex;
-            gap: 10px;
-            flex-wrap: wrap;
-            align-items: center;
+            gap: var(--space-sm);
+            align-items: stretch;
+            overflow-x: auto;
+            overflow-y: hidden;
+            -webkit-overflow-scrolling: touch;
+            overscroll-behavior-x: contain;
+            scroll-snap-type: x proximity;
+            scrollbar-width: thin;
+            scrollbar-color: var(--border-primary) transparent;
+            padding-bottom: 4px;
+        }
+        
+        .filters::-webkit-scrollbar {
+            height: 8px;
+        }
+        
+        .filters::-webkit-scrollbar-track {
+            background: transparent;
+        }
+        
+        .filters::-webkit-scrollbar-thumb {
+            background: var(--border-primary);
+            border-radius: 4px;
+        }
+        
+        /* Wrap filters on larger screens */
+        @media (min-width: 768px) {
+            .filters {
+                flex-wrap: wrap;
+                overflow-x: visible;
+            }
         }
 
+        /* Checkbox filter */
         .current-checkbox {
             display: flex;
             align-items: center;
-            gap: 8px;
-            background: #262626;
-            border: 1px solid #56d364;
-            padding: 8px 16px;
-            border-radius: 3px;
+            gap: var(--space-sm);
+            background: var(--bg-secondary);
+            border: 1px solid var(--border-success);
+            padding: var(--space-sm) var(--space-md);
+            border-radius: var(--radius-md);
             cursor: pointer;
-            transition: all 0.2s;
+            transition: all 0.2s ease;
+            min-height: var(--min-touch-target);
+            white-space: nowrap;
+            flex-shrink: 0;
+            scroll-snap-align: start;
+            -webkit-tap-highlight-color: rgba(86, 211, 100, 0.1);
         }
 
         .current-checkbox:hover {
-            background: #30363d;
+            background: var(--bg-tertiary);
+            transform: translateY(-1px);
+        }
+        
+        .current-checkbox:active {
+            transform: translateY(0);
         }
 
         .current-checkbox input[type="checkbox"] {
             cursor: pointer;
-            width: 16px;
-            height: 16px;
+            width: 18px;
+            height: 18px;
+            flex-shrink: 0;
         }
 
         .current-checkbox label {
             cursor: pointer;
-            color: #56d364;
+            color: var(--text-success);
             margin: 0;
+            user-select: none;
+            font-size: clamp(12px, 1.8vw, 14px);
         }
 
-
+        /* Filter Buttons - Touch-friendly */
         .filter-btn {
-            background: #262626;
-            border: 1px solid #30363d;
-            color: #58a6ff;
-            padding: 8px 16px;
-            border-radius: 3px;
+            background: var(--bg-secondary);
+            border: 1px solid var(--border-primary);
+            color: var(--text-link);
+            padding: var(--space-sm) var(--space-md);
+            border-radius: var(--radius-md);
             cursor: pointer;
-            transition: all 0.2s;
+            transition: all 0.2s ease;
+            min-height: var(--min-touch-target);
+            min-width: var(--min-touch-target);
+            white-space: nowrap;
+            flex-shrink: 0;
+            font-size: clamp(12px, 1.8vw, 14px);
+            font-family: inherit;
+            scroll-snap-align: start;
+            -webkit-tap-highlight-color: rgba(88, 166, 255, 0.1);
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
         }
 
         .filter-btn:hover {
-            background: #30363d;
-            border-color: #58a6ff;
+            background: var(--bg-tertiary);
+            border-color: var(--border-accent);
+            transform: translateY(-1px);
+        }
+        
+        .filter-btn:active {
+            transform: translateY(0);
         }
 
         .filter-btn.active {
             background: #1f6feb;
             color: white;
             border-color: #1f6feb;
+            font-weight: bold;
+        }
+        
+        .filter-btn:disabled {
+            cursor: not-allowed;
+            opacity: 0.5;
         }
 
-
+        /* Schedule Container */
         .schedule-container {
-            margin-top: 20px;
+            margin-top: var(--space-xl);
         }
 
+        /* Day Section */
         .day-section {
-            background: #262626;
-            border: 1px solid #30363d;
-            padding: 15px;
-            margin-bottom: 20px;
-            border-radius: 3px;
+            background: var(--bg-secondary);
+            border: 1px solid var(--border-primary);
+            padding: clamp(12px, 3vw, 16px);
+            margin-bottom: var(--space-lg);
+            border-radius: var(--radius-md);
         }
 
         .day-header {
-            color: #58a6ff;
-            font-size: 1.3em;
-            margin-bottom: 15px;
-            padding-bottom: 10px;
-            border-bottom: 1px solid #30363d;
+            color: var(--text-link);
+            font-size: clamp(1.1em, 3vw, 1.3em);
+            margin-bottom: var(--space-md);
+            padding-bottom: var(--space-sm);
+            border-bottom: 1px solid var(--border-primary);
+            line-height: 1.3;
         }
 
         .day-header.current-day {
-            border-bottom-color: #56d364;
+            border-bottom-color: var(--border-success);
         }
 
+        /* Slot Cards */
         .slot-card {
-            background: #1c1c1c;
-            border: 1px solid #30363d;
-            padding: 12px;
-            margin-bottom: 10px;
-            border-radius: 3px;
+            background: var(--bg-tertiary);
+            border: 1px solid var(--border-primary);
+            padding: clamp(10px, 2.5vw, 14px);
+            margin-bottom: var(--space-md);
+            border-radius: var(--radius-md);
         }
 
         .slot-card.current-slot {
-            border: 2px solid #56d364;
+            border: 2px solid var(--border-success);
             background: #1f2d1f;
+            box-shadow: 0 0 0 3px rgba(86, 211, 100, 0.1);
         }
 
         .current-badge {
-            background: #56d364;
-            color: #1a1a1a;
-            padding: 2px 8px;
-            border-radius: 3px;
-            font-size: 0.75em;
+            background: var(--text-success);
+            color: var(--bg-primary);
+            padding: 3px 8px;
+            border-radius: var(--radius-sm);
+            font-size: clamp(10px, 1.4vw, 11px);
             font-weight: bold;
-            margin-left: 10px;
+            margin-left: var(--space-sm);
+            white-space: nowrap;
         }
 
         .slot-header {
             display: flex;
             justify-content: space-between;
-            align-items: center;
-            margin-bottom: 10px;
+            align-items: flex-start;
+            margin-bottom: var(--space-sm);
             flex-wrap: wrap;
-            gap: 10px;
+            gap: var(--space-sm);
         }
 
         .slot-time {
-            color: #79c0ff;
-            font-size: 1.1em;
+            color: var(--text-accent);
+            font-size: clamp(14px, 2.2vw, 16px);
+            font-weight: 600;
+            display: flex;
+            align-items: center;
+            flex-wrap: wrap;
+            gap: 4px;
         }
 
         .slot-counts {
             display: flex;
-            gap: 15px;
-            font-size: 0.9em;
+            gap: clamp(10px, 2vw, 15px);
+            font-size: clamp(11px, 1.6vw, 13px);
+            flex-wrap: wrap;
         }
 
         .slot-count {
-            color: #8b949e;
+            color: var(--text-secondary);
+            white-space: nowrap;
         }
 
         .slot-count span {
-            color: #56d364;
+            color: var(--text-success);
+            font-weight: bold;
         }
 
+        /* Labs Grid - Fully Responsive */
         .labs-grid {
             display: grid;
-            grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
-            gap: 8px;
-            margin-top: 10px;
+            gap: clamp(6px, 1.5vw, 10px);
+            margin-top: var(--space-sm);
+            /* Mobile-first: smaller cards */
+            grid-template-columns: repeat(auto-fill, minmax(140px, 1fr));
+        }
+        
+        @media (min-width: 480px) {
+            .labs-grid {
+                grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));
+            }
+        }
+        
+        @media (min-width: 768px) {
+            .labs-grid {
+                grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+            }
+        }
+        
+        @media (min-width: 992px) {
+            .labs-grid {
+                grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+            }
         }
 
         .lab-item {
-            background: #262626;
-            border: 1px solid #30363d;
-            padding: 8px 12px;
-            border-radius: 3px;
+            background: var(--bg-secondary);
+            border: 1px solid var(--border-primary);
+            padding: clamp(8px, 2vw, 10px) clamp(10px, 2.5vw, 12px);
+            border-radius: var(--radius-md);
             display: flex;
             justify-content: space-between;
             align-items: center;
+            gap: var(--space-sm);
+            transition: transform 0.2s ease, box-shadow 0.2s ease;
+            min-height: 48px;
+        }
+        
+        .lab-item:hover {
+            transform: translateY(-1px);
+            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.3);
         }
 
         .lab-item.free {
-            border-color: #56d364;
+            border-color: var(--border-success);
         }
 
         .lab-name {
-            color: #56d364;
+            color: var(--text-success);
             font-weight: bold;
+            font-size: clamp(12px, 1.8vw, 14px);
+            word-break: break-word;
         }
 
         .dept-badges {
             display: flex;
             gap: 3px;
             flex-wrap: wrap;
+            justify-content: flex-end;
+            align-items: center;
         }
 
         .dept-badge {
             background: #1c2d38;
-            border: 1px solid #58a6ff;
-            color: #79c0ff;
-            padding: 1px 6px;
-            border-radius: 3px;
-            font-size: 0.75em;
+            border: 1px solid var(--border-accent);
+            color: var(--text-accent);
+            padding: 2px 6px;
+            border-radius: var(--radius-sm);
+            font-size: clamp(10px, 1.4vw, 11px);
+            white-space: nowrap;
         }
 
+        /* Time Slots */
         .slots-section {
-            margin-top: 10px;
+            margin-top: var(--space-md);
         }
 
         .slots-title {
-            color: #79c0ff;
-            margin-bottom: 5px;
-            font-size: 0.9em;
+            color: var(--text-accent);
+            margin-bottom: var(--space-xs);
+            font-size: clamp(12px, 1.8vw, 13px);
         }
 
         .time-slots {
             display: grid;
-            grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
-            gap: 5px;
-            margin-top: 5px;
+            gap: clamp(4px, 1vw, 6px);
+            margin-top: var(--space-xs);
+            grid-template-columns: repeat(auto-fill, minmax(140px, 1fr));
+        }
+        
+        @media (min-width: 600px) {
+            .time-slots {
+                grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));
+            }
         }
 
         .time-slot {
-            background: #1c1c1c;
-            border: 1px solid #56d364;
-            padding: 5px 8px;
-            border-radius: 3px;
-            font-size: 0.85em;
-            color: #56d364;
+            background: var(--bg-tertiary);
+            border: 1px solid var(--border-success);
+            padding: 6px 8px;
+            border-radius: var(--radius-sm);
+            font-size: clamp(11px, 1.6vw, 12px);
+            color: var(--text-success);
         }
 
+        /* No Labs State */
         .no-labs {
             text-align: center;
-            padding: 40px;
-            color: #8b949e;
+            padding: clamp(24px, 6vw, 40px);
+            color: var(--text-secondary);
+            font-size: clamp(13px, 1.8vw, 14px);
         }
 
+        /* Footer */
         footer {
-            margin-top: 50px;
-            padding-top: 20px;
-            border-top: 1px solid #30363d;
+            margin-top: clamp(32px, 6vw, 50px);
+            padding-top: var(--space-lg);
+            border-top: 1px solid var(--border-primary);
             text-align: center;
-            color: #8b949e;
-            font-size: 0.9em;
+            color: var(--text-secondary);
+            font-size: clamp(12px, 1.6vw, 13px);
+            line-height: 1.6;
         }
-
-        @media (max-width: 768px) {
+        
+        footer a {
+            transition: opacity 0.2s ease;
+        }
+        
+        footer a:hover {
+            opacity: 0.8;
+        }
+        
+        /* Motion Preferences */
+        @media (prefers-reduced-motion: reduce) {
+            *, *::before, *::after {
+                animation-duration: 0.01ms !important;
+                animation-iteration-count: 1 !important;
+                transition-duration: 0.01ms !important;
+                scroll-behavior: auto !important;
+            }
+        }
+        
+        /* Print Styles */
+        @media print {
             body {
-                padding: 20px 15px;
+                background: white;
+                color: black;
             }
-
-            h1 {
-                font-size: 1.5em;
-            }
-
-            .filters {
-                flex-direction: column;
+            
+            .filters, .back-link {
+                display: none;
             }
         }
     </style>
 </head>
 <body>
     <div class="container">
-        <h1>$ Free Labs</h1>
-        <a href="index.html" class="back-link">← back</a>
+        <h1 style="margin-bottom: 5px;">$ </>OPEN <span style="color: #58a6ff; font-style: italic;">LABS</span></></h1>
+        <div style="margin-bottom: 20px; font-size: 0.9em; color: #8b949e;">
+            by - <a href="https://github.com/itzMRZ" style="color: inherit; text-decoration: none; display: inline-flex; align-items: center; gap: 4px;" target="_blank" rel="noopener noreferrer">
+                <svg height="14" width="14" viewBox="0 0 16 16" fill="currentColor" style="vertical-align: middle;">
+                    <path d="M8 0c4.42 0 8 3.58 8 8a8.013 8.013 0 0 1-5.45 7.59c-.4.08-.55-.17-.55-.38 0-.27.01-1.13.01-2.2 0-.75-.25-1.23-.54-1.48 1.78-.2 3.65-.88 3.65-3.95 0-.88-.31-1.59-.82-2.15.08-.2.36-1.02-.08-2.12 0 0-.67-.22-2.2.82-.64-.18-1.32-.27-2-.27-.68 0-1.36.09-2 .27-1.53-1.03-2.2-.82-2.2-.82-.44 1.1-.16 1.92-.08 2.12-.51.56-.82 1.28-.82 2.15 0 3.06 1.86 3.75 3.64 3.95-.23.2-.44.55-.51 1.07-.46.21-1.61.55-2.33-.66-.15-.24-.6-.83-1.23-.82-.67.01-.27.38.01.53.34.19.73.9.82 1.13.16.45.68 1.31 2.69.94 0 .67.01 1.3.01 1.49 0 .21-.15.45-.55.38A7.995 7.995 0 0 1 0 8c0-4.42 3.58-8 8-8Z"></path>
+                </svg>itzMRZ
+            </a>
+        </div>
+        <a href="index.html" class="back-link" style="margin-top: 0;">← back</a>
 
         <div class="info">
-            <strong>Showing free lab time slots for <span id="semester">Loading...</span></strong><br>
+            <strong>Showing open lab time slots for <span id="semester">Loading...</span></strong><br>
             Updated: <span id="lastUpdated">Loading...</span>
         </div>
 
@@ -341,7 +588,7 @@
                 <div class="stat-value">-</div>
             </div>
             <div class="stat">
-                <div class="stat-label">Free Slots</div>
+                <div class="stat-label">Open Slots</div>
                 <div class="stat-value">-</div>
             </div>
             <div class="stat">
@@ -386,7 +633,7 @@
 
         async function loadFreeLabs() {
             try {
-                const response = await fetch('free_labs.json');
+                const response = await fetch('open_labs.json');
                 if (!response.ok) throw new Error('Failed to load');
                 
                 const data = await response.json();
@@ -409,12 +656,12 @@
                 renderSchedule(scheduleData);
                 
             } catch (error) {
-                console.error('Error loading free labs:', error);
+                console.error('Error loading open labs:', error);
                 document.getElementById('schedule').innerHTML = `
                     <div class="no-labs">
-                        Unable to load free labs data.<br>
+                        Unable to load open labs data.<br>
                         <span style="font-size: 0.9em; color: #666;">
-                            Make sure free_labs.json exists.
+                            Make sure open_labs.json exists.
                         </span>
                     </div>
                 `;
@@ -493,7 +740,7 @@
                 if (currentSlotInfo) {
                     days = [currentSlotInfo.day];
                 } else {
-                    container.innerHTML = '<div class="no-labs">No free labs available in current or upcoming slots.</div>';
+                    container.innerHTML = '<div class="no-labs">No open labs available in current or upcoming slots.</div>';
                     return;
                 }
             }
@@ -525,7 +772,7 @@
                                     ${isCurrent ? '<span class="current-badge">NOW/UPCOMING</span>' : ''}
                                 </div>
                                 <div class="slot-counts">
-                                    <div class="slot-count">Free: <span>${freeCount}</span></div>
+                                    <div class="slot-count">Open: <span>${freeCount}</span></div>
                                     <div class="slot-count">Occupied: <span>${occupiedCount}</span></div>
                                 </div>
                             </div>
@@ -533,7 +780,7 @@
                     
                     if (freeCount > 0) {
                         html += `
-                            <div style="color: #00aaff; margin: 8px 0; font-size: 0.9em;">Free Labs:</div>
+                            <div style="color: #00aaff; margin: 8px 0; font-size: 0.9em;">Open Labs:</div>
                             <div class="labs-grid">
                                 ${slot.freeLabs.map(lab => `
                                     <div class="lab-item free">
@@ -546,7 +793,7 @@
                             </div>
                         `;
                     } else {
-                        html += '<div style="color: #666; margin-top: 8px;">No free labs</div>';
+                        html += '<div style="color: #666; margin-top: 8px;">No open labs</div>';
                     }
                     
                     html += '</div>';
