@@ -11,24 +11,76 @@ Course and exam data API with automatic updates and backups.
 
 ## 📡 API Endpoints
 
-### Current Data
+### `connect.json` - Full Course Data
 ```
-https://connect-cdn.itzmrz.xyz/connect.json         # Full course data (~3.4 MB)
-https://connect-cdn.itzmrz.xyz/exams.json           # Exam schedules (~516 KB)
-https://connect-cdn.itzmrz.xyz/connect_backup.json  # Backups index
+https://connect-cdn.itzmrz.xyz/connect.json
 ```
+**What it contains:**
+- Complete course section information (all offered courses)
+- Section details: course code, section name, faculty, seat availability
+- Exam schedules (mid & final dates/times)
+- Metadata: total sections, seat statistics, exam date ranges
+- Size: ~3.4 MB (137 KB gzipped)
+
+**Use this for:** Building course registration tools, seat availability checkers, full course catalogs
+
+---
+
+### `exams.json` - Exam Schedules Only
+```
+https://connect-cdn.itzmrz.xyz/exams.json
+```
+**What it contains:**
+- Filtered exam schedule data (no seat/faculty info)
+- Course codes and section names with exam dates/times
+- Metadata: exam date ranges, total exam entries
+- Size: ~516 KB (20 KB gzipped)
+
+**Use this for:** Exam calendars, schedule conflict checkers, exam timetable apps
+
+---
+
+### `connect_backup.json` - Backups Index
+```
+https://connect-cdn.itzmrz.xyz/connect_backup.json
+```
+**What it contains:**
+- Complete list of all available backups (current + archived)
+- Metadata for each backup: semester name, section count, backup timestamp
+- Direct CDN links to all backup files
+- Statistics: total backups, current vs archived counts
+
+**Use this for:** Accessing historical data, comparing semesters, building backup browsers
+
+---
 
 ### Current Semester Backup
 ```
 https://connect-cdn.itzmrz.xyz/backups/curr_Fall2025_connect.json
 ```
+**What it contains:**
+- Full course data for the ongoing semester
+- Updated weekly with latest data
+- Automatically renamed to dated archive when semester ends
+- Same structure as `connect.json` but frozen for current semester
 
-### Historical Backups
+**Use this for:** Accessing stable semester data, comparing with live updates
+
+---
+
+### Historical Backups (Archived Semesters)
 ```
 https://connect-cdn.itzmrz.xyz/backups/20250831_2359_Summer2025_connect.json
 https://connect-cdn.itzmrz.xyz/backups/20250531_2359_Spring2025_connect.json
 # ... see connect_backup.json for full list
 ```
+**What it contains:**
+- Archived course data from completed semesters
+- Timestamped with final exam date (YYYYMMDD_HHMM format)
+- Immutable historical records
+- Same structure as `connect.json`
+
+**Use this for:** Historical analysis, semester comparisons, archival research
 
 ## Usage
 
