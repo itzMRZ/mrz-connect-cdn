@@ -675,13 +675,13 @@
                 <button class="filter-btn" data-filter="WEDNESDAY">Wednesday</button>
                 <button class="filter-btn" data-filter="THURSDAY">Thursday</button>
                 <!-- Current/Upcoming Toggle - Position 8 on mobile -->
-                <label class="filter-btn" id="currentToggle" style="display: flex; align-items: center; justify-content: space-between; gap: 8px; cursor: pointer;">
-                    <span style="font-size: clamp(11px, 1.6vw, 13px);">Current</span>
-                    <div class="toggle-switch" style="width: 42px; height: 22px;">
-                        <input type="checkbox" id="currentTimeCheckbox">
+                <div class="filter-btn" id="currentToggle" style="display: flex; align-items: center; justify-content: space-between; gap: 8px; cursor: pointer; padding: var(--space-sm) var(--space-md);">
+                    <span style="font-size: clamp(11px, 1.6vw, 13px); pointer-events: none;">Current</span>
+                    <label class="toggle-switch" style="width: 42px; height: 22px; cursor: pointer; margin: 0;">
+                        <input type="checkbox" id="currentTimeCheckbox" style="opacity: 0; width: 0; height: 0;">
                         <span class="toggle-slider"></span>
-                    </div>
-                </label>
+                    </label>
+                </div>
             </div>
         </div>
 
@@ -926,12 +926,12 @@
 
         // Filter button handling
         document.addEventListener('DOMContentLoaded', () => {
-            const filterBtns = document.querySelectorAll('.filter-btn');
+            const filterBtns = document.querySelectorAll('.filter-btn[data-filter]');
             const currentCheckbox = document.getElementById('currentTimeCheckbox');
             const currentToggle = document.getElementById('currentToggle');
             const dayFiltersContainer = document.getElementById('dayFilters');
             
-            // Day filter buttons
+            // Day filter buttons (exclude the current toggle)
             filterBtns.forEach(btn => {
                 btn.addEventListener('click', () => {
                     if (btn.disabled) return;
@@ -941,6 +941,14 @@
                 });
             });
             
+            // Make the entire toggle button clickable
+            currentToggle.addEventListener('click', (e) => {
+                // Toggle the checkbox
+                currentCheckbox.checked = !currentCheckbox.checked;
+                // Trigger the change event
+                currentCheckbox.dispatchEvent(new Event('change'));
+            });
+            
             // Current/Upcoming toggle handling
             currentCheckbox.addEventListener('change', (e) => {
                 showCurrent = e.target.checked;
@@ -948,19 +956,19 @@
                 if (showCurrent) {
                     // Highlight toggle, disable day filters
                     currentToggle.classList.add('active');
-                    dayFiltersContainer.style.opacity = '0.4';
-                    dayFiltersContainer.style.pointerEvents = 'none';
                     filterBtns.forEach(b => {
                         b.classList.remove('active');
                         b.disabled = true;
+                        b.style.opacity = '0.4';
+                        b.style.pointerEvents = 'none';
                     });
                 } else {
                     // Restore day filters
                     currentToggle.classList.remove('active');
-                    dayFiltersContainer.style.opacity = '1';
-                    dayFiltersContainer.style.pointerEvents = 'auto';
                     filterBtns.forEach(b => {
                         b.disabled = false;
+                        b.style.opacity = '1';
+                        b.style.pointerEvents = 'auto';
                     });
                     filterBtns[0].classList.add('active');
                     currentFilter = 'all';
