@@ -6,6 +6,9 @@ on:
     - cron: '0 0 1 1 *'  # January 1st at midnight
   workflow_dispatch: # Manual trigger
 
+permissions:
+  contents: write
+
 jobs:
   cleanup:
     runs-on: ubuntu-latest
