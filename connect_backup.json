@@ -1,9 +1,9 @@
 {
   "metadata": {
-    "totalBackups": 6,
+    "totalBackups": 7,
     "currentBackups": 1,
-    "archivedBackups": 5,
-    "lastUpdated": "2025-12-08T06:37:57.503718+00:00",
+    "archivedBackups": 6,
+    "lastUpdated": "2025-12-11T21:44:53.486235+00:00",
     "cdnBaseUrl": "https://connect-cdn.itzmrz.xyz/backups"
   },
   "backups": [
@@ -40,6 +40,14 @@
       "filename": "20260123_2359_Fall2025_connect.json"
     },
     {
+      "semester": "Fall2025",
+      "totalSections": 2131,
+      "backupTime": "2026-01-17T23:59:00Z",
+      "cdnLink": "https://connect-cdn.itzmrz.xyz/backups/20260117_2359_Fall2025_connect.json",
+      "isCurrent": false,
+      "filename": "20260117_2359_Fall2025_connect.json"
+    },
+    {
       "semester": "Fall2024",
       "totalSections": 2349,
       "backupTime": "2025-01-23T23:59:00Z",
@@ -48,12 +56,12 @@
       "filename": "20250123_2359_Fall2024_connect.json"
     },
     {
-      "semester": "Fall2025",
-      "totalSections": 2131,
-      "backupTime": "2025-12-08T06:37:56.921832+00:00",
-      "cdnLink": "https://connect-cdn.itzmrz.xyz/backups/curr_Fall2025_connect.json",
+      "semester": "Spring2026",
+      "totalSections": 2087,
+      "backupTime": "2025-12-11T21:44:52.810881+00:00",
+      "cdnLink": "https://connect-cdn.itzmrz.xyz/backups/curr_Spring2026_connect.json",
       "isCurrent": true,
-      "filename": "curr_Fall2025_connect.json"
+      "filename": "curr_Spring2026_connect.json"
     }
   ]
 }
