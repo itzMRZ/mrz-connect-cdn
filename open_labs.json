@@ -2,9 +2,9 @@
   "metadata": {
     "semester": "Spring2026",
     "totalLabs": 49,
-    "totalFreeSlots": 892,
-    "totalOccupiedSlots": 1166,
-    "averageUtilization": 56.66,
+    "totalFreeSlots": 890,
+    "totalOccupiedSlots": 1168,
+    "averageUtilization": 56.75,
     "timeSlots": [
       [
         "08:00:00",
@@ -43,8 +43,8 @@
       "WEDNESDAY",
       "THURSDAY"
     ],
-    "lastUpdated": "2025-12-11T21:44:53.551522+00:00",
-    "sourceDataUpdated": "2025-12-11T21:44:52.810881+00:00"
+    "lastUpdated": "2025-12-15T06:38:30.544029+00:00",
+    "sourceDataUpdated": "2025-12-15T06:38:29.967992+00:00"
   },
   "schedule": {
     "SATURDAY": {
@@ -1839,7 +1839,7 @@
               "CSE"
             ],
             "courseCode": "CSE421L",
-            "sectionName": "04",
+            "sectionName": "03",
             "department": "CSE"
           },
           {
@@ -1857,7 +1857,7 @@
               "CSE"
             ],
             "courseCode": "CSE423L",
-            "sectionName": "05",
+            "sectionName": "06",
             "department": "CSE"
           },
           {
@@ -1940,9 +1940,9 @@
               "ECE",
               "EEE"
             ],
-            "courseCode": "ECE101L",
+            "courseCode": "EEE101L",
             "sectionName": "07",
-            "department": "ECE"
+            "department": "EEE"
           },
           {
             "labRoom": "11H-45L",
@@ -1960,7 +1960,7 @@
               "CSE"
             ],
             "courseCode": "CSE250L",
-            "sectionName": "01B",
+            "sectionName": "01A",
             "department": "CSE"
           },
           {
@@ -2241,7 +2241,7 @@
               "CSE"
             ],
             "courseCode": "CSE421L",
-            "sectionName": "04",
+            "sectionName": "03",
             "department": "CSE"
           },
           {
@@ -2259,7 +2259,7 @@
               "CSE"
             ],
             "courseCode": "CSE423L",
-            "sectionName": "05",
+            "sectionName": "06",
             "department": "CSE"
           },
           {
@@ -2333,9 +2333,9 @@
               "ECE",
               "EEE"
             ],
-            "courseCode": "ECE101L",
+            "courseCode": "EEE101L",
             "sectionName": "07",
-            "department": "ECE"
+            "department": "EEE"
           },
           {
             "labRoom": "11H-45L",
@@ -2353,7 +2353,7 @@
               "CSE"
             ],
             "courseCode": "CSE250L",
-            "sectionName": "01B",
+            "sectionName": "01A",
             "department": "CSE"
           },
           {
@@ -2929,7 +2929,7 @@
               "CSE"
             ],
             "courseCode": "CSE423L",
-            "sectionName": "25",
+            "sectionName": "20",
             "department": "CSE"
           },
           {
@@ -3001,7 +3001,7 @@
               "CSE"
             ],
             "courseCode": "CSE421L",
-            "sectionName": "18",
+            "sectionName": "27",
             "department": "CSE"
           },
           {
@@ -3020,9 +3020,9 @@
               "ECE",
               "EEE"
             ],
-            "courseCode": "ECE385L",
+            "courseCode": "EEE385L",
             "sectionName": "01",
-            "department": "ECE"
+            "department": "EEE"
           },
           {
             "labRoom": "11H-43L",
@@ -3030,9 +3030,9 @@
               "ECE",
               "EEE"
             ],
-            "courseCode": "ECE101L",
+            "courseCode": "EEE101L",
             "sectionName": "06",
-            "department": "ECE"
+            "department": "EEE"
           },
           {
             "labRoom": "12B-20L",
@@ -3040,7 +3040,7 @@
               "CSE"
             ],
             "courseCode": "CSE350L",
-            "sectionName": "08B",
+            "sectionName": "08A",
             "department": "CSE"
           },
           {
@@ -3316,7 +3316,7 @@
               "CSE"
             ],
             "courseCode": "CSE423L",
-            "sectionName": "25",
+            "sectionName": "20",
             "department": "CSE"
           },
           {
@@ -3397,7 +3397,7 @@
               "CSE"
             ],
             "courseCode": "CSE421L",
-            "sectionName": "18",
+            "sectionName": "27",
             "department": "CSE"
           },
           {
@@ -3443,9 +3443,9 @@
               "ECE",
               "EEE"
             ],
-            "courseCode": "ECE385L",
+            "courseCode": "EEE385L",
             "sectionName": "01",
-            "department": "ECE"
+            "department": "EEE"
           },
           {
             "labRoom": "11H-43L",
@@ -3453,9 +3453,9 @@
               "ECE",
               "EEE"
             ],
-            "courseCode": "ECE101L",
+            "courseCode": "EEE101L",
             "sectionName": "06",
-            "department": "ECE"
+            "department": "EEE"
           },
           {
             "labRoom": "12B-20L",
@@ -3463,7 +3463,7 @@
               "CSE"
             ],
             "courseCode": "CSE350L",
-            "sectionName": "08B",
+            "sectionName": "08A",
             "department": "CSE"
           },
           {
@@ -3830,9 +3830,9 @@
               "ECE",
               "EEE"
             ],
-            "courseCode": "ECE373L",
+            "courseCode": "EEE373L",
             "sectionName": "02",
-            "department": "ECE"
+            "department": "EEE"
           },
           {
             "labRoom": "11F-39L",
@@ -4259,9 +4259,9 @@
               "ECE",
               "EEE"
             ],
-            "courseCode": "ECE373L",
+            "courseCode": "EEE373L",
             "sectionName": "02",
-            "department": "ECE"
+            "department": "EEE"
           },
           {
             "labRoom": "11F-39L",
@@ -4736,9 +4736,9 @@
               "ECE",
               "EEE"
             ],
-            "courseCode": "ECE205L",
+            "courseCode": "EEE205L",
             "sectionName": "08",
-            "department": "ECE"
+            "department": "EEE"
           },
           {
             "labRoom": "12A-06L",
@@ -4756,7 +4756,7 @@
               "CSE"
             ],
             "courseCode": "CSE250L",
-            "sectionName": "05A",
+            "sectionName": "05B",
             "department": "CSE"
           },
           {
@@ -5153,9 +5153,9 @@
               "ECE",
               "EEE"
             ],
-            "courseCode": "ECE205L",
+            "courseCode": "EEE205L",
             "sectionName": "08",
-            "department": "ECE"
+            "department": "EEE"
           },
           {
             "labRoom": "12A-06L",
@@ -5173,7 +5173,7 @@
               "CSE"
             ],
             "courseCode": "CSE250L",
-            "sectionName": "05A",
+            "sectionName": "05B",
             "department": "CSE"
           },
           {
@@ -5603,12 +5603,6 @@
             ]
           },
           {
-            "labRoom": "09F-26L",
-            "departments": [
-              "CSE"
-            ]
-          },
-          {
             "labRoom": "10A-01L",
             "departments": [
               "BTE"
@@ -5751,7 +5745,7 @@
               "CSE"
             ],
             "courseCode": "CSE423L",
-            "sectionName": "08",
+            "sectionName": "09",
             "department": "CSE"
           },
           {
@@ -5770,6 +5764,15 @@
             ],
             "courseCode": "CSE421L",
             "sectionName": "23",
+            "department": "CSE"
+          },
+          {
+            "labRoom": "09F-26L",
+            "departments": [
+              "CSE"
+            ],
+            "courseCode": "CSE428L",
+            "sectionName": "04",
             "department": "CSE"
           },
           {
@@ -5851,9 +5854,9 @@
               "ECE",
               "EEE"
             ],
-            "courseCode": "ECE103L",
+            "courseCode": "EEE103L",
             "sectionName": "07",
-            "department": "ECE"
+            "department": "EEE"
           },
           {
             "labRoom": "11H-43L",
@@ -6002,12 +6005,6 @@
             ]
           },
           {
-            "labRoom": "09F-26L",
-            "departments": [
-              "CSE"
-            ]
-          },
-          {
             "labRoom": "10E-27L",
             "departments": [
               "CSE"
@@ -6120,7 +6117,7 @@
               "CSE"
             ],
             "courseCode": "CSE423L",
-            "sectionName": "08",
+            "sectionName": "09",
             "department": "CSE"
           },
           {
@@ -6139,6 +6136,15 @@
             ],
             "courseCode": "CSE421L",
             "sectionName": "23",
+            "department": "CSE"
+          },
+          {
+            "labRoom": "09F-26L",
+            "departments": [
+              "CSE"
+            ],
+            "courseCode": "CSE428L",
+            "sectionName": "04",
             "department": "CSE"
           },
           {
@@ -6265,9 +6271,9 @@
               "ECE",
               "EEE"
             ],
-            "courseCode": "ECE103L",
+            "courseCode": "EEE103L",
             "sectionName": "07",
-            "department": "ECE"
+            "department": "EEE"
           },
           {
             "labRoom": "11H-43L",
@@ -6690,9 +6696,9 @@
               "ECE",
               "EEE"
             ],
-            "courseCode": "ECE103L",
+            "courseCode": "EEE103L",
             "sectionName": "09",
-            "department": "ECE"
+            "department": "EEE"
           },
           {
             "labRoom": "11H-43L",
@@ -6700,9 +6706,9 @@
               "ECE",
               "EEE"
             ],
-            "courseCode": "ECE203L",
+            "courseCode": "EEE203L",
             "sectionName": "04",
-            "department": "ECE"
+            "department": "EEE"
           },
           {
             "labRoom": "11H-44L",
@@ -7110,9 +7116,9 @@
               "ECE",
               "EEE"
             ],
-            "courseCode": "ECE103L",
+            "courseCode": "EEE103L",
             "sectionName": "09",
-            "department": "ECE"
+            "department": "EEE"
           },
           {
             "labRoom": "11H-43L",
@@ -7120,9 +7126,9 @@
               "ECE",
               "EEE"
             ],
-            "courseCode": "ECE203L",
+            "courseCode": "EEE203L",
             "sectionName": "04",
-            "department": "ECE"
+            "department": "EEE"
           },
           {
             "labRoom": "11H-44L",
@@ -7535,9 +7541,9 @@
               "ECE",
               "EEE"
             ],
-            "courseCode": "ECE282",
+            "courseCode": "EEE282",
             "sectionName": "06",
-            "department": "ECE"
+            "department": "EEE"
           },
           {
             "labRoom": "11F-39L",
@@ -7545,9 +7551,9 @@
               "ECE",
               "EEE"
             ],
-            "courseCode": "ECE103L",
-            "sectionName": "06",
-            "department": "ECE"
+            "courseCode": "EEE103L",
+            "sectionName": "04",
+            "department": "EEE"
           },
           {
             "labRoom": "11H-44L",
@@ -7555,9 +7561,9 @@
               "ECE",
               "EEE"
             ],
-            "courseCode": "ECE203L",
+            "courseCode": "EEE203L",
             "sectionName": "11",
-            "department": "ECE"
+            "department": "EEE"
           },
           {
             "labRoom": "11H-46L",
@@ -7575,7 +7581,7 @@
               "CSE"
             ],
             "courseCode": "CSE350L",
-            "sectionName": "09A",
+            "sectionName": "09B",
             "department": "CSE"
           },
           {
@@ -7611,9 +7617,9 @@
               "ECE",
               "EEE"
             ],
-            "courseCode": "ECE305L",
+            "courseCode": "EEE305L",
             "sectionName": "06",
-            "department": "ECE"
+            "department": "EEE"
           },
           {
             "labRoom": "FT10-01L",
@@ -7955,9 +7961,9 @@
               "ECE",
               "EEE"
             ],
-            "courseCode": "ECE282",
+            "courseCode": "EEE282",
             "sectionName": "06",
-            "department": "ECE"
+            "department": "EEE"
           },
           {
             "labRoom": "11F-39L",
@@ -7965,9 +7971,9 @@
               "ECE",
               "EEE"
             ],
-            "courseCode": "ECE103L",
-            "sectionName": "06",
-            "department": "ECE"
+            "courseCode": "EEE103L",
+            "sectionName": "04",
+            "department": "EEE"
           },
           {
             "labRoom": "11H-44L",
@@ -7975,9 +7981,9 @@
               "ECE",
               "EEE"
             ],
-            "courseCode": "ECE203L",
+            "courseCode": "EEE203L",
             "sectionName": "11",
-            "department": "ECE"
+            "department": "EEE"
           },
           {
             "labRoom": "11H-46L",
@@ -7995,7 +8001,7 @@
               "CSE"
             ],
             "courseCode": "CSE350L",
-            "sectionName": "09A",
+            "sectionName": "09B",
             "department": "CSE"
           },
           {
@@ -8031,9 +8037,9 @@
               "ECE",
               "EEE"
             ],
-            "courseCode": "ECE305L",
+            "courseCode": "EEE305L",
             "sectionName": "06",
-            "department": "ECE"
+            "department": "EEE"
           },
           {
             "labRoom": "FT10-01L",
@@ -9326,7 +9332,7 @@
               "CSE"
             ],
             "courseCode": "CSE423L",
-            "sectionName": "03",
+            "sectionName": "04",
             "department": "CSE"
           },
           {
@@ -9565,7 +9571,7 @@
               "CSE"
             ],
             "courseCode": "CSE440L",
-            "sectionName": "04",
+            "sectionName": "03",
             "department": "CSE"
           },
           {
@@ -9773,7 +9779,7 @@
               "CSE"
             ],
             "courseCode": "CSE423L",
-            "sectionName": "03",
+            "sectionName": "04",
             "department": "CSE"
           },
           {
@@ -9985,7 +9991,7 @@
               "CSE"
             ],
             "courseCode": "CSE440L",
-            "sectionName": "04",
+            "sectionName": "03",
             "department": "CSE"
           },
           {
@@ -10223,7 +10229,7 @@
               "CSE"
             ],
             "courseCode": "CSE421L",
-            "sectionName": "13",
+            "sectionName": "14",
             "department": "CSE"
           },
           {
@@ -10304,7 +10310,7 @@
               "CSE"
             ],
             "courseCode": "CSE360L",
-            "sectionName": "04",
+            "sectionName": "06",
             "department": "CSE"
           },
           {
@@ -10640,7 +10646,7 @@
               "CSE"
             ],
             "courseCode": "CSE421L",
-            "sectionName": "13",
+            "sectionName": "14",
             "department": "CSE"
           },
           {
@@ -10712,7 +10718,7 @@
               "CSE"
             ],
             "courseCode": "CSE360L",
-            "sectionName": "04",
+            "sectionName": "06",
             "department": "CSE"
           },
           {
@@ -11422,7 +11428,7 @@
               "CSE"
             ],
             "courseCode": "CSE423L",
-            "sectionName": "16",
+            "sectionName": "15",
             "department": "CSE"
           },
           {
@@ -11480,9 +11486,9 @@
               "ECE",
               "EEE"
             ],
-            "courseCode": "ECE205L",
+            "courseCode": "EEE205L",
             "sectionName": "03",
-            "department": "ECE"
+            "department": "EEE"
           },
           {
             "labRoom": "12B-20L",
@@ -11535,9 +11541,9 @@
               "ECE",
               "EEE"
             ],
-            "courseCode": "ECE305L",
+            "courseCode": "EEE305L",
             "sectionName": "05",
-            "department": "ECE"
+            "department": "EEE"
           },
           {
             "labRoom": "FT10-02L",
@@ -11794,7 +11800,7 @@
               "CSE"
             ],
             "courseCode": "CSE423L",
-            "sectionName": "16",
+            "sectionName": "15",
             "department": "CSE"
           },
           {
@@ -11879,9 +11885,9 @@
               "ECE",
               "EEE"
             ],
-            "courseCode": "ECE205L",
+            "courseCode": "EEE205L",
             "sectionName": "03",
-            "department": "ECE"
+            "department": "EEE"
           },
           {
             "labRoom": "12B-20L",
@@ -11934,9 +11940,9 @@
               "ECE",
               "EEE"
             ],
-            "courseCode": "ECE305L",
+            "courseCode": "EEE305L",
             "sectionName": "05",
-            "department": "ECE"
+            "department": "EEE"
           },
           {
             "labRoom": "FT10-02L",
@@ -12928,7 +12934,7 @@
               "CSE"
             ],
             "courseCode": "CSE421L",
-            "sectionName": "08",
+            "sectionName": "09",
             "department": "CSE"
           },
           {
@@ -13045,9 +13051,9 @@
               "ECE",
               "EEE"
             ],
-            "courseCode": "ECE382",
+            "courseCode": "EEE382",
             "sectionName": "01",
-            "department": "ECE"
+            "department": "EEE"
           },
           {
             "labRoom": "11F-39L",
@@ -13095,7 +13101,7 @@
               "CSE"
             ],
             "courseCode": "CSE250L",
-            "sectionName": "12A",
+            "sectionName": "12B",
             "department": "CSE"
           },
           {
@@ -13351,7 +13357,7 @@
               "CSE"
             ],
             "courseCode": "CSE421L",
-            "sectionName": "08",
+            "sectionName": "09",
             "department": "CSE"
           },
           {
@@ -13459,9 +13465,9 @@
               "ECE",
               "EEE"
             ],
-            "courseCode": "ECE382",
+            "courseCode": "EEE382",
             "sectionName": "01",
-            "department": "ECE"
+            "department": "EEE"
           },
           {
             "labRoom": "11F-39L",
@@ -13509,7 +13515,7 @@
               "CSE"
             ],
             "courseCode": "CSE250L",
-            "sectionName": "12A",
+            "sectionName": "12B",
             "department": "CSE"
           },
           {
@@ -14177,9 +14183,9 @@
               "ECE",
               "EEE"
             ],
-            "courseCode": "ECE282",
+            "courseCode": "EEE282",
             "sectionName": "02",
-            "department": "ECE"
+            "department": "EEE"
           },
           {
             "labRoom": "11H-43L",
@@ -14576,9 +14582,9 @@
               "ECE",
               "EEE"
             ],
-            "courseCode": "ECE282",
+            "courseCode": "EEE282",
             "sectionName": "02",
-            "department": "ECE"
+            "department": "EEE"
           },
           {
             "labRoom": "11H-43L",
@@ -15014,9 +15020,9 @@
               "ECE",
               "EEE"
             ],
-            "courseCode": "ECE308L",
+            "courseCode": "EEE308L",
             "sectionName": "06",
-            "department": "ECE"
+            "department": "EEE"
           },
           {
             "labRoom": "12A-06L",
@@ -15024,9 +15030,9 @@
               "ECE",
               "EEE"
             ],
-            "courseCode": "ECE341L",
+            "courseCode": "EEE341L",
             "sectionName": "03",
-            "department": "ECE"
+            "department": "EEE"
           },
           {
             "labRoom": "12B-20L",
@@ -15419,9 +15425,9 @@
               "ECE",
               "EEE"
             ],
-            "courseCode": "ECE308L",
+            "courseCode": "EEE308L",
             "sectionName": "06",
-            "department": "ECE"
+            "department": "EEE"
           },
           {
             "labRoom": "12A-06L",
@@ -15429,9 +15435,9 @@
               "ECE",
               "EEE"
             ],
-            "courseCode": "ECE341L",
+            "courseCode": "EEE341L",
             "sectionName": "03",
-            "department": "ECE"
+            "department": "EEE"
           },
           {
             "labRoom": "12B-20L",
@@ -15721,7 +15727,7 @@
               "CSE"
             ],
             "courseCode": "CSE421L",
-            "sectionName": "11",
+            "sectionName": "12",
             "department": "CSE"
           },
           {
@@ -15840,9 +15846,9 @@
               "ECE",
               "EEE"
             ],
-            "courseCode": "ECE101L",
+            "courseCode": "EEE101L",
             "sectionName": "02",
-            "department": "ECE"
+            "department": "EEE"
           },
           {
             "labRoom": "12B-20L",
@@ -16129,7 +16135,7 @@
               "CSE"
             ],
             "courseCode": "CSE421L",
-            "sectionName": "11",
+            "sectionName": "12",
             "department": "CSE"
           },
           {
@@ -16239,9 +16245,9 @@
               "ECE",
               "EEE"
             ],
-            "courseCode": "ECE101L",
+            "courseCode": "EEE101L",
             "sectionName": "02",
-            "department": "ECE"
+            "department": "EEE"
           },
           {
             "labRoom": "12B-20L",
