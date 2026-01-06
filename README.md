@@ -31,6 +31,20 @@ https://connect-cdn.itzmrz.xyz/connect.json
 
 ---
 
+### `connect_metadata.json` - Metadata Only
+```
+https://connect-cdn.itzmrz.xyz/connect_metadata.json
+```
+**What it contains:**
+- Just the `metadata` object from connect.json
+- Stats: total sections, consumed seats, empty seats
+- Exam date ranges and last updated timestamp
+- Size: ~400 bytes (0.4 KB)
+
+**Use this for:** Checking API status, displaying dashboard stats, verifying update times without downloading full data
+
+---
+
 ### `connect_backup.json` - Backups Index
 ```
 https://connect-cdn.itzmrz.xyz/connect_backup.json

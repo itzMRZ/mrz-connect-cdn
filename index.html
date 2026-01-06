@@ -717,7 +717,8 @@ print(data['metadata'])</pre>
         
         async function loadData() {
             try {
-                const response = await fetch('connect.json');
+                // Optimization: Fetch only metadata (~400 bytes) instead of full data (~3.4 MB)
+                const response = await fetch('connect_metadata.json');
                 if (!response.ok) throw new Error('Failed to load');
                 
                 const data = await response.json();
