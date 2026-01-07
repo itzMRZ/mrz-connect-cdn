@@ -167,13 +167,42 @@
             font-size: clamp(11px, 1.4vw, 12px);
         }
 
+        .code-container {
+            position: relative;
+            margin: var(--space-md) 0;
+        }
+
         .code-block {
             background: var(--bg-secondary);
             border: 1px solid var(--border-primary);
             border-radius: var(--radius-md);
             padding: clamp(12px, 2.5vw, 15px);
-            margin: var(--space-md) 0;
+            margin: 0;
             overflow-x: auto;
+        }
+
+        .copy-btn {
+            position: absolute;
+            top: 8px;
+            right: 8px;
+            background: var(--bg-tertiary);
+            border: 1px solid var(--border-primary);
+            color: var(--text-secondary);
+            border-radius: var(--radius-sm);
+            padding: 4px 8px;
+            font-size: 11px;
+            cursor: pointer;
+            transition: all 0.2s;
+        }
+
+        @media (hover: hover) {
+            .copy-btn { opacity: 0; }
+            .code-container:hover .copy-btn, .copy-btn:focus { opacity: 1; }
+        }
+
+        .copy-btn:hover {
+            background: var(--border-primary);
+            color: var(--text-primary);
         }
 
         .code-block pre {
@@ -373,6 +402,9 @@
         }
 
         .close {
+            background: transparent;
+            border: none;
+            font-family: inherit;
             color: var(--text-secondary);
             float: right;
             font-size: 32px;
@@ -623,35 +655,43 @@
                 Regular files work directly, gzipped files need manual decompression.
             </div>
 
-            <div class="code-block">
-                <pre><span class="comment">// JavaScript - Regular</span>
+            <div class="code-container">
+                <div class="code-block">
+                    <pre><span class="comment">// JavaScript - Regular</span>
 fetch('https://connect-cdn.itzmrz.xyz/connect.json')
   .then(r => r.json())
   .then(data => console.log(data.metadata));</pre>
+                </div>
             </div>
 
-            <div class="code-block">
-                <pre><span class="comment">// JavaScript - Gzipped (smaller, faster)</span>
+            <div class="code-container">
+                <div class="code-block">
+                    <pre><span class="comment">// JavaScript - Gzipped (smaller, faster)</span>
 fetch('https://connect-cdn.itzmrz.xyz/connect.json.gz')
   .then(r => r.blob())
   .then(blob => blob.stream().pipeThrough(new DecompressionStream('gzip')))
   .then(stream => new Response(stream).json())
   .then(data => console.log(data.metadata));</pre>
+                </div>
             </div>
 
-            <div class="code-block">
-                <pre><span class="comment"># Python - Regular</span>
+            <div class="code-container">
+                <div class="code-block">
+                    <pre><span class="comment"># Python - Regular</span>
 import requests
 data = requests.get('https://connect-cdn.itzmrz.xyz/connect.json').json()
 print(data['metadata'])</pre>
+                </div>
             </div>
 
-            <div class="code-block">
-                <pre><span class="comment"># Python - Gzipped (smaller, faster)</span>
+            <div class="code-container">
+                <div class="code-block">
+                    <pre><span class="comment"># Python - Gzipped (smaller, faster)</span>
 import requests, gzip, json
 r = requests.get('https://connect-cdn.itzmrz.xyz/connect.json.gz')
 data = json.loads(gzip.decompress(r.content))
 print(data['metadata'])</pre>
+                </div>
             </div>
         </div>
 
@@ -670,7 +710,7 @@ print(data['metadata'])</pre>
     <!-- README Modal -->
     <div id="readmeModal" class="modal">
         <div class="modal-content">
-            <span class="close" onclick="closeReadme()">&times;</span>
+            <button class="close" onclick="closeReadme()" aria-label="Close modal">&times;</button>
             <div id="readmeContent">
                 <p style="text-align: center; color: #666;">Loading README...</p>
             </div>
@@ -715,6 +755,55 @@ print(data['metadata'])</pre>
         loadVersion();
         updateVersionDisplay();
         
+        // Initialize Copy Buttons
+        document.querySelectorAll('.code-container').forEach(container => {
+            const btn = document.createElement('button');
+            btn.className = 'copy-btn';
+            btn.textContent = 'Copy';
+            btn.ariaLabel = 'Copy code to clipboard';
+
+            btn.onclick = () => {
+                const code = container.querySelector('pre').innerText;
+
+                const copyToClipboard = async (text) => {
+                    try {
+                        if (navigator.clipboard && navigator.clipboard.writeText) {
+                            await navigator.clipboard.writeText(text);
+                            return;
+                        }
+                    } catch (err) {
+                        console.warn('Clipboard API failed, trying fallback:', err);
+                    }
+
+                    const textArea = document.createElement("textarea");
+                    textArea.value = text;
+                    textArea.style.position = "fixed";
+                    textArea.style.left = "-9999px";
+                    document.body.appendChild(textArea);
+                    textArea.focus();
+                    textArea.select();
+                    try {
+                        document.execCommand('copy');
+                    } catch (err) {
+                        console.error('Fallback copy failed', err);
+                        throw err;
+                    } finally {
+                        document.body.removeChild(textArea);
+                    }
+                };
+
+                copyToClipboard(code).then(() => {
+                    btn.textContent = 'Copied!';
+                    setTimeout(() => btn.textContent = 'Copy', 2000);
+                }).catch(err => {
+                    console.error('Failed to copy:', err);
+                    btn.textContent = 'Error';
+                });
+            };
+
+            container.appendChild(btn);
+        });
+
         async function loadData() {
             try {
                 // Optimization: Fetch only metadata (~400 bytes) instead of full data (~3.4 MB)
