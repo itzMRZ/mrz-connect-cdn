@@ -16,16 +16,38 @@ from typing import Dict, List, Optional
 # Get the directory where this script is located
 SCRIPT_DIR = os.path.dirname(os.path.abspath(__file__))
 BACKUPS_DIR = os.path.join(SCRIPT_DIR, "backups")
+ETAG_FILE = os.path.join(SCRIPT_DIR, "connect.etag")
 
 
-def fetch_mrz_data() -> List[Dict]:
+def fetch_mrz_data() -> Optional[List[Dict]]:
     """Fetch course data from MRZ Connect API."""
     url = "https://usis-cdn.eniamza.com/connect.json"
     print(f"Fetching data from {url}...")
     
+    headers = {}
+    if os.path.exists(ETAG_FILE):
+        with open(ETAG_FILE, 'r', encoding='utf-8') as f:
+            etag = f.read().strip()
+            if etag:
+                headers['If-None-Match'] = etag
+                print(f"  Using ETag: {etag}")
+
     try:
-        response = requests.get(url, timeout=30)
+        response = requests.get(url, headers=headers, timeout=30)
+
+        if response.status_code == 304:
+            print("✓ Data not modified (304). Using cached version.")
+            return None
+
         response.raise_for_status()
+
+        # Save new ETag
+        new_etag = response.headers.get('ETag')
+        if new_etag:
+            with open(ETAG_FILE, 'w', encoding='utf-8') as f:
+                f.write(new_etag)
+                print(f"  Saved new ETag: {new_etag}")
+
         data = response.json()
         print(f"✓ Successfully fetched {len(data)} sections")
         return data
@@ -330,6 +352,11 @@ def main():
         # Fetch data from API
         sections = fetch_mrz_data()
         
+        if sections is None:
+            print("\n✓ Local data is already up to date.")
+            print("  Skipping regeneration to prevent unnecessary commits.")
+            return 0
+
         # Calculate metadata first (needed for backup management)
         metadata = calculate_connect_metadata(sections)
         
