@@ -373,6 +373,8 @@
         }
 
         .close {
+            background: transparent;
+            border: none;
             color: var(--text-secondary);
             float: right;
             font-size: 32px;
@@ -701,9 +703,9 @@ print(data['metadata'])</pre>
     </div>
 
     <!-- README Modal -->
-    <div id="readmeModal" class="modal">
+    <div id="readmeModal" class="modal" role="dialog" aria-modal="true" aria-label="README Preview">
         <div class="modal-content">
-            <span class="close" onclick="closeReadme()">&times;</span>
+            <button class="close" onclick="closeReadme()" aria-label="Close modal">&times;</button>
             <div id="readmeContent">
                 <p style="text-align: center; color: #666;">Loading README...</p>
             </div>
@@ -835,10 +837,19 @@ print(data['metadata'])</pre>
         loadData();
 
         // README Modal Functions
+        let lastFocusedElement;
+
         async function openReadme() {
+            lastFocusedElement = document.activeElement;
             const modal = document.getElementById('readmeModal');
             modal.style.display = 'block';
             
+            // Focus close button for accessibility
+            setTimeout(() => {
+                const closeBtn = modal.querySelector('.close');
+                if (closeBtn) closeBtn.focus();
+            }, 100);
+
             const content = document.getElementById('readmeContent');
             content.innerHTML = '<p style="text-align: center; color: #666;">Loading README...</p>';
             
@@ -870,6 +881,7 @@ print(data['metadata'])</pre>
 
         function closeReadme() {
             document.getElementById('readmeModal').style.display = 'none';
+            if (lastFocusedElement) lastFocusedElement.focus();
         }
 
         // Close modal when clicking outside of it
