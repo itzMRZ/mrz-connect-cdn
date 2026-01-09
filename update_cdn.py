@@ -105,9 +105,9 @@ def generate_connect_json(sections: List[Dict], output_path: str = "connect.json
         "sections": sections
     }
     
-    # Write regular JSON
+    # Write regular JSON (minified for performance)
     with open(output_path, 'w', encoding='utf-8') as f:
-        json.dump(output_data, f, indent=2, ensure_ascii=False)
+        json.dump(output_data, f, separators=(',', ':'), ensure_ascii=False)
     
     # Write gzipped version
     gzip_path = output_path + '.gz'
@@ -117,7 +117,7 @@ def generate_connect_json(sections: List[Dict], output_path: str = "connect.json
     # Write metadata only JSON (optimization for landing page)
     metadata_path = os.path.join(SCRIPT_DIR, "connect_metadata.json")
     with open(metadata_path, 'w', encoding='utf-8') as f:
-        json.dump({"metadata": metadata}, f, indent=2, ensure_ascii=False)
+        json.dump({"metadata": metadata}, f, separators=(',', ':'), ensure_ascii=False)
 
     # Write gzipped metadata version
     metadata_gzip_path = metadata_path + '.gz'
@@ -300,9 +300,9 @@ def generate_exams_json(sections: List[Dict], output_path: str = "exams.json"):
         "exams": exams
     }
     
-    # Write regular JSON
+    # Write regular JSON (minified for performance)
     with open(output_path, 'w', encoding='utf-8') as f:
-        json.dump(output_data, f, indent=2, ensure_ascii=False)
+        json.dump(output_data, f, separators=(',', ':'), ensure_ascii=False)
     
     # Write gzipped version
     gzip_path = output_path + '.gz'
