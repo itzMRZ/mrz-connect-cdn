@@ -381,12 +381,16 @@
             cursor: pointer;
             transition: all 0.2s ease;
             padding: 4px 8px;
+            background: none;
+            border: none;
+            font-family: inherit;
         }
 
         .close:hover,
         .close:focus {
             color: var(--text-link);
             transform: scale(1.1);
+            outline: none;
         }
 
         .modal-content h1 {
@@ -703,7 +707,7 @@ print(data['metadata'])</pre>
     <!-- README Modal -->
     <div id="readmeModal" class="modal">
         <div class="modal-content">
-            <span class="close" onclick="closeReadme()">&times;</span>
+            <button class="close" onclick="closeReadme()" aria-label="Close modal">&times;</button>
             <div id="readmeContent">
                 <p style="text-align: center; color: #666;">Loading README...</p>
             </div>
