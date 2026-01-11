@@ -18,14 +18,42 @@ SCRIPT_DIR = os.path.dirname(os.path.abspath(__file__))
 BACKUPS_DIR = os.path.join(SCRIPT_DIR, "backups")
 
 
-def fetch_mrz_data() -> List[Dict]:
+def fetch_mrz_data() -> Optional[List[Dict]]:
     """Fetch course data from MRZ Connect API."""
     url = "https://usis-cdn.eniamza.com/connect.json"
+    etag_path = os.path.join(SCRIPT_DIR, "connect.etag")
+    connect_json_path = os.path.join(SCRIPT_DIR, "connect.json")
     print(f"Fetching data from {url}...")
     
+    headers = {}
+
+    # Conditional GET: Only if both ETag and local data exist
+    if os.path.exists(etag_path) and os.path.exists(connect_json_path):
+        try:
+            with open(etag_path, 'r', encoding='utf-8') as f:
+                etag = f.read().strip()
+                if etag:
+                    headers['If-None-Match'] = etag
+                    print(f"  Found existing ETag: {etag}")
+        except Exception as e:
+            print(f"⚠️  Error reading ETag: {e}")
+
     try:
-        response = requests.get(url, timeout=30)
+        response = requests.get(url, headers=headers, timeout=30)
+
+        if response.status_code == 304:
+            print("✓ Data not modified (304). Skipping update.")
+            return None
+
         response.raise_for_status()
+
+        # Save new ETag if present
+        new_etag = response.headers.get('ETag')
+        if new_etag:
+            with open(etag_path, 'w', encoding='utf-8') as f:
+                f.write(new_etag)
+                print(f"  Saved new ETag: {new_etag}")
+
         data = response.json()
         print(f"✓ Successfully fetched {len(data)} sections")
         return data
@@ -330,6 +358,10 @@ def main():
         # Fetch data from API
         sections = fetch_mrz_data()
         
+        if sections is None:
+            print("No changes detected. Exiting.")
+            return 0
+
         # Calculate metadata first (needed for backup management)
         metadata = calculate_connect_metadata(sections)
         
