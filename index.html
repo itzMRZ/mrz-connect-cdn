@@ -147,6 +147,8 @@
             margin-bottom: var(--space-md);
             border-radius: var(--radius-md);
             transition: transform 0.2s ease, box-shadow 0.2s ease;
+            position: relative;
+            padding-right: 50px;
         }
         
         .endpoint:hover {
@@ -1016,6 +1018,75 @@ print(data['metadata'])</pre>
                 };
 
                 block.appendChild(btn);
+            });
+
+            // Initialize Endpoint Copy Buttons
+            document.querySelectorAll('.endpoint').forEach(endpoint => {
+                if (endpoint.querySelector('.copy-btn')) return;
+
+                const urlDiv = endpoint.querySelector('.endpoint-url');
+                if (!urlDiv) return;
+
+                const btn = document.createElement('button');
+                btn.className = 'copy-btn';
+                btn.textContent = 'Copy';
+                btn.ariaLabel = 'Copy endpoint URL';
+
+                btn.onclick = async () => {
+                    // Prevent rapid clicks from messing up the text revert logic
+                    if (btn.textContent === 'Copied!') return;
+
+                    const url = urlDiv.textContent.trim();
+
+                    try {
+                        await navigator.clipboard.writeText(url);
+
+                        // Feedback
+                        const originalText = btn.textContent;
+                        btn.textContent = 'Copied!';
+                        btn.style.color = 'var(--text-success)';
+                        btn.style.borderColor = 'var(--text-success)';
+
+                        setTimeout(() => {
+                            btn.textContent = originalText;
+                            btn.style.color = '';
+                            btn.style.borderColor = '';
+                        }, 2000);
+                    } catch (err) {
+                        console.error('Failed to copy:', err);
+
+                        // Fallback for better compatibility
+                        const textArea = document.createElement("textarea");
+                        textArea.value = url;
+                        textArea.style.position = "fixed";
+                        textArea.style.left = "-9999px";
+                        document.body.appendChild(textArea);
+                        textArea.focus();
+                        textArea.select();
+                        try {
+                            document.execCommand('copy');
+                             // Feedback
+                            const originalText = btn.textContent;
+                            btn.textContent = 'Copied!';
+                            btn.style.color = 'var(--text-success)';
+                            btn.style.borderColor = 'var(--text-success)';
+
+                            setTimeout(() => {
+                                btn.textContent = originalText;
+                                btn.style.color = '';
+                                btn.style.borderColor = '';
+                            }, 2000);
+                        } catch (fallbackErr) {
+                            console.error('Fallback copy failed', fallbackErr);
+                            btn.textContent = 'Error';
+                            setTimeout(() => btn.textContent = 'Copy', 2000);
+                        } finally {
+                            document.body.removeChild(textArea);
+                        }
+                    }
+                };
+
+                endpoint.appendChild(btn);
             });
         });
     </script>
