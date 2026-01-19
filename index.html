@@ -55,6 +55,7 @@
             --text-accent: #79c0ff;
             --text-link: #58a6ff;
             --text-success: #56d364;
+            --text-error: #ff6b6b;
             
             /* Spacing */
             --space-xs: clamp(4px, 0.5vw, 6px);
@@ -122,6 +123,10 @@
         .status span {
             color: var(--text-success);
         }
+
+        .status span.offline {
+            color: var(--text-error);
+        }
         
         .status-item {
             display: inline-flex;
@@ -141,6 +146,7 @@
         }
 
         .endpoint {
+            position: relative;
             background: var(--bg-secondary);
             border: 1px solid var(--border-primary);
             padding: clamp(10px, 2.5vw, 14px);
@@ -789,53 +795,84 @@ print(data['metadata'])</pre>
         updateVersionDisplay();
         
         // Initialize Copy Buttons
-        document.querySelectorAll('.code-container').forEach(container => {
-            const btn = document.createElement('button');
-            btn.className = 'copy-btn';
-            btn.textContent = 'Copy';
-            btn.ariaLabel = 'Copy code to clipboard';
+        function initCopyButtons() {
+            const addBtn = (parent, getText) => {
+                 if (parent.querySelector('.copy-btn')) return;
 
-            btn.onclick = () => {
-                const code = container.querySelector('pre').innerText;
+                 const btn = document.createElement('button');
+                 btn.className = 'copy-btn';
+                 btn.textContent = 'Copy';
+                 btn.ariaLabel = 'Copy to clipboard';
 
-                const copyToClipboard = async (text) => {
-                    try {
-                        if (navigator.clipboard && navigator.clipboard.writeText) {
-                            await navigator.clipboard.writeText(text);
-                            return;
+                 btn.onclick = async () => {
+                    const text = getText();
+                    if (!text) return;
+
+                    const copyToClipboard = async (t) => {
+                        try {
+                            if (navigator.clipboard && navigator.clipboard.writeText) {
+                                await navigator.clipboard.writeText(t);
+                                return;
+                            }
+                        } catch (err) {
+                            console.warn('Clipboard API failed, trying fallback:', err);
                         }
-                    } catch (err) {
-                        console.warn('Clipboard API failed, trying fallback:', err);
-                    }
 
-                    const textArea = document.createElement("textarea");
-                    textArea.value = text;
-                    textArea.style.position = "fixed";
-                    textArea.style.left = "-9999px";
-                    document.body.appendChild(textArea);
-                    textArea.focus();
-                    textArea.select();
-                    try {
-                        document.execCommand('copy');
-                    } catch (err) {
-                        console.error('Fallback copy failed', err);
-                        throw err;
-                    } finally {
-                        document.body.removeChild(textArea);
-                    }
-                };
+                        const textArea = document.createElement("textarea");
+                        textArea.value = t;
+                        textArea.style.position = "fixed";
+                        textArea.style.left = "-9999px";
+                        document.body.appendChild(textArea);
+                        textArea.focus();
+                        textArea.select();
+                        try {
+                            document.execCommand('copy');
+                        } catch (err) {
+                            console.error('Fallback copy failed', err);
+                            throw err;
+                        } finally {
+                            document.body.removeChild(textArea);
+                        }
+                    };
 
-                copyToClipboard(code).then(() => {
-                    btn.textContent = 'Copied!';
-                    setTimeout(() => btn.textContent = 'Copy', 2000);
-                }).catch(err => {
-                    console.error('Failed to copy:', err);
-                    btn.textContent = 'Error';
-                });
+                    copyToClipboard(text).then(() => {
+                        const originalText = btn.textContent;
+                        btn.textContent = 'Copied!';
+                        btn.style.color = 'var(--text-success)';
+                        btn.style.borderColor = 'var(--text-success)';
+
+                        setTimeout(() => {
+                            btn.textContent = originalText;
+                            btn.style.color = '';
+                            btn.style.borderColor = '';
+                        }, 2000);
+                    }).catch(err => {
+                        console.error('Failed to copy:', err);
+                        btn.textContent = 'Error';
+                        setTimeout(() => btn.textContent = 'Copy', 2000);
+                    });
+                 };
+
+                 parent.appendChild(btn);
             };
 
-            container.appendChild(btn);
-        });
+            // Add to Code Blocks
+            document.querySelectorAll('.code-container').forEach(el => {
+                // Prefer textContent to preserve newlines in pre
+                addBtn(el, () => el.querySelector('pre')?.textContent);
+            });
+
+            // Add to Endpoints
+            document.querySelectorAll('.endpoint').forEach(el => {
+                addBtn(el, () => el.querySelector('.endpoint-url')?.textContent);
+            });
+        }
+
+        if (document.readyState === 'loading') {
+            document.addEventListener('DOMContentLoaded', initCopyButtons);
+        } else {
+            initCopyButtons();
+        }
 
         async function loadData() {
             try {
@@ -912,9 +949,12 @@ print(data['metadata'])</pre>
                 `;
                 
             } catch (error) {
-                document.getElementById('status').textContent = 'Offline';
+                const statusEl = document.getElementById('status');
+                statusEl.textContent = 'Offline';
+                statusEl.classList.add('offline');
+
                 document.getElementById('stats-container').innerHTML = `
-                    <div class="info" style="border-left-color: #ff0000;">
+                    <div class="info" style="border-left-color: var(--text-error);">
                         Unable to load data. Run: python update_cdn.py
                     </div>
                 `;
@@ -976,48 +1016,6 @@ print(data['metadata'])</pre>
             }
         });
 
-        // Copy to Clipboard Functionality
-        document.addEventListener('DOMContentLoaded', () => {
-            document.querySelectorAll('.code-block').forEach(block => {
-                // Check if button already exists (to prevent duplicates if run multiple times)
-                if (block.querySelector('.copy-btn')) return;
-
-                const btn = document.createElement('button');
-                btn.className = 'copy-btn';
-                btn.textContent = 'Copy';
-                btn.ariaLabel = 'Copy code to clipboard';
-
-                btn.onclick = async () => {
-                    const pre = block.querySelector('pre');
-                    if (!pre) return;
-
-                    // Get text content but handle possible child elements (like spans)
-                    const code = pre.textContent;
-
-                    try {
-                        await navigator.clipboard.writeText(code);
-
-                        // Feedback
-                        const originalText = btn.textContent;
-                        btn.textContent = 'Copied!';
-                        btn.style.color = 'var(--text-success)';
-                        btn.style.borderColor = 'var(--text-success)';
-
-                        setTimeout(() => {
-                            btn.textContent = originalText;
-                            btn.style.color = '';
-                            btn.style.borderColor = '';
-                        }, 2000);
-                    } catch (err) {
-                        console.error('Failed to copy:', err);
-                        btn.textContent = 'Error';
-                        setTimeout(() => btn.textContent = 'Copy', 2000);
-                    }
-                };
-
-                block.appendChild(btn);
-            });
-        });
     </script>
 </body>
 </html>
