@@ -1,0 +1,3 @@
+## 2024-05-22 - Duplicate Initialization and Closure Allocation
+**Learning:** Mixing inline script execution with `DOMContentLoaded` listeners can lead to duplicate initialization of UI components (e.g., double copy buttons), wasting resources and degrading UX. Additionally, defining helper functions inside loops or event handlers creates unnecessary closures for every element, which increases memory usage on pages with many elements.
+**Action:** consolidating initialization logic into a single lifecycle event (like `DOMContentLoaded`) and hoisting helper functions to the module/script scope to prevent allocation churn.
