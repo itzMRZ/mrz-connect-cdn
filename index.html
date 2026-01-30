@@ -788,55 +788,6 @@ print(data['metadata'])</pre>
         loadVersion();
         updateVersionDisplay();
         
-        // Initialize Copy Buttons
-        document.querySelectorAll('.code-container').forEach(container => {
-            const btn = document.createElement('button');
-            btn.className = 'copy-btn';
-            btn.textContent = 'Copy';
-            btn.ariaLabel = 'Copy code to clipboard';
-
-            btn.onclick = () => {
-                const code = container.querySelector('pre').innerText;
-
-                const copyToClipboard = async (text) => {
-                    try {
-                        if (navigator.clipboard && navigator.clipboard.writeText) {
-                            await navigator.clipboard.writeText(text);
-                            return;
-                        }
-                    } catch (err) {
-                        console.warn('Clipboard API failed, trying fallback:', err);
-                    }
-
-                    const textArea = document.createElement("textarea");
-                    textArea.value = text;
-                    textArea.style.position = "fixed";
-                    textArea.style.left = "-9999px";
-                    document.body.appendChild(textArea);
-                    textArea.focus();
-                    textArea.select();
-                    try {
-                        document.execCommand('copy');
-                    } catch (err) {
-                        console.error('Fallback copy failed', err);
-                        throw err;
-                    } finally {
-                        document.body.removeChild(textArea);
-                    }
-                };
-
-                copyToClipboard(code).then(() => {
-                    btn.textContent = 'Copied!';
-                    setTimeout(() => btn.textContent = 'Copy', 2000);
-                }).catch(err => {
-                    console.error('Failed to copy:', err);
-                    btn.textContent = 'Error';
-                });
-            };
-
-            container.appendChild(btn);
-        });
-
         async function loadData() {
             try {
                 // Optimization: Fetch only metadata (~400 bytes) instead of full data (~3.4 MB)
@@ -978,9 +929,37 @@ print(data['metadata'])</pre>
 
         // Copy to Clipboard Functionality
         document.addEventListener('DOMContentLoaded', () => {
-            document.querySelectorAll('.code-block').forEach(block => {
+            const copyToClipboard = async (text) => {
+                try {
+                    if (navigator.clipboard && navigator.clipboard.writeText) {
+                        await navigator.clipboard.writeText(text);
+                        return;
+                    }
+                } catch (err) {
+                    console.warn('Clipboard API failed, trying fallback:', err);
+                }
+
+                // Robust fallback for older browsers or if Clipboard API is blocked
+                const textArea = document.createElement("textarea");
+                textArea.value = text;
+                textArea.style.position = "fixed";
+                textArea.style.left = "-9999px";
+                document.body.appendChild(textArea);
+                textArea.focus();
+                textArea.select();
+                try {
+                    document.execCommand('copy');
+                } catch (err) {
+                    console.error('Fallback copy failed', err);
+                    throw err;
+                } finally {
+                    document.body.removeChild(textArea);
+                }
+            };
+
+            document.querySelectorAll('.code-container').forEach(container => {
                 // Check if button already exists (to prevent duplicates if run multiple times)
-                if (block.querySelector('.copy-btn')) return;
+                if (container.querySelector('.copy-btn')) return;
 
                 const btn = document.createElement('button');
                 btn.className = 'copy-btn';
@@ -988,14 +967,42 @@ print(data['metadata'])</pre>
                 btn.ariaLabel = 'Copy code to clipboard';
 
                 btn.onclick = async () => {
-                    const pre = block.querySelector('pre');
+                    const pre = container.querySelector('pre');
                     if (!pre) return;
 
-                    // Get text content but handle possible child elements (like spans)
+                    // Get text content (handles child elements like spans correctly)
                     const code = pre.textContent;
 
+                    const copyToClipboard = async (text) => {
+                        try {
+                            if (navigator.clipboard && navigator.clipboard.writeText) {
+                                await navigator.clipboard.writeText(text);
+                                return;
+                            }
+                        } catch (err) {
+                            console.warn('Clipboard API failed, trying fallback:', err);
+                        }
+
+                        // Robust fallback for older browsers or if Clipboard API is blocked
+                        const textArea = document.createElement("textarea");
+                        textArea.value = text;
+                        textArea.style.position = "fixed";
+                        textArea.style.left = "-9999px";
+                        document.body.appendChild(textArea);
+                        textArea.focus();
+                        textArea.select();
+                        try {
+                            document.execCommand('copy');
+                        } catch (err) {
+                            console.error('Fallback copy failed', err);
+                            throw err;
+                        } finally {
+                            document.body.removeChild(textArea);
+                        }
+                    };
+
                     try {
-                        await navigator.clipboard.writeText(code);
+                        await copyToClipboard(code);
 
                         // Feedback
                         const originalText = btn.textContent;
@@ -1015,7 +1022,7 @@ print(data['metadata'])</pre>
                     }
                 };
 
-                block.appendChild(btn);
+                container.appendChild(btn);
             });
         });
     </script>
