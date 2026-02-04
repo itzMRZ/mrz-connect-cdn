@@ -112,51 +112,6 @@ def calculate_connect_metadata(sections: List[Dict]) -> Dict:
     return metadata
 
 
-def generate_connect_json(sections: List[Dict], output_path: str = "connect.json"):
-    """Generate connect.json with metadata."""
-    # Ensure output path is in the script directory
-    if not os.path.isabs(output_path):
-        output_path = os.path.join(SCRIPT_DIR, output_path)
-
-    print(f"\nGenerating {output_path}...")
-
-    metadata = calculate_connect_metadata(sections)
-
-    output_data = {
-        "metadata": metadata,
-        "sections": sections
-    }
-
-    # Write regular JSON
-    with open(output_path, 'w', encoding='utf-8') as f:
-        json.dump(output_data, f, indent=2, ensure_ascii=False)
-
-    # Write gzipped version
-    gzip_path = output_path + '.gz'
-    with gzip.open(gzip_path, 'wt', encoding='utf-8') as f:
-        json.dump(output_data, f, separators=(',', ':'), ensure_ascii=False)
-
-    # Write metadata only JSON (optimization for landing page)
-    metadata_path = os.path.join(SCRIPT_DIR, "connect_metadata.json")
-    with open(metadata_path, 'w', encoding='utf-8') as f:
-        json.dump({"metadata": metadata}, f, indent=2, ensure_ascii=False)
-
-    # Write gzipped metadata version
-    metadata_gzip_path = metadata_path + '.gz'
-    with gzip.open(metadata_gzip_path, 'wt', encoding='utf-8') as f:
-        json.dump({"metadata": metadata}, f, separators=(
-            ',', ':'), ensure_ascii=False)
-
-    regular_size = os.path.getsize(output_path) / 1024  # KB
-    gzip_size = os.path.getsize(gzip_path) / 1024  # KB
-    metadata_size = os.path.getsize(metadata_path) / 1024  # KB
-    compression_ratio = ((regular_size - gzip_size) / regular_size * 100)
-
-    print(f"✓ {output_path} created successfully")
-    print(
-        f"✓ connect_metadata.json created successfully ({metadata_size:.2f} KB)")
-    print(f"  Regular: {regular_size:.1f} KB")
-    print(f"  Gzipped: {gzip_size:.1f} KB (saved {compression_ratio:.1f}%)")
 
 
 def get_current_semester(mid_exam_start: str) -> str:
