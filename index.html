@@ -147,6 +147,7 @@
             margin-bottom: var(--space-md);
             border-radius: var(--radius-md);
             transition: transform 0.2s ease, box-shadow 0.2s ease;
+            position: relative;
         }
         
         .endpoint:hover {
@@ -978,6 +979,7 @@ print(data['metadata'])</pre>
 
         // Copy to Clipboard Functionality
         document.addEventListener('DOMContentLoaded', () => {
+            // Add copy buttons to code blocks
             document.querySelectorAll('.code-block').forEach(block => {
                 // Check if button already exists (to prevent duplicates if run multiple times)
                 if (block.querySelector('.copy-btn')) return;
@@ -1016,6 +1018,46 @@ print(data['metadata'])</pre>
                 };
 
                 block.appendChild(btn);
+            });
+
+            // Add copy buttons to API endpoints
+            document.querySelectorAll('.endpoint').forEach(endpoint => {
+                // Check if button already exists
+                if (endpoint.querySelector('.copy-btn')) return;
+
+                const btn = document.createElement('button');
+                btn.className = 'copy-btn';
+                btn.textContent = 'Copy';
+                btn.ariaLabel = 'Copy URL to clipboard';
+
+                btn.onclick = async () => {
+                    const urlDiv = endpoint.querySelector('.endpoint-url');
+                    if (!urlDiv) return;
+
+                    const url = urlDiv.textContent.trim();
+
+                    try {
+                        await navigator.clipboard.writeText(url);
+
+                        // Feedback
+                        const originalText = btn.textContent;
+                        btn.textContent = 'Copied!';
+                        btn.style.color = 'var(--text-success)';
+                        btn.style.borderColor = 'var(--text-success)';
+
+                        setTimeout(() => {
+                            btn.textContent = originalText;
+                            btn.style.color = '';
+                            btn.style.borderColor = '';
+                        }, 2000);
+                    } catch (err) {
+                        console.error('Failed to copy:', err);
+                        btn.textContent = 'Error';
+                        setTimeout(() => btn.textContent = 'Copy', 2000);
+                    }
+                };
+
+                endpoint.appendChild(btn);
             });
         });
     </script>
