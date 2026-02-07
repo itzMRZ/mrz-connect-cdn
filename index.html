@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0, viewport-fit=cover">
     <meta name="description" content="Open source CDN for USIS course data, exam schedules, and lab availability. JSON APIs updated daily with automatic backups.">
     <link rel="icon" type="image/svg+xml" href="favicon.svg">
-    
+
     <!-- Open Graph Meta Tags -->
     <meta property="og:type" content="website">
     <meta property="og:site_name" content="MRZ Connect CDN">
@@ -19,7 +19,7 @@
     <meta property="og:image:height" content="630">
     <meta property="og:image:alt" content="MRZ Connect CDN - BRAC University Data API">
     <meta property="og:locale" content="en_US">
-    
+
     <!-- Twitter Card Meta Tags -->
     <meta name="twitter:card" content="summary_large_image">
     <meta name="twitter:site" content="@itzmrz">
@@ -28,13 +28,13 @@
     <meta name="twitter:description" content="Course data, exam schedules, and lab slots. Updated daily with automatic backups. JSON APIs for BRAC University USIS data.">
     <meta name="twitter:image" content="https://connect-cdn.itzmrz.xyz/banner.png">
     <meta name="twitter:image:alt" content="MRZ Connect CDN - BRAC University Data API">
-    
+
     <!-- Additional Meta Tags -->
     <meta name="author" content="itzMRZ - OpenSource">
     <meta name="robots" content="index, follow">
     <meta name="keywords" content="BRAC University, USIS, course data, exam schedules, lab availability, JSON API, open source, connect CDN">
     <meta name="theme-color" content="#1a1a1a">
-    
+
     <title>MRZ Connect CDN</title>
     <!-- marked.js — lightweight markdown renderer for README modal -->
     <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js" defer></script>
@@ -42,7 +42,7 @@
         /* CSS Variables for consistent theming */
         :root {
             color-scheme: dark;
-            
+
             /* Eye-soothing color palette */
             --bg-primary: #1a1a1a;
             --bg-secondary: #262626;
@@ -50,13 +50,13 @@
             --border-primary: #30363d;
             --border-accent: #58a6ff;
             --border-success: #56d364;
-            
+
             --text-primary: #c9d1d9;
             --text-secondary: #8b949e;
             --text-accent: #79c0ff;
             --text-link: #58a6ff;
             --text-success: #56d364;
-            
+
             /* Spacing */
             --space-xs: clamp(4px, 0.5vw, 6px);
             --space-sm: clamp(8px, 1vw, 12px);
@@ -64,20 +64,20 @@
             --space-lg: clamp(16px, 2vw, 24px);
             --space-xl: clamp(20px, 2.5vw, 32px);
             --space-2xl: clamp(32px, 4vw, 48px);
-            
+
             /* Radius */
             --radius-sm: 3px;
             --radius-md: 6px;
             --radius-lg: 12px;
         }
-        
+
         /* Reset & Base Styles */
         *, *::before, *::after {
             margin: 0;
             padding: 0;
             box-sizing: border-box;
         }
-        
+
         html {
             -webkit-text-size-adjust: 100%;
             text-size-adjust: 100%;
@@ -123,7 +123,7 @@
         .status span {
             color: var(--text-success);
         }
-        
+
         .status-item {
             display: inline-flex;
             align-items: center;
@@ -149,7 +149,7 @@
             border-radius: var(--radius-md);
             transition: transform 0.2s ease, box-shadow 0.2s ease;
         }
-        
+
         .endpoint:hover {
             transform: translateY(-1px);
             box-shadow: 0 2px 8px rgba(0, 0, 0, 0.3);
@@ -244,7 +244,7 @@
             transform: translateY(-1px);
             box-shadow: 0 2px 8px rgba(86, 211, 100, 0.3);
         }
-        
+
         :focus-visible {
             outline: 2px solid var(--border-accent);
             outline-offset: 2px;
@@ -268,7 +268,7 @@
             color: var(--text-success);
             font-family: 'Courier New', monospace;
         }
-        
+
         .info strong {
             color: var(--text-link);
         }
@@ -279,7 +279,7 @@
             margin-bottom: var(--space-xl);
             grid-template-columns: repeat(2, 1fr);
         }
-        
+
         @media (max-width: 360px) {
             .stats {
                 grid-template-columns: 1fr;
@@ -299,7 +299,7 @@
             border-radius: var(--radius-md);
             transition: transform 0.2s ease, box-shadow 0.2s ease;
         }
-        
+
         .stat:hover {
             transform: translateY(-2px);
             box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
@@ -329,12 +329,12 @@
             font-size: clamp(12px, 1.6vw, 13px);
             line-height: 1.6;
         }
-        
+
         footer a {
             transition: opacity 0.2s ease;
             word-break: break-word;
         }
-        
+
         footer a:hover {
             opacity: 0.8;
         }
@@ -390,15 +390,15 @@
             scrollbar-width: thin;
             scrollbar-color: var(--border-primary) transparent;
         }
-        
+
         .modal-content::-webkit-scrollbar {
             width: 8px;
         }
-        
+
         .modal-content::-webkit-scrollbar-track {
             background: transparent;
         }
-        
+
         .modal-content::-webkit-scrollbar-thumb {
             background: var(--border-primary);
             border-radius: 4px;
@@ -448,7 +448,7 @@
             margin-bottom: var(--space-sm);
             font-size: clamp(1.1em, 2vw, 1.25em);
         }
-        
+
         .modal-content h4 {
             color: var(--text-secondary);
             margin-top: var(--space-md);
@@ -509,7 +509,7 @@
             margin: var(--space-sm) 0;
             color: var(--text-primary);
         }
-        
+
         .modal-content blockquote {
             background: var(--bg-secondary);
             border-left: 3px solid var(--border-accent);
@@ -518,35 +518,35 @@
             border-radius: var(--radius-sm);
             color: var(--text-secondary);
         }
-        
+
         .modal-content table {
             width: 100%;
             border-collapse: collapse;
             margin: var(--space-md) 0;
         }
-        
+
         .modal-content th,
         .modal-content td {
             border: 1px solid var(--border-primary);
             padding: var(--space-sm);
             text-align: left;
         }
-        
+
         .modal-content th {
             background: var(--bg-secondary);
             color: var(--text-link);
             font-weight: 600;
         }
-        
+
         .modal-content tr:nth-child(even) {
             background: var(--bg-secondary);
         }
-        
+
         /* Hide badges in modal README */
         .modal-content p:first-of-type a img[src*="shields.io"] {
             display: none;
         }
-        
+
         .modal-content p:first-of-type a[href*="shields.io"],
         .modal-content p:first-of-type a[href*="urbanup.com"],
         .modal-content p:first-of-type a[href*="github.com"][href*="LICENSE"] {
@@ -582,9 +582,9 @@
     <div class="container">
         <h1>$ MRZ Connect CDN</h1>
         <div class="status">
-            Status: <span id="status">Loading...</span> • 
-            Version: <span id="version">1.0.0</span> • 
-            Semester: <span id="semester">Loading...</span> • 
+            Status: <span id="status">Loading...</span> •
+            Version: <span id="version">1.0.0</span> •
+            Semester: <span id="semester">Loading...</span> •
             Last Fetched: <span id="lastFetched">Loading...</span>
         </div>
 
@@ -611,6 +611,7 @@
             <h2>// JSON API Files</h2>
             <div class="links">
                 <a href="https://connect-cdn.itzmrz.xyz/connect.json" class="link" target="_blank" rel="noopener">◆ connect.json</a>
+                <a href="https://connect-cdn.itzmrz.xyz/backups/latest.json" class="link" target="_blank" rel="noopener">◆ latest backup</a>
                 <a href="https://connect-cdn.itzmrz.xyz/connect_backup.json" class="link" target="_blank" rel="noopener">◆ backups index</a>
                 <a href="https://connect-cdn.itzmrz.xyz/exams.json" class="link" target="_blank" rel="noopener">◆ exams.json</a>
                 <a href="https://connect-cdn.itzmrz.xyz/open_labs.json" class="link" target="_blank" rel="noopener">◆ open labs</a>
@@ -635,6 +636,10 @@
                 <div class="endpoint-label">Full course data with metadata (~3.4 MB, auto-compressed to 137 KB)</div>
             </div>
             <div class="endpoint">
+                <div class="endpoint-url">https://connect-cdn.itzmrz.xyz/backups/latest.json</div>
+                <div class="endpoint-label">Always points to the current semester's backup data</div>
+            </div>
+            <div class="endpoint">
                 <div class="endpoint-url">https://connect-cdn.itzmrz.xyz/connect_backup.json</div>
                 <div class="endpoint-label">Backups index with all historical data links</div>
             </div>
@@ -652,7 +657,7 @@
         <!-- Usage -->
         <div class="section">
             <h2>// Usage</h2>
-            
+
             <div class="info">
                 <strong>Compression:</strong> Use <code>.gz</code> files for 96% smaller downloads (3.4 MB → 137 KB).<br>
                 Regular files work directly, gzipped files need manual decompression.
@@ -703,8 +708,8 @@ print(data['metadata'])</pre>
             Auto-updates daily • Backups on semester change • <span id="footerSemester">Loading...</span>
             <br>
             <span style="margin-top: 10px; display: inline-block;">
-                <a href="https://github.com/itzMRZ/mrz-connect-cdn" style="color: #00ff00; text-decoration: none;">GitHub</a> • 
-                Data source: <a href="https://github.com/eniamza" style="color: #00aaff; text-decoration: none;">@eniamza</a> • 
+                <a href="https://github.com/itzMRZ/mrz-connect-cdn" style="color: #00ff00; text-decoration: none;">GitHub</a> •
+                Data source: <a href="https://github.com/eniamza" style="color: #00aaff; text-decoration: none;">@eniamza</a> •
                 <a href="https://usis-cdn.eniamza.com/connect.json" style="color: #00aaff; text-decoration: none;">usis-cdn.eniamza.com</a>
             </span>
         </footer>
@@ -775,15 +780,15 @@ print(data['metadata'])</pre>
                 // Optimization: Fetch only metadata (~400 bytes) instead of full data (~3.4 MB)
                 const response = await fetch('connect_metadata.json');
                 if (!response.ok) throw new Error('Failed to load');
-                
+
                 const data = await response.json();
                 const m = data.metadata;
-                
+
                 document.getElementById('status').textContent = 'Online';
-                
+
                 // Version from server (MAJOR.SEMESTER.DAILY)
                 document.getElementById('version').textContent = m.version || '2.3.0';
-                
+
                 // Detect semester from mid exam start date
                 let semester = 'Unknown';
                 if (m.midExamStartDate) {
@@ -797,7 +802,7 @@ print(data['metadata'])</pre>
                 document.getElementById('semester').textContent = semester;
                 document.getElementById('liveSemester').textContent = semester;
                 document.getElementById('footerSemester').textContent = semester;
-                
+
                 // Format last fetched time
                 const lastUpdated = new Date(m.lastUpdated);
                 const fetchedStr = lastUpdated.toLocaleString('en-US', {
@@ -809,11 +814,11 @@ print(data['metadata'])</pre>
                     timeZoneName: 'short'
                 });
                 document.getElementById('lastFetched').textContent = fetchedStr;
-                
-                const formatDate = (d) => d ? new Date(d).toLocaleDateString('en-US', { 
-                    month: 'short', day: 'numeric', year: 'numeric' 
+
+                const formatDate = (d) => d ? new Date(d).toLocaleDateString('en-US', {
+                    month: 'short', day: 'numeric', year: 'numeric'
                 }) : 'N/A';
-                
+
                 document.getElementById('stats-container').innerHTML = `
                     <div class="stats">
                         <div class="stat">
@@ -838,7 +843,7 @@ print(data['metadata'])</pre>
                         Final Exams: ${formatDate(m.finalExamStartDate)} - ${formatDate(m.finalExamEndDate)}
                     </div>
                 `;
-                
+
             } catch (error) {
                 document.getElementById('status').textContent = 'Offline';
                 document.getElementById('stats-container').innerHTML = `
@@ -855,10 +860,10 @@ print(data['metadata'])</pre>
         async function openReadme() {
             const modal = document.getElementById('readmeModal');
             modal.style.display = 'block';
-            
+
             const content = document.getElementById('readmeContent');
             content.innerHTML = '<p style="text-align: center; color: #666;">Loading README...</p>';
-            
+
             try {
                 // Try local README first (avoids GitHub API rate limit)
                 const localResp = await fetch('README.md');

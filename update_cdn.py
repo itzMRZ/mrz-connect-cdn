@@ -225,8 +225,14 @@ def manage_current_backup(metadata: Dict, sections: List[Dict]):
     with open(backup_path, 'w', encoding='utf-8') as f:
         json.dump(backup_data, f, indent=2, ensure_ascii=False)
 
+    # Also write as latest.json — canonical alias for current semester
+    latest_path = os.path.join(BACKUPS_DIR, "latest.json")
+    with open(latest_path, 'w', encoding='utf-8') as f:
+        json.dump(backup_data, f, indent=2, ensure_ascii=False)
+
     file_size = os.path.getsize(backup_path) / 1024
     print(f"\n✓ Created/Updated: {backup_name} ({file_size:.1f} KB)")
+    print(f"✓ latest.json → {backup_name}")
 
     return backup_name, semester_changed
 

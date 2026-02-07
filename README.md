@@ -47,14 +47,15 @@ https://connect-cdn.itzmrz.xyz/connect_backup.json
 
 ### Current Semester Backup
 ```
+https://connect-cdn.itzmrz.xyz/backups/latest.json
 https://connect-cdn.itzmrz.xyz/backups/spring2026.json
 ```
 **What it contains:**
-- Full course data for the ongoing semester
-- Updated daily with latest data
-- Clean naming: `{season}{year}.json`
+- `latest.json` — always points to the current semester (no hardcoding needed)
+- Each semester also has its own file: `{season}{year}.json`
+- Full course data, updated daily
 
-**Use this for:** Accessing stable semester data, comparing with live updates
+**Use this for:** Accessing current semester data without knowing the semester name
 
 ---
 

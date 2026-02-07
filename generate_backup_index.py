@@ -108,10 +108,15 @@ def generate_backup_index():
         reverse=True
     )
 
+    # Find the current backup info
+    current_backup = next((b for b in backups if b['isCurrent']), None)
+
     # Create output structure
     output = {
         "metadata": {
             "totalBackups": len(backups),
+            "currentSemester": current_backup['semester'] if current_backup else None,
+            "latestBackup": f"{CDN_BASE_URL}/latest.json",
             "currentBackups": sum(1 for b in backups if b['isCurrent']),
             "archivedBackups": sum(1 for b in backups if not b['isCurrent']),
             "lastUpdated": datetime.now(timezone.utc).isoformat(),
