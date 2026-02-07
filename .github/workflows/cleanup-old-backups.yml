@@ -32,19 +32,20 @@ jobs:
           echo "Cutoff: deleting backups from before ${CUTOFF_YEAR}"
           echo ""
 
-          for file in [0-9]*_connect.json; do
+          # Match clean backup names: spring2024.json, fall2025.json, etc.
+          for file in *.json; do
             # Skip if no matches (glob literal)
             [ -e "$file" ] || continue
 
-            # Extract year from date prefix (YYYYMMDD_HHMM_Semester_connect.json)
-            FILE_YEAR="${file:0:4}"
+            # Extract year from filename (e.g. spring2024.json → 2024)
+            FILE_YEAR=$(echo "$file" | grep -oP '\d{4}' || true)
 
-            if [ "$FILE_YEAR" -lt "$CUTOFF_YEAR" ] 2>/dev/null; then
+            if [ -n "$FILE_YEAR" ] && [ "$FILE_YEAR" -lt "$CUTOFF_YEAR" ] 2>/dev/null; then
               echo "  Deleting: $file (year: ${FILE_YEAR})"
               rm "$file"
               DELETED=$((DELETED + 1))
             else
-              echo "  Keeping:  $file (year: ${FILE_YEAR})"
+              echo "  Keeping:  $file (year: ${FILE_YEAR:-unknown})"
             fi
           done
 

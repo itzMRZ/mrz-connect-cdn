@@ -9,7 +9,6 @@ import os
 import sys
 import gzip
 import requests
-import shutil
 import glob
 from datetime import datetime, timezone
 from typing import Dict, List, Optional
@@ -166,8 +165,13 @@ def get_current_semester(mid_exam_start: str) -> str:
         return "Unknown"
 
 
+def semester_to_filename(semester: str) -> str:
+    """Convert semester name to clean filename: Spring2026 → spring2026.json"""
+    return semester.lower() + ".json"
+
+
 def manage_current_backup(metadata: Dict, sections: List[Dict]):
-    """Manage current semester backup with smart renaming."""
+    """Manage current semester backup."""
     print("\n" + "=" * 60)
     print("Managing Current Semester Backup")
     print("=" * 60)
@@ -183,69 +187,48 @@ def manage_current_backup(metadata: Dict, sections: List[Dict]):
     print(f"\nCurrent Semester: {current_semester}")
     print(f"Mid Exam Start: {mid_exam_start}")
 
-    # Look for existing "curr_" backup
-    curr_backups = glob.glob(os.path.join(BACKUPS_DIR, "curr_*_connect.json"))
+    # Check for existing backup of this semester
+    backup_name = semester_to_filename(current_semester)
+    backup_path = os.path.join(BACKUPS_DIR, backup_name)
 
-    if curr_backups:
-        old_curr_backup = curr_backups[0]
-        print(
-            f"\nFound existing current backup: {os.path.basename(old_curr_backup)}")
+    # Find all existing backup files to detect semester change
+    existing_backups = glob.glob(os.path.join(BACKUPS_DIR, "*.json"))
 
-        # Load old backup to check if exam dates changed
+    if existing_backups:
+        # Check the most recent backup's semester
+        latest_backup = max(existing_backups, key=os.path.getmtime)
         try:
-            with open(old_curr_backup, 'r', encoding='utf-8') as f:
+            with open(latest_backup, 'r', encoding='utf-8') as f:
                 old_data = json.load(f)
                 old_mid_exam = old_data['metadata'].get('midExamStartDate')
                 old_semester = get_current_semester(old_mid_exam)
 
-            # Check if semester changed (exam dates different)
-            if mid_exam_start != old_mid_exam:
+            if mid_exam_start != old_mid_exam and old_semester != current_semester:
                 semester_changed = True
-                print(f"\n📅 Exam dates changed!")
+                print(f"\n📅 Semester changed!")
                 print(f"   Old: {old_mid_exam} ({old_semester})")
                 print(f"   New: {mid_exam_start} ({current_semester})")
-
-                # Rename old backup with final exam date
-                old_final_exam = old_data['metadata'].get('finalExamEndDate')
-                if old_final_exam:
-                    final_date_obj = datetime.strptime(
-                        old_final_exam, "%Y-%m-%d")
-                    date_prefix = final_date_obj.strftime("%Y%m%d_2359")
-                    new_backup_name = f"{date_prefix}_{old_semester}_connect.json"
-                    new_backup_path = os.path.join(
-                        BACKUPS_DIR, new_backup_name)
-
-                    # Rename the old current backup
-                    shutil.move(old_curr_backup, new_backup_path)
-                    print(f"✓ Archived old backup as: {new_backup_name}")
-                else:
-                    print(f"⚠️  No final exam date in old backup, removing...")
-                    os.remove(old_curr_backup)
+                print(f"✓ Previous backup preserved: {os.path.basename(latest_backup)}")
             else:
-                print(f"✓ Same semester, updating current backup...")
+                print(f"✓ Same semester, updating backup...")
         except Exception as e:
             print(f"⚠️  Error reading old backup: {e}")
     else:
-        # No previous backup found, this is a new semester
         semester_changed = True
 
-    # Create new current backup
-    curr_backup_name = f"curr_{current_semester}_connect.json"
-    curr_backup_path = os.path.join(BACKUPS_DIR, curr_backup_name)
-
+    # Write current semester backup
     backup_data = {
         "metadata": metadata,
         "sections": sections
     }
 
-    with open(curr_backup_path, 'w', encoding='utf-8') as f:
+    with open(backup_path, 'w', encoding='utf-8') as f:
         json.dump(backup_data, f, indent=2, ensure_ascii=False)
 
-    file_size = os.path.getsize(curr_backup_path) / 1024
-    print(f"\n✓ Created/Updated: {curr_backup_name} ({file_size:.1f} KB)")
-    print(f"  This will be renamed when semester ends")
+    file_size = os.path.getsize(backup_path) / 1024
+    print(f"\n✓ Created/Updated: {backup_name} ({file_size:.1f} KB)")
 
-    return curr_backup_name, semester_changed
+    return backup_name, semester_changed
 
 
 def generate_exams_json(sections: List[Dict], output_path: str = "exams.json"):
@@ -432,8 +415,7 @@ def main():
         print(f"\nCurrent semester backup: {curr_backup_name}")
         print("Backup index: connect_backup.json")
         print("Open labs CDN: open_labs.json")
-        if semester_changed:
-            print("  ↳ Semester change detected — old backup archived")
+
         print("\nNext steps:")
         print("1. Review the generated JSON files")
         print("2. Commit and push to GitHub")

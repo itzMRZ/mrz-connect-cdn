@@ -47,13 +47,12 @@ https://connect-cdn.itzmrz.xyz/connect_backup.json
 
 ### Current Semester Backup
 ```
-https://connect-cdn.itzmrz.xyz/backups/curr_Spring2026_connect.json
+https://connect-cdn.itzmrz.xyz/backups/spring2026.json
 ```
 **What it contains:**
 - Full course data for the ongoing semester
 - Updated daily with latest data
-- Automatically renamed to dated archive when semester ends
-- Same structure as `connect.json` but frozen for current semester
+- Clean naming: `{season}{year}.json`
 
 **Use this for:** Accessing stable semester data, comparing with live updates
 
@@ -61,13 +60,13 @@ https://connect-cdn.itzmrz.xyz/backups/curr_Spring2026_connect.json
 
 ### Historical Backups (Archived Semesters)
 ```
-https://connect-cdn.itzmrz.xyz/backups/20250831_2359_Summer2025_connect.json
-https://connect-cdn.itzmrz.xyz/backups/20250531_2359_Spring2025_connect.json
+https://connect-cdn.itzmrz.xyz/backups/summer2025.json
+https://connect-cdn.itzmrz.xyz/backups/spring2025.json
 # ... see connect_backup.json for full list
 ```
 **What it contains:**
 - Archived course data from completed semesters
-- Timestamped with final exam date (YYYYMMDD_HHMM format)
+- Clean naming: `{season}{year}.json`
 - Immutable historical records
 - Same structure as `connect.json`
 
