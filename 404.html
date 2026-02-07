@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Redirecting... - MRZ Connect CDN</title>
+    <script>
+        (function() {
+            var path = window.location.pathname;
+
+            // Redirect old backup URLs to new clean format
+            // Old: /backups/curr_Spring2026_connect.json → /backups/spring2026.json
+            // Old: /backups/20250831_2359_Summer2025_connect.json → /backups/summer2025.json
+            var currMatch = path.match(/\/backups\/curr_([A-Za-z]+\d{4})_connect\.json$/);
+            if (currMatch) {
+                window.location.replace('/backups/' + currMatch[1].toLowerCase() + '.json');
+                return;
+            }
+
+            var archiveMatch = path.match(/\/backups\/\d{8}_\d{4}_([A-Za-z]+\d{4})_connect\.json$/);
+            if (archiveMatch) {
+                window.location.replace('/backups/' + archiveMatch[1].toLowerCase() + '.json');
+                return;
+            }
+
+            // No redirect match — show 404 page
+            document.addEventListener('DOMContentLoaded', function() {
+                document.getElementById('content').style.display = 'block';
+            });
+        })();
+    </script>
+    <style>
+        body {
+            font-family: 'Courier New', monospace;
+            background: #1a1a1a;
+            color: #c9d1d9;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            min-height: 100vh;
+            margin: 0;
+            padding: 20px;
+        }
+        .container {
+            text-align: center;
+            max-width: 500px;
+        }
+        h1 {
+            color: #58a6ff;
+            font-size: 2em;
+            font-weight: normal;
+        }
+        p { color: #8b949e; line-height: 1.6; }
+        a {
+            color: #56d364;
+            text-decoration: none;
+            border: 1px solid #56d364;
+            padding: 8px 16px;
+            border-radius: 6px;
+            display: inline-block;
+            margin-top: 16px;
+            transition: all 0.2s;
+        }
+        a:hover {
+            background: #56d364;
+            color: #1a1a1a;
+        }
+    </style>
+</head>
+<body>
+    <div class="container" id="content" style="display: none;">
+        <h1>$ 404</h1>
+        <p>Page not found.</p>
+        <a href="/">← Back to MRZ Connect CDN</a>
+    </div>
+</body>
+</html>
