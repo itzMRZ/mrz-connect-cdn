@@ -8,6 +8,12 @@
         (function() {
             var path = window.location.pathname;
 
+            // Redirect /backups/latest.json → /latest.json (moved to root)
+            if (path === '/backups/latest.json') {
+                window.location.replace('/latest.json');
+                return;
+            }
+
             // Redirect old backup URLs to new clean format
             // Old: /backups/curr_Spring2026_connect.json → /backups/spring2026.json
             // Old: /backups/20250831_2359_Summer2025_connect.json → /backups/summer2025.json

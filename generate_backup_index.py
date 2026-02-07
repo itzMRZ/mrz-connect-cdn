@@ -13,6 +13,7 @@ from datetime import datetime, timezone
 SCRIPT_DIR = os.path.dirname(os.path.abspath(__file__))
 BACKUPS_DIR = os.path.join(SCRIPT_DIR, "backups")
 CDN_BASE_URL = "https://connect-cdn.itzmrz.xyz/backups"
+CDN_ROOT_URL = "https://connect-cdn.itzmrz.xyz"
 
 # Pattern: spring2026.json, fall2024.json, summer2025.json
 BACKUP_PATTERN = re.compile(r'^(spring|summer|fall)(\d{4})\.json$', re.IGNORECASE)
@@ -116,7 +117,7 @@ def generate_backup_index():
         "metadata": {
             "totalBackups": len(backups),
             "currentSemester": current_backup['semester'] if current_backup else None,
-            "latestBackup": f"{CDN_BASE_URL}/latest.json",
+            "latestBackup": f"{CDN_ROOT_URL}/latest.json",
             "currentBackups": sum(1 for b in backups if b['isCurrent']),
             "archivedBackups": sum(1 for b in backups if not b['isCurrent']),
             "lastUpdated": datetime.now(timezone.utc).isoformat(),

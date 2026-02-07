@@ -225,8 +225,9 @@ def manage_current_backup(metadata: Dict, sections: List[Dict]):
     with open(backup_path, 'w', encoding='utf-8') as f:
         json.dump(backup_data, f, indent=2, ensure_ascii=False)
 
-    # Also write as latest.json — canonical alias for current semester
-    latest_path = os.path.join(BACKUPS_DIR, "latest.json")
+    # Also write as latest.json at root — canonical alias for current semester
+    # Lives at /latest.json (same level as /connect.json) for easy access
+    latest_path = os.path.join(SCRIPT_DIR, "latest.json")
     with open(latest_path, 'w', encoding='utf-8') as f:
         json.dump(backup_data, f, indent=2, ensure_ascii=False)
 

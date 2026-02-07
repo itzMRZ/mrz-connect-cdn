@@ -611,10 +611,11 @@
             <h2>// JSON API Files</h2>
             <div class="links">
                 <a href="https://connect-cdn.itzmrz.xyz/connect.json" class="link" target="_blank" rel="noopener">◆ connect.json</a>
-                <a href="https://connect-cdn.itzmrz.xyz/backups/latest.json" class="link" target="_blank" rel="noopener">◆ latest backup</a>
-                <a href="https://connect-cdn.itzmrz.xyz/connect_backup.json" class="link" target="_blank" rel="noopener">◆ backups index</a>
+                <a href="https://connect-cdn.itzmrz.xyz/latest.json" class="link" target="_blank" rel="noopener">◆ latest.json</a>
                 <a href="https://connect-cdn.itzmrz.xyz/exams.json" class="link" target="_blank" rel="noopener">◆ exams.json</a>
-                <a href="https://connect-cdn.itzmrz.xyz/open_labs.json" class="link" target="_blank" rel="noopener">◆ open labs</a>
+                <a href="https://connect-cdn.itzmrz.xyz/open_labs.json" class="link" target="_blank" rel="noopener">◆ open_labs.json</a>
+                <a href="https://connect-cdn.itzmrz.xyz/connect_metadata.json" class="link" target="_blank" rel="noopener">◆ metadata</a>
+                <a href="https://connect-cdn.itzmrz.xyz/connect_backup.json" class="link" target="_blank" rel="noopener">◆ backups index</a>
             </div>
         </div>
 
@@ -623,35 +624,50 @@
             <h2>// Quick Downloads</h2>
             <div class="links">
                 <a href="connect.json" class="link" download>↓ connect.json</a>
+                <a href="latest.json" class="link" download>↓ latest.json</a>
                 <a href="exams.json" class="link" download>↓ exams.json</a>
-                <a href="open_labs.json" class="link" download>↓ open labs</a>
+                <a href="open_labs.json" class="link" download>↓ open_labs.json</a>
             </div>
         </div>
 
         <!-- API Endpoints -->
         <div class="section">
             <h2>// API Endpoints</h2>
+
+            <div class="info">
+                All endpoints return JSON. Every file also has a <code>.gz</code> variant (96% smaller).
+                Data updates daily at 12:00 PM BDT via GitHub Actions.
+            </div>
+
             <div class="endpoint">
                 <div class="endpoint-url">https://connect-cdn.itzmrz.xyz/connect.json</div>
-                <div class="endpoint-label">Full course data with metadata (~3.4 MB, auto-compressed to 137 KB)</div>
+                <div class="endpoint-label">Complete course data — all sections, seats, faculty, schedules, exam dates. This is the primary data file. (~3.4 MB, auto-compressed to 137 KB via .gz)</div>
             </div>
             <div class="endpoint">
-                <div class="endpoint-url">https://connect-cdn.itzmrz.xyz/backups/latest.json</div>
-                <div class="endpoint-label">Always points to the current semester's backup data</div>
-            </div>
-            <div class="endpoint">
-                <div class="endpoint-url">https://connect-cdn.itzmrz.xyz/connect_backup.json</div>
-                <div class="endpoint-label">Backups index with all historical data links</div>
+                <div class="endpoint-url">https://connect-cdn.itzmrz.xyz/latest.json</div>
+                <div class="endpoint-label">Alias for the current semester's backup. Same data as connect.json but frozen per-semester. Use this if you want a stable link that always gives you current semester data without hardcoding semester names.</div>
             </div>
             <div class="endpoint">
                 <div class="endpoint-url">https://connect-cdn.itzmrz.xyz/exams.json</div>
-                <div class="endpoint-label">Exam schedules only (~516 KB, auto-compressed to 20 KB)</div>
+                <div class="endpoint-label">Exam schedules only — mid and final exam dates/times extracted from course data. Much lighter than connect.json if you only need exam info. (~516 KB, 20 KB gzipped)</div>
             </div>
             <div class="endpoint">
                 <div class="endpoint-url">https://connect-cdn.itzmrz.xyz/open_labs.json</div>
-                <div class="endpoint-label">Open lab slots by day/time (~387 KB, updated daily)</div>
+                <div class="endpoint-label">Lab room availability by day and time slot. Shows which labs are free, occupied, and which department uses each lab. (~387 KB, updated daily)</div>
             </div>
-            <button class="readme-btn" onclick="openReadme()">📖 View README.md</button>
+            <div class="endpoint">
+                <div class="endpoint-url">https://connect-cdn.itzmrz.xyz/connect_metadata.json</div>
+                <div class="endpoint-label">Lightweight metadata only — section counts, seat stats, exam date ranges, version. Use this instead of connect.json when you just need stats. (~400 bytes)</div>
+            </div>
+            <div class="endpoint">
+                <div class="endpoint-url">https://connect-cdn.itzmrz.xyz/connect_backup.json</div>
+                <div class="endpoint-label">Index of all semester backups with CDN links, section counts, and dates. Use this to discover and access historical data programmatically.</div>
+            </div>
+            <div class="endpoint">
+                <div class="endpoint-url">https://connect-cdn.itzmrz.xyz/backups/{season}{year}.json</div>
+                <div class="endpoint-label">Individual semester backups. Examples: /backups/spring2026.json, /backups/fall2025.json, /backups/summer2024.json</div>
+            </div>
+            <button class="readme-btn" onclick="openReadme()">📖 View Full Documentation (README)</button>
         </div>
 
         <!-- Usage -->
