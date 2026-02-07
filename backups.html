@@ -12,7 +12,6 @@
     <meta property="og:image" content="https://connect-cdn.itzmrz.xyz/banner.png">
     <meta property="og:url" content="https://connect-cdn.itzmrz.xyz/backups.html">
     <meta property="og:type" content="website">
-    <meta property="og:logo" content="https://connect-cdn.itzmrz.xyz/favicon.svg">
 
     <!-- Twitter Card -->
     <meta name="twitter:card" content="summary_large_image">
@@ -175,10 +174,10 @@
     </div>
 
     <script>
-        // Load current semester info from connect.json
+        // Load current semester info from lightweight metadata (not full 3.4 MB connect.json)
         async function loadCurrentInfo() {
             try {
-                const response = await fetch('connect.json');
+                const response = await fetch('connect_metadata.json');
                 if (response.ok) {
                     const data = await response.json();
                     const m = data.metadata;
@@ -218,7 +217,7 @@
 
             try {
                 // Use the static backup index instead of rate-limited GitHub API
-                const response = await fetch('https://connect-cdn.itzmrz.xyz/connect_backup.json');
+                const response = await fetch('connect_backup.json');
 
                 if (!response.ok) {
                     container.innerHTML = `
@@ -270,7 +269,7 @@
                             </div>
                             <div class="backup-date">Updates daily • ${backup.totalSections} sections</div>
                             <div class="backup-links">
-                                <a href="${backup.cdnLink}" class="backup-link" target="_blank">view</a>
+                                <a href="${backup.cdnLink}" class="backup-link" target="_blank" rel="noopener">view</a>
                                 <a href="backups/${backup.filename}" class="backup-link" download>download</a>
                             </div>
                         </div>
@@ -286,7 +285,7 @@
                             <div class="backup-semester">${backup.semester}</div>
                             <div class="backup-date">Archived: ${dateStr} • ${backup.totalSections} sections</div>
                             <div class="backup-links">
-                                <a href="${backup.cdnLink}" class="backup-link" target="_blank">view</a>
+                                <a href="${backup.cdnLink}" class="backup-link" target="_blank" rel="noopener">view</a>
                                 <a href="backups/${backup.filename}" class="backup-link" download>download</a>
                             </div>
                         </div>

@@ -13,6 +13,7 @@ ENV/
 # IDE
 .vscode/
 .idea/
+.Jules/
 *.swp
 *.swo
 *~

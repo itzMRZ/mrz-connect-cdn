@@ -19,7 +19,6 @@
     <meta property="og:image:height" content="630">
     <meta property="og:image:alt" content="MRZ Connect CDN - BRAC University Data API">
     <meta property="og:locale" content="en_US">
-    <meta property="og:logo" content="https://connect-cdn.itzmrz.xyz/favicon.svg">
     
     <!-- Twitter Card Meta Tags -->
     <meta name="twitter:card" content="summary_large_image">
@@ -193,8 +192,10 @@
             border-radius: var(--radius-sm);
             padding: 4px 8px;
             font-size: 11px;
+            font-family: inherit;
             cursor: pointer;
             transition: all 0.2s;
+            z-index: 10;
         }
 
         @media (hover: hover) {
@@ -574,39 +575,6 @@
                 padding: 20px;
                 margin: 5% auto;
             }
-        }
-
-        /* Copy Button Styles */
-        .code-block {
-            position: relative;
-        }
-
-        .copy-btn {
-            position: absolute;
-            top: 8px;
-            right: 8px;
-            background: var(--bg-primary);
-            border: 1px solid var(--border-primary);
-            color: var(--text-secondary);
-            border-radius: var(--radius-sm);
-            padding: 4px 8px;
-            font-size: 11px;
-            font-family: inherit;
-            cursor: pointer;
-            transition: all 0.2s;
-            opacity: 0;
-            z-index: 10;
-        }
-
-        .code-block:hover .copy-btn,
-        .copy-btn:focus {
-            opacity: 1;
-        }
-
-        .copy-btn:hover {
-            color: var(--text-success);
-            border-color: var(--text-success);
-            background: var(--bg-secondary);
         }
     </style>
 </head>

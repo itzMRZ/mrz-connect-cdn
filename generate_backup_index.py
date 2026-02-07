@@ -140,7 +140,3 @@ def generate_backup_index():
 
 if __name__ == "__main__":
     generate_backup_index()
-
-
-if __name__ == "__main__":
-    generate_backup_index()
