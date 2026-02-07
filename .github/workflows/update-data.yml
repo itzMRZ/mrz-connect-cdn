@@ -81,7 +81,7 @@ jobs:
             connect_backup.json \
             open_labs.json open_labs.json.gz \
             version.json \
-            latest.json \
+            stable.json stable.json.gz \
             backups/ \
             2>/dev/null || true
 

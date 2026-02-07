@@ -13,22 +13,49 @@ Open-source JSON API serving BRAC University course data, exam schedules, and la
 
 ## Quick Start
 
-Need course data? Just fetch one URL:
-
 ```js
-// Get all current semester data
-const data = await fetch('https://connect-cdn.itzmrz.xyz/latest.json').then(r => r.json());
-console.log(data.metadata.totalSections); // e.g. 2353
-console.log(data.sections[0]);            // first course section
+// Get the latest data (whatever USIS currently has)
+const data = await fetch('https://connect-cdn.itzmrz.xyz/connect.json').then(r => r.json());
+
+// Get stable current semester data (won't switch until finals end)
+const stable = await fetch('https://connect-cdn.itzmrz.xyz/stable.json').then(r => r.json());
 ```
 
 ```python
 import requests
-data = requests.get('https://connect-cdn.itzmrz.xyz/latest.json').json()
-print(data['metadata']['totalSections'])  # e.g. 2353
+
+# Latest data
+data = requests.get('https://connect-cdn.itzmrz.xyz/connect.json').json()
+
+# Stable current semester
+stable = requests.get('https://connect-cdn.itzmrz.xyz/stable.json').json()
 ```
 
-That's it. `latest.json` always points to the current semester — no hardcoding needed.
+---
+
+## connect.json vs stable.json
+
+This is the key design decision of the CDN.
+
+**Problem:** USIS sometimes publishes next semester's data mid-current-semester. If you're building a tool for the current semester (exam prep, seat tracker, etc.), you don't want your data to suddenly switch to next semester while you're still in the middle of finals.
+
+**Solution:**
+
+| File | Behavior | Use when |
+|------|----------|----------|
+| `connect.json` | Always the latest data from USIS. If USIS publishes next semester data mid-current, connect.json switches immediately. | You want the freshest data available, or you're building next-semester planning tools. |
+| `stable.json` | Locked to the current semester. Only switches after the **final exam end date** passes. Daily seat/schedule updates still apply within the same semester. | You need reliable current-semester data — exam prep apps, seat availability trackers, anything that shouldn't break mid-semester. |
+
+**Example timeline:**
+```
+March 2026:  connect.json = Spring 2026    stable.json = Spring 2026    (same)
+April 2026:  USIS publishes Summer 2026 data early
+             connect.json = Summer 2026    stable.json = Spring 2026    (different!)
+May 21 2026: Spring 2026 finals end
+May 22 2026: connect.json = Summer 2026    stable.json = Summer 2026    (synced again)
+```
+
+Both files have identical structure. Just pick the one that fits your use case.
 
 ---
 
@@ -36,30 +63,30 @@ That's it. `latest.json` always points to the current semester — no hardcoding
 
 | Endpoint | Description | Size |
 |----------|-------------|------|
-| [`/connect.json`](https://connect-cdn.itzmrz.xyz/connect.json) | Full course data with metadata (primary file) | ~3.4 MB |
-| [`/latest.json`](https://connect-cdn.itzmrz.xyz/latest.json) | Current semester alias — always points to current data | ~3.4 MB |
+| [`/connect.json`](https://connect-cdn.itzmrz.xyz/connect.json) | Latest API data — always whatever USIS currently has | ~3.4 MB |
+| [`/stable.json`](https://connect-cdn.itzmrz.xyz/stable.json) | Current semester, locked until finals end | ~3.4 MB |
 | [`/exams.json`](https://connect-cdn.itzmrz.xyz/exams.json) | Exam schedules only (mid + final dates/times) | ~516 KB |
 | [`/open_labs.json`](https://connect-cdn.itzmrz.xyz/open_labs.json) | Lab room availability by day and time slot | ~387 KB |
-| [`/connect_metadata.json`](https://connect-cdn.itzmrz.xyz/connect_metadata.json) | Lightweight stats (section count, seats, exam ranges) | ~400 B |
+| [`/connect_metadata.json`](https://connect-cdn.itzmrz.xyz/connect_metadata.json) | Lightweight stats only (section count, seats, exam ranges) | ~400 B |
 | [`/connect_backup.json`](https://connect-cdn.itzmrz.xyz/connect_backup.json) | Index of all semester backups with CDN links | ~2 KB |
-| [`/backups/{season}{year}.json`](https://connect-cdn.itzmrz.xyz/backups/spring2026.json) | Individual semester archives (e.g. `spring2026.json`) | ~3.4 MB |
+| [`/backups/{season}{year}.json`](https://connect-cdn.itzmrz.xyz/backups/spring2026.json) | Individual semester archives | ~3.4 MB |
 
 Every JSON file also has a `.gz` variant (append `.gz` to the URL) for ~96% smaller downloads.
 
 ### Which file should I use?
 
-- **Building a course tool?** → `/connect.json` or `/latest.json` (identical for current semester)
+- **Building a course tool / seat tracker?** → `/stable.json` (won't break mid-semester)
+- **Planning next semester?** → `/connect.json` (always latest, could be next semester already)
 - **Only need exams?** → `/exams.json` (much lighter)
 - **Finding open labs?** → `/open_labs.json`
-- **Just need stats?** → `/connect_metadata.json` (~400 bytes vs 3.4 MB)
-- **Want historical data?** → `/connect_backup.json` to discover all semesters, then fetch `/backups/{season}{year}.json`
-- **Stable current-semester link?** → `/latest.json` (no need to figure out semester names)
+- **Just need stats / section count?** → `/connect_metadata.json` (~400 bytes vs 3.4 MB)
+- **Want historical data?** → `/connect_backup.json` to discover semesters, then `/backups/{season}{year}.json`
 
 ---
 
 ## Data Structure
 
-### connect.json / latest.json
+### connect.json / stable.json
 
 ```json
 {
@@ -143,7 +170,7 @@ Every JSON file also has a `.gz` variant (append `.gz` to the URL) for ~96% smal
   "metadata": {
     "totalBackups": 6,
     "currentSemester": "Spring2026",
-    "latestBackup": "https://connect-cdn.itzmrz.xyz/latest.json",
+    "stableUrl": "https://connect-cdn.itzmrz.xyz/stable.json",
     "currentBackups": 1,
     "archivedBackups": 5,
     "cdnBaseUrl": "https://connect-cdn.itzmrz.xyz/backups"
@@ -152,7 +179,6 @@ Every JSON file also has a `.gz` variant (append `.gz` to the URL) for ~96% smal
     {
       "semester": "Spring2026",
       "totalSections": 2353,
-      "backupTime": "2026-02-07T06:00:00.000Z",
       "cdnLink": "https://connect-cdn.itzmrz.xyz/backups/spring2026.json",
       "isCurrent": true,
       "filename": "spring2026.json"
@@ -165,17 +191,16 @@ Every JSON file also has a `.gz` variant (append `.gz` to the URL) for ~96% smal
 
 ## Gzip Compression
 
-Every JSON file has a `.gz` version for significantly smaller downloads:
+Every JSON file has a `.gz` version for much smaller downloads:
 
 | File | Regular | Gzipped | Savings |
 |------|---------|---------|---------|
 | connect.json | ~3.4 MB | ~137 KB | 96% |
+| stable.json | ~3.4 MB | ~137 KB | 96% |
 | exams.json | ~516 KB | ~20 KB | 96% |
 | open_labs.json | ~387 KB | ~15 KB | 96% |
 
-### Using gzipped files
-
-**JavaScript:**
+**JavaScript (gzipped):**
 ```js
 fetch('https://connect-cdn.itzmrz.xyz/connect.json.gz')
   .then(r => r.blob())
@@ -184,15 +209,14 @@ fetch('https://connect-cdn.itzmrz.xyz/connect.json.gz')
   .then(data => console.log(data.metadata));
 ```
 
-**Python:**
+**Python (gzipped):**
 ```python
 import requests, gzip, json
 r = requests.get('https://connect-cdn.itzmrz.xyz/connect.json.gz')
 data = json.loads(gzip.decompress(r.content))
-print(data['metadata']['totalSections'])
 ```
 
-> **Tip:** Regular `.json` files work with a simple `fetch()` or `requests.get()`. Use `.gz` files when bandwidth matters (mobile apps, frequent polling, etc).
+> **Tip:** Regular `.json` files work with a simple `fetch()` or `requests.get()`. Use `.gz` when bandwidth matters (mobile apps, frequent polling).
 
 ---
 
@@ -201,28 +225,31 @@ print(data['metadata']['totalSections'])
 | Page | URL | Description |
 |------|-----|-------------|
 | Homepage | [connect-cdn.itzmrz.xyz](https://connect-cdn.itzmrz.xyz/) | Live stats, all endpoints, code examples |
-| Open Labs | [/openlabs.html](https://connect-cdn.itzmrz.xyz/openlabs.html) | Lab availability viewer with NOW/UPCOMING/PASSED slots |
+| Open Labs | [/openlabs.html](https://connect-cdn.itzmrz.xyz/openlabs.html) | Lab availability with NOW/UPCOMING/PASSED time slots |
 | Backups | [/backups.html](https://connect-cdn.itzmrz.xyz/backups.html) | Browse and download historical semester data |
 
 ---
 
 ## How It Works
 
-1. **Daily cron** (GitHub Actions at 12:00 PM BDT / 6:00 AM UTC) runs `update_cdn.py`
-2. Fetches fresh data from [usis-cdn.eniamza.com/connect.json](https://usis-cdn.eniamza.com/connect.json) with ETag caching
-3. Generates all JSON files: `connect.json`, `exams.json`, `open_labs.json`, `latest.json`
-4. Detects semester changes automatically (when mid exam dates change) and creates new backup files
-5. Bumps version in `version.json` (MAJOR.SEMESTER.DAILY format)
-6. Commits and pushes — GitHub Pages serves it instantly
+1. **Daily cron** (GitHub Actions, 12:00 PM BDT / 6:00 AM UTC) runs `update_cdn.py`
+2. Fetches fresh data from [usis-cdn.eniamza.com/connect.json](https://usis-cdn.eniamza.com/connect.json) (with ETag caching)
+3. Writes `connect.json` — always the raw latest from the API
+4. Updates `stable.json` — only if same semester, or previous semester's finals have ended
+5. Generates `exams.json`, `open_labs.json`, backup index
+6. Detects semester changes (when mid-exam dates differ) and creates new backup files
+7. Bumps version in `version.json` (MAJOR.SEMESTER.DAILY)
+8. Commits and pushes — GitHub Pages serves immediately
+
+### Semester end detection
+
+`stable.json` detects semester end by checking the `finalExamEndDate` field in its own metadata. If today's date is past that date and the API has different semester data, stable.json switches. Otherwise, it stays frozen on the current semester's data.
 
 ### Backup naming
 
-Backups use clean, human-readable filenames:
-- `/backups/spring2026.json` — current semester (also available as `/latest.json`)
-- `/backups/fall2025.json` — archived
-- `/backups/summer2025.json` — archived
-
-When a new semester starts (detected by changed mid-exam dates), the old backup is preserved and a new one is created.
+Clean, human-readable filenames:
+- `/backups/spring2026.json`, `/backups/fall2025.json`, `/backups/summer2024.json`
+- When a new semester starts, the old backup is preserved and a new one is created
 
 ---
 
@@ -239,13 +266,13 @@ python update_cdn.py --force  # Skip ETag cache, force refresh
 ### Project Structure
 
 ```
-├── connect.json              # Full course data (primary)
-├── latest.json               # Current semester alias
+├── connect.json              # Latest API data (always freshest)
+├── stable.json               # Current semester (frozen until finals end)
 ├── exams.json                # Exam schedules only
 ├── open_labs.json            # Lab availability
 ├── connect_metadata.json     # Lightweight stats
 ├── connect_backup.json       # Backup index
-├── version.json              # Version tracking (MAJOR.SEMESTER.DAILY)
+├── version.json              # Version (MAJOR.SEMESTER.DAILY)
 ├── backups/                  # Semester archives
 │   ├── spring2026.json
 │   ├── fall2025.json
@@ -257,7 +284,7 @@ python update_cdn.py --force  # Skip ETag cache, force refresh
 ├── update_cdn.py             # Main update script
 ├── generate_backup_index.py  # Backup index generator
 ├── generate_free_labs.py     # Lab availability generator
-└── .github/workflows/        # GitHub Actions (daily cron + yearly cleanup)
+└── .github/workflows/        # Daily cron + yearly cleanup
 ```
 
 ## Credits

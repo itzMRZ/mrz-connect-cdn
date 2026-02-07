@@ -225,17 +225,73 @@ def manage_current_backup(metadata: Dict, sections: List[Dict]):
     with open(backup_path, 'w', encoding='utf-8') as f:
         json.dump(backup_data, f, indent=2, ensure_ascii=False)
 
-    # Also write as latest.json at root — canonical alias for current semester
-    # Lives at /latest.json (same level as /connect.json) for easy access
-    latest_path = os.path.join(SCRIPT_DIR, "latest.json")
-    with open(latest_path, 'w', encoding='utf-8') as f:
-        json.dump(backup_data, f, indent=2, ensure_ascii=False)
-
     file_size = os.path.getsize(backup_path) / 1024
     print(f"\n✓ Created/Updated: {backup_name} ({file_size:.1f} KB)")
-    print(f"✓ latest.json → {backup_name}")
 
     return backup_name, semester_changed
+
+
+def manage_stable_json(metadata: Dict, sections: List[Dict]):
+    """Manage stable.json — stays on current semester until final exams end.
+
+    connect.json always has the latest API data (could be next semester mid-current).
+    stable.json only updates when:
+      - Same semester as current stable (daily seat/schedule changes are fine)
+      - Different semester AND stable's final exams have ended
+
+    Semester end is detected by: today > finalExamEndDate
+    """
+    stable_path = os.path.join(SCRIPT_DIR, "stable.json")
+    incoming_semester = get_current_semester(metadata.get('midExamStartDate'))
+
+    print("\n" + "=" * 60)
+    print("Managing stable.json")
+    print("=" * 60)
+
+    if os.path.exists(stable_path):
+        try:
+            with open(stable_path, 'r', encoding='utf-8') as f:
+                stable_data = json.load(f)
+
+            stable_mid = stable_data['metadata'].get('midExamStartDate')
+            stable_semester = get_current_semester(stable_mid)
+
+            if incoming_semester == stable_semester:
+                print(f"\n  Same semester ({stable_semester}) — updating with latest data")
+            else:
+                # Different semester — only switch after finals end
+                final_end = stable_data['metadata'].get('finalExamEndDate')
+                if final_end:
+                    today = datetime.now(timezone.utc).date()
+                    final_end_date = datetime.strptime(final_end, "%Y-%m-%d").date()
+
+                    if today <= final_end_date:
+                        stable_size = os.path.getsize(stable_path) / 1024
+                        print(f"\n  ⏸ Frozen on {stable_semester} (finals end {final_end})")
+                        print(f"  API has {incoming_semester} data, but {stable_semester} finals haven't ended")
+                        print(f"  stable.json unchanged ({stable_size:.1f} KB)")
+                        return
+
+                print(f"\n  Switching: {stable_semester} → {incoming_semester} (previous finals ended)")
+        except Exception as e:
+            print(f"\n  ⚠️  Error reading stable.json: {e}, recreating")
+    else:
+        print(f"\n  Creating stable.json ({incoming_semester})")
+
+    # Write stable.json
+    stable_data = {"metadata": metadata, "sections": sections}
+
+    with open(stable_path, 'w', encoding='utf-8') as f:
+        json.dump(stable_data, f, indent=2, ensure_ascii=False)
+
+    # Write gzipped version
+    gz_path = stable_path + '.gz'
+    with gzip.open(gz_path, 'wt', encoding='utf-8') as f:
+        json.dump(stable_data, f, separators=(',', ':'), ensure_ascii=False)
+
+    file_size = os.path.getsize(stable_path) / 1024
+    gz_size = os.path.getsize(gz_path) / 1024
+    print(f"  ✓ stable.json written ({file_size:.1f} KB, gzipped: {gz_size:.1f} KB)")
 
 
 def generate_exams_json(sections: List[Dict], output_path: str = "exams.json"):
@@ -393,6 +449,9 @@ def main():
         print(
             f"  Gzipped: {gzip_size:.1f} KB (saved {compression_ratio:.1f}%)")
 
+        # Manage stable.json — stays on current semester until finals end
+        manage_stable_json(metadata, sections)
+
         # Generate exams.json
         generate_exams_json(sections)
 
@@ -419,14 +478,16 @@ def main():
         print("\n" + "=" * 60)
         print("✓ All files generated successfully!")
         print("=" * 60)
-        print(f"\nCurrent semester backup: {curr_backup_name}")
-        print("Backup index: connect_backup.json")
-        print("Open labs CDN: open_labs.json")
+        print(f"\nFiles:")
+        print(f"  connect.json  — latest API data (always up-to-date)")
+        print(f"  stable.json   — current semester (frozen until finals end)")
+        print(f"  exams.json    — exam schedules")
+        print(f"  open_labs.json — lab availability")
+        print(f"  Backup: {curr_backup_name}")
 
         print("\nNext steps:")
         print("1. Review the generated JSON files")
         print("2. Commit and push to GitHub")
-        print("3. Backups will auto-archive when semester ends")
 
     except Exception as e:
         print(f"\n✗ Error: {e}")

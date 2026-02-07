@@ -8,9 +8,9 @@
         (function() {
             var path = window.location.pathname;
 
-            // Redirect /backups/latest.json → /latest.json (moved to root)
-            if (path === '/backups/latest.json') {
-                window.location.replace('/latest.json');
+            // Redirect old latest.json URLs → /stable.json (renamed)
+            if (path === '/latest.json' || path === '/backups/latest.json') {
+                window.location.replace('/stable.json');
                 return;
             }
 

@@ -611,7 +611,7 @@
             <h2>// JSON API Files</h2>
             <div class="links">
                 <a href="https://connect-cdn.itzmrz.xyz/connect.json" class="link" target="_blank" rel="noopener">◆ connect.json</a>
-                <a href="https://connect-cdn.itzmrz.xyz/latest.json" class="link" target="_blank" rel="noopener">◆ latest.json</a>
+                <a href="https://connect-cdn.itzmrz.xyz/stable.json" class="link" target="_blank" rel="noopener">◆ stable.json</a>
                 <a href="https://connect-cdn.itzmrz.xyz/exams.json" class="link" target="_blank" rel="noopener">◆ exams.json</a>
                 <a href="https://connect-cdn.itzmrz.xyz/open_labs.json" class="link" target="_blank" rel="noopener">◆ open_labs.json</a>
                 <a href="https://connect-cdn.itzmrz.xyz/connect_metadata.json" class="link" target="_blank" rel="noopener">◆ metadata</a>
@@ -624,7 +624,7 @@
             <h2>// Quick Downloads</h2>
             <div class="links">
                 <a href="connect.json" class="link" download>↓ connect.json</a>
-                <a href="latest.json" class="link" download>↓ latest.json</a>
+                <a href="stable.json" class="link" download>↓ stable.json</a>
                 <a href="exams.json" class="link" download>↓ exams.json</a>
                 <a href="open_labs.json" class="link" download>↓ open_labs.json</a>
             </div>
@@ -635,17 +635,18 @@
             <h2>// API Endpoints</h2>
 
             <div class="info">
-                All endpoints return JSON. Every file also has a <code>.gz</code> variant (96% smaller).
-                Data updates daily at 12:00 PM BDT via GitHub Actions.
+                <strong>connect.json</strong> = always the latest data from USIS (may switch to next semester mid-current).<br>
+                <strong>stable.json</strong> = stays on the current semester until final exams end.<br>
+                All files also have <code>.gz</code> variants (96% smaller). Data updates daily at 12:00 PM BDT.
             </div>
 
             <div class="endpoint">
                 <div class="endpoint-url">https://connect-cdn.itzmrz.xyz/connect.json</div>
-                <div class="endpoint-label">Complete course data — all sections, seats, faculty, schedules, exam dates. This is the primary data file. (~3.4 MB, auto-compressed to 137 KB via .gz)</div>
+                <div class="endpoint-label">Always the latest API data — all sections, seats, faculty, schedules, exam dates. When USIS publishes next semester data mid-current-semester, connect.json switches immediately. (~3.4 MB, 137 KB gzipped)</div>
             </div>
             <div class="endpoint">
-                <div class="endpoint-url">https://connect-cdn.itzmrz.xyz/latest.json</div>
-                <div class="endpoint-label">Alias for the current semester's backup. Same data as connect.json but frozen per-semester. Use this if you want a stable link that always gives you current semester data without hardcoding semester names.</div>
+                <div class="endpoint-url">https://connect-cdn.itzmrz.xyz/stable.json</div>
+                <div class="endpoint-label">Guaranteed current semester data. Won't switch to next semester until final exams are over. Use this when you need reliable current-semester info (e.g. exam prep tools, seat trackers). (~3.4 MB, 137 KB gzipped)</div>
             </div>
             <div class="endpoint">
                 <div class="endpoint-url">https://connect-cdn.itzmrz.xyz/exams.json</div>
@@ -675,33 +676,29 @@
             <h2>// Usage</h2>
 
             <div class="info">
-                <strong>Compression:</strong> Use <code>.gz</code> files for 96% smaller downloads (3.4 MB → 137 KB).<br>
-                Regular files work directly, gzipped files need manual decompression.
+                <strong>connect.json</strong> for latest data, <strong>stable.json</strong> for current semester.<br>
+                Use <code>.gz</code> files for 96% smaller downloads (3.4 MB → 137 KB).
             </div>
 
             <div class="code-container">
                 <div class="code-block">
-                    <pre><span class="comment">// JavaScript - Regular</span>
-fetch('https://connect-cdn.itzmrz.xyz/connect.json')
-  .then(r => r.json())
-  .then(data => console.log(data.metadata));</pre>
+                    <pre><span class="comment">// JavaScript — get latest data (may be next semester)</span>
+const data = await fetch('https://connect-cdn.itzmrz.xyz/connect.json').then(r => r.json());
+console.log(data.metadata.totalSections);</pre>
                 </div>
             </div>
 
             <div class="code-container">
                 <div class="code-block">
-                    <pre><span class="comment">// JavaScript - Gzipped (smaller, faster)</span>
-fetch('https://connect-cdn.itzmrz.xyz/connect.json.gz')
-  .then(r => r.blob())
-  .then(blob => blob.stream().pipeThrough(new DecompressionStream('gzip')))
-  .then(stream => new Response(stream).json())
-  .then(data => console.log(data.metadata));</pre>
+                    <pre><span class="comment">// JavaScript — get stable current semester data</span>
+const data = await fetch('https://connect-cdn.itzmrz.xyz/stable.json').then(r => r.json());
+console.log(data.metadata.totalSections);</pre>
                 </div>
             </div>
 
             <div class="code-container">
                 <div class="code-block">
-                    <pre><span class="comment"># Python - Regular</span>
+                    <pre><span class="comment"># Python — get latest data</span>
 import requests
 data = requests.get('https://connect-cdn.itzmrz.xyz/connect.json').json()
 print(data['metadata'])</pre>
@@ -710,7 +707,7 @@ print(data['metadata'])</pre>
 
             <div class="code-container">
                 <div class="code-block">
-                    <pre><span class="comment"># Python - Gzipped (smaller, faster)</span>
+                    <pre><span class="comment"># Python — gzipped (96% smaller, use for mobile/bandwidth-limited)</span>
 import requests, gzip, json
 r = requests.get('https://connect-cdn.itzmrz.xyz/connect.json.gz')
 data = json.loads(gzip.decompress(r.content))

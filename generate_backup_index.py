@@ -117,7 +117,7 @@ def generate_backup_index():
         "metadata": {
             "totalBackups": len(backups),
             "currentSemester": current_backup['semester'] if current_backup else None,
-            "latestBackup": f"{CDN_ROOT_URL}/latest.json",
+            "stableUrl": f"{CDN_ROOT_URL}/stable.json",
             "currentBackups": sum(1 for b in backups if b['isCurrent']),
             "archivedBackups": sum(1 for b in backups if not b['isCurrent']),
             "lastUpdated": datetime.now(timezone.utc).isoformat(),
