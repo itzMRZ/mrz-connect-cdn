@@ -10,7 +10,7 @@
     "midExamEndDate": null,
     "finalExamStartDate": null,
     "finalExamEndDate": null,
-    "lastUpdated": "2026-02-07T13:12:13.197882+00:00",
+    "lastUpdated": "2026-02-07T13:24:59.633747+00:00",
     "semester": "Summer-2024"
   },
   "sections": [
@@ -24830,8 +24830,8 @@
       "semesterSessionId": null,
       "parentSectionId": null,
       "faculties": "AAR",
-      "roomName": "10A-05C",
-      "roomNumber": "10A-05C",
+      "roomName": null,
+      "roomNumber": null,
       "courseType": "THEORY",
       "academicDegree": "UNDERGRADUATE",
       "sectionSchedule": {
@@ -24850,12 +24850,12 @@
         "classSchedules": [
           {
             "startTime": "00:00:00",
-            "endTime": "Invalid Time",
+            "endTime": "Invalid Time-10A-05C",
             "day": "SUNDAY"
           },
           {
             "startTime": "00:00:00",
-            "endTime": "Invalid Time",
+            "endTime": "Invalid Time-10A-05C",
             "day": "SUNDAY"
           }
         ]
@@ -27454,8 +27454,8 @@
       "semesterSessionId": null,
       "parentSectionId": null,
       "faculties": "TLQ",
-      "roomName": "09A-02C",
-      "roomNumber": "09A-02C",
+      "roomName": null,
+      "roomNumber": null,
       "courseType": "THEORY",
       "academicDegree": "UNDERGRADUATE",
       "sectionSchedule": {
@@ -27474,12 +27474,12 @@
         "classSchedules": [
           {
             "startTime": "00:00:00",
-            "endTime": "Invalid Time",
+            "endTime": "Invalid Time-09A-02C",
             "day": "TUESDAY"
           },
           {
             "startTime": "00:00:00",
-            "endTime": "Invalid Time",
+            "endTime": "Invalid Time-09A-02C",
             "day": "TUESDAY"
           }
         ]
@@ -27506,8 +27506,8 @@
       "semesterSessionId": null,
       "parentSectionId": null,
       "faculties": "KYK",
-      "roomName": "09A-01C",
-      "roomNumber": "09A-01C",
+      "roomName": null,
+      "roomNumber": null,
       "courseType": "THEORY",
       "academicDegree": "UNDERGRADUATE",
       "sectionSchedule": {
@@ -27526,12 +27526,12 @@
         "classSchedules": [
           {
             "startTime": "00:00:00",
-            "endTime": "Invalid Time",
+            "endTime": "Invalid Time-09A-01C",
             "day": "MONDAY"
           },
           {
             "startTime": "00:00:00",
-            "endTime": "Invalid Time",
+            "endTime": "Invalid Time-09A-01C",
             "day": "MONDAY"
           }
         ]
@@ -27558,8 +27558,8 @@
       "semesterSessionId": null,
       "parentSectionId": null,
       "faculties": "GRA",
-      "roomName": "09A-02C",
-      "roomNumber": "09A-02C",
+      "roomName": null,
+      "roomNumber": null,
       "courseType": "THEORY",
       "academicDegree": "UNDERGRADUATE",
       "sectionSchedule": {
@@ -27578,12 +27578,12 @@
         "classSchedules": [
           {
             "startTime": "00:00:00",
-            "endTime": "Invalid Time",
+            "endTime": "Invalid Time-09A-02C",
             "day": "MONDAY"
           },
           {
             "startTime": "00:00:00",
-            "endTime": "Invalid Time",
+            "endTime": "Invalid Time-09A-02C",
             "day": "MONDAY"
           }
         ]
@@ -27610,8 +27610,8 @@
       "semesterSessionId": null,
       "parentSectionId": null,
       "faculties": "GRA",
-      "roomName": "09A-01C",
-      "roomNumber": "09A-01C",
+      "roomName": null,
+      "roomNumber": null,
       "courseType": "THEORY",
       "academicDegree": "UNDERGRADUATE",
       "sectionSchedule": {
@@ -27630,12 +27630,12 @@
         "classSchedules": [
           {
             "startTime": "00:00:00",
-            "endTime": "Invalid Time",
+            "endTime": "Invalid Time-09A-01C",
             "day": "SATURDAY"
           },
           {
             "startTime": "00:00:00",
-            "endTime": "Invalid Time",
+            "endTime": "Invalid Time-09A-01C",
             "day": "SATURDAY"
           }
         ]
@@ -27662,8 +27662,8 @@
       "semesterSessionId": null,
       "parentSectionId": null,
       "faculties": "AAR",
-      "roomName": "10A-05C",
-      "roomNumber": "10A-05C",
+      "roomName": null,
+      "roomNumber": null,
       "courseType": "THEORY",
       "academicDegree": "UNDERGRADUATE",
       "sectionSchedule": {
@@ -27682,12 +27682,12 @@
         "classSchedules": [
           {
             "startTime": "00:00:00",
-            "endTime": "Invalid Time",
+            "endTime": "Invalid Time-10A-05C",
             "day": "SUNDAY"
           },
           {
             "startTime": "00:00:00",
-            "endTime": "Invalid Time",
+            "endTime": "Invalid Time-10A-05C",
             "day": "SUNDAY"
           }
         ]
@@ -27714,8 +27714,8 @@
       "semesterSessionId": null,
       "parentSectionId": null,
       "faculties": "MMM",
-      "roomName": "09A-02C",
-      "roomNumber": "09A-02C",
+      "roomName": null,
+      "roomNumber": null,
       "courseType": "THEORY",
       "academicDegree": "UNDERGRADUATE",
       "sectionSchedule": {
@@ -27734,12 +27734,12 @@
         "classSchedules": [
           {
             "startTime": "00:00:00",
-            "endTime": "Invalid Time",
+            "endTime": "Invalid Time-09A-02C",
             "day": "SATURDAY"
           },
           {
             "startTime": "00:00:00",
-            "endTime": "Invalid Time",
+            "endTime": "Invalid Time-09A-02C",
             "day": "SATURDAY"
           }
         ]
@@ -27766,8 +27766,8 @@
       "semesterSessionId": null,
       "parentSectionId": null,
       "faculties": "KYK",
-      "roomName": "09A-01C",
-      "roomNumber": "09A-01C",
+      "roomName": null,
+      "roomNumber": null,
       "courseType": "THEORY",
       "academicDegree": "UNDERGRADUATE",
       "sectionSchedule": {
@@ -27786,12 +27786,12 @@
         "classSchedules": [
           {
             "startTime": "00:00:00",
-            "endTime": "Invalid Time",
+            "endTime": "Invalid Time-09A-01C",
             "day": "TUESDAY"
           },
           {
             "startTime": "00:00:00",
-            "endTime": "Invalid Time",
+            "endTime": "Invalid Time-09A-01C",
             "day": "TUESDAY"
           }
         ]
@@ -27818,8 +27818,8 @@
       "semesterSessionId": null,
       "parentSectionId": null,
       "faculties": "IBU",
-      "roomName": "09H-35C",
-      "roomNumber": "09H-35C",
+      "roomName": null,
+      "roomNumber": null,
       "courseType": "THEORY",
       "academicDegree": "UNDERGRADUATE",
       "sectionSchedule": {
@@ -27838,12 +27838,12 @@
         "classSchedules": [
           {
             "startTime": "00:00:00",
-            "endTime": "Invalid Time",
+            "endTime": "Invalid Time-09H-35C",
             "day": "SUNDAY"
           },
           {
             "startTime": "00:00:00",
-            "endTime": "Invalid Time",
+            "endTime": "Invalid Time-09H-35C",
             "day": "SUNDAY"
           }
         ]
@@ -27870,8 +27870,8 @@
       "semesterSessionId": null,
       "parentSectionId": null,
       "faculties": "ASA",
-      "roomName": "09A-01C",
-      "roomNumber": "09A-01C",
+      "roomName": null,
+      "roomNumber": null,
       "courseType": "THEORY",
       "academicDegree": "UNDERGRADUATE",
       "sectionSchedule": {
@@ -27890,12 +27890,12 @@
         "classSchedules": [
           {
             "startTime": "00:00:00",
-            "endTime": "Invalid Time",
+            "endTime": "Invalid Time-09A-01C",
             "day": "WEDNESDAY"
           },
           {
             "startTime": "00:00:00",
-            "endTime": "Invalid Time",
+            "endTime": "Invalid Time-09A-01C",
             "day": "WEDNESDAY"
           }
         ]
@@ -27922,8 +27922,8 @@
       "semesterSessionId": null,
       "parentSectionId": null,
       "faculties": "SDF",
-      "roomName": "09A-01C",
-      "roomNumber": "09A-01C",
+      "roomName": null,
+      "roomNumber": null,
       "courseType": "THEORY",
       "academicDegree": "UNDERGRADUATE",
       "sectionSchedule": {
@@ -27942,12 +27942,12 @@
         "classSchedules": [
           {
             "startTime": "00:00:00",
-            "endTime": "Invalid Time",
+            "endTime": "Invalid Time-09A-01C",
             "day": "THURSDAY"
           },
           {
             "startTime": "00:00:00",
-            "endTime": "Invalid Time",
+            "endTime": "Invalid Time-09A-01C",
             "day": "THURSDAY"
           }
         ]
