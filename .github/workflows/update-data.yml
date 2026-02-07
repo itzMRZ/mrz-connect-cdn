@@ -80,7 +80,6 @@ jobs:
             exams.json exams.json.gz \
             connect_backup.json \
             open_labs.json \
-            free_labs.json \
             backups/ \
             2>/dev/null || true
 

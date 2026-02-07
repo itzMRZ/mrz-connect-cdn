@@ -104,8 +104,13 @@ def generate_backup_index():
             status = "CURRENT" if backup_info['isCurrent'] else "ARCHIVED"
             print(f"  ✓ {backup_info['semester']} ({status}) - {backup_info['totalSections']} sections")
     
-    # Sort: current first, then by semester descending
-    backups.sort(key=lambda x: (not x['isCurrent'], x['semester']), reverse=True)
+    # Sort: current first, then by backup time descending (chronological)
+    def semester_sort_key(b):
+        """Sort key: current first, then reverse-chronological by backupTime."""
+        # isCurrent=True → 1 (sorts higher with reverse=True)
+        # isCurrent=False → 0
+        return (1 if b['isCurrent'] else 0, b.get('backupTime', '') or '')
+    backups.sort(key=semester_sort_key, reverse=True)
     
     # Create output structure
     output = {

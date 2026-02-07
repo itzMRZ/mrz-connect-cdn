@@ -72,7 +72,7 @@ def is_lab_room(room_name: str) -> bool:
     return room_name.endswith('L') or 'LAB' in room_name.upper()
 
 
-def analyze_lab_usage(sections: List[Dict]) -> Dict:
+def analyze_lab_usage(sections: List[Dict]) -> tuple:
     """Analyze lab room usage from sections data."""
     
     # Track occupied slots for each lab room
