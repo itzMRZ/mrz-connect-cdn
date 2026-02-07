@@ -17,6 +17,34 @@ from typing import Dict, List, Optional
 # Get the directory where this script is located
 SCRIPT_DIR = os.path.dirname(os.path.abspath(__file__))
 BACKUPS_DIR = os.path.join(SCRIPT_DIR, "backups")
+VERSION_FILE = os.path.join(SCRIPT_DIR, "version.json")
+
+
+def load_version() -> Dict:
+    """Load version info from version.json."""
+    try:
+        with open(VERSION_FILE, 'r') as f:
+            return json.load(f)
+    except (FileNotFoundError, json.JSONDecodeError):
+        return {"major": 2, "semester": 0, "daily": 0}
+
+
+def bump_version(semester_changed: bool) -> str:
+    """Bump version and return version string (MAJOR.SEMESTER.DAILY)."""
+    v = load_version()
+
+    if semester_changed:
+        v["semester"] += 1
+        v["daily"] = 0
+    else:
+        v["daily"] += 1
+
+    with open(VERSION_FILE, 'w') as f:
+        json.dump(v, f, indent=2)
+
+    version_str = f"{v['major']}.{v['semester']}.{v['daily']}"
+    print(f"✓ Version bumped to {version_str}")
+    return version_str
 
 
 def fetch_mrz_data(force: bool = False) -> Optional[List[Dict]]:
@@ -330,6 +358,10 @@ def main():
         # Manage current semester backup
         curr_backup_name, semester_changed = manage_current_backup(
             metadata, sections)
+
+        # Bump version (daily +1, or semester +1 & daily reset)
+        version = bump_version(semester_changed)
+        metadata["version"] = version
 
         # Generate both JSON files
         output_data = {

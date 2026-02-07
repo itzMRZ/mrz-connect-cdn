@@ -753,43 +753,6 @@ print(data['metadata'])</pre>
     </div>
 
     <script>
-        // Version Control: MAJOR.MINOR.SYNC
-        const MANUAL_VERSION = '1.0'; // You control this (e.g., 1.0, 2.0, 2.1)
-        let syncVersion = 0;
-        
-        // Load version from localStorage
-        function loadVersion() {
-            const stored = localStorage.getItem('cdn_version_info');
-            if (stored) {
-                const info = JSON.parse(stored);
-                if (info.manual === MANUAL_VERSION) {
-                    syncVersion = info.sync;
-                } else {
-                    // Manual version changed, reset sync counter
-                    syncVersion = 0;
-                }
-            }
-        }
-        
-        // Increment sync version on data update
-        function incrementSyncVersion() {
-            syncVersion++;
-            localStorage.setItem('cdn_version_info', JSON.stringify({
-                manual: MANUAL_VERSION,
-                sync: syncVersion
-            }));
-            updateVersionDisplay();
-        }
-        
-        // Update version display
-        function updateVersionDisplay() {
-            document.getElementById('version').textContent = `${MANUAL_VERSION}.${syncVersion}`;
-        }
-        
-        // Initialize
-        loadVersion();
-        updateVersionDisplay();
-        
         // Initialize Copy Buttons
         document.querySelectorAll('.code-container').forEach(container => {
             const btn = document.createElement('button');
@@ -850,6 +813,9 @@ print(data['metadata'])</pre>
                 
                 document.getElementById('status').textContent = 'Online';
                 
+                // Version from server (MAJOR.SEMESTER.DAILY)
+                document.getElementById('version').textContent = m.version || '2.3.0';
+                
                 // Detect semester from mid exam start date
                 let semester = 'Unknown';
                 if (m.midExamStartDate) {
@@ -875,15 +841,6 @@ print(data['metadata'])</pre>
                     timeZoneName: 'short'
                 });
                 document.getElementById('lastFetched').textContent = fetchedStr;
-                
-                // Check if data has changed and increment sync version
-                const lastDataUpdate = localStorage.getItem('last_data_update');
-                if (lastDataUpdate !== m.lastUpdated) {
-                    localStorage.setItem('last_data_update', m.lastUpdated);
-                    if (lastDataUpdate) { // Don't increment on first visit
-                        incrementSyncVersion();
-                    }
-                }
                 
                 const formatDate = (d) => d ? new Date(d).toLocaleDateString('en-US', { 
                     month: 'short', day: 'numeric', year: 'numeric' 
