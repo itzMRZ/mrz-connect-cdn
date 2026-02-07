@@ -143,6 +143,7 @@
         }
 
         .endpoint {
+            position: relative;
             background: var(--bg-secondary);
             border: 1px solid var(--border-primary);
             padding: clamp(10px, 2.5vw, 14px);
@@ -199,7 +200,7 @@
 
         @media (hover: hover) {
             .copy-btn { opacity: 0; }
-            .code-container:hover .copy-btn, .copy-btn:focus { opacity: 1; }
+            .code-container:hover .copy-btn, .endpoint:hover .copy-btn, .copy-btn:focus { opacity: 1; }
         }
 
         .copy-btn:hover {
@@ -754,52 +755,68 @@ print(data['metadata'])</pre>
 
     <script>
         // Initialize Copy Buttons
-        document.querySelectorAll('.code-container').forEach(container => {
-            const btn = document.createElement('button');
-            btn.className = 'copy-btn';
-            btn.textContent = 'Copy';
-            btn.ariaLabel = 'Copy code to clipboard';
+        document.addEventListener('DOMContentLoaded', () => {
+            const initCopyButtons = () => {
+                const createCopyButton = (container, getText) => {
+                    if (container.querySelector('.copy-btn')) return;
 
-            btn.onclick = () => {
-                const code = container.querySelector('pre').innerText;
+                    const btn = document.createElement('button');
+                    btn.className = 'copy-btn';
+                    btn.textContent = 'Copy';
+                    btn.ariaLabel = 'Copy to clipboard';
 
-                const copyToClipboard = async (text) => {
-                    try {
-                        if (navigator.clipboard && navigator.clipboard.writeText) {
-                            await navigator.clipboard.writeText(text);
-                            return;
-                        }
-                    } catch (err) {
-                        console.warn('Clipboard API failed, trying fallback:', err);
-                    }
+                    btn.onclick = () => {
+                        const text = getText(container);
 
-                    const textArea = document.createElement("textarea");
-                    textArea.value = text;
-                    textArea.style.position = "fixed";
-                    textArea.style.left = "-9999px";
-                    document.body.appendChild(textArea);
-                    textArea.focus();
-                    textArea.select();
-                    try {
-                        document.execCommand('copy');
-                    } catch (err) {
-                        console.error('Fallback copy failed', err);
-                        throw err;
-                    } finally {
-                        document.body.removeChild(textArea);
-                    }
+                        const copyToClipboard = async (text) => {
+                            try {
+                                if (navigator.clipboard && navigator.clipboard.writeText) {
+                                    await navigator.clipboard.writeText(text);
+                                    return;
+                                }
+                            } catch (err) {
+                                console.warn('Clipboard API failed, trying fallback:', err);
+                            }
+
+                            const textArea = document.createElement("textarea");
+                            textArea.value = text;
+                            textArea.style.position = "fixed";
+                            textArea.style.left = "-9999px";
+                            document.body.appendChild(textArea);
+                            textArea.focus();
+                            textArea.select();
+                            try {
+                                document.execCommand('copy');
+                            } catch (err) {
+                                console.error('Fallback copy failed', err);
+                                throw err;
+                            } finally {
+                                document.body.removeChild(textArea);
+                            }
+                        };
+
+                        copyToClipboard(text).then(() => {
+                            btn.textContent = 'Copied!';
+                            setTimeout(() => btn.textContent = 'Copy', 2000);
+                        }).catch(err => {
+                            console.error('Failed to copy:', err);
+                            btn.textContent = 'Error';
+                        });
+                    };
+
+                    container.appendChild(btn);
                 };
 
-                copyToClipboard(code).then(() => {
-                    btn.textContent = 'Copied!';
-                    setTimeout(() => btn.textContent = 'Copy', 2000);
-                }).catch(err => {
-                    console.error('Failed to copy:', err);
-                    btn.textContent = 'Error';
-                });
+                document.querySelectorAll('.code-container').forEach(el =>
+                    createCopyButton(el, (c) => c.querySelector('pre').innerText)
+                );
+
+                document.querySelectorAll('.endpoint').forEach(el =>
+                    createCopyButton(el, (c) => c.querySelector('.endpoint-url').innerText)
+                );
             };
 
-            container.appendChild(btn);
+            initCopyButtons();
         });
 
         async function loadData() {
