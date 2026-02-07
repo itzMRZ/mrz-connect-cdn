@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0, viewport-fit=cover">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
     <meta name="description" content="Open source CDN for USIS course data, exam schedules, and lab availability. JSON APIs updated daily with automatic backups.">
     <link rel="icon" type="image/svg+xml" href="favicon.svg">
 
@@ -273,6 +273,42 @@
             color: var(--text-link);
         }
 
+        .info--top {
+            margin-top: 15px;
+        }
+
+        .stat-value--small {
+            font-size: clamp(12px, 1.6vw, 14px);
+            font-weight: normal;
+            color: var(--text-secondary);
+        }
+
+        .footer-links {
+            margin-top: 10px;
+            display: inline-block;
+        }
+
+        .footer-link {
+            text-decoration: none;
+        }
+
+        .footer-link--github {
+            color: var(--text-success);
+        }
+
+        .footer-link--source {
+            color: var(--text-accent);
+        }
+
+        .text-center-muted {
+            text-align: center;
+            color: var(--text-secondary);
+        }
+
+        .text-center {
+            text-align: center;
+        }
+
         .stats {
             display: grid;
             gap: clamp(8px, 2vw, 12px);
@@ -372,6 +408,7 @@
             height: 100%;
             overflow: auto;
             background-color: rgba(26, 26, 26, 0.95);
+            -webkit-backdrop-filter: blur(4px);
             backdrop-filter: blur(4px);
         }
 
@@ -635,38 +672,38 @@
             <h2>// API Endpoints</h2>
 
             <div class="info">
-                <strong>connect.json</strong> = always the latest data from USIS (may switch to next semester mid-current).<br>
-                <strong>stable.json</strong> = stays on the current semester until final exams end.<br>
-                All files also have <code>.gz</code> variants (96% smaller). Data updates daily at 12:00 PM BDT.
+                <strong>connect.json</strong>: always latest (can switch to next semester early).<br>
+                <strong>stable.json</strong>: current semester until finals end.<br>
+                Tip: append <code>.gz</code> for smaller downloads.
             </div>
 
             <div class="endpoint">
                 <div class="endpoint-url">https://connect-cdn.itzmrz.xyz/connect.json</div>
-                <div class="endpoint-label">Always the latest API data — all sections, seats, faculty, schedules, exam dates. When USIS publishes next semester data mid-current-semester, connect.json switches immediately. (~3.4 MB, 137 KB gzipped)</div>
+                <div class="endpoint-label">Full data (always latest). Use for next-semester planning.</div>
             </div>
             <div class="endpoint">
                 <div class="endpoint-url">https://connect-cdn.itzmrz.xyz/stable.json</div>
-                <div class="endpoint-label">Guaranteed current semester data. Won't switch to next semester until final exams are over. Use this when you need reliable current-semester info (e.g. exam prep tools, seat trackers). (~3.4 MB, 137 KB gzipped)</div>
+                <div class="endpoint-label">Full data (current semester, won’t switch until finals end). Use for seat trackers/exam tools.</div>
             </div>
             <div class="endpoint">
                 <div class="endpoint-url">https://connect-cdn.itzmrz.xyz/exams.json</div>
-                <div class="endpoint-label">Exam schedules only — mid and final exam dates/times extracted from course data. Much lighter than connect.json if you only need exam info. (~516 KB, 20 KB gzipped)</div>
+                <div class="endpoint-label">Exams only (lighter). Use for timetables/calendars.</div>
             </div>
             <div class="endpoint">
                 <div class="endpoint-url">https://connect-cdn.itzmrz.xyz/open_labs.json</div>
-                <div class="endpoint-label">Lab room availability by day and time slot. Shows which labs are free, occupied, and which department uses each lab. (~387 KB, updated daily)</div>
+                <div class="endpoint-label">Lab availability by day/time slot.</div>
             </div>
             <div class="endpoint">
                 <div class="endpoint-url">https://connect-cdn.itzmrz.xyz/connect_metadata.json</div>
-                <div class="endpoint-label">Lightweight metadata only — section counts, seat stats, exam date ranges, version. Use this instead of connect.json when you just need stats. (~400 bytes)</div>
+                <div class="endpoint-label">Metadata only (tiny). Use for stats/version checks.</div>
             </div>
             <div class="endpoint">
                 <div class="endpoint-url">https://connect-cdn.itzmrz.xyz/connect_backup.json</div>
-                <div class="endpoint-label">Index of all semester backups with CDN links, section counts, and dates. Use this to discover and access historical data programmatically.</div>
+                <div class="endpoint-label">Backup index (discover all semesters + links).</div>
             </div>
             <div class="endpoint">
                 <div class="endpoint-url">https://connect-cdn.itzmrz.xyz/backups/{season}{year}.json</div>
-                <div class="endpoint-label">Individual semester backups. Examples: /backups/spring2026.json, /backups/fall2025.json, /backups/summer2024.json</div>
+                <div class="endpoint-label">One semester snapshot. Example: /backups/spring2026.json</div>
             </div>
             <button class="readme-btn" onclick="openReadme()">📖 View Full Documentation (README)</button>
         </div>
@@ -676,8 +713,7 @@
             <h2>// Usage</h2>
 
             <div class="info">
-                <strong>connect.json</strong> for latest data, <strong>stable.json</strong> for current semester.<br>
-                Use <code>.gz</code> files for 96% smaller downloads (3.4 MB → 137 KB).
+                Use <strong>connect.json</strong> for latest, <strong>stable.json</strong> for current semester.
             </div>
 
             <div class="code-container">
@@ -698,20 +734,10 @@ console.log(data.metadata.totalSections);</pre>
 
             <div class="code-container">
                 <div class="code-block">
-                    <pre><span class="comment"># Python — get latest data</span>
+                    <pre><span class="comment"># Python — stable current semester</span>
 import requests
-data = requests.get('https://connect-cdn.itzmrz.xyz/connect.json').json()
-print(data['metadata'])</pre>
-                </div>
-            </div>
-
-            <div class="code-container">
-                <div class="code-block">
-                    <pre><span class="comment"># Python — gzipped (96% smaller, use for mobile/bandwidth-limited)</span>
-import requests, gzip, json
-r = requests.get('https://connect-cdn.itzmrz.xyz/connect.json.gz')
-data = json.loads(gzip.decompress(r.content))
-print(data['metadata'])</pre>
+data = requests.get('https://connect-cdn.itzmrz.xyz/stable.json').json()
+print(data['metadata']['totalSections'])</pre>
                 </div>
             </div>
         </div>
@@ -720,10 +746,10 @@ print(data['metadata'])</pre>
         <footer>
             Auto-updates daily • Backups on semester change • <span id="footerSemester">Loading...</span>
             <br>
-            <span style="margin-top: 10px; display: inline-block;">
-                <a href="https://github.com/itzMRZ/mrz-connect-cdn" style="color: #00ff00; text-decoration: none;">GitHub</a> •
-                Data source: <a href="https://github.com/eniamza" style="color: #00aaff; text-decoration: none;">@eniamza</a> •
-                <a href="https://usis-cdn.eniamza.com/connect.json" style="color: #00aaff; text-decoration: none;">usis-cdn.eniamza.com</a>
+            <span class="footer-links">
+                <a class="footer-link footer-link--github" href="https://github.com/itzMRZ/mrz-connect-cdn">GitHub</a> •
+                Data source: <a class="footer-link footer-link--source" href="https://github.com/eniamza">@eniamza</a> •
+                <a class="footer-link footer-link--source" href="https://usis-cdn.eniamza.com/connect.json">usis-cdn.eniamza.com</a>
             </span>
         </footer>
     </div>
@@ -733,7 +759,7 @@ print(data['metadata'])</pre>
         <div class="modal-content">
             <button class="close" onclick="closeReadme()" aria-label="Close modal">&times;</button>
             <div id="readmeContent">
-                <p style="text-align: center; color: #666;">Loading README...</p>
+                <p class="text-center-muted">Loading README...</p>
             </div>
         </div>
     </div>
@@ -772,7 +798,7 @@ print(data['metadata'])</pre>
                         console.error('Fallback copy failed', err);
                         throw err;
                     } finally {
-                        document.body.removeChild(textArea);
+                        textArea.remove();
                     }
                 };
 
@@ -848,19 +874,20 @@ print(data['metadata'])</pre>
                         </div>
                         <div class="stat">
                             <div class="stat-label">Updated</div>
-                            <div class="stat-value" style="font-size: 0.9em;">${formatDate(m.lastUpdated)}</div>
+                                <div class="stat-value stat-value--small">${formatDate(m.lastUpdated)}</div>
                         </div>
                     </div>
-                    <div class="info" style="margin-top: 15px;">
+                        <div class="info info--top">
                         Mid Exams: ${formatDate(m.midExamStartDate)} - ${formatDate(m.midExamEndDate)}<br>
                         Final Exams: ${formatDate(m.finalExamStartDate)} - ${formatDate(m.finalExamEndDate)}
                     </div>
                 `;
 
             } catch (error) {
+                    console.error('Error loading metadata:', error);
                 document.getElementById('status').textContent = 'Offline';
                 document.getElementById('stats-container').innerHTML = `
-                    <div class="info" style="border-left-color: #ff0000;">
+                        <div class="info">
                         Unable to load data. Run: python update_cdn.py
                     </div>
                 `;
@@ -875,7 +902,7 @@ print(data['metadata'])</pre>
             modal.style.display = 'block';
 
             const content = document.getElementById('readmeContent');
-            content.innerHTML = '<p style="text-align: center; color: #666;">Loading README...</p>';
+            content.innerHTML = '<p class="text-center-muted">Loading README...</p>';
 
             try {
                 // Try local README first (avoids GitHub API rate limit)
@@ -883,12 +910,11 @@ print(data['metadata'])</pre>
                 if (localResp.ok) {
                     const md = await localResp.text();
                     // Use marked.js if loaded, otherwise fallback to GitHub API
-                    if (typeof marked !== 'undefined') {
-                        content.innerHTML = marked.parse(md);
-                    } else {
+                    if (typeof marked === 'undefined') {
                         // marked.js not loaded yet — try GitHub API
-                        throw new Error('marked.js not available');
+                        throw new TypeError('marked.js not available');
                     }
+                    content.innerHTML = marked.parse(md);
                     return;
                 }
                 throw new Error('Local README not available');
@@ -903,11 +929,9 @@ print(data['metadata'])</pre>
                 } catch (error) {
                     console.error('Error loading README:', error);
                     content.innerHTML = `
-                        <p style="text-align: center; color: #ff0000;">Failed to load README</p>
-                        <p style="text-align: center;">
-                            <a href="https://github.com/itzMRZ/mrz-connect-cdn#readme" target="_blank" style="color: #00aaff;">
-                                View on GitHub →
-                            </a>
+                        <p class="text-center-muted">Failed to load README</p>
+                        <p class="text-center">
+                            <a href="https://github.com/itzMRZ/mrz-connect-cdn#readme" target="_blank">View on GitHub →</a>
                         </p>
                     `;
                 }
@@ -919,12 +943,12 @@ print(data['metadata'])</pre>
         }
 
         // Close modal when clicking outside of it
-        window.onclick = function(event) {
+        globalThis.addEventListener('click', (event) => {
             const modal = document.getElementById('readmeModal');
-            if (event.target == modal) {
+            if (event.target === modal) {
                 closeReadme();
             }
-        }
+        });
 
         // Close modal with Escape key
         document.addEventListener('keydown', function(event) {
