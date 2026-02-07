@@ -65,7 +65,7 @@ jobs:
           git config --local user.name "github-actions[bot]"
 
           git add backups/ connect_backup.json
-          
+
           if git diff --staged --quiet; then
             echo "No changes to commit."
           else

@@ -15,12 +15,12 @@ CDN_BASE_URL = "https://connect-cdn.itzmrz.xyz/backups"
 
 def parse_backup_file(filename: str) -> dict:
     """Parse backup filename and extract metadata."""
-    
+
     # Check for current backup: curr_Fall2025_connect.json
     curr_match = filename.startswith('curr_') and filename.endswith('_connect.json')
     if curr_match:
         semester = filename.replace('curr_', '').replace('_connect.json', '')
-        
+
         # Load file to get section count
         filepath = os.path.join(BACKUPS_DIR, filename)
         try:
@@ -31,7 +31,7 @@ def parse_backup_file(filename: str) -> dict:
         except:
             total_sections = 0
             last_updated = ''
-        
+
         return {
             "semester": semester,
             "totalSections": total_sections,
@@ -40,7 +40,7 @@ def parse_backup_file(filename: str) -> dict:
             "isCurrent": True,
             "filename": filename
         }
-    
+
     # Check for archived backup: 20251104_1200_Fall2025_connect.json
     if filename.endswith('_connect.json') and not filename.startswith('curr_'):
         parts = filename.replace('_connect.json', '').split('_')
@@ -48,14 +48,14 @@ def parse_backup_file(filename: str) -> dict:
             date = parts[0]  # YYYYMMDD
             time = parts[1]  # HHMM
             semester = parts[2]  # Fall2025
-            
+
             # Parse date and time
             try:
                 dt = datetime.strptime(f"{date}{time}", "%Y%m%d%H%M")
                 backup_time = dt.isoformat() + "Z"
             except:
                 backup_time = ""
-            
+
             # Load file to get section count
             filepath = os.path.join(BACKUPS_DIR, filename)
             try:
@@ -64,7 +64,7 @@ def parse_backup_file(filename: str) -> dict:
                     total_sections = data['metadata']['totalSections']
             except:
                 total_sections = 0
-            
+
             return {
                 "semester": semester,
                 "totalSections": total_sections,
@@ -73,37 +73,37 @@ def parse_backup_file(filename: str) -> dict:
                 "isCurrent": False,
                 "filename": filename
             }
-    
+
     return None
 
 
 def generate_backup_index():
     """Generate connect_backup.json with all available backups."""
-    
+
     print("=" * 60)
     print("Generating Backup Index (connect_backup.json)")
     print("=" * 60)
-    
+
     # Find all backup files
     backup_files = glob.glob(os.path.join(BACKUPS_DIR, "*_connect.json"))
-    
+
     if not backup_files:
         print("⚠️  No backup files found")
         return
-    
+
     print(f"\nFound {len(backup_files)} backup file(s)")
-    
+
     # Parse all backups
     backups = []
     for filepath in backup_files:
         filename = os.path.basename(filepath)
         backup_info = parse_backup_file(filename)
-        
+
         if backup_info:
             backups.append(backup_info)
             status = "CURRENT" if backup_info['isCurrent'] else "ARCHIVED"
             print(f"  ✓ {backup_info['semester']} ({status}) - {backup_info['totalSections']} sections")
-    
+
     # Sort: current first, then by backup time descending (chronological)
     def semester_sort_key(b):
         """Sort key: current first, then reverse-chronological by backupTime."""
@@ -111,7 +111,7 @@ def generate_backup_index():
         # isCurrent=False → 0
         return (1 if b['isCurrent'] else 0, b.get('backupTime', '') or '')
     backups.sort(key=semester_sort_key, reverse=True)
-    
+
     # Create output structure
     output = {
         "metadata": {
@@ -123,19 +123,23 @@ def generate_backup_index():
         },
         "backups": backups
     }
-    
+
     # Write to connect_backup.json
     output_path = os.path.join(SCRIPT_DIR, "connect_backup.json")
     with open(output_path, 'w', encoding='utf-8') as f:
         json.dump(output, f, indent=2, ensure_ascii=False)
-    
+
     file_size = os.path.getsize(output_path) / 1024
-    
+
     print(f"\n✓ connect_backup.json created ({file_size:.1f} KB)")
     print(f"  Total backups: {output['metadata']['totalBackups']}")
     print(f"  Current: {output['metadata']['currentBackups']}")
     print(f"  Archived: {output['metadata']['archivedBackups']}")
     print("\n" + "=" * 60)
+
+
+if __name__ == "__main__":
+    generate_backup_index()
 
 
 if __name__ == "__main__":

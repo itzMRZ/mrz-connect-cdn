@@ -79,7 +79,7 @@ jobs:
             connect.etag \
             exams.json exams.json.gz \
             connect_backup.json \
-            open_labs.json \
+            open_labs.json open_labs.json.gz \
             backups/ \
             2>/dev/null || true
 

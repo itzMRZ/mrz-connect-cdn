@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="Browse historical semester data backups. Access archived course information from previous semesters.">
     <link rel="icon" type="image/svg+xml" href="favicon.svg">
-    
+
     <!-- Open Graph -->
     <meta property="og:title" content="Historical BRAC University Data Backups - MRZ Connect CDN">
     <meta property="og:description" content="Access archived semester data. Historical course and exam information from past semesters.">
@@ -13,13 +13,13 @@
     <meta property="og:url" content="https://connect-cdn.itzmrz.xyz/backups.html">
     <meta property="og:type" content="website">
     <meta property="og:logo" content="https://connect-cdn.itzmrz.xyz/favicon.svg">
-    
+
     <!-- Twitter Card -->
     <meta name="twitter:card" content="summary_large_image">
     <meta name="twitter:title" content="Historical BRAC University Data Backups - MRZ Connect CDN">
     <meta name="twitter:description" content="Access archived semester data. Historical course and exam information from past semesters.">
     <meta name="twitter:image" content="https://connect-cdn.itzmrz.xyz/banner.png">
-    
+
     <title>Backups - MRZ Connect CDN</title>
     <style>
         * {
@@ -168,8 +168,8 @@
         </div>
 
         <footer>
-            <a href="https://github.com/itzMRZ/mrz-connect-cdn" style="color: #00ff00; text-decoration: none;">GitHub</a> • 
-            Data source: <a href="https://github.com/eniamza" style="color: #00aaff; text-decoration: none;">@eniamza</a> • 
+            <a href="https://github.com/itzMRZ/mrz-connect-cdn" style="color: #00ff00; text-decoration: none;">GitHub</a> •
+            Data source: <a href="https://github.com/eniamza" style="color: #00aaff; text-decoration: none;">@eniamza</a> •
             <a href="https://usis-cdn.eniamza.com/connect.json" style="color: #00aaff; text-decoration: none;">usis-cdn.eniamza.com</a>
         </footer>
     </div>
@@ -182,7 +182,7 @@
                 if (response.ok) {
                     const data = await response.json();
                     const m = data.metadata;
-                    
+
                     // Detect semester
                     let semester = 'Unknown';
                     if (m.midExamStartDate) {
@@ -193,9 +193,9 @@
                         else if (month >= 5 && month <= 8) semester = `Summer ${year}`;
                         else semester = `Fall ${year}`;
                     }
-                    
+
                     document.getElementById('currentSemester').textContent = semester;
-                    
+
                     // Format last fetched time
                     const lastUpdated = new Date(m.lastUpdated);
                     const fetchedStr = lastUpdated.toLocaleString('en-US', {
@@ -212,14 +212,14 @@
                 console.error('Error loading current info:', error);
             }
         }
-        
+
         async function loadBackups() {
             const container = document.getElementById('backups');
-            
+
             try {
                 // Use the static backup index instead of rate-limited GitHub API
                 const response = await fetch('https://connect-cdn.itzmrz.xyz/connect_backup.json');
-                
+
                 if (!response.ok) {
                     container.innerHTML = `
                         <div class="no-backups">
@@ -231,10 +231,10 @@
                     `;
                     return;
                 }
-                
+
                 const data = await response.json();
                 const backupList = data.backups || [];
-                
+
                 if (backupList.length === 0) {
                     container.innerHTML = `
                         <div class="no-backups">
@@ -243,11 +243,11 @@
                     `;
                     return;
                 }
-                
+
                 // Separate current and archived backups (already sorted by the index)
                 const currentBackups = backupList.filter(b => b.isCurrent);
                 const archivedBackups = backupList.filter(b => !b.isCurrent);
-                
+
                 if (currentBackups.length === 0 && archivedBackups.length === 0) {
                     container.innerHTML = `
                         <div class="no-backups">
@@ -256,10 +256,10 @@
                     `;
                     return;
                 }
-                
+
                 // Render backups
                 let html = '';
-                
+
                 // Render current backup first
                 currentBackups.forEach(backup => {
                     html += `
@@ -276,11 +276,11 @@
                         </div>
                     `;
                 });
-                
+
                 // Render archived backups
                 archivedBackups.forEach(backup => {
                     const dateStr = backup.backupTime ? backup.backupTime.slice(0, 10) : '';
-                    
+
                     html += `
                         <div class="backup-item">
                             <div class="backup-semester">${backup.semester}</div>
@@ -292,9 +292,9 @@
                         </div>
                     `;
                 });
-                
+
                 container.innerHTML = html;
-                
+
             } catch (error) {
                 console.error('Error loading backups:', error);
                 container.innerHTML = `

@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0, viewport-fit=cover">
     <meta name="description" content="If not on your lap, let it be an open lab. All open labs over the week, currently open labs, and department tags. Based on MRZ CDN.">
     <link rel="icon" type="image/svg+xml" href="favicon.svg">
-    
+
     <!-- Open Graph Meta Tags -->
     <meta property="og:type" content="website">
     <meta property="og:site_name" content="Open Labs - MRZ CDN">
@@ -20,8 +20,7 @@
     <meta property="og:image:alt" content="Open Labs - All open labs over the week">
     <meta property="og:locale" content="en_US">
     <meta property="og:logo" content="https://connect-cdn.itzmrz.xyz/favicon.svg">
-    <meta property="og:updated_time" content="2025-10-05T14:33:30Z">
-    
+
     <!-- Twitter Card Meta Tags -->
     <meta name="twitter:card" content="summary_large_image">
     <meta name="twitter:site" content="@itzmrz">
@@ -30,18 +29,18 @@
     <meta name="twitter:description" content="If not on your lap, let it be an open lab. All open labs over the week, currently open labs, and department tags. Based on MRZ CDN.">
     <meta name="twitter:image" content="https://connect-cdn.itzmrz.xyz/banner-openlabs.png">
     <meta name="twitter:image:alt" content="Open Labs - All open labs over the week">
-    
+
     <!-- Additional Meta Tags -->
     <meta name="author" content="itzMRZ - OpenSource">
     <meta name="robots" content="index, follow">
     <meta name="keywords" content="BRAC University, open labs, lab availability, currently open labs, department tags, university schedule, open source">
-    
+
     <title>Open Labs - MRZ CDN | All Open Labs Over The Week</title>
     <style>
         /* CSS Variables for consistent theming and spacing */
         :root {
             color-scheme: dark;
-            
+
             /* Colors - preserving original theme */
             --bg-primary: #1a1a1a;
             --bg-secondary: #262626;
@@ -49,13 +48,13 @@
             --border-primary: #30363d;
             --border-accent: #58a6ff;
             --border-success: #56d364;
-            
+
             --text-primary: #c9d1d9;
             --text-secondary: #8b949e;
             --text-accent: #79c0ff;
             --text-link: #58a6ff;
             --text-success: #56d364;
-            
+
             /* Spacing - fluid using clamp */
             --space-xs: clamp(4px, 0.5vw, 6px);
             --space-sm: clamp(8px, 1vw, 12px);
@@ -63,23 +62,23 @@
             --space-lg: clamp(16px, 2vw, 24px);
             --space-xl: clamp(20px, 2.5vw, 32px);
             --space-2xl: clamp(32px, 4vw, 48px);
-            
+
             /* Radius */
             --radius-sm: 3px;
             --radius-md: 6px;
             --radius-lg: 12px;
-            
+
             /* Touch targets */
             --min-touch-target: 44px;
         }
-        
+
         /* Reset & Base Styles */
         *, *::before, *::after {
             margin: 0;
             padding: 0;
             box-sizing: border-box;
         }
-        
+
         html {
             -webkit-text-size-adjust: 100%;
             text-size-adjust: 100%;
@@ -131,7 +130,7 @@
         .back-link:hover {
             text-decoration: underline;
         }
-        
+
         /* Focus styles for accessibility */
         :focus-visible {
             outline: 2px solid var(--border-accent);
@@ -158,7 +157,7 @@
             /* Mobile: 1 column on very small, 2 columns on small */
             grid-template-columns: 1fr 1fr;
         }
-        
+
         @media (max-width: 360px) {
             .stats {
                 grid-template-columns: 1fr;
@@ -178,7 +177,7 @@
             border-radius: var(--radius-md);
             transition: transform 0.2s ease, box-shadow 0.2s ease;
         }
-        
+
         .stat:hover {
             transform: translateY(-2px);
             box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
@@ -204,14 +203,14 @@
             flex-direction: column;
             gap: var(--space-md);
         }
-        
+
         /* Current/Upcoming Toggle - Prominent position */
         .current-toggle-container {
             display: flex;
             justify-content: center;
             align-items: center;
         }
-        
+
         .current-toggle {
             display: inline-flex;
             align-items: center;
@@ -226,52 +225,52 @@
             -webkit-tap-highlight-color: rgba(86, 211, 100, 0.1);
             box-shadow: 0 2px 8px rgba(86, 211, 100, 0.1);
         }
-        
+
         .current-toggle:hover {
             background: var(--bg-tertiary);
             transform: translateY(-2px);
             box-shadow: 0 4px 12px rgba(86, 211, 100, 0.2);
         }
-        
+
         .current-toggle:active {
             transform: translateY(0);
         }
-        
+
         .current-toggle.active {
             background: rgba(86, 211, 100, 0.1);
             border-color: var(--text-success);
         }
-        
+
         .toggle-switch {
             position: relative;
             width: 52px;
             height: 28px;
             flex-shrink: 0;
         }
-        
+
         /* Adjust toggle switch size in button */
         .filter-btn .toggle-switch {
             width: 42px;
             height: 22px;
         }
-        
+
         .filter-btn .toggle-slider:before {
             height: 16px;
             width: 16px;
             left: 3px;
             bottom: 3px;
         }
-        
+
         .filter-btn input:checked + .toggle-slider:before {
             transform: translateX(20px);
         }
-        
+
         .toggle-switch input {
             opacity: 0;
             width: 0;
             height: 0;
         }
-        
+
         .toggle-slider {
             position: absolute;
             cursor: pointer;
@@ -283,7 +282,7 @@
             transition: 0.3s;
             border-radius: 28px;
         }
-        
+
         .toggle-slider:before {
             position: absolute;
             content: "";
@@ -295,36 +294,36 @@
             transition: 0.3s;
             border-radius: 50%;
         }
-        
+
         input:checked + .toggle-slider {
             background-color: var(--text-success);
         }
-        
+
         input:checked + .toggle-slider:before {
             transform: translateX(24px);
         }
-        
+
         .toggle-label {
             color: var(--text-success);
             font-weight: 600;
             font-size: clamp(13px, 2vw, 15px);
             user-select: none;
         }
-        
+
         /* Hide stats on mobile */
         @media (max-width: 767px) {
             .stats {
                 display: none;
             }
         }
-        
+
         /* Day Filters - 2x4 grid on mobile with button at position 8 */
         .day-filters {
             display: grid;
             gap: clamp(8px, 1.5vw, 12px);
             grid-template-columns: repeat(2, 1fr);
         }
-        
+
         @media (min-width: 768px) {
             .day-filters {
                 display: flex;
@@ -360,7 +359,7 @@
             border-color: var(--border-accent);
             transform: translateY(-1px);
         }
-        
+
         .filter-btn:active {
             transform: translateY(0);
         }
@@ -371,7 +370,7 @@
             border-color: #1f6feb;
             font-weight: bold;
         }
-        
+
         .filter-btn:disabled {
             cursor: not-allowed;
             opacity: 0.5;
@@ -475,19 +474,19 @@
             /* Mobile-first: smaller cards */
             grid-template-columns: repeat(auto-fill, minmax(140px, 1fr));
         }
-        
+
         @media (min-width: 480px) {
             .labs-grid {
                 grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));
             }
         }
-        
+
         @media (min-width: 768px) {
             .labs-grid {
                 grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
             }
         }
-        
+
         @media (min-width: 992px) {
             .labs-grid {
                 grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
@@ -506,7 +505,7 @@
             transition: transform 0.2s ease, box-shadow 0.2s ease;
             min-height: 48px;
         }
-        
+
         .lab-item:hover {
             transform: translateY(-1px);
             box-shadow: 0 2px 8px rgba(0, 0, 0, 0.3);
@@ -559,7 +558,7 @@
             margin-top: var(--space-xs);
             grid-template-columns: repeat(auto-fill, minmax(140px, 1fr));
         }
-        
+
         @media (min-width: 600px) {
             .time-slots {
                 grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));
@@ -595,16 +594,16 @@
             font-size: clamp(12px, 1.6vw, 13px);
             line-height: 1.6;
         }
-        
+
         footer a {
             transition: opacity 0.2s ease;
             word-break: break-word;
         }
-        
+
         footer a:hover {
             opacity: 0.8;
         }
-        
+
         /* Motion Preferences */
         @media (prefers-reduced-motion: reduce) {
             *, *::before, *::after {
@@ -614,14 +613,14 @@
                 scroll-behavior: auto !important;
             }
         }
-        
+
         /* Print Styles */
         @media print {
             body {
                 background: white;
                 color: black;
             }
-            
+
             .filters, .back-link {
                 display: none;
             }
@@ -691,14 +690,14 @@
         </div>
 
         <footer>
-            <a href="https://github.com/itzMRZ/mrz-connect-cdn" style="color: #00ff00; text-decoration: none;">GitHub</a> • 
-            Data source: <a href="https://github.com/eniamza" style="color: #00aaff; text-decoration: none;">@eniamza</a> • 
+            <a href="https://github.com/itzMRZ/mrz-connect-cdn" style="color: #00ff00; text-decoration: none;">GitHub</a> •
+            Data source: <a href="https://github.com/eniamza" style="color: #00aaff; text-decoration: none;">@eniamza</a> •
             <a href="https://usis-cdn.eniamza.com/connect.json" style="color: #00aaff; text-decoration: none;">usis-cdn.eniamza.com</a>
         </footer>
     </div>
 
     <script>
-        
+
         let scheduleData = null;
         let currentFilter = 'all';
         let showCurrent = false;
@@ -707,26 +706,26 @@
             try {
                 const response = await fetch('open_labs.json');
                 if (!response.ok) throw new Error('Failed to load');
-                
+
                 const data = await response.json();
                 const m = data.metadata;
-                
+
                 // Update stats
                 document.getElementById('semester').textContent = m.semester || 'Unknown';
                 document.getElementById('lastUpdated').textContent = new Date(m.lastUpdated).toLocaleString();
-                
+
                 const stats = document.querySelectorAll('.stat-value');
                 stats[0].textContent = m.totalLabs;
                 stats[1].textContent = m.totalFreeSlots;
                 stats[2].textContent = m.totalOccupiedSlots;
                 stats[3].textContent = m.averageUtilization + '%';
-                
+
                 // Store schedule data
                 scheduleData = data.schedule;
-                
+
                 // Render schedule
                 renderSchedule(scheduleData);
-                
+
             } catch (error) {
                 console.error('Error loading open labs:', error);
                 document.getElementById('schedule').innerHTML = `
@@ -742,70 +741,76 @@
 
         function getCurrentDayAndSlot() {
             const now = new Date();
-            const dayNames = ['SUNDAY', 'MONDAY', 'TUESDAY', 'WEDNESDAY', 'THURSDAY', 'FRIDAY', 'SATURDAY'];
-            const currentDay = dayNames[now.getDay()];
-            const currentTime = now.getHours() * 60 + now.getMinutes(); // minutes since midnight
-            
-            // Convert to Bangladesh time (UTC+6)
+
+            // Convert to Bangladesh time (UTC+6) using UTC base
+            const utcMinutes = now.getUTCHours() * 60 + now.getUTCMinutes();
             const bdOffset = 6 * 60;
-            const bdTime = currentTime + bdOffset;
-            const bdHours = Math.floor(bdTime / 60) % 24;
-            const bdMinutes = bdTime % 60;
-            const bdCurrentTime = bdHours * 60 + bdMinutes;
-            
-            return { day: currentDay, time: bdCurrentTime };
+            let bdTotalMinutes = utcMinutes + bdOffset;
+
+            // Compute day offset for BDT (may be +1 day from UTC)
+            let dayShift = 0;
+            if (bdTotalMinutes >= 1440) {
+                bdTotalMinutes -= 1440;
+                dayShift = 1;
+            }
+
+            // Get BDT day of week
+            const dayNames = ['SUNDAY', 'MONDAY', 'TUESDAY', 'WEDNESDAY', 'THURSDAY', 'FRIDAY', 'SATURDAY'];
+            const bdDay = dayNames[(now.getUTCDay() + dayShift) % 7];
+
+            return { day: bdDay, time: bdTotalMinutes };
         }
-        
+
         function parseSlotTime(timeStr) {
             const [h, m] = timeStr.split(':').map(Number);
             return h * 60 + m;
         }
-        
+
         function findCurrentOrUpcoming(schedule) {
             const { day: currentDay, time: currentTime } = getCurrentDayAndSlot();
             const days = ['SATURDAY', 'SUNDAY', 'MONDAY', 'TUESDAY', 'WEDNESDAY', 'THURSDAY'];
-            
+
             // Start from current day
             let dayIndex = days.indexOf(currentDay);
             if (dayIndex === -1) dayIndex = 0; // Default to Saturday if not found (Friday)
-            
+
             // Check current day first
             for (let i = 0; i < days.length; i++) {
                 const checkDay = days[(dayIndex + i) % days.length];
                 if (!schedule[checkDay]) continue;
-                
+
                 const slots = Object.keys(schedule[checkDay]).sort();
-                
+
                 for (const slotKey of slots) {
                     const slot = schedule[checkDay][slotKey];
                     const slotStart = parseSlotTime(slot.startTime);
                     const slotEnd = parseSlotTime(slot.endTime);
-                    
+
                     // If checking current day, only show current or future slots
                     if (i === 0 && slotEnd < currentTime) continue;
-                    
+
                     // Return first valid slot
                     if (slot.freeLabs.length > 0) {
                         return { day: checkDay, slotKey: slotKey };
                     }
                 }
             }
-            
+
             return null;
         }
 
         function renderSchedule(schedule, filterDay = null) {
             const container = document.getElementById('schedule');
-            
+
             if (!schedule) {
                 container.innerHTML = '<div class="no-labs">No schedule data.</div>';
                 return;
             }
-            
+
             let html = '';
             let days = filterDay ? [filterDay] : Object.keys(schedule);
             let currentSlotInfo = null;
-            
+
             // If showing current/upcoming, find and filter
             if (showCurrent) {
                 currentSlotInfo = findCurrentOrUpcoming(schedule);
@@ -816,26 +821,26 @@
                     return;
                 }
             }
-            
+
             days.forEach(day => {
                 const slots = schedule[day];
                 const isCurrentDay = currentSlotInfo && currentSlotInfo.day === day;
-                
+
                 html += `
                     <div class="day-section">
                         <div class="day-header ${isCurrentDay ? 'current-day' : ''}">${day}${isCurrentDay ? ' <span style="color: #00aaff; font-size: 0.8em;">(Current/Upcoming)</span>' : ''}</div>
                 `;
-                
-                const slotKeys = showCurrent && currentSlotInfo && currentSlotInfo.day === day 
-                    ? [currentSlotInfo.slotKey] 
+
+                const slotKeys = showCurrent && currentSlotInfo && currentSlotInfo.day === day
+                    ? [currentSlotInfo.slotKey]
                     : Object.keys(slots);
-                
+
                 slotKeys.forEach(slotKey => {
                     const slot = slots[slotKey];
                     const freeCount = slot.freeLabs.length;
                     const occupiedCount = slot.occupiedLabs.length;
                     const isCurrent = currentSlotInfo && currentSlotInfo.day === day && currentSlotInfo.slotKey === slotKey;
-                    
+
                     html += `
                         <div class="slot-card ${isCurrent ? 'current-slot' : ''}">
                             <div class="slot-header">
@@ -849,7 +854,7 @@
                                 </div>
                             </div>
                     `;
-                    
+
                     if (freeCount > 0) {
                         html += `
                             <div style="color: #00aaff; margin: 8px 0; font-size: 0.9em;">Open Labs:</div>
@@ -867,13 +872,13 @@
                     } else {
                         html += '<div style="color: #666; margin-top: 8px;">No open labs</div>';
                     }
-                    
+
                     html += '</div>';
                 });
-                
+
                 html += '</div>';
             });
-            
+
             container.innerHTML = html;
         }
 
@@ -887,7 +892,7 @@
 
         function filterSchedule(filterType) {
             currentFilter = filterType;
-            
+
             if (filterType === 'all') {
                 renderSchedule(scheduleData);
             } else {
@@ -901,7 +906,7 @@
             const currentCheckbox = document.getElementById('currentTimeCheckbox');
             const currentToggle = document.getElementById('currentToggle');
             const dayFiltersContainer = document.getElementById('dayFilters');
-            
+
             // Day filter buttons (exclude the current toggle)
             filterBtns.forEach(btn => {
                 btn.addEventListener('click', () => {
@@ -911,7 +916,7 @@
                     filterSchedule(btn.dataset.filter);
                 });
             });
-            
+
             // Make the entire toggle button clickable
             currentToggle.addEventListener('click', (e) => {
                 // Toggle the checkbox
@@ -919,11 +924,11 @@
                 // Trigger the change event
                 currentCheckbox.dispatchEvent(new Event('change'));
             });
-            
+
             // Current/Upcoming toggle handling
             currentCheckbox.addEventListener('change', (e) => {
                 showCurrent = e.target.checked;
-                
+
                 if (showCurrent) {
                     // Highlight toggle, disable day filters
                     currentToggle.classList.add('active');
