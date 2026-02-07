@@ -144,9 +144,11 @@
             background: var(--bg-secondary);
             border: 1px solid var(--border-primary);
             padding: clamp(10px, 2.5vw, 14px);
+            padding-right: 50px;
             margin-bottom: var(--space-md);
             border-radius: var(--radius-md);
             transition: transform 0.2s ease, box-shadow 0.2s ease;
+            position: relative;
         }
         
         .endpoint:hover {
@@ -179,6 +181,7 @@
             padding: clamp(12px, 2.5vw, 15px);
             margin: 0;
             overflow-x: auto;
+            position: relative;
         }
 
         .copy-btn {
@@ -193,16 +196,23 @@
             font-size: 11px;
             cursor: pointer;
             transition: all 0.2s;
+            opacity: 1; /* Default visible for mobile */
+            z-index: 10;
         }
 
         @media (hover: hover) {
             .copy-btn { opacity: 0; }
-            .code-container:hover .copy-btn, .copy-btn:focus { opacity: 1; }
+            .code-container:hover .copy-btn,
+            .endpoint:hover .copy-btn,
+            .copy-btn:focus {
+                opacity: 1;
+            }
         }
 
         .copy-btn:hover {
             background: var(--border-primary);
             color: var(--text-primary);
+            border-color: var(--text-success);
         }
 
         .code-block pre {
@@ -574,38 +584,6 @@
             }
         }
 
-        /* Copy Button Styles */
-        .code-block {
-            position: relative;
-        }
-
-        .copy-btn {
-            position: absolute;
-            top: 8px;
-            right: 8px;
-            background: var(--bg-primary);
-            border: 1px solid var(--border-primary);
-            color: var(--text-secondary);
-            border-radius: var(--radius-sm);
-            padding: 4px 8px;
-            font-size: 11px;
-            font-family: inherit;
-            cursor: pointer;
-            transition: all 0.2s;
-            opacity: 0;
-            z-index: 10;
-        }
-
-        .code-block:hover .copy-btn,
-        .copy-btn:focus {
-            opacity: 1;
-        }
-
-        .copy-btn:hover {
-            color: var(--text-success);
-            border-color: var(--text-success);
-            background: var(--bg-secondary);
-        }
     </style>
 </head>
 <body>
@@ -788,54 +766,6 @@ print(data['metadata'])</pre>
         loadVersion();
         updateVersionDisplay();
         
-        // Initialize Copy Buttons
-        document.querySelectorAll('.code-container').forEach(container => {
-            const btn = document.createElement('button');
-            btn.className = 'copy-btn';
-            btn.textContent = 'Copy';
-            btn.ariaLabel = 'Copy code to clipboard';
-
-            btn.onclick = () => {
-                const code = container.querySelector('pre').innerText;
-
-                const copyToClipboard = async (text) => {
-                    try {
-                        if (navigator.clipboard && navigator.clipboard.writeText) {
-                            await navigator.clipboard.writeText(text);
-                            return;
-                        }
-                    } catch (err) {
-                        console.warn('Clipboard API failed, trying fallback:', err);
-                    }
-
-                    const textArea = document.createElement("textarea");
-                    textArea.value = text;
-                    textArea.style.position = "fixed";
-                    textArea.style.left = "-9999px";
-                    document.body.appendChild(textArea);
-                    textArea.focus();
-                    textArea.select();
-                    try {
-                        document.execCommand('copy');
-                    } catch (err) {
-                        console.error('Fallback copy failed', err);
-                        throw err;
-                    } finally {
-                        document.body.removeChild(textArea);
-                    }
-                };
-
-                copyToClipboard(code).then(() => {
-                    btn.textContent = 'Copied!';
-                    setTimeout(() => btn.textContent = 'Copy', 2000);
-                }).catch(err => {
-                    console.error('Failed to copy:', err);
-                    btn.textContent = 'Error';
-                });
-            };
-
-            container.appendChild(btn);
-        });
 
         async function loadData() {
             try {
@@ -978,26 +908,46 @@ print(data['metadata'])</pre>
 
         // Copy to Clipboard Functionality
         document.addEventListener('DOMContentLoaded', () => {
-            document.querySelectorAll('.code-block').forEach(block => {
-                // Check if button already exists (to prevent duplicates if run multiple times)
-                if (block.querySelector('.copy-btn')) return;
+            const copyToClipboard = async (text) => {
+                try {
+                    if (navigator.clipboard && navigator.clipboard.writeText) {
+                        await navigator.clipboard.writeText(text);
+                        return;
+                    }
+                } catch (err) {
+                    console.warn('Clipboard API failed, trying fallback:', err);
+                }
+
+                const textArea = document.createElement("textarea");
+                textArea.value = text;
+                textArea.style.position = "fixed";
+                textArea.style.left = "-9999px";
+                document.body.appendChild(textArea);
+                textArea.focus();
+                textArea.select();
+                try {
+                    document.execCommand('copy');
+                } catch (err) {
+                    throw err;
+                } finally {
+                    document.body.removeChild(textArea);
+                }
+            };
+
+            const addCopyButton = (element, textGetter) => {
+                if (element.querySelector('.copy-btn')) return;
 
                 const btn = document.createElement('button');
                 btn.className = 'copy-btn';
                 btn.textContent = 'Copy';
-                btn.ariaLabel = 'Copy code to clipboard';
+                btn.ariaLabel = 'Copy to clipboard';
 
                 btn.onclick = async () => {
-                    const pre = block.querySelector('pre');
-                    if (!pre) return;
-
-                    // Get text content but handle possible child elements (like spans)
-                    const code = pre.textContent;
+                    const text = textGetter();
+                    if (!text) return;
 
                     try {
-                        await navigator.clipboard.writeText(code);
-
-                        // Feedback
+                        await copyToClipboard(text);
                         const originalText = btn.textContent;
                         btn.textContent = 'Copied!';
                         btn.style.color = 'var(--text-success)';
@@ -1015,7 +965,17 @@ print(data['metadata'])</pre>
                     }
                 };
 
-                block.appendChild(btn);
+                element.appendChild(btn);
+            };
+
+            // Add buttons to code blocks
+            document.querySelectorAll('.code-block').forEach(block => {
+                addCopyButton(block, () => block.querySelector('pre')?.innerText);
+            });
+
+            // Add buttons to endpoints
+            document.querySelectorAll('.endpoint').forEach(endpoint => {
+                addCopyButton(endpoint, () => endpoint.querySelector('.endpoint-url')?.textContent);
             });
         });
     </script>
