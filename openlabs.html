@@ -515,12 +515,31 @@
             border-color: var(--border-success);
         }
 
+        /* CSE labs (have PCs) — distinct visual */
+        .lab-item.cse-lab {
+            border-color: #d29922;
+            background: linear-gradient(135deg, var(--bg-secondary), #2a2518);
+        }
+
+        .lab-item.cse-lab .lab-name {
+            color: #f0c040;
+        }
+
+        .lab-item.cse-lab .pc-icon {
+            font-size: clamp(12px, 1.6vw, 14px);
+            margin-right: 3px;
+            flex-shrink: 0;
+        }
+
         .lab-name {
             color: var(--text-success);
             font-weight: bold;
             font-size: clamp(12px, 1.8vw, 14px);
             word-break: break-word;
             line-height: 1.3;
+            display: flex;
+            align-items: center;
+            gap: 4px;
         }
 
         .dept-badges {
@@ -539,6 +558,64 @@
             border-radius: var(--radius-sm);
             font-size: clamp(10px, 1.4vw, 11px);
             white-space: nowrap;
+        }
+
+        .dept-badge.cse {
+            background: #2a2518;
+            border-color: #d29922;
+            color: #f0c040;
+        }
+
+        /* Passed slots (greyed out in current mode) */
+        .slot-card.passed-slot {
+            opacity: 0.35;
+            pointer-events: none;
+        }
+
+        .upcoming-badge {
+            background: var(--text-accent);
+            color: var(--bg-primary);
+            padding: 3px 8px;
+            border-radius: var(--radius-sm);
+            font-size: clamp(10px, 1.4vw, 11px);
+            font-weight: bold;
+            margin-left: var(--space-sm);
+            white-space: nowrap;
+        }
+
+        /* CSE legend */
+        .legend {
+            display: flex;
+            gap: clamp(12px, 3vw, 20px);
+            flex-wrap: wrap;
+            font-size: clamp(11px, 1.6vw, 13px);
+            color: var(--text-secondary);
+            margin-bottom: var(--space-md);
+            align-items: center;
+        }
+
+        .legend-item {
+            display: flex;
+            align-items: center;
+            gap: 6px;
+        }
+
+        .legend-swatch {
+            width: 14px;
+            height: 14px;
+            border-radius: 3px;
+            border: 1px solid;
+            flex-shrink: 0;
+        }
+
+        .legend-swatch.cse {
+            background: linear-gradient(135deg, var(--bg-secondary), #2a2518);
+            border-color: #d29922;
+        }
+
+        .legend-swatch.other {
+            background: var(--bg-secondary);
+            border-color: var(--border-success);
         }
 
         /* Time Slots */
@@ -685,6 +762,11 @@
             </div>
         </div>
 
+        <div class="legend">
+            <div class="legend-item"><div class="legend-swatch cse"></div> CSE Lab (has PCs)</div>
+            <div class="legend-item"><div class="legend-swatch other"></div> Other Lab</div>
+        </div>
+
         <div class="schedule-container" id="schedule">
             <div class="no-labs">Loading schedule...</div>
         </div>
@@ -774,29 +856,34 @@
             let dayIndex = days.indexOf(currentDay);
             if (dayIndex === -1) dayIndex = 0; // Default to Saturday if not found (Friday)
 
-            // Check current day first
+            // Check current day first, then cycle through
             for (let i = 0; i < days.length; i++) {
                 const checkDay = days[(dayIndex + i) % days.length];
                 if (!schedule[checkDay]) continue;
 
                 const slots = Object.keys(schedule[checkDay]).sort();
+                const hasRelevantSlots = (i === 0)
+                    ? slots.some(sk => {
+                        const slot = schedule[checkDay][sk];
+                        return parseSlotTime(slot.endTime) > currentTime;
+                    })
+                    : slots.length > 0;
 
-                for (const slotKey of slots) {
-                    const slot = schedule[checkDay][slotKey];
-                    const slotStart = parseSlotTime(slot.startTime);
-                    const slotEnd = parseSlotTime(slot.endTime);
-
-                    // If checking current day, only show current or future slots
-                    if (i === 0 && slotEnd < currentTime) continue;
-
-                    // Return first valid slot
-                    if (slot.freeLabs.length > 0) {
-                        return { day: checkDay, slotKey: slotKey };
-                    }
+                if (hasRelevantSlots) {
+                    // Return the day + timing context so renderer can classify each slot
+                    return {
+                        day: checkDay,
+                        isToday: i === 0,
+                        currentTime: i === 0 ? currentTime : null
+                    };
                 }
             }
 
             return null;
+        }
+
+        function isCSELab(lab) {
+            return lab.departments && lab.departments.includes('CSE');
         }
 
         function renderSchedule(schedule, filterDay = null) {
@@ -809,13 +896,13 @@
 
             let html = '';
             let days = filterDay ? [filterDay] : Object.keys(schedule);
-            let currentSlotInfo = null;
+            let currentInfo = null;
 
-            // If showing current/upcoming, find and filter
+            // If showing current/upcoming, find the relevant day
             if (showCurrent) {
-                currentSlotInfo = findCurrentOrUpcoming(schedule);
-                if (currentSlotInfo) {
-                    days = [currentSlotInfo.day];
+                currentInfo = findCurrentOrUpcoming(schedule);
+                if (currentInfo) {
+                    days = [currentInfo.day];
                 } else {
                     container.innerHTML = '<div class="no-labs">No open labs available in current or upcoming slots.</div>';
                     return;
@@ -824,29 +911,51 @@
 
             days.forEach(day => {
                 const slots = schedule[day];
-                const isCurrentDay = currentSlotInfo && currentSlotInfo.day === day;
+                const isRelevantDay = currentInfo && currentInfo.day === day;
 
                 html += `
                     <div class="day-section">
-                        <div class="day-header ${isCurrentDay ? 'current-day' : ''}">${day}${isCurrentDay ? ' <span style="color: #00aaff; font-size: 0.8em;">(Current/Upcoming)</span>' : ''}</div>
+                        <div class="day-header ${isRelevantDay ? 'current-day' : ''}">${day}${isRelevantDay ? ' <span style="color: #00aaff; font-size: 0.8em;">(Current/Upcoming)</span>' : ''}</div>
                 `;
 
-                const slotKeys = showCurrent && currentSlotInfo && currentSlotInfo.day === day
-                    ? [currentSlotInfo.slotKey]
-                    : Object.keys(slots);
+                const slotKeys = Object.keys(slots).sort();
 
                 slotKeys.forEach(slotKey => {
                     const slot = slots[slotKey];
                     const freeCount = slot.freeLabs.length;
                     const occupiedCount = slot.occupiedLabs.length;
-                    const isCurrent = currentSlotInfo && currentSlotInfo.day === day && currentSlotInfo.slotKey === slotKey;
+
+                    // Classify slot: NOW, UPCOMING, PASSED (only in current mode)
+                    let slotClass = '';
+                    let badgeHTML = '';
+
+                    if (showCurrent && currentInfo && currentInfo.isToday && currentInfo.currentTime !== null) {
+                        const slotStart = parseSlotTime(slot.startTime);
+                        const slotEnd = parseSlotTime(slot.endTime);
+                        const ct = currentInfo.currentTime;
+
+                        if (ct >= slotStart && ct < slotEnd) {
+                            // Currently ongoing
+                            slotClass = 'current-slot';
+                            badgeHTML = '<span class="current-badge">NOW</span>';
+                        } else if (slotStart > ct) {
+                            // Future slot today
+                            badgeHTML = '<span class="upcoming-badge">UPCOMING</span>';
+                        } else {
+                            // Already passed
+                            slotClass = 'passed-slot';
+                        }
+                    } else if (showCurrent && currentInfo && !currentInfo.isToday) {
+                        // Next working day — all slots are upcoming
+                        badgeHTML = '<span class="upcoming-badge">UPCOMING</span>';
+                    }
 
                     html += `
-                        <div class="slot-card ${isCurrent ? 'current-slot' : ''}">
+                        <div class="slot-card ${slotClass}">
                             <div class="slot-header">
                                 <div class="slot-time">
                                     ${formatTime(slot.startTime)} - ${formatTime(slot.endTime)}
-                                    ${isCurrent ? '<span class="current-badge">NOW/UPCOMING</span>' : ''}
+                                    ${badgeHTML}
                                 </div>
                                 <div class="slot-counts">
                                     <div class="slot-count">Open: <span>${freeCount}</span></div>
@@ -856,17 +965,27 @@
                     `;
 
                     if (freeCount > 0) {
+                        // Sort: CSE labs first, then alphabetical
+                        const sortedLabs = [...slot.freeLabs].sort((a, b) => {
+                            const aCSE = isCSELab(a) ? 0 : 1;
+                            const bCSE = isCSELab(b) ? 0 : 1;
+                            if (aCSE !== bCSE) return aCSE - bCSE;
+                            return a.labRoom.localeCompare(b.labRoom);
+                        });
+
                         html += `
                             <div style="color: #00aaff; margin: 8px 0; font-size: 0.9em;">Open Labs:</div>
                             <div class="labs-grid">
-                                ${slot.freeLabs.map(lab => `
-                                    <div class="lab-item free">
-                                        <span class="lab-name">${lab.labRoom}</span>
+                                ${sortedLabs.map(lab => {
+                                    const cse = isCSELab(lab);
+                                    return `
+                                    <div class="lab-item free ${cse ? 'cse-lab' : ''}">
+                                        <span class="lab-name">${cse ? '<span class="pc-icon">🖥️</span>' : ''}${lab.labRoom}</span>
                                         <div class="dept-badges">
-                                            ${lab.departments.map(dept => `<span class="dept-badge">${dept}</span>`).join('')}
+                                            ${lab.departments.map(dept => `<span class="dept-badge ${dept === 'CSE' ? 'cse' : ''}">${dept}</span>`).join('')}
                                         </div>
                                     </div>
-                                `).join('')}
+                                `}).join('')}
                             </div>
                         `;
                     } else {
@@ -884,7 +1003,7 @@
 
         function formatTime(timeStr) {
             const [h, m] = timeStr.split(':');
-            const hour = parseInt(h);
+            const hour = Number.parseInt(h);
             const ampm = hour >= 12 ? 'PM' : 'AM';
             const hour12 = hour % 12 || 12;
             return `${hour12}:${m} ${ampm}`;
@@ -905,7 +1024,6 @@
             const filterBtns = document.querySelectorAll('.filter-btn[data-filter]');
             const currentCheckbox = document.getElementById('currentTimeCheckbox');
             const currentToggle = document.getElementById('currentToggle');
-            const dayFiltersContainer = document.getElementById('dayFilters');
 
             // Day filter buttons (exclude the current toggle)
             filterBtns.forEach(btn => {

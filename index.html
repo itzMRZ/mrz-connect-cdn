@@ -37,6 +37,8 @@
     <meta name="theme-color" content="#1a1a1a">
     
     <title>MRZ Connect CDN</title>
+    <!-- marked.js — lightweight markdown renderer for README modal -->
+    <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js" defer></script>
     <style>
         /* CSS Variables for consistent theming */
         :root {
@@ -937,19 +939,13 @@ print(data['metadata'])</pre>
                 const localResp = await fetch('README.md');
                 if (localResp.ok) {
                     const md = await localResp.text();
-                    // Basic markdown rendering (headings, bold, code, links, lists)
-                    const html = md
-                        .replace(/^### (.+)$/gm, '<h3>$1</h3>')
-                        .replace(/^## (.+)$/gm, '<h2>$1</h2>')
-                        .replace(/^# (.+)$/gm, '<h1>$1</h1>')
-                        .replace(/\*\*(.+?)\*\*/g, '<strong>$1</strong>')
-                        .replace(/`([^`]+)`/g, '<code>$1</code>')
-                        .replace(/\[([^\]]+)\]\(([^)]+)\)/g, '<a href="$2" target="_blank" style="color:#00aaff">$1</a>')
-                        .replace(/^- (.+)$/gm, '<li>$1</li>')
-                        .replace(/(<li>.*<\/li>)/s, '<ul>$1</ul>')
-                        .replace(/\n\n/g, '<br><br>')
-                        .replace(/\n/g, '<br>');
-                    content.innerHTML = `<div style="text-align:left;line-height:1.7;color:#ccc;">${html}</div>`;
+                    // Use marked.js if loaded, otherwise fallback to GitHub API
+                    if (typeof marked !== 'undefined') {
+                        content.innerHTML = marked.parse(md);
+                    } else {
+                        // marked.js not loaded yet — try GitHub API
+                        throw new Error('marked.js not available');
+                    }
                     return;
                 }
                 throw new Error('Local README not available');

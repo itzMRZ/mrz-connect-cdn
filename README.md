@@ -47,11 +47,11 @@ https://connect-cdn.itzmrz.xyz/connect_backup.json
 
 ### Current Semester Backup
 ```
-https://connect-cdn.itzmrz.xyz/backups/curr_Fall2025_connect.json
+https://connect-cdn.itzmrz.xyz/backups/curr_Spring2026_connect.json
 ```
 **What it contains:**
 - Full course data for the ongoing semester
-- Updated weekly with latest data
+- Updated daily with latest data
 - Automatically renamed to dated archive when semester ends
 - Same structure as `connect.json` but frozen for current semester
 
@@ -102,7 +102,7 @@ https://connect-cdn.itzmrz.xyz/open_labs.json
 
 **Use this for:** Finding open lab rooms, scheduling lab sessions, lab utilization analysis
 
-**Note:** Auto-generated only when semester changes (exam dates differ)
+**Note:** Auto-generated daily alongside other CDN files
 
 ## Usage
 
@@ -143,7 +143,7 @@ print(data['metadata']['totalSections'])
 
 ## Features
 
-- Auto-updates every 7 days via GitHub Actions
+- Auto-updates daily via GitHub Actions
 - Automatic semester-based backups when exam dates change
 - Gzip compression (96% size reduction)
 - Free hosting on GitHub Pages
