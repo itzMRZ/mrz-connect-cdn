@@ -122,6 +122,10 @@
         .status span {
             color: var(--text-success);
         }
+
+        .status span.offline {
+            color: #ff6b6b;
+        }
         
         .status-item {
             display: inline-flex;
@@ -147,6 +151,7 @@
             margin-bottom: var(--space-md);
             border-radius: var(--radius-md);
             transition: transform 0.2s ease, box-shadow 0.2s ease;
+            position: relative;
         }
         
         .endpoint:hover {
@@ -788,54 +793,6 @@ print(data['metadata'])</pre>
         loadVersion();
         updateVersionDisplay();
         
-        // Initialize Copy Buttons
-        document.querySelectorAll('.code-container').forEach(container => {
-            const btn = document.createElement('button');
-            btn.className = 'copy-btn';
-            btn.textContent = 'Copy';
-            btn.ariaLabel = 'Copy code to clipboard';
-
-            btn.onclick = () => {
-                const code = container.querySelector('pre').innerText;
-
-                const copyToClipboard = async (text) => {
-                    try {
-                        if (navigator.clipboard && navigator.clipboard.writeText) {
-                            await navigator.clipboard.writeText(text);
-                            return;
-                        }
-                    } catch (err) {
-                        console.warn('Clipboard API failed, trying fallback:', err);
-                    }
-
-                    const textArea = document.createElement("textarea");
-                    textArea.value = text;
-                    textArea.style.position = "fixed";
-                    textArea.style.left = "-9999px";
-                    document.body.appendChild(textArea);
-                    textArea.focus();
-                    textArea.select();
-                    try {
-                        document.execCommand('copy');
-                    } catch (err) {
-                        console.error('Fallback copy failed', err);
-                        throw err;
-                    } finally {
-                        document.body.removeChild(textArea);
-                    }
-                };
-
-                copyToClipboard(code).then(() => {
-                    btn.textContent = 'Copied!';
-                    setTimeout(() => btn.textContent = 'Copy', 2000);
-                }).catch(err => {
-                    console.error('Failed to copy:', err);
-                    btn.textContent = 'Error';
-                });
-            };
-
-            container.appendChild(btn);
-        });
 
         async function loadData() {
             try {
@@ -912,7 +869,9 @@ print(data['metadata'])</pre>
                 `;
                 
             } catch (error) {
-                document.getElementById('status').textContent = 'Offline';
+                const statusEl = document.getElementById('status');
+                statusEl.textContent = 'Offline';
+                statusEl.classList.add('offline');
                 document.getElementById('stats-container').innerHTML = `
                     <div class="info" style="border-left-color: #ff0000;">
                         Unable to load data. Run: python update_cdn.py
@@ -978,26 +937,50 @@ print(data['metadata'])</pre>
 
         // Copy to Clipboard Functionality
         document.addEventListener('DOMContentLoaded', () => {
-            document.querySelectorAll('.code-block').forEach(block => {
-                // Check if button already exists (to prevent duplicates if run multiple times)
-                if (block.querySelector('.copy-btn')) return;
+            const copyToClipboard = async (text) => {
+                try {
+                    if (navigator.clipboard && navigator.clipboard.writeText) {
+                        await navigator.clipboard.writeText(text);
+                        return true;
+                    }
+                } catch (err) {
+                    console.warn('Clipboard API failed, trying fallback:', err);
+                }
+
+                // Fallback
+                const textArea = document.createElement("textarea");
+                textArea.value = text;
+                textArea.style.position = "fixed";
+                textArea.style.left = "-9999px";
+                document.body.appendChild(textArea);
+                textArea.focus();
+                textArea.select();
+                try {
+                    const successful = document.execCommand('copy');
+                    document.body.removeChild(textArea);
+                    return successful;
+                } catch (err) {
+                    console.error('Fallback copy failed', err);
+                    document.body.removeChild(textArea);
+                    return false;
+                }
+            };
+
+            const addCopyButton = (container, getText) => {
+                if (container.querySelector('.copy-btn')) return;
 
                 const btn = document.createElement('button');
                 btn.className = 'copy-btn';
                 btn.textContent = 'Copy';
-                btn.ariaLabel = 'Copy code to clipboard';
+                btn.ariaLabel = 'Copy to clipboard';
 
                 btn.onclick = async () => {
-                    const pre = block.querySelector('pre');
-                    if (!pre) return;
+                    const text = getText();
+                    if (!text) return;
 
-                    // Get text content but handle possible child elements (like spans)
-                    const code = pre.textContent;
+                    const success = await copyToClipboard(text);
 
-                    try {
-                        await navigator.clipboard.writeText(code);
-
-                        // Feedback
+                    if (success) {
                         const originalText = btn.textContent;
                         btn.textContent = 'Copied!';
                         btn.style.color = 'var(--text-success)';
@@ -1008,14 +991,28 @@ print(data['metadata'])</pre>
                             btn.style.color = '';
                             btn.style.borderColor = '';
                         }, 2000);
-                    } catch (err) {
-                        console.error('Failed to copy:', err);
+                    } else {
                         btn.textContent = 'Error';
                         setTimeout(() => btn.textContent = 'Copy', 2000);
                     }
                 };
+                container.appendChild(btn);
+            };
 
-                block.appendChild(btn);
+            // Add buttons to code containers
+            document.querySelectorAll('.code-container').forEach(container => {
+                addCopyButton(container, () => {
+                    const pre = container.querySelector('pre');
+                    return pre ? pre.innerText : '';
+                });
+            });
+
+            // Add buttons to API endpoints
+            document.querySelectorAll('.endpoint').forEach(endpoint => {
+                addCopyButton(endpoint, () => {
+                    const urlDiv = endpoint.querySelector('.endpoint-url');
+                    return urlDiv ? urlDiv.textContent.trim() : '';
+                });
             });
         });
     </script>
