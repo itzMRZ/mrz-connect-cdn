@@ -1,46 +1,120 @@
-name: Update USIS Data
+name: Update CDN Data
 
 on:
   schedule:
-    # Run every 7 days at 6 AM UTC (12 PM Bangladesh Time)
-    - cron: '0 6 */7 * *'
-  workflow_dispatch: # Allow manual trigger from Actions tab
+    # Run daily at 6:00 AM UTC (12:00 PM Bangladesh Time)
+    - cron: '0 6 * * *'
+  workflow_dispatch:
+    inputs:
+      force:
+        description: 'Force refresh (ignore ETag cache)'
+        required: false
+        default: 'true'
+        type: choice
+        options:
+          - 'true'
+          - 'false'
 
 permissions:
   contents: write
 
+# Prevent concurrent runs — queue latest, cancel stale
+concurrency:
+  group: cdn-update
+  cancel-in-progress: true
+
 jobs:
   update:
     runs-on: ubuntu-latest
-    
+    timeout-minutes: 10
+
     steps:
-    - name: Checkout repository
-      uses: actions/checkout@v4
-      with:
-        fetch-depth: 0  # Fetch all history for backup comparison
-      
-    - name: Set up Python
-      uses: actions/setup-python@v5
-      with:
-        python-version: '3.x'
-        
-    - name: Install dependencies
-      run: pip install requests
-    
-    - name: Run update script
-      run: python update_cdn.py
-      
-    - name: Commit and push changes
-      run: |
-        git config --local user.email "github-actions[bot]@users.noreply.github.com"
-        git config --local user.name "github-actions[bot]"
-        git add connect.json connect.json.gz exams.json exams.json.gz connect_backup.json open_labs.json backups/curr_*.json backups/20*.json
-        
-        # Check if there are changes to commit
-        if git diff --quiet && git diff --staged --quiet; then
-          echo "No changes to commit"
-        else
-          git commit -m "Auto-update data and backups - $(date -u +'%Y-%m-%d %H:%M:%S UTC')"
-          git push
-          echo "✓ Changes pushed successfully"
-        fi
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+
+      - name: Install dependencies
+        run: pip install requests
+
+      - name: Fetch and update CDN data
+        id: update
+        env:
+          FORCE_FLAG: ${{ github.event_name == 'workflow_dispatch' && inputs.force == 'true' && '--force' || '' }}
+        run: |
+          set -euo pipefail
+
+          echo "::group::Running update_cdn.py"
+          # Run the update script (--force skips ETag, used for manual triggers)
+          if python update_cdn.py $FORCE_FLAG; then
+            echo "update_exit=0" >> "$GITHUB_OUTPUT"
+          else
+            echo "update_exit=1" >> "$GITHUB_OUTPUT"
+            exit 1
+          fi
+          echo "::endgroup::"
+
+          # Detect whether anything actually changed in the working tree
+          if git diff --quiet && git diff --cached --quiet; then
+            echo "changed=false" >> "$GITHUB_OUTPUT"
+            echo "ℹ️  No data changes detected."
+          else
+            echo "changed=true" >> "$GITHUB_OUTPUT"
+            echo "✓ Data changes detected."
+          fi
+
+      - name: Commit and push
+        if: steps.update.outputs.changed == 'true'
+        run: |
+          git config --local user.email "github-actions[bot]@users.noreply.github.com"
+          git config --local user.name "github-actions[bot]"
+
+          # Stage all generated/updated files
+          git add \
+            connect.json connect.json.gz \
+            connect_metadata.json connect_metadata.json.gz \
+            connect.etag \
+            exams.json exams.json.gz \
+            connect_backup.json \
+            open_labs.json \
+            free_labs.json \
+            backups/ \
+            2>/dev/null || true
+
+          # Only commit if staged changes exist
+          if git diff --staged --quiet; then
+            echo "Nothing staged to commit."
+            exit 0
+          fi
+
+          # Build a descriptive commit message
+          SECTIONS=$(python -c "import json; d=json.load(open('connect.json')); print(d['metadata']['totalSections'])" 2>/dev/null || echo "?")
+          DATE=$(date -u +'%Y-%m-%d')
+          TRIGGER="${{ github.event_name }}"
+
+          if [ "$TRIGGER" = "schedule" ]; then
+            MSG="auto: Daily CDN update — ${SECTIONS} sections (${DATE})"
+          else
+            MSG="auto: Manual CDN update — ${SECTIONS} sections (${DATE})"
+          fi
+
+          git commit -m "$MSG"
+
+          # Push with retry (GitHub can occasionally be slow)
+          for attempt in 1 2 3; do
+            if git push; then
+              echo "✓ Pushed successfully (attempt ${attempt})"
+              break
+            fi
+            if [ "$attempt" -lt 3 ]; then
+              echo "⚠ Push failed, retrying in 5s... (attempt ${attempt}/3)"
+              sleep 5
+              git pull --rebase
+            else
+              echo "✗ Push failed after 3 attempts"
+              exit 1
+            fi
+          done

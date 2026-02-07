@@ -6,6 +6,7 @@ Fetches course data from MRZ Connect API and generates static CDN files with met
 
 import json
 import os
+import sys
 import gzip
 import requests
 import shutil
@@ -18,18 +19,22 @@ SCRIPT_DIR = os.path.dirname(os.path.abspath(__file__))
 BACKUPS_DIR = os.path.join(SCRIPT_DIR, "backups")
 
 
-def fetch_mrz_data() -> Optional[List[Dict]]:
+def fetch_mrz_data(force: bool = False) -> Optional[List[Dict]]:
     """Fetch course data from MRZ Connect API with conditional GET."""
     url = "https://usis-cdn.eniamza.com/connect.json"
     etag_file = os.path.join(SCRIPT_DIR, "connect.etag")
     headers = {}
 
-    # Load stored ETag
-    if os.path.exists(etag_file):
+    # Load stored ETag (skip if force mode)
+    if not force and os.path.exists(etag_file):
         with open(etag_file, 'r') as f:
-            headers['If-None-Match'] = f.read().strip()
+            stored_etag = f.read().strip()
+            if stored_etag:
+                headers['If-None-Match'] = stored_etag
 
     print(f"Fetching data from {url}...")
+    if force:
+        print("  (force mode - ignoring cached ETag)")
 
     try:
         response = requests.get(url, headers=headers, timeout=30)
@@ -352,13 +357,15 @@ def generate_exams_json(sections: List[Dict], output_path: str = "exams.json"):
 
 def main():
     """Main execution function."""
+    force = '--force' in sys.argv
+
     print("=" * 60)
     print("MRZ Connect CDN Data Update Script")
     print("=" * 60)
 
     try:
         # Fetch data from API
-        sections = fetch_mrz_data()
+        sections = fetch_mrz_data(force=force)
 
         if sections is None:
             print("\n✓ No changes detected. Exiting.")

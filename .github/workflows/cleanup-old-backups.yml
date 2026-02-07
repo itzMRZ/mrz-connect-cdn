@@ -1,10 +1,10 @@
 name: Cleanup Old Backups
 
-# Run once a year to clean backups older than 2 years
 on:
   schedule:
-    - cron: '0 0 1 1 *'  # January 1st at midnight
-  workflow_dispatch: # Manual trigger
+    # Run on January 1st at midnight UTC each year
+    - cron: '0 0 1 1 *'
+  workflow_dispatch:
 
 permissions:
   contents: write
@@ -12,45 +12,65 @@ permissions:
 jobs:
   cleanup:
     runs-on: ubuntu-latest
-    
+    timeout-minutes: 5
+
     steps:
-    - name: Checkout repository
-      uses: actions/checkout@v4
-      
-    - name: Remove backups older than 2 years
-      run: |
-        cd backups
-        
-        # Get current year
-        CURRENT_YEAR=$(date +%Y)
-        CUTOFF_YEAR=$((CURRENT_YEAR - 2))
-        
-        echo "Current year: $CURRENT_YEAR"
-        echo "Will delete backups from before: $CUTOFF_YEAR"
-        
-        # Find and delete old backup files
-        for file in *.json 2>/dev/null; do
-          # Extract year from filename (e.g., 05Oct2023_connect.json)
-          YEAR=$(echo "$file" | grep -oP '\d{4}' | head -1)
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Remove backups older than 2 years
+        id: cleanup
+        run: |
+          set -euo pipefail
+          cd backups
+
+          CURRENT_YEAR=$(date +%Y)
+          CUTOFF_YEAR=$((CURRENT_YEAR - 2))
+          DELETED=0
+
+          echo "Current year: ${CURRENT_YEAR}"
+          echo "Cutoff: deleting backups from before ${CUTOFF_YEAR}"
+          echo ""
+
+          for file in [0-9]*_connect.json; do
+            # Skip if no matches (glob literal)
+            [ -e "$file" ] || continue
+
+            # Extract year from date prefix (YYYYMMDD_HHMM_Semester_connect.json)
+            FILE_YEAR="${file:0:4}"
+
+            if [ "$FILE_YEAR" -lt "$CUTOFF_YEAR" ] 2>/dev/null; then
+              echo "  Deleting: $file (year: ${FILE_YEAR})"
+              rm "$file"
+              DELETED=$((DELETED + 1))
+            else
+              echo "  Keeping:  $file (year: ${FILE_YEAR})"
+            fi
+          done
+
+          echo ""
+          echo "Deleted ${DELETED} backup(s)."
+          echo "deleted=${DELETED}" >> "$GITHUB_OUTPUT"
+
+      - name: Regenerate backup index
+        if: steps.cleanup.outputs.deleted != '0'
+        run: |
+          pip install requests 2>/dev/null || true
+          python generate_backup_index.py
+
+      - name: Commit and push
+        if: steps.cleanup.outputs.deleted != '0'
+        run: |
+          git config --local user.email "github-actions[bot]@users.noreply.github.com"
+          git config --local user.name "github-actions[bot]"
+
+          git add backups/ connect_backup.json
           
-          if [ -n "$YEAR" ] && [ "$YEAR" -lt "$CUTOFF_YEAR" ]; then
-            echo "Deleting old backup: $file (year: $YEAR)"
-            rm "$file"
+          if git diff --staged --quiet; then
+            echo "No changes to commit."
+          else
+            YEAR=$(date +%Y)
+            git commit -m "auto: Cleanup backups older than $((YEAR - 2))"
+            git push
+            echo "✓ Old backups removed and pushed."
           fi
-        done
-        
-        echo "Cleanup completed"
-    
-    - name: Commit deletions
-      run: |
-        git config --local user.email "github-actions[bot]@users.noreply.github.com"
-        git config --local user.name "github-actions[bot]"
-        git add backups/
-        
-        if git diff --staged --quiet; then
-          echo "No backups to delete"
-        else
-          git commit -m "Cleanup: Remove backups older than 2 years"
-          git push
-          echo "Old backups removed and changes pushed"
-        fi
