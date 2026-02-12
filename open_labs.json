@@ -43,8 +43,8 @@
       "WEDNESDAY",
       "THURSDAY"
     ],
-    "lastUpdated": "2026-02-11T07:03:04.575028+00:00",
-    "sourceDataUpdated": "2026-02-11T07:03:03.523958+00:00"
+    "lastUpdated": "2026-02-12T07:03:40.176003+00:00",
+    "sourceDataUpdated": "2026-02-12T07:03:39.181546+00:00"
   },
   "schedule": {
     "SATURDAY": {
@@ -1566,7 +1566,7 @@
               "CSE"
             ],
             "courseCode": "CSE423L",
-            "sectionName": "02",
+            "sectionName": "01",
             "department": "CSE"
           },
           {
@@ -2150,7 +2150,7 @@
               "CSE"
             ],
             "courseCode": "CSE423L",
-            "sectionName": "02",
+            "sectionName": "01",
             "department": "CSE"
           },
           {
@@ -4001,9 +4001,9 @@
               "PHB",
               "PHR"
             ],
-            "courseCode": "PHB207",
+            "courseCode": "PHR415",
             "sectionName": "02",
-            "department": "PHB"
+            "department": "PHR"
           },
           {
             "labRoom": "11B-22L",
@@ -4549,9 +4549,9 @@
               "ECE",
               "EEE"
             ],
-            "courseCode": "EEE385L",
+            "courseCode": "ECE385L",
             "sectionName": "01",
-            "department": "EEE"
+            "department": "ECE"
           },
           {
             "labRoom": "11H-43L",
@@ -5202,9 +5202,9 @@
               "ECE",
               "EEE"
             ],
-            "courseCode": "EEE385L",
+            "courseCode": "ECE385L",
             "sectionName": "01",
-            "department": "EEE"
+            "department": "ECE"
           },
           {
             "labRoom": "11H-40L",
