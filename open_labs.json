@@ -2,9 +2,9 @@
   "metadata": {
     "semester": "Spring2026",
     "totalLabs": 77,
-    "totalFreeSlots": 1661,
-    "totalOccupiedSlots": 1573,
-    "averageUtilization": 48.64,
+    "totalFreeSlots": 1662,
+    "totalOccupiedSlots": 1572,
+    "averageUtilization": 48.61,
     "timeSlots": [
       [
         "08:00:00",
@@ -43,8 +43,8 @@
       "WEDNESDAY",
       "THURSDAY"
     ],
-    "lastUpdated": "2026-02-22T06:50:54.477948+00:00",
-    "sourceDataUpdated": "2026-02-22T06:50:53.443169+00:00"
+    "lastUpdated": "2026-02-26T07:02:03.480759+00:00",
+    "sourceDataUpdated": "2026-02-26T07:02:02.362865+00:00"
   },
   "schedule": {
     "SATURDAY": {
@@ -138,7 +138,7 @@
             ]
           },
           {
-            "labRoom": "10G-32L",
+            "labRoom": "10G-33L",
             "departments": [
               "CSE"
             ]
@@ -475,7 +475,7 @@
             "department": "MAT"
           },
           {
-            "labRoom": "10G-33L",
+            "labRoom": "10G-32L",
             "departments": [
               "CSE"
             ],
@@ -698,7 +698,7 @@
             ]
           },
           {
-            "labRoom": "10G-32L",
+            "labRoom": "10G-33L",
             "departments": [
               "CSE"
             ]
@@ -1044,7 +1044,7 @@
             "department": "MAT"
           },
           {
-            "labRoom": "10G-33L",
+            "labRoom": "10G-32L",
             "departments": [
               "CSE"
             ],
@@ -1255,7 +1255,7 @@
             ]
           },
           {
-            "labRoom": "10G-32L",
+            "labRoom": "10G-33L",
             "departments": [
               "CSE"
             ]
@@ -1597,7 +1597,7 @@
             "department": "CSE"
           },
           {
-            "labRoom": "10G-33L",
+            "labRoom": "10G-32L",
             "departments": [
               "CSE"
             ],
@@ -1845,7 +1845,7 @@
             ]
           },
           {
-            "labRoom": "10G-32L",
+            "labRoom": "10G-33L",
             "departments": [
               "CSE"
             ]
@@ -2172,7 +2172,7 @@
             "department": "CSE"
           },
           {
-            "labRoom": "10G-33L",
+            "labRoom": "10G-32L",
             "departments": [
               "CSE"
             ],
@@ -2420,12 +2420,6 @@
             "labRoom": "10F-28L",
             "departments": [
               "MIC"
-            ]
-          },
-          {
-            "labRoom": "10G-33L",
-            "departments": [
-              "CSE"
             ]
           },
           {
@@ -2721,7 +2715,7 @@
               "CSE"
             ],
             "courseCode": "CSE423L",
-            "sectionName": "06",
+            "sectionName": "05",
             "department": "CSE"
           },
           {
@@ -2758,6 +2752,15 @@
             ],
             "courseCode": "CSE360L",
             "sectionName": "05",
+            "department": "CSE"
+          },
+          {
+            "labRoom": "10G-33L",
+            "departments": [
+              "CSE"
+            ],
+            "courseCode": "CSE360L",
+            "sectionName": "08",
             "department": "CSE"
           },
           {
@@ -3013,12 +3016,6 @@
             ]
           },
           {
-            "labRoom": "10G-33L",
-            "departments": [
-              "CSE"
-            ]
-          },
-          {
             "labRoom": "11A-02L",
             "departments": [
               "MIC"
@@ -3317,7 +3314,7 @@
               "CSE"
             ],
             "courseCode": "CSE423L",
-            "sectionName": "06",
+            "sectionName": "05",
             "department": "CSE"
           },
           {
@@ -3354,6 +3351,15 @@
             ],
             "courseCode": "CSE360L",
             "sectionName": "05",
+            "department": "CSE"
+          },
+          {
+            "labRoom": "10G-33L",
+            "departments": [
+              "CSE"
+            ],
+            "courseCode": "CSE360L",
+            "sectionName": "08",
             "department": "CSE"
           },
           {
@@ -4001,9 +4007,9 @@
               "PHB",
               "PHR"
             ],
-            "courseCode": "PHR415",
+            "courseCode": "PHB207",
             "sectionName": "02",
-            "department": "PHR"
+            "department": "PHB"
           },
           {
             "labRoom": "11B-22L",
@@ -5654,8 +5660,8 @@
             "departments": [
               "CSE"
             ],
-            "courseCode": "CSE422L",
-            "sectionName": "18",
+            "courseCode": "CSE461L",
+            "sectionName": "06",
             "department": "CSE"
           },
           {
@@ -5663,8 +5669,8 @@
             "departments": [
               "CSE"
             ],
-            "courseCode": "CSE461L",
-            "sectionName": "06",
+            "courseCode": "CSE422L",
+            "sectionName": "18",
             "department": "CSE"
           },
           {
@@ -5932,7 +5938,7 @@
               "CSE"
             ],
             "courseCode": "CSE440L",
-            "sectionName": "01",
+            "sectionName": "02",
             "department": "CSE"
           },
           {
@@ -6391,8 +6397,8 @@
             "departments": [
               "CSE"
             ],
-            "courseCode": "CSE422L",
-            "sectionName": "18",
+            "courseCode": "CSE461L",
+            "sectionName": "06",
             "department": "CSE"
           },
           {
@@ -6400,8 +6406,8 @@
             "departments": [
               "CSE"
             ],
-            "courseCode": "CSE461L",
-            "sectionName": "06",
+            "courseCode": "CSE422L",
+            "sectionName": "18",
             "department": "CSE"
           },
           {
@@ -6570,7 +6576,7 @@
               "CSE"
             ],
             "courseCode": "CSE440L",
-            "sectionName": "01",
+            "sectionName": "02",
             "department": "CSE"
           },
           {
@@ -8206,6 +8212,12 @@
             ]
           },
           {
+            "labRoom": "11F-34L",
+            "departments": [
+              "PHB"
+            ]
+          },
+          {
             "labRoom": "11F-37L",
             "departments": [
               "ECE",
@@ -8402,15 +8414,6 @@
             ],
             "courseCode": "PHB203L",
             "sectionName": "03",
-            "department": "PHB"
-          },
-          {
-            "labRoom": "11F-34L",
-            "departments": [
-              "PHB"
-            ],
-            "courseCode": "PHB104L",
-            "sectionName": "02",
             "department": "PHB"
           }
         ]
@@ -9986,8 +9989,8 @@
             "departments": [
               "CSE"
             ],
-            "courseCode": "CSE428L",
-            "sectionName": "02",
+            "courseCode": "CSE461L",
+            "sectionName": "05",
             "department": "CSE"
           },
           {
@@ -9995,8 +9998,8 @@
             "departments": [
               "CSE"
             ],
-            "courseCode": "CSE461L",
-            "sectionName": "05",
+            "courseCode": "CSE428L",
+            "sectionName": "02",
             "department": "CSE"
           },
           {
@@ -10664,8 +10667,8 @@
             "departments": [
               "CSE"
             ],
-            "courseCode": "CSE428L",
-            "sectionName": "02",
+            "courseCode": "CSE461L",
+            "sectionName": "05",
             "department": "CSE"
           },
           {
@@ -10673,8 +10676,8 @@
             "departments": [
               "CSE"
             ],
-            "courseCode": "CSE461L",
-            "sectionName": "05",
+            "courseCode": "CSE428L",
+            "sectionName": "02",
             "department": "CSE"
           },
           {
@@ -10905,7 +10908,7 @@
             ]
           },
           {
-            "labRoom": "10G-33L",
+            "labRoom": "10G-32L",
             "departments": [
               "CSE"
             ]
@@ -11247,7 +11250,7 @@
             "department": "MIC"
           },
           {
-            "labRoom": "10G-32L",
+            "labRoom": "10G-33L",
             "departments": [
               "CSE"
             ],
@@ -11546,7 +11549,7 @@
             ]
           },
           {
-            "labRoom": "10G-33L",
+            "labRoom": "10G-32L",
             "departments": [
               "CSE"
             ]
@@ -11885,7 +11888,7 @@
             "department": "CSE"
           },
           {
-            "labRoom": "10G-32L",
+            "labRoom": "10G-33L",
             "departments": [
               "CSE"
             ],
@@ -13920,7 +13923,7 @@
             ]
           },
           {
-            "labRoom": "10G-32L",
+            "labRoom": "10G-33L",
             "departments": [
               "CSE"
             ]
@@ -14231,7 +14234,7 @@
             "department": "CSE"
           },
           {
-            "labRoom": "10G-33L",
+            "labRoom": "10G-32L",
             "departments": [
               "CSE"
             ],
@@ -14613,7 +14616,7 @@
             ]
           },
           {
-            "labRoom": "10G-32L",
+            "labRoom": "10G-33L",
             "departments": [
               "CSE"
             ]
@@ -14962,7 +14965,7 @@
             "department": "MIC"
           },
           {
-            "labRoom": "10G-33L",
+            "labRoom": "10G-32L",
             "departments": [
               "CSE"
             ],
@@ -15262,7 +15265,7 @@
             ]
           },
           {
-            "labRoom": "10G-33L",
+            "labRoom": "10G-32L",
             "departments": [
               "CSE"
             ]
@@ -15589,7 +15592,7 @@
             "department": "MIC"
           },
           {
-            "labRoom": "10G-32L",
+            "labRoom": "10G-33L",
             "departments": [
               "CSE"
             ],
@@ -15891,7 +15894,7 @@
             ]
           },
           {
-            "labRoom": "10G-33L",
+            "labRoom": "10G-32L",
             "departments": [
               "CSE"
             ]
@@ -16209,7 +16212,7 @@
             "department": "CSE"
           },
           {
-            "labRoom": "10G-32L",
+            "labRoom": "10G-33L",
             "departments": [
               "CSE"
             ],
@@ -16962,6 +16965,12 @@
         "endTime": "09:20:00",
         "freeLabs": [
           {
+            "labRoom": "09E-21L",
+            "departments": [
+              "CSE"
+            ]
+          },
+          {
             "labRoom": "09F-24L",
             "departments": [
               "CSE",
@@ -16973,12 +16982,6 @@
             "departments": [
               "CSE",
               "EEE"
-            ]
-          },
-          {
-            "labRoom": "09F-27L",
-            "departments": [
-              "CSE"
             ]
           },
           {
@@ -17286,15 +17289,6 @@
             "department": "CSE"
           },
           {
-            "labRoom": "09E-21L",
-            "departments": [
-              "CSE"
-            ],
-            "courseCode": "CSE111L",
-            "sectionName": "10",
-            "department": "CSE"
-          },
-          {
             "labRoom": "09E-22L",
             "departments": [
               "CSE"
@@ -17311,6 +17305,15 @@
             ],
             "courseCode": "CSE422L",
             "sectionName": "02",
+            "department": "CSE"
+          },
+          {
+            "labRoom": "09F-27L",
+            "departments": [
+              "CSE"
+            ],
+            "courseCode": "CSE111L",
+            "sectionName": "10",
             "department": "CSE"
           },
           {
@@ -17546,6 +17549,12 @@
         "endTime": "10:50:00",
         "freeLabs": [
           {
+            "labRoom": "09E-21L",
+            "departments": [
+              "CSE"
+            ]
+          },
+          {
             "labRoom": "09F-24L",
             "departments": [
               "CSE",
@@ -17557,12 +17566,6 @@
             "departments": [
               "CSE",
               "EEE"
-            ]
-          },
-          {
-            "labRoom": "09F-27L",
-            "departments": [
-              "CSE"
             ]
           },
           {
@@ -17833,15 +17836,6 @@
             "department": "CSE"
           },
           {
-            "labRoom": "09E-21L",
-            "departments": [
-              "CSE"
-            ],
-            "courseCode": "CSE111L",
-            "sectionName": "10",
-            "department": "CSE"
-          },
-          {
             "labRoom": "09E-22L",
             "departments": [
               "CSE"
@@ -17858,6 +17852,15 @@
             ],
             "courseCode": "CSE422L",
             "sectionName": "02",
+            "department": "CSE"
+          },
+          {
+            "labRoom": "09F-27L",
+            "departments": [
+              "CSE"
+            ],
+            "courseCode": "CSE111L",
+            "sectionName": "10",
             "department": "CSE"
           },
           {
@@ -18148,6 +18151,12 @@
         "endTime": "12:20:00",
         "freeLabs": [
           {
+            "labRoom": "09E-21L",
+            "departments": [
+              "CSE"
+            ]
+          },
+          {
             "labRoom": "10A-06L",
             "departments": [
               "ARC"
@@ -18403,15 +18412,6 @@
             ],
             "courseCode": "CSE111L",
             "sectionName": "08",
-            "department": "CSE"
-          },
-          {
-            "labRoom": "09E-21L",
-            "departments": [
-              "CSE"
-            ],
-            "courseCode": "CSE111L",
-            "sectionName": "11",
             "department": "CSE"
           },
           {
@@ -18765,6 +18765,12 @@
         "endTime": "13:50:00",
         "freeLabs": [
           {
+            "labRoom": "09E-21L",
+            "departments": [
+              "CSE"
+            ]
+          },
+          {
             "labRoom": "10A-01L",
             "departments": [
               "BTE"
@@ -19076,15 +19082,6 @@
             ],
             "courseCode": "CSE111L",
             "sectionName": "08",
-            "department": "CSE"
-          },
-          {
-            "labRoom": "09E-21L",
-            "departments": [
-              "CSE"
-            ],
-            "courseCode": "CSE111L",
-            "sectionName": "11",
             "department": "CSE"
           },
           {
@@ -19612,7 +19609,7 @@
               "EEE"
             ],
             "courseCode": "CSE421L",
-            "sectionName": "09",
+            "sectionName": "08",
             "department": "CSE"
           },
           {
@@ -20238,7 +20235,7 @@
               "EEE"
             ],
             "courseCode": "CSE421L",
-            "sectionName": "09",
+            "sectionName": "08",
             "department": "CSE"
           },
           {
@@ -23931,7 +23928,7 @@
               "EEE"
             ],
             "courseCode": "CSE421L",
-            "sectionName": "11",
+            "sectionName": "12",
             "department": "CSE"
           },
           {
@@ -24174,7 +24171,7 @@
               "CSE"
             ],
             "courseCode": "CSE250L",
-            "sectionName": "02B",
+            "sectionName": "02A",
             "department": "CSE"
           },
           {
@@ -24557,7 +24554,7 @@
               "EEE"
             ],
             "courseCode": "CSE421L",
-            "sectionName": "11",
+            "sectionName": "12",
             "department": "CSE"
           },
           {
@@ -24791,7 +24788,7 @@
               "CSE"
             ],
             "courseCode": "CSE250L",
-            "sectionName": "02B",
+            "sectionName": "02A",
             "department": "CSE"
           },
           {
