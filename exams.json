@@ -5,7 +5,7 @@
     "midExamEndDate": "2026-04-27",
     "finalExamStartDate": "2026-04-30",
     "finalExamEndDate": "2026-07-16",
-    "lastUpdated": "2026-03-06T06:52:06.175085+00:00"
+    "lastUpdated": "2026-03-07T06:42:31.350356+00:00"
   },
   "exams": [
     {
@@ -3705,18 +3705,6 @@
       "finalExamRoom": null
     },
     {
-      "courseCode": "CSE422",
-      "sectionName": "15",
-      "sectionId": 183779,
-      "sectionType": "OTHER",
-      "midExamDate": "2026-04-05",
-      "midExamTime": "11:00:00",
-      "midExamRoom": null,
-      "finalExamDate": "2026-05-18",
-      "finalExamTime": "11:00:00",
-      "finalExamRoom": null
-    },
-    {
       "courseCode": "EEE343",
       "sectionName": "01",
       "sectionId": 184658,
@@ -5013,18 +5001,6 @@
       "finalExamRoom": null
     },
     {
-      "courseCode": "ENG102",
-      "sectionName": "10",
-      "sectionId": 182277,
-      "sectionType": "OTHER",
-      "midExamDate": "2026-03-30",
-      "midExamTime": "11:00:00",
-      "midExamRoom": null,
-      "finalExamDate": "2026-05-13",
-      "finalExamTime": "11:00:00",
-      "finalExamRoom": null
-    },
-    {
       "courseCode": "CSE421",
       "sectionName": "13",
       "sectionId": 183719,
@@ -5373,54 +5349,6 @@
       "finalExamRoom": null
     },
     {
-      "courseCode": "ENG111",
-      "sectionName": "01",
-      "sectionId": 183689,
-      "sectionType": "OTHER",
-      "midExamDate": "2026-04-04",
-      "midExamTime": "08:30:00",
-      "midExamRoom": null,
-      "finalExamDate": "2026-05-17",
-      "finalExamTime": "08:30:00",
-      "finalExamRoom": null
-    },
-    {
-      "courseCode": "EEE203",
-      "sectionName": "04",
-      "sectionId": 184598,
-      "sectionType": "OTHER",
-      "midExamDate": "2026-04-07",
-      "midExamTime": "11:00:00",
-      "midExamRoom": null,
-      "finalExamDate": "2026-05-20",
-      "finalExamTime": "11:00:00",
-      "finalExamRoom": null
-    },
-    {
-      "courseCode": "CSE421",
-      "sectionName": "14",
-      "sectionId": 183721,
-      "sectionType": "OTHER",
-      "midExamDate": "2026-03-30",
-      "midExamTime": "14:00:00",
-      "midExamRoom": null,
-      "finalExamDate": "2026-05-13",
-      "finalExamTime": "14:00:00",
-      "finalExamRoom": null
-    },
-    {
-      "courseCode": "LAW103",
-      "sectionName": "02",
-      "sectionId": 184011,
-      "sectionType": "OTHER",
-      "midExamDate": "2026-04-12",
-      "midExamTime": "14:00:00",
-      "midExamRoom": null,
-      "finalExamDate": "2026-06-28",
-      "finalExamTime": "14:00:00",
-      "finalExamRoom": null
-    },
-    {
       "courseCode": "ENG101",
       "sectionName": "37",
       "sectionId": 182258,
@@ -5505,18 +5433,6 @@
       "finalExamRoom": null
     },
     {
-      "courseCode": "MIC303",
-      "sectionName": "02",
-      "sectionId": 183384,
-      "sectionType": "OTHER",
-      "midExamDate": "2026-04-07",
-      "midExamTime": "08:30:00",
-      "midExamRoom": null,
-      "finalExamDate": "2026-05-20",
-      "finalExamTime": "08:30:00",
-      "finalExamRoom": null
-    },
-    {
       "courseCode": "CSE460",
       "sectionName": "02",
       "sectionId": 184470,
@@ -5577,42 +5493,6 @@
       "finalExamRoom": null
     },
     {
-      "courseCode": "FIN423",
-      "sectionName": "02",
-      "sectionId": 184292,
-      "sectionType": "OTHER",
-      "midExamDate": "2026-03-31",
-      "midExamTime": "11:00:00",
-      "midExamRoom": null,
-      "finalExamDate": "2026-05-14",
-      "finalExamTime": "11:00:00",
-      "finalExamRoom": null
-    },
-    {
-      "courseCode": "CSE251",
-      "sectionName": "06B",
-      "sectionId": 184402,
-      "sectionType": "OTHER",
-      "midExamDate": "2026-03-30",
-      "midExamTime": "16:30:00",
-      "midExamRoom": null,
-      "finalExamDate": "2026-05-13",
-      "finalExamTime": "16:30:00",
-      "finalExamRoom": null
-    },
-    {
-      "courseCode": "ECE415",
-      "sectionName": "02",
-      "sectionId": 184870,
-      "sectionType": "OTHER",
-      "midExamDate": "2026-04-05",
-      "midExamTime": "11:00:00",
-      "midExamRoom": null,
-      "finalExamDate": "2026-05-18",
-      "finalExamTime": "11:00:00",
-      "finalExamRoom": null
-    },
-    {
       "courseCode": "CSE340",
       "sectionName": "11",
       "sectionId": 183476,
@@ -5646,18 +5526,6 @@
       "midExamRoom": null,
       "finalExamDate": "2026-05-19",
       "finalExamTime": "11:00:00",
-      "finalExamRoom": null
-    },
-    {
-      "courseCode": "MAT216",
-      "sectionName": "21",
-      "sectionId": 182775,
-      "sectionType": "OTHER",
-      "midExamDate": "2026-03-30",
-      "midExamTime": "08:30:00",
-      "midExamRoom": null,
-      "finalExamDate": "2026-05-13",
-      "finalExamTime": "08:30:00",
       "finalExamRoom": null
     },
     {
@@ -5865,18 +5733,6 @@
       "finalExamRoom": null
     },
     {
-      "courseCode": "ARC432",
-      "sectionName": "02",
-      "sectionId": 183428,
-      "sectionType": "OTHER",
-      "midExamDate": "2026-04-05",
-      "midExamTime": "14:00:00",
-      "midExamRoom": null,
-      "finalExamDate": "2026-05-18",
-      "finalExamTime": "14:00:00",
-      "finalExamRoom": null
-    },
-    {
       "courseCode": "CSE111",
       "sectionName": "16",
       "sectionId": 182985,
@@ -5910,30 +5766,6 @@
       "midExamRoom": null,
       "finalExamDate": "2026-05-13",
       "finalExamTime": "14:00:00",
-      "finalExamRoom": null
-    },
-    {
-      "courseCode": "PHB313",
-      "sectionName": "01",
-      "sectionId": 185493,
-      "sectionType": "OTHER",
-      "midExamDate": "2026-04-25",
-      "midExamTime": "17:00:00",
-      "midExamRoom": null,
-      "finalExamDate": "2026-07-14",
-      "finalExamTime": "09:00:00",
-      "finalExamRoom": null
-    },
-    {
-      "courseCode": "PHB404",
-      "sectionName": "01",
-      "sectionId": 185135,
-      "sectionType": "OTHER",
-      "midExamDate": "2026-04-21",
-      "midExamTime": "12:00:00",
-      "midExamRoom": null,
-      "finalExamDate": "2026-07-07",
-      "finalExamTime": "09:30:00",
       "finalExamRoom": null
     },
     {
@@ -5973,66 +5805,6 @@
       "finalExamRoom": null
     },
     {
-      "courseCode": "ECO102",
-      "sectionName": "02",
-      "sectionId": 182452,
-      "sectionType": "OTHER",
-      "midExamDate": "2026-04-05",
-      "midExamTime": "16:30:00",
-      "midExamRoom": null,
-      "finalExamDate": "2026-05-18",
-      "finalExamTime": "16:30:00",
-      "finalExamRoom": null
-    },
-    {
-      "courseCode": "CHE110",
-      "sectionName": "02",
-      "sectionId": 182630,
-      "sectionType": "OTHER",
-      "midExamDate": "2026-04-06",
-      "midExamTime": "14:00:00",
-      "midExamRoom": null,
-      "finalExamDate": "2026-05-19",
-      "finalExamTime": "14:00:00",
-      "finalExamRoom": null
-    },
-    {
-      "courseCode": "BCH202",
-      "sectionName": "04",
-      "sectionId": 183324,
-      "sectionType": "OTHER",
-      "midExamDate": "2026-04-01",
-      "midExamTime": "11:00:00",
-      "midExamRoom": null,
-      "finalExamDate": "2026-05-15",
-      "finalExamTime": "11:00:00",
-      "finalExamRoom": null
-    },
-    {
-      "courseCode": "ACT201",
-      "sectionName": "05",
-      "sectionId": 184135,
-      "sectionType": "OTHER",
-      "midExamDate": "2026-03-31",
-      "midExamTime": "11:00:00",
-      "midExamRoom": null,
-      "finalExamDate": "2026-05-14",
-      "finalExamTime": "11:00:00",
-      "finalExamRoom": null
-    },
-    {
-      "courseCode": "BUS201",
-      "sectionName": "05",
-      "sectionId": 184203,
-      "sectionType": "OTHER",
-      "midExamDate": "2026-03-30",
-      "midExamTime": "16:30:00",
-      "midExamRoom": null,
-      "finalExamDate": "2026-05-13",
-      "finalExamTime": "16:30:00",
-      "finalExamRoom": null
-    },
-    {
       "courseCode": "CSE111",
       "sectionName": "10",
       "sectionId": 182973,
@@ -6054,18 +5826,6 @@
       "midExamRoom": null,
       "finalExamDate": "2026-05-15",
       "finalExamTime": "08:30:00",
-      "finalExamRoom": null
-    },
-    {
-      "courseCode": "BUS232",
-      "sectionName": "05",
-      "sectionId": 184245,
-      "sectionType": "OTHER",
-      "midExamDate": "2026-04-06",
-      "midExamTime": "11:00:00",
-      "midExamRoom": null,
-      "finalExamDate": "2026-05-19",
-      "finalExamTime": "11:00:00",
       "finalExamRoom": null
     },
     {
@@ -6105,42 +5865,6 @@
       "finalExamRoom": null
     },
     {
-      "courseCode": "BCH201",
-      "sectionName": "01",
-      "sectionId": 183313,
-      "sectionType": "OTHER",
-      "midExamDate": "2026-04-06",
-      "midExamTime": "11:00:00",
-      "midExamRoom": null,
-      "finalExamDate": "2026-05-19",
-      "finalExamTime": "11:00:00",
-      "finalExamRoom": null
-    },
-    {
-      "courseCode": "MIC202",
-      "sectionName": "02",
-      "sectionId": 183348,
-      "sectionType": "OTHER",
-      "midExamDate": "2026-04-05",
-      "midExamTime": "14:00:00",
-      "midExamRoom": null,
-      "finalExamDate": "2026-05-18",
-      "finalExamTime": "14:00:00",
-      "finalExamRoom": null
-    },
-    {
-      "courseCode": "ECO209",
-      "sectionName": "01",
-      "sectionId": 182500,
-      "sectionType": "OTHER",
-      "midExamDate": "2026-04-04",
-      "midExamTime": "14:00:00",
-      "midExamRoom": null,
-      "finalExamDate": "2026-05-17",
-      "finalExamTime": "14:00:00",
-      "finalExamRoom": null
-    },
-    {
       "courseCode": "CSE428",
       "sectionName": "04",
       "sectionId": 184926,
@@ -6150,90 +5874,6 @@
       "midExamRoom": null,
       "finalExamDate": "2026-05-17",
       "finalExamTime": "14:00:00",
-      "finalExamRoom": null
-    },
-    {
-      "courseCode": "CHN101",
-      "sectionName": "02",
-      "sectionId": 182285,
-      "sectionType": "OTHER",
-      "midExamDate": "2026-03-30",
-      "midExamTime": "11:00:00",
-      "midExamRoom": null,
-      "finalExamDate": "2026-05-13",
-      "finalExamTime": "11:00:00",
-      "finalExamRoom": null
-    },
-    {
-      "courseCode": "CSE220",
-      "sectionName": "01",
-      "sectionId": 182989,
-      "sectionType": "OTHER",
-      "midExamDate": "2026-03-31",
-      "midExamTime": "14:00:00",
-      "midExamRoom": null,
-      "finalExamDate": "2026-05-14",
-      "finalExamTime": "14:00:00",
-      "finalExamRoom": null
-    },
-    {
-      "courseCode": "MSC221",
-      "sectionName": "01",
-      "sectionId": 184547,
-      "sectionType": "OTHER",
-      "midExamDate": "2026-03-30",
-      "midExamTime": "08:00:00",
-      "midExamRoom": null,
-      "finalExamDate": "2026-05-13",
-      "finalExamTime": "08:00:00",
-      "finalExamRoom": null
-    },
-    {
-      "courseCode": "HST103",
-      "sectionName": "02",
-      "sectionId": 183593,
-      "sectionType": "OTHER",
-      "midExamDate": "2026-04-06",
-      "midExamTime": "14:00:00",
-      "midExamRoom": null,
-      "finalExamDate": "2026-05-19",
-      "finalExamTime": "14:00:00",
-      "finalExamRoom": null
-    },
-    {
-      "courseCode": "ENG217",
-      "sectionName": "01",
-      "sectionId": 183622,
-      "sectionType": "OTHER",
-      "midExamDate": "2026-04-02",
-      "midExamTime": "08:30:00",
-      "midExamRoom": null,
-      "finalExamDate": "2026-05-16",
-      "finalExamTime": "08:30:00",
-      "finalExamRoom": null
-    },
-    {
-      "courseCode": "BUS232",
-      "sectionName": "07",
-      "sectionId": 184247,
-      "sectionType": "OTHER",
-      "midExamDate": "2026-04-06",
-      "midExamTime": "11:00:00",
-      "midExamRoom": null,
-      "finalExamDate": "2026-05-19",
-      "finalExamTime": "11:00:00",
-      "finalExamRoom": null
-    },
-    {
-      "courseCode": "CSE221",
-      "sectionName": "14",
-      "sectionId": 183059,
-      "sectionType": "OTHER",
-      "midExamDate": "2026-03-31",
-      "midExamTime": "08:30:00",
-      "midExamRoom": null,
-      "finalExamDate": "2026-05-14",
-      "finalExamTime": "08:30:00",
       "finalExamRoom": null
     },
     {
@@ -6273,66 +5913,6 @@
       "finalExamRoom": null
     },
     {
-      "courseCode": "HUM101",
-      "sectionName": "33",
-      "sectionId": 184931,
-      "sectionType": "OTHER",
-      "midExamDate": "2026-04-06",
-      "midExamTime": "11:00:00",
-      "midExamRoom": null,
-      "finalExamDate": "2026-05-19",
-      "finalExamTime": "11:00:00",
-      "finalExamRoom": null
-    },
-    {
-      "courseCode": "BUS232",
-      "sectionName": "03",
-      "sectionId": 184243,
-      "sectionType": "OTHER",
-      "midExamDate": "2026-04-06",
-      "midExamTime": "11:00:00",
-      "midExamRoom": null,
-      "finalExamDate": "2026-05-19",
-      "finalExamTime": "11:00:00",
-      "finalExamRoom": null
-    },
-    {
-      "courseCode": "MSC221",
-      "sectionName": "12",
-      "sectionId": 184558,
-      "sectionType": "OTHER",
-      "midExamDate": "2026-04-02",
-      "midExamTime": "15:30:00",
-      "midExamRoom": null,
-      "finalExamDate": "2026-05-16",
-      "finalExamTime": "15:30:00",
-      "finalExamRoom": null
-    },
-    {
-      "courseCode": "MSC321",
-      "sectionName": "08",
-      "sectionId": 184576,
-      "sectionType": "OTHER",
-      "midExamDate": "2026-04-07",
-      "midExamTime": "14:00:00",
-      "midExamRoom": null,
-      "finalExamDate": "2026-05-20",
-      "finalExamTime": "14:00:00",
-      "finalExamRoom": null
-    },
-    {
-      "courseCode": "CSE221",
-      "sectionName": "07",
-      "sectionId": 183045,
-      "sectionType": "OTHER",
-      "midExamDate": "2026-03-31",
-      "midExamTime": "08:30:00",
-      "midExamRoom": null,
-      "finalExamDate": "2026-05-14",
-      "finalExamTime": "08:30:00",
-      "finalExamRoom": null
-    },
-    {
       "courseCode": "CSE260",
       "sectionName": "27B",
       "sectionId": 183188,
@@ -6357,54 +5937,6 @@
       "finalExamRoom": null
     },
     {
-      "courseCode": "PSY101",
-      "sectionName": "02",
-      "sectionId": 184129,
-      "sectionType": "OTHER",
-      "midExamDate": "2026-04-06",
-      "midExamTime": "11:00:00",
-      "midExamRoom": null,
-      "finalExamDate": "2026-05-19",
-      "finalExamTime": "11:00:00",
-      "finalExamRoom": null
-    },
-    {
-      "courseCode": "DEV104",
-      "sectionName": "02",
-      "sectionId": 184049,
-      "sectionType": "OTHER",
-      "midExamDate": "2026-04-05",
-      "midExamTime": "11:00:00",
-      "midExamRoom": null,
-      "finalExamDate": "2026-05-18",
-      "finalExamTime": "11:00:00",
-      "finalExamRoom": null
-    },
-    {
-      "courseCode": "MGT480",
-      "sectionName": "01",
-      "sectionId": 184327,
-      "sectionType": "OTHER",
-      "midExamDate": "2026-04-02",
-      "midExamTime": "14:00:00",
-      "midExamRoom": null,
-      "finalExamDate": "2026-05-16",
-      "finalExamTime": "14:00:00",
-      "finalExamRoom": null
-    },
-    {
-      "courseCode": "ANT101",
-      "sectionName": "06",
-      "sectionId": 182535,
-      "sectionType": "OTHER",
-      "midExamDate": "2026-04-04",
-      "midExamTime": "16:30:00",
-      "midExamRoom": null,
-      "finalExamDate": "2026-05-17",
-      "finalExamTime": "16:30:00",
-      "finalExamRoom": null
-    },
-    {
       "courseCode": "BUS209",
       "sectionName": "04",
       "sectionId": 184225,
@@ -6413,54 +5945,6 @@
       "midExamTime": "08:30:00",
       "midExamRoom": null,
       "finalExamDate": "2026-05-19",
-      "finalExamTime": "08:30:00",
-      "finalExamRoom": null
-    },
-    {
-      "courseCode": "CSE370",
-      "sectionName": "09",
-      "sectionId": 183552,
-      "sectionType": "OTHER",
-      "midExamDate": "2026-04-04",
-      "midExamTime": "16:30:00",
-      "midExamRoom": null,
-      "finalExamDate": "2026-05-17",
-      "finalExamTime": "16:30:00",
-      "finalExamRoom": null
-    },
-    {
-      "courseCode": "ECO101",
-      "sectionName": "09",
-      "sectionId": 182398,
-      "sectionType": "OTHER",
-      "midExamDate": "2026-03-31",
-      "midExamTime": "11:00:00",
-      "midExamRoom": null,
-      "finalExamDate": "2026-05-14",
-      "finalExamTime": "11:00:00",
-      "finalExamRoom": null
-    },
-    {
-      "courseCode": "ENG091",
-      "sectionName": "09",
-      "sectionId": 182205,
-      "sectionType": "OTHER",
-      "midExamDate": "2026-03-30",
-      "midExamTime": "11:00:00",
-      "midExamRoom": null,
-      "finalExamDate": "2026-05-13",
-      "finalExamTime": "11:00:00",
-      "finalExamRoom": null
-    },
-    {
-      "courseCode": "CSE331",
-      "sectionName": "08",
-      "sectionId": 183440,
-      "sectionType": "OTHER",
-      "midExamDate": "2026-04-02",
-      "midExamTime": "08:30:00",
-      "midExamRoom": null,
-      "finalExamDate": "2026-05-16",
       "finalExamTime": "08:30:00",
       "finalExamRoom": null
     },
@@ -6474,42 +5958,6 @@
       "midExamRoom": null,
       "finalExamDate": "2026-05-17",
       "finalExamTime": "16:30:00",
-      "finalExamRoom": null
-    },
-    {
-      "courseCode": "CSE460",
-      "sectionName": "07",
-      "sectionId": 184480,
-      "sectionType": "OTHER",
-      "midExamDate": "2026-03-30",
-      "midExamTime": "16:30:00",
-      "midExamRoom": null,
-      "finalExamDate": "2026-05-13",
-      "finalExamTime": "16:30:00",
-      "finalExamRoom": null
-    },
-    {
-      "courseCode": "CSE110",
-      "sectionName": "15",
-      "sectionId": 185527,
-      "sectionType": "OTHER",
-      "midExamDate": "2026-03-31",
-      "midExamTime": "08:30:00",
-      "midExamRoom": null,
-      "finalExamDate": "2026-05-14",
-      "finalExamTime": "08:30:00",
-      "finalExamRoom": null
-    },
-    {
-      "courseCode": "BTE302",
-      "sectionName": "02",
-      "sectionId": 182444,
-      "sectionType": "OTHER",
-      "midExamDate": "2026-04-04",
-      "midExamTime": "14:00:00",
-      "midExamRoom": null,
-      "finalExamDate": "2026-05-17",
-      "finalExamTime": "14:00:00",
       "finalExamRoom": null
     },
     {
@@ -6534,30 +5982,6 @@
       "midExamRoom": null,
       "finalExamDate": "2026-05-16",
       "finalExamTime": "11:00:00",
-      "finalExamRoom": null
-    },
-    {
-      "courseCode": "CSE111",
-      "sectionName": "17",
-      "sectionId": 182987,
-      "sectionType": "OTHER",
-      "midExamDate": "2026-03-31",
-      "midExamTime": "11:00:00",
-      "midExamRoom": null,
-      "finalExamDate": "2026-05-14",
-      "finalExamTime": "11:00:00",
-      "finalExamRoom": null
-    },
-    {
-      "courseCode": "CSE420",
-      "sectionName": "12",
-      "sectionId": 183673,
-      "sectionType": "OTHER",
-      "midExamDate": "2026-04-02",
-      "midExamTime": "14:00:00",
-      "midExamRoom": null,
-      "finalExamDate": "2026-05-16",
-      "finalExamTime": "14:00:00",
       "finalExamRoom": null
     },
     {
@@ -6657,6 +6081,42 @@
       "finalExamRoom": null
     },
     {
+      "courseCode": "CSE251",
+      "sectionName": "06B",
+      "sectionId": 184402,
+      "sectionType": "OTHER",
+      "midExamDate": "2026-03-30",
+      "midExamTime": "16:30:00",
+      "midExamRoom": null,
+      "finalExamDate": "2026-05-13",
+      "finalExamTime": "16:30:00",
+      "finalExamRoom": null
+    },
+    {
+      "courseCode": "ECE415",
+      "sectionName": "02",
+      "sectionId": 184870,
+      "sectionType": "OTHER",
+      "midExamDate": "2026-04-05",
+      "midExamTime": "11:00:00",
+      "midExamRoom": null,
+      "finalExamDate": "2026-05-18",
+      "finalExamTime": "11:00:00",
+      "finalExamRoom": null
+    },
+    {
+      "courseCode": "CHE110",
+      "sectionName": "02",
+      "sectionId": 182630,
+      "sectionType": "OTHER",
+      "midExamDate": "2026-04-06",
+      "midExamTime": "14:00:00",
+      "midExamRoom": null,
+      "finalExamDate": "2026-05-19",
+      "finalExamTime": "14:00:00",
+      "finalExamRoom": null
+    },
+    {
       "courseCode": "MGT301",
       "sectionName": "09",
       "sectionId": 184315,
@@ -6669,14 +6129,86 @@
       "finalExamRoom": null
     },
     {
-      "courseCode": "EEE203",
-      "sectionName": "07",
-      "sectionId": 184601,
+      "courseCode": "BCH202",
+      "sectionName": "04",
+      "sectionId": 183324,
+      "sectionType": "OTHER",
+      "midExamDate": "2026-04-01",
+      "midExamTime": "11:00:00",
+      "midExamRoom": null,
+      "finalExamDate": "2026-05-15",
+      "finalExamTime": "11:00:00",
+      "finalExamRoom": null
+    },
+    {
+      "courseCode": "ACT201",
+      "sectionName": "05",
+      "sectionId": 184135,
+      "sectionType": "OTHER",
+      "midExamDate": "2026-03-31",
+      "midExamTime": "11:00:00",
+      "midExamRoom": null,
+      "finalExamDate": "2026-05-14",
+      "finalExamTime": "11:00:00",
+      "finalExamRoom": null
+    },
+    {
+      "courseCode": "BUS201",
+      "sectionName": "05",
+      "sectionId": 184203,
+      "sectionType": "OTHER",
+      "midExamDate": "2026-03-30",
+      "midExamTime": "16:30:00",
+      "midExamRoom": null,
+      "finalExamDate": "2026-05-13",
+      "finalExamTime": "16:30:00",
+      "finalExamRoom": null
+    },
+    {
+      "courseCode": "BCH201",
+      "sectionName": "01",
+      "sectionId": 183313,
+      "sectionType": "OTHER",
+      "midExamDate": "2026-04-06",
+      "midExamTime": "11:00:00",
+      "midExamRoom": null,
+      "finalExamDate": "2026-05-19",
+      "finalExamTime": "11:00:00",
+      "finalExamRoom": null
+    },
+    {
+      "courseCode": "MIC202",
+      "sectionName": "02",
+      "sectionId": 183348,
       "sectionType": "OTHER",
       "midExamDate": "2026-04-05",
       "midExamTime": "14:00:00",
       "midExamRoom": null,
       "finalExamDate": "2026-05-18",
+      "finalExamTime": "14:00:00",
+      "finalExamRoom": null
+    },
+    {
+      "courseCode": "MSC221",
+      "sectionName": "01",
+      "sectionId": 184547,
+      "sectionType": "OTHER",
+      "midExamDate": "2026-03-30",
+      "midExamTime": "08:00:00",
+      "midExamRoom": null,
+      "finalExamDate": "2026-05-13",
+      "finalExamTime": "08:00:00",
+      "finalExamRoom": null
+    },
+    {
+      "courseCode": "HST103",
+      "sectionName": "02",
+      "sectionId": 183593,
+      "sectionType": "OTHER",
+      "midExamDate": "2026-04-06",
+      "midExamTime": "14:00:00",
+      "midExamRoom": null,
+      "finalExamDate": "2026-05-19",
       "finalExamTime": "14:00:00",
       "finalExamRoom": null
     },
@@ -6702,6 +6234,18 @@
       "midExamRoom": null,
       "finalExamDate": "2026-05-15",
       "finalExamTime": "08:30:00",
+      "finalExamRoom": null
+    },
+    {
+      "courseCode": "MSC321",
+      "sectionName": "08",
+      "sectionId": 184576,
+      "sectionType": "OTHER",
+      "midExamDate": "2026-04-07",
+      "midExamTime": "14:00:00",
+      "midExamRoom": null,
+      "finalExamDate": "2026-05-20",
+      "finalExamTime": "14:00:00",
       "finalExamRoom": null
     },
     {
@@ -6753,14 +6297,26 @@
       "finalExamRoom": null
     },
     {
-      "courseCode": "CSE321",
-      "sectionName": "22",
-      "sectionId": 183252,
+      "courseCode": "CSE111",
+      "sectionName": "17",
+      "sectionId": 182987,
       "sectionType": "OTHER",
-      "midExamDate": "2026-04-05",
+      "midExamDate": "2026-03-31",
+      "midExamTime": "11:00:00",
+      "midExamRoom": null,
+      "finalExamDate": "2026-05-14",
+      "finalExamTime": "11:00:00",
+      "finalExamRoom": null
+    },
+    {
+      "courseCode": "CSE420",
+      "sectionName": "12",
+      "sectionId": 183673,
+      "sectionType": "OTHER",
+      "midExamDate": "2026-04-02",
       "midExamTime": "14:00:00",
       "midExamRoom": null,
-      "finalExamDate": "2026-05-18",
+      "finalExamDate": "2026-05-16",
       "finalExamTime": "14:00:00",
       "finalExamRoom": null
     },
@@ -6789,6 +6345,18 @@
       "finalExamRoom": null
     },
     {
+      "courseCode": "ENG102",
+      "sectionName": "10",
+      "sectionId": 182277,
+      "sectionType": "OTHER",
+      "midExamDate": "2026-03-30",
+      "midExamTime": "11:00:00",
+      "midExamRoom": null,
+      "finalExamDate": "2026-05-13",
+      "finalExamTime": "11:00:00",
+      "finalExamRoom": null
+    },
+    {
       "courseCode": "ACT202",
       "sectionName": "09",
       "sectionId": 184173,
@@ -6810,6 +6378,462 @@
       "midExamRoom": null,
       "finalExamDate": "2026-05-18",
       "finalExamTime": "16:30:00",
+      "finalExamRoom": null
+    },
+    {
+      "courseCode": "CSE421",
+      "sectionName": "14",
+      "sectionId": 183721,
+      "sectionType": "OTHER",
+      "midExamDate": "2026-03-30",
+      "midExamTime": "14:00:00",
+      "midExamRoom": null,
+      "finalExamDate": "2026-05-13",
+      "finalExamTime": "14:00:00",
+      "finalExamRoom": null
+    },
+    {
+      "courseCode": "LAW103",
+      "sectionName": "02",
+      "sectionId": 184011,
+      "sectionType": "OTHER",
+      "midExamDate": "2026-04-12",
+      "midExamTime": "14:00:00",
+      "midExamRoom": null,
+      "finalExamDate": "2026-06-28",
+      "finalExamTime": "14:00:00",
+      "finalExamRoom": null
+    },
+    {
+      "courseCode": "MIC303",
+      "sectionName": "02",
+      "sectionId": 183384,
+      "sectionType": "OTHER",
+      "midExamDate": "2026-04-07",
+      "midExamTime": "08:30:00",
+      "midExamRoom": null,
+      "finalExamDate": "2026-05-20",
+      "finalExamTime": "08:30:00",
+      "finalExamRoom": null
+    },
+    {
+      "courseCode": "MAT216",
+      "sectionName": "21",
+      "sectionId": 182775,
+      "sectionType": "OTHER",
+      "midExamDate": "2026-03-30",
+      "midExamTime": "08:30:00",
+      "midExamRoom": null,
+      "finalExamDate": "2026-05-13",
+      "finalExamTime": "08:30:00",
+      "finalExamRoom": null
+    },
+    {
+      "courseCode": "ARC432",
+      "sectionName": "02",
+      "sectionId": 183428,
+      "sectionType": "OTHER",
+      "midExamDate": "2026-04-05",
+      "midExamTime": "14:00:00",
+      "midExamRoom": null,
+      "finalExamDate": "2026-05-18",
+      "finalExamTime": "14:00:00",
+      "finalExamRoom": null
+    },
+    {
+      "courseCode": "BUS232",
+      "sectionName": "05",
+      "sectionId": 184245,
+      "sectionType": "OTHER",
+      "midExamDate": "2026-04-06",
+      "midExamTime": "11:00:00",
+      "midExamRoom": null,
+      "finalExamDate": "2026-05-19",
+      "finalExamTime": "11:00:00",
+      "finalExamRoom": null
+    },
+    {
+      "courseCode": "CSE422",
+      "sectionName": "15",
+      "sectionId": 183779,
+      "sectionType": "OTHER",
+      "midExamDate": "2026-04-05",
+      "midExamTime": "11:00:00",
+      "midExamRoom": null,
+      "finalExamDate": "2026-05-18",
+      "finalExamTime": "11:00:00",
+      "finalExamRoom": null
+    },
+    {
+      "courseCode": "ENG111",
+      "sectionName": "01",
+      "sectionId": 183689,
+      "sectionType": "OTHER",
+      "midExamDate": "2026-04-04",
+      "midExamTime": "08:30:00",
+      "midExamRoom": null,
+      "finalExamDate": "2026-05-17",
+      "finalExamTime": "08:30:00",
+      "finalExamRoom": null
+    },
+    {
+      "courseCode": "EEE203",
+      "sectionName": "04",
+      "sectionId": 184598,
+      "sectionType": "OTHER",
+      "midExamDate": "2026-04-07",
+      "midExamTime": "11:00:00",
+      "midExamRoom": null,
+      "finalExamDate": "2026-05-20",
+      "finalExamTime": "11:00:00",
+      "finalExamRoom": null
+    },
+    {
+      "courseCode": "FIN423",
+      "sectionName": "02",
+      "sectionId": 184292,
+      "sectionType": "OTHER",
+      "midExamDate": "2026-03-31",
+      "midExamTime": "11:00:00",
+      "midExamRoom": null,
+      "finalExamDate": "2026-05-14",
+      "finalExamTime": "11:00:00",
+      "finalExamRoom": null
+    },
+    {
+      "courseCode": "PHB313",
+      "sectionName": "01",
+      "sectionId": 185493,
+      "sectionType": "OTHER",
+      "midExamDate": "2026-04-25",
+      "midExamTime": "17:00:00",
+      "midExamRoom": null,
+      "finalExamDate": "2026-07-14",
+      "finalExamTime": "09:00:00",
+      "finalExamRoom": null
+    },
+    {
+      "courseCode": "PHB404",
+      "sectionName": "01",
+      "sectionId": 185135,
+      "sectionType": "OTHER",
+      "midExamDate": "2026-04-21",
+      "midExamTime": "12:00:00",
+      "midExamRoom": null,
+      "finalExamDate": "2026-07-07",
+      "finalExamTime": "09:30:00",
+      "finalExamRoom": null
+    },
+    {
+      "courseCode": "ECO102",
+      "sectionName": "02",
+      "sectionId": 182452,
+      "sectionType": "OTHER",
+      "midExamDate": "2026-04-05",
+      "midExamTime": "16:30:00",
+      "midExamRoom": null,
+      "finalExamDate": "2026-05-18",
+      "finalExamTime": "16:30:00",
+      "finalExamRoom": null
+    },
+    {
+      "courseCode": "ECO209",
+      "sectionName": "01",
+      "sectionId": 182500,
+      "sectionType": "OTHER",
+      "midExamDate": "2026-04-04",
+      "midExamTime": "14:00:00",
+      "midExamRoom": null,
+      "finalExamDate": "2026-05-17",
+      "finalExamTime": "14:00:00",
+      "finalExamRoom": null
+    },
+    {
+      "courseCode": "CHN101",
+      "sectionName": "02",
+      "sectionId": 182285,
+      "sectionType": "OTHER",
+      "midExamDate": "2026-03-30",
+      "midExamTime": "11:00:00",
+      "midExamRoom": null,
+      "finalExamDate": "2026-05-13",
+      "finalExamTime": "11:00:00",
+      "finalExamRoom": null
+    },
+    {
+      "courseCode": "CSE220",
+      "sectionName": "01",
+      "sectionId": 182989,
+      "sectionType": "OTHER",
+      "midExamDate": "2026-03-31",
+      "midExamTime": "14:00:00",
+      "midExamRoom": null,
+      "finalExamDate": "2026-05-14",
+      "finalExamTime": "14:00:00",
+      "finalExamRoom": null
+    },
+    {
+      "courseCode": "EEE203",
+      "sectionName": "07",
+      "sectionId": 184601,
+      "sectionType": "OTHER",
+      "midExamDate": "2026-04-05",
+      "midExamTime": "14:00:00",
+      "midExamRoom": null,
+      "finalExamDate": "2026-05-18",
+      "finalExamTime": "14:00:00",
+      "finalExamRoom": null
+    },
+    {
+      "courseCode": "ENG217",
+      "sectionName": "01",
+      "sectionId": 183622,
+      "sectionType": "OTHER",
+      "midExamDate": "2026-04-02",
+      "midExamTime": "08:30:00",
+      "midExamRoom": null,
+      "finalExamDate": "2026-05-16",
+      "finalExamTime": "08:30:00",
+      "finalExamRoom": null
+    },
+    {
+      "courseCode": "BUS232",
+      "sectionName": "07",
+      "sectionId": 184247,
+      "sectionType": "OTHER",
+      "midExamDate": "2026-04-06",
+      "midExamTime": "11:00:00",
+      "midExamRoom": null,
+      "finalExamDate": "2026-05-19",
+      "finalExamTime": "11:00:00",
+      "finalExamRoom": null
+    },
+    {
+      "courseCode": "CSE221",
+      "sectionName": "14",
+      "sectionId": 183059,
+      "sectionType": "OTHER",
+      "midExamDate": "2026-03-31",
+      "midExamTime": "08:30:00",
+      "midExamRoom": null,
+      "finalExamDate": "2026-05-14",
+      "finalExamTime": "08:30:00",
+      "finalExamRoom": null
+    },
+    {
+      "courseCode": "HUM101",
+      "sectionName": "33",
+      "sectionId": 184931,
+      "sectionType": "OTHER",
+      "midExamDate": "2026-04-06",
+      "midExamTime": "11:00:00",
+      "midExamRoom": null,
+      "finalExamDate": "2026-05-19",
+      "finalExamTime": "11:00:00",
+      "finalExamRoom": null
+    },
+    {
+      "courseCode": "BUS232",
+      "sectionName": "03",
+      "sectionId": 184243,
+      "sectionType": "OTHER",
+      "midExamDate": "2026-04-06",
+      "midExamTime": "11:00:00",
+      "midExamRoom": null,
+      "finalExamDate": "2026-05-19",
+      "finalExamTime": "11:00:00",
+      "finalExamRoom": null
+    },
+    {
+      "courseCode": "MSC221",
+      "sectionName": "12",
+      "sectionId": 184558,
+      "sectionType": "OTHER",
+      "midExamDate": "2026-04-02",
+      "midExamTime": "15:30:00",
+      "midExamRoom": null,
+      "finalExamDate": "2026-05-16",
+      "finalExamTime": "15:30:00",
+      "finalExamRoom": null
+    },
+    {
+      "courseCode": "CSE221",
+      "sectionName": "07",
+      "sectionId": 183045,
+      "sectionType": "OTHER",
+      "midExamDate": "2026-03-31",
+      "midExamTime": "08:30:00",
+      "midExamRoom": null,
+      "finalExamDate": "2026-05-14",
+      "finalExamTime": "08:30:00",
+      "finalExamRoom": null
+    },
+    {
+      "courseCode": "PSY101",
+      "sectionName": "02",
+      "sectionId": 184129,
+      "sectionType": "OTHER",
+      "midExamDate": "2026-04-06",
+      "midExamTime": "11:00:00",
+      "midExamRoom": null,
+      "finalExamDate": "2026-05-19",
+      "finalExamTime": "11:00:00",
+      "finalExamRoom": null
+    },
+    {
+      "courseCode": "DEV104",
+      "sectionName": "02",
+      "sectionId": 184049,
+      "sectionType": "OTHER",
+      "midExamDate": "2026-04-05",
+      "midExamTime": "11:00:00",
+      "midExamRoom": null,
+      "finalExamDate": "2026-05-18",
+      "finalExamTime": "11:00:00",
+      "finalExamRoom": null
+    },
+    {
+      "courseCode": "MGT480",
+      "sectionName": "01",
+      "sectionId": 184327,
+      "sectionType": "OTHER",
+      "midExamDate": "2026-04-02",
+      "midExamTime": "14:00:00",
+      "midExamRoom": null,
+      "finalExamDate": "2026-05-16",
+      "finalExamTime": "14:00:00",
+      "finalExamRoom": null
+    },
+    {
+      "courseCode": "ANT101",
+      "sectionName": "06",
+      "sectionId": 182535,
+      "sectionType": "OTHER",
+      "midExamDate": "2026-04-04",
+      "midExamTime": "16:30:00",
+      "midExamRoom": null,
+      "finalExamDate": "2026-05-17",
+      "finalExamTime": "16:30:00",
+      "finalExamRoom": null
+    },
+    {
+      "courseCode": "CSE370",
+      "sectionName": "09",
+      "sectionId": 183552,
+      "sectionType": "OTHER",
+      "midExamDate": "2026-04-04",
+      "midExamTime": "16:30:00",
+      "midExamRoom": null,
+      "finalExamDate": "2026-05-17",
+      "finalExamTime": "16:30:00",
+      "finalExamRoom": null
+    },
+    {
+      "courseCode": "ECO101",
+      "sectionName": "09",
+      "sectionId": 182398,
+      "sectionType": "OTHER",
+      "midExamDate": "2026-03-31",
+      "midExamTime": "11:00:00",
+      "midExamRoom": null,
+      "finalExamDate": "2026-05-14",
+      "finalExamTime": "11:00:00",
+      "finalExamRoom": null
+    },
+    {
+      "courseCode": "ENG091",
+      "sectionName": "09",
+      "sectionId": 182205,
+      "sectionType": "OTHER",
+      "midExamDate": "2026-03-30",
+      "midExamTime": "11:00:00",
+      "midExamRoom": null,
+      "finalExamDate": "2026-05-13",
+      "finalExamTime": "11:00:00",
+      "finalExamRoom": null
+    },
+    {
+      "courseCode": "CSE331",
+      "sectionName": "08",
+      "sectionId": 183440,
+      "sectionType": "OTHER",
+      "midExamDate": "2026-04-02",
+      "midExamTime": "08:30:00",
+      "midExamRoom": null,
+      "finalExamDate": "2026-05-16",
+      "finalExamTime": "08:30:00",
+      "finalExamRoom": null
+    },
+    {
+      "courseCode": "CSE460",
+      "sectionName": "07",
+      "sectionId": 184480,
+      "sectionType": "OTHER",
+      "midExamDate": "2026-03-30",
+      "midExamTime": "16:30:00",
+      "midExamRoom": null,
+      "finalExamDate": "2026-05-13",
+      "finalExamTime": "16:30:00",
+      "finalExamRoom": null
+    },
+    {
+      "courseCode": "CSE110",
+      "sectionName": "15",
+      "sectionId": 185527,
+      "sectionType": "OTHER",
+      "midExamDate": "2026-03-31",
+      "midExamTime": "08:30:00",
+      "midExamRoom": null,
+      "finalExamDate": "2026-05-14",
+      "finalExamTime": "08:30:00",
+      "finalExamRoom": null
+    },
+    {
+      "courseCode": "APE401",
+      "sectionName": "01",
+      "sectionId": 185599,
+      "sectionType": "OTHER",
+      "midExamDate": "2026-04-05",
+      "midExamTime": "14:00:00",
+      "midExamRoom": null,
+      "finalExamDate": "2026-05-18",
+      "finalExamTime": "14:00:00",
+      "finalExamRoom": null
+    },
+    {
+      "courseCode": "BTE302",
+      "sectionName": "02",
+      "sectionId": 182444,
+      "sectionType": "OTHER",
+      "midExamDate": "2026-04-04",
+      "midExamTime": "14:00:00",
+      "midExamRoom": null,
+      "finalExamDate": "2026-05-17",
+      "finalExamTime": "14:00:00",
+      "finalExamRoom": null
+    },
+    {
+      "courseCode": "CSE321",
+      "sectionName": "22",
+      "sectionId": 183252,
+      "sectionType": "OTHER",
+      "midExamDate": "2026-04-05",
+      "midExamTime": "14:00:00",
+      "midExamRoom": null,
+      "finalExamDate": "2026-05-18",
+      "finalExamTime": "14:00:00",
+      "finalExamRoom": null
+    },
+    {
+      "courseCode": "BTE201",
+      "sectionName": "02",
+      "sectionId": 182386,
+      "sectionType": "OTHER",
+      "midExamDate": "2026-04-07",
+      "midExamTime": "11:00:00",
+      "midExamRoom": null,
+      "finalExamDate": "2026-05-20",
+      "finalExamTime": "11:00:00",
       "finalExamRoom": null
     },
     {
@@ -6837,30 +6861,6 @@
       "finalExamRoom": null
     },
     {
-      "courseCode": "APE401",
-      "sectionName": "01",
-      "sectionId": 185599,
-      "sectionType": "OTHER",
-      "midExamDate": "2026-04-05",
-      "midExamTime": "14:00:00",
-      "midExamRoom": null,
-      "finalExamDate": "2026-05-18",
-      "finalExamTime": "14:00:00",
-      "finalExamRoom": null
-    },
-    {
-      "courseCode": "BTE201",
-      "sectionName": "02",
-      "sectionId": 182386,
-      "sectionType": "OTHER",
-      "midExamDate": "2026-04-07",
-      "midExamTime": "11:00:00",
-      "midExamRoom": null,
-      "finalExamDate": "2026-05-20",
-      "finalExamTime": "11:00:00",
-      "finalExamRoom": null
-    },
-    {
       "courseCode": "PHY112",
       "sectionName": "10",
       "sectionId": 182876,
@@ -6873,18 +6873,6 @@
       "finalExamRoom": null
     },
     {
-      "courseCode": "ECO102",
-      "sectionName": "04",
-      "sectionId": 182456,
-      "sectionType": "OTHER",
-      "midExamDate": "2026-04-05",
-      "midExamTime": "16:30:00",
-      "midExamRoom": null,
-      "finalExamDate": "2026-05-18",
-      "finalExamTime": "16:30:00",
-      "finalExamRoom": null
-    },
-    {
       "courseCode": "ACT201",
       "sectionName": "02",
       "sectionId": 184130,
@@ -6894,6 +6882,18 @@
       "midExamRoom": null,
       "finalExamDate": "2026-05-14",
       "finalExamTime": "11:00:00",
+      "finalExamRoom": null
+    },
+    {
+      "courseCode": "ECO102",
+      "sectionName": "04",
+      "sectionId": 182456,
+      "sectionType": "OTHER",
+      "midExamDate": "2026-04-05",
+      "midExamTime": "16:30:00",
+      "midExamRoom": null,
+      "finalExamDate": "2026-05-18",
+      "finalExamTime": "16:30:00",
       "finalExamRoom": null
     },
     {
