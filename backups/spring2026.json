@@ -10,7 +10,7 @@
     "midExamEndDate": "2026-04-27",
     "finalExamStartDate": "2026-04-30",
     "finalExamEndDate": "2026-07-16",
-    "lastUpdated": "2026-03-09T07:03:43.679452+00:00"
+    "lastUpdated": "2026-03-10T06:52:59.097585+00:00"
   },
   "sections": [
     {
@@ -23605,7 +23605,7 @@
         ]
       },
       "courseName": "BASIC ELECTRONICS",
-      "prerequisiteCourses": null,
+      "prerequisiteCourses": "(PHY201)",
       "labSchedules": null,
       "labSectionId": null,
       "labCourseCode": null,
@@ -42456,7 +42456,7 @@
         ]
       },
       "courseName": "INTRODUCTION TO NUMERICAL METHODS",
-      "prerequisiteCourses": "(MAT203) OR (MAT212) OR (MAT216)",
+      "prerequisiteCourses": "(CSE110)",
       "labSchedules": null,
       "labSectionId": null,
       "labCourseCode": null,
@@ -55872,7 +55872,7 @@
         ]
       },
       "courseName": "ELECTRICITY AND MAGNETISM",
-      "prerequisiteCourses": null,
+      "prerequisiteCourses": "(MAT105)",
       "labSchedules": null,
       "labSectionId": null,
       "labCourseCode": null,
@@ -117913,7 +117913,7 @@
         ]
       },
       "courseName": "PARTICLE AND REACTOR PHYSICS",
-      "prerequisiteCourses": null,
+      "prerequisiteCourses": "(PHY305)",
       "labSchedules": null,
       "labSectionId": null,
       "labCourseCode": null,
@@ -118360,7 +118360,7 @@
         ]
       },
       "courseName": "WAVES, OSCILLATION AND ACOUSTICS",
-      "prerequisiteCourses": null,
+      "prerequisiteCourses": "(PHY110)",
       "labSchedules": null,
       "labSectionId": null,
       "labCourseCode": null,
