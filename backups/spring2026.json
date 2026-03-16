@@ -10,7 +10,7 @@
     "midExamEndDate": "2026-04-27",
     "finalExamStartDate": "2026-04-30",
     "finalExamEndDate": "2026-07-16",
-    "lastUpdated": "2026-03-14T06:49:52.493938+00:00"
+    "lastUpdated": "2026-03-16T07:19:42.618540+00:00"
   },
   "sections": [
     {
@@ -4321,7 +4321,7 @@
         ]
       },
       "courseName": "EMBEDDED SYSTEM DESIGN",
-      "prerequisiteCourses": "(EEE103 AND EEE283L AND EEE283)",
+      "prerequisiteCourses": "(EEE103 AND EEE283 AND EEE283L) OR (ECE103 AND EEE283 AND EEE283L)",
       "labSchedules": null,
       "labSectionId": null,
       "labCourseCode": null,
@@ -6177,7 +6177,7 @@
         ]
       },
       "courseName": "EMBEDDED SYSTEM DESIGN",
-      "prerequisiteCourses": "(EEE103 AND EEE283L AND EEE283)",
+      "prerequisiteCourses": "(EEE103 AND EEE283 AND EEE283L) OR (ECE103 AND EEE283 AND EEE283L)",
       "labSchedules": [
         {
           "startTime": "11:00:00",
@@ -15933,7 +15933,7 @@
         ]
       },
       "courseName": "EMBEDDED SYSTEM DESIGN",
-      "prerequisiteCourses": "(EEE103 AND EEE283L AND EEE283)",
+      "prerequisiteCourses": "(EEE103 AND EEE283 AND EEE283L) OR (ECE103 AND EEE283 AND EEE283L)",
       "labSchedules": [
         {
           "startTime": "11:00:00",
