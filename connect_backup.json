@@ -5,14 +5,14 @@
     "stableUrl": "https://connect-cdn.itzmrz.xyz/stable.json",
     "currentBackups": 1,
     "archivedBackups": 5,
-    "lastUpdated": "2026-04-07T07:19:42.988919+00:00",
+    "lastUpdated": "2026-04-08T07:22:00.203979+00:00",
     "cdnBaseUrl": "https://connect-cdn.itzmrz.xyz/backups"
   },
   "backups": [
     {
       "semester": "Spring2026",
-      "totalSections": 2364,
-      "backupTime": "2026-04-07T07:19:41.983597+00:00",
+      "totalSections": 2405,
+      "backupTime": "2026-04-08T07:21:59.203122+00:00",
       "cdnLink": "https://connect-cdn.itzmrz.xyz/backups/spring2026.json",
       "isCurrent": true,
       "filename": "spring2026.json"
