@@ -1,20 +1,28 @@
 {
   "metadata": {
-    "totalBackups": 6,
-    "currentSemester": "Spring2026",
+    "totalBackups": 7,
+    "currentSemester": "Summer2026",
     "stableUrl": "https://connect-cdn.itzmrz.xyz/stable.json",
     "currentBackups": 1,
-    "archivedBackups": 5,
-    "lastUpdated": "2026-04-14T07:48:03.683336+00:00",
+    "archivedBackups": 6,
+    "lastUpdated": "2026-04-16T07:48:42.010050+00:00",
     "cdnBaseUrl": "https://connect-cdn.itzmrz.xyz/backups"
   },
   "backups": [
+    {
+      "semester": "Summer2026",
+      "totalSections": 1969,
+      "backupTime": "2026-04-16T07:48:41.372247+00:00",
+      "cdnLink": "https://connect-cdn.itzmrz.xyz/backups/summer2026.json",
+      "isCurrent": true,
+      "filename": "summer2026.json"
+    },
     {
       "semester": "Spring2026",
       "totalSections": 2405,
       "backupTime": "2026-04-14T07:48:02.520336+00:00",
       "cdnLink": "https://connect-cdn.itzmrz.xyz/backups/spring2026.json",
-      "isCurrent": true,
+      "isCurrent": false,
       "filename": "spring2026.json"
     },
     {
