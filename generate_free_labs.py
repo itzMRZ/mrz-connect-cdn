@@ -89,7 +89,8 @@ def analyze_lab_usage(sections: List[Dict]) -> tuple:
         # Check theory sections with lab schedules
         if section.get('labSchedules') and section.get('labRoomName'):
             lab_room = section['labRoomName']
-            course_code = section.get('labCourseCode') or section.get('courseCode')
+            course_code = section.get(
+                'labCourseCode') or section.get('courseCode')
             dept = extract_department_from_course(course_code)
 
             lab_departments[lab_room].add(dept)
@@ -119,7 +120,8 @@ def analyze_lab_usage(sections: List[Dict]) -> tuple:
 
                 lab_departments[room_name].add(dept)
 
-                schedules = section.get('sectionSchedule', {}).get('classSchedules', [])
+                schedules = section.get('sectionSchedule', {}).get(
+                    'classSchedules', [])
                 for schedule in schedules:
                     day = schedule.get('day')
                     start_time = schedule.get('startTime')
@@ -166,7 +168,7 @@ def find_free_slots(lab_occupancy: Dict, lab_departments: Dict) -> Dict:
                 # Check if this slot overlaps with any occupied time
                 for occupied in occupied_times:
                     if time_overlaps(slot_start, slot_end,
-                                   occupied['startTime'], occupied['endTime']):
+                                     occupied['startTime'], occupied['endTime']):
                         is_free = False
                         occupied_info = occupied
                         break
@@ -195,14 +197,14 @@ def generate_free_labs_json():
     print("Free Labs Analyzer")
     print("=" * 60)
 
-    # Load current connect.json
-    connect_path = os.path.join(SCRIPT_DIR, "connect.json")
+    # Load current stable.json
+    connect_path = os.path.join(SCRIPT_DIR, "stable.json")
 
     if not os.path.exists(connect_path):
-        print("✗ connect.json not found. Run update_cdn.py first.")
+        print("✗ stable.json not found. Run update_cdn.py first.")
         return False
 
-    print("\nLoading connect.json...")
+    print("\nLoading stable.json...")
     with open(connect_path, 'r', encoding='utf-8') as f:
         data = json.load(f)
 
@@ -226,10 +228,12 @@ def generate_free_labs_json():
     for day in slots_data:
         for slot_key in slots_data[day]:
             total_free_count += len(slots_data[day][slot_key]['freeLabs'])
-            total_occupied_count += len(slots_data[day][slot_key]['occupiedLabs'])
+            total_occupied_count += len(slots_data[day]
+                                        [slot_key]['occupiedLabs'])
 
     total_possible = total_labs * len(DAYS) * len(TIME_SLOTS)
-    avg_utilization = (total_occupied_count / total_possible * 100) if total_possible > 0 else 0
+    avg_utilization = (total_occupied_count / total_possible *
+                       100) if total_possible > 0 else 0
 
     # Create output structure
     output = {
@@ -260,7 +264,8 @@ def generate_free_labs_json():
     file_size = os.path.getsize(output_path) / 1024
     gzip_size = os.path.getsize(gzip_path) / 1024
 
-    print(f"\n\u2713 open_labs.json created ({file_size:.1f} KB, gzipped {gzip_size:.1f} KB)")
+    print(
+        f"\n\u2713 open_labs.json created ({file_size:.1f} KB, gzipped {gzip_size:.1f} KB)")
     print(f"  Total labs: {total_labs}")
     print(f"  Total free slot entries: {total_free_count}")
     print(f"  Average utilization: {avg_utilization:.1f}%")
