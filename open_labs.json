@@ -2,9 +2,9 @@
   "metadata": {
     "semester": "Summer2026",
     "totalLabs": 65,
-    "totalFreeSlots": 1434,
-    "totalOccupiedSlots": 1296,
-    "averageUtilization": 47.47,
+    "totalFreeSlots": 1432,
+    "totalOccupiedSlots": 1298,
+    "averageUtilization": 47.55,
     "timeSlots": [
       [
         "08:00:00",
@@ -43,8 +43,8 @@
       "WEDNESDAY",
       "THURSDAY"
     ],
-    "lastUpdated": "2026-04-28T08:26:46.038609+00:00",
-    "sourceDataUpdated": "2026-04-28T08:26:45.318154+00:00"
+    "lastUpdated": "2026-04-29T08:21:01.567249+00:00",
+    "sourceDataUpdated": "2026-04-29T08:21:00.915749+00:00"
   },
   "schedule": {
     "SATURDAY": {
@@ -2033,12 +2033,6 @@
             ]
           },
           {
-            "labRoom": "10E-26L",
-            "departments": [
-              "MAT"
-            ]
-          },
-          {
             "labRoom": "10F-28L",
             "departments": [
               "MIC"
@@ -2337,6 +2331,15 @@
             "department": "BTE"
           },
           {
+            "labRoom": "10E-26L",
+            "departments": [
+              "MAT"
+            ],
+            "courseCode": "MAT350",
+            "sectionName": "01",
+            "department": "MAT"
+          },
+          {
             "labRoom": "10E-27L",
             "departments": [
               "CSE"
@@ -2454,7 +2457,7 @@
               "CSE"
             ],
             "courseCode": "CSE420L",
-            "sectionName": "23",
+            "sectionName": "16",
             "department": "CSE"
           },
           {
@@ -2528,12 +2531,6 @@
             ]
           },
           {
-            "labRoom": "10E-26L",
-            "departments": [
-              "MAT"
-            ]
-          },
-          {
             "labRoom": "10F-28L",
             "departments": [
               "MIC"
@@ -2832,6 +2829,15 @@
             "department": "BTE"
           },
           {
+            "labRoom": "10E-26L",
+            "departments": [
+              "MAT"
+            ],
+            "courseCode": "MAT350",
+            "sectionName": "01",
+            "department": "MAT"
+          },
+          {
             "labRoom": "10E-27L",
             "departments": [
               "CSE"
@@ -2949,7 +2955,7 @@
               "CSE"
             ],
             "courseCode": "CSE420L",
-            "sectionName": "23",
+            "sectionName": "16",
             "department": "CSE"
           },
           {
@@ -14725,7 +14731,7 @@
               "CSE"
             ],
             "courseCode": "CSE420L",
-            "sectionName": "13",
+            "sectionName": "10",
             "department": "CSE"
           },
           {
@@ -15232,7 +15238,7 @@
               "CSE"
             ],
             "courseCode": "CSE420L",
-            "sectionName": "13",
+            "sectionName": "10",
             "department": "CSE"
           },
           {
