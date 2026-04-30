@@ -195,14 +195,14 @@ def generate_free_labs_json():
     print("Free Labs Analyzer")
     print("=" * 60)
 
-    # Load current connect.json
-    connect_path = os.path.join(SCRIPT_DIR, "connect.json")
+    # Load current stable.json
+    connect_path = os.path.join(SCRIPT_DIR, "stable.json")
 
     if not os.path.exists(connect_path):
-        print("✗ connect.json not found. Run update_cdn.py first.")
+        print("✗ stable.json not found. Run update_cdn.py first.")
         return False
 
-    print("\nLoading connect.json...")
+    print("\nLoading stable.json...")
     with open(connect_path, 'r', encoding='utf-8') as f:
         data = json.load(f)
 
