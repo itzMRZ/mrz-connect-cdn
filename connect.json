@@ -10,8 +10,8 @@
     "midExamEndDate": "2026-08-02",
     "finalExamStartDate": "2026-09-11",
     "finalExamEndDate": "2026-09-19",
-    "lastUpdated": "2026-04-30T08:23:17.068094+00:00",
-    "version": "2.50.13"
+    "lastUpdated": "2026-05-01T08:12:31.128334+00:00",
+    "version": "2.50.14"
   },
   "sections": [
     {
@@ -771,59 +771,6 @@
       "labRoomName": null,
       "preRegLabSchedule": null,
       "preRegSchedule": "MONDAY(3:30 PM-4:50 PM-10H-39C)\nWEDNESDAY(3:30 PM-4:50 PM-10H-39C)"
-    },
-    {
-      "sectionId": 186071,
-      "courseId": 1704,
-      "sectionName": "07",
-      "courseCredit": 3,
-      "courseCode": "BUS102",
-      "sectionType": "OTHER",
-      "capacity": 35,
-      "consumedSeat": 39,
-      "semesterSessionId": 20262,
-      "parentSectionId": null,
-      "faculties": "NAC",
-      "roomName": "12B-23C",
-      "roomNumber": "12B-23C",
-      "courseType": "THEORY",
-      "academicDegree": "UNDERGRADUATE",
-      "sectionSchedule": {
-        "classPairId": null,
-        "classSlotId": null,
-        "finalExamDate": "2026-09-13",
-        "finalExamStartTime": "16:30:00",
-        "finalExamEndTime": "18:30:00",
-        "midExamDate": "2026-07-26",
-        "midExamStartTime": "16:30:00",
-        "midExamEndTime": "18:30:00",
-        "finalExamDetail": "Sep 13, 2026 4:30 PM - 6:30 PM",
-        "midExamDetail": "Jul 26, 2026 4:30 PM - 6:30 PM",
-        "classStartDate": "2026-06-09",
-        "classEndDate": "2026-09-08",
-        "classSchedules": [
-          {
-            "startTime": "11:00:00",
-            "endTime": "12:20:00",
-            "day": "SUNDAY"
-          },
-          {
-            "startTime": "11:00:00",
-            "endTime": "12:20:00",
-            "day": "TUESDAY"
-          }
-        ]
-      },
-      "courseName": "BUSINESS - BASICS, ETHICS AND ENVIRONMENT",
-      "prerequisiteCourses": null,
-      "labSchedules": null,
-      "labSectionId": null,
-      "labCourseCode": null,
-      "labFaculties": null,
-      "labName": null,
-      "labRoomName": null,
-      "preRegLabSchedule": null,
-      "preRegSchedule": "SUNDAY(11:00 AM-12:20 PM-12B-23C)\nTUESDAY(11:00 AM-12:20 PM-12B-23C)"
     },
     {
       "sectionId": 187697,
@@ -1741,65 +1688,6 @@
       "preRegSchedule": "SATURDAY(9:30 AM-10:50 AM-07H-27C)\nTHURSDAY(9:30 AM-10:50 AM-07H-27C)"
     },
     {
-      "sectionId": 187770,
-      "courseId": 865,
-      "sectionName": "07",
-      "courseCredit": 3,
-      "courseCode": "MAT120",
-      "sectionType": "OTHER",
-      "capacity": 40,
-      "consumedSeat": 5,
-      "semesterSessionId": 20262,
-      "parentSectionId": null,
-      "faculties": "TBA",
-      "roomName": "12A-10C",
-      "roomNumber": "12A-10C",
-      "courseType": "THEORY",
-      "academicDegree": "UNDERGRADUATE",
-      "sectionSchedule": {
-        "classPairId": null,
-        "classSlotId": null,
-        "finalExamDate": "2026-09-18",
-        "finalExamStartTime": "14:30:00",
-        "finalExamEndTime": "16:30:00",
-        "midExamDate": "2026-08-01",
-        "midExamStartTime": "14:00:00",
-        "midExamEndTime": "16:00:00",
-        "finalExamDetail": "Sep 18, 2026 2:30 PM - 4:30 PM",
-        "midExamDetail": "Aug 1, 2026 2:00 PM - 4:00 PM",
-        "classStartDate": "2026-06-09",
-        "classEndDate": "2026-09-08",
-        "classSchedules": [
-          {
-            "startTime": "08:00:00",
-            "endTime": "21:20:00",
-            "day": "SUNDAY"
-          },
-          {
-            "startTime": "08:00:00",
-            "endTime": "21:20:00",
-            "day": "TUESDAY"
-          }
-        ]
-      },
-      "courseName": "MATHEMATICS II: INTEGRAL CALCULUS & DIFFERENTIAL EQUATIONS",
-      "prerequisiteCourses": "(MAT110)",
-      "labSchedules": [
-        {
-          "startTime": "08:00:00",
-          "endTime": "09:20:00",
-          "day": "MONDAY"
-        }
-      ],
-      "labSectionId": 187773,
-      "labCourseCode": "MAT120L",
-      "labFaculties": "TBA",
-      "labName": "MATHEMATICS II: INTEGRAL CALCULUS & DIFFERENTIAL EQUATIONS LAB",
-      "labRoomName": "10E-26L",
-      "preRegLabSchedule": "MONDAY(8:00 AM-9:20 AM-10E-26L)",
-      "preRegSchedule": "SUNDAY(8:00 AM-9:20 PM-12A-10C)\nTUESDAY(8:00 AM-9:20 PM-12A-10C)"
-    },
-    {
       "sectionId": 187201,
       "courseId": 1651,
       "sectionName": "07",
@@ -1857,54 +1745,6 @@
       "labRoomName": "10G-32L",
       "preRegLabSchedule": "SATURDAY(11:00 AM-1:50 PM-10G-32L)",
       "preRegSchedule": "MONDAY(9:30 AM-10:50 AM-09H-34C)\nWEDNESDAY(9:30 AM-10:50 AM-09H-34C)"
-    },
-    {
-      "sectionId": 187488,
-      "courseId": 1189,
-      "sectionName": "02",
-      "courseCredit": 3,
-      "courseCode": "MIC355",
-      "sectionType": "LAB",
-      "capacity": 20,
-      "consumedSeat": 20,
-      "semesterSessionId": 20262,
-      "parentSectionId": null,
-      "faculties": "TBA",
-      "roomName": "11A-01L",
-      "roomNumber": "11A-01L",
-      "courseType": "LAB",
-      "academicDegree": "UNDERGRADUATE",
-      "sectionSchedule": {
-        "classPairId": null,
-        "classSlotId": null,
-        "finalExamDate": null,
-        "finalExamStartTime": null,
-        "finalExamEndTime": null,
-        "midExamDate": null,
-        "midExamStartTime": null,
-        "midExamEndTime": null,
-        "finalExamDetail": null,
-        "midExamDetail": null,
-        "classStartDate": "2026-06-09",
-        "classEndDate": "2026-09-08",
-        "classSchedules": [
-          {
-            "startTime": "12:30:00",
-            "endTime": "15:20:00",
-            "day": "WEDNESDAY"
-          }
-        ]
-      },
-      "courseName": "MICROBIOL LAB III",
-      "prerequisiteCourses": "(MIC255L)",
-      "labSchedules": null,
-      "labSectionId": null,
-      "labCourseCode": null,
-      "labFaculties": null,
-      "labName": null,
-      "labRoomName": null,
-      "preRegLabSchedule": null,
-      "preRegSchedule": "WEDNESDAY(12:30 PM-3:20 PM-11A-01L)"
     },
     {
       "sectionId": 187659,
@@ -2846,59 +2686,6 @@
       "labRoomName": "12D-27L",
       "preRegLabSchedule": "THURSDAY(8:00 AM-10:50 AM-12D-27L)",
       "preRegSchedule": "MONDAY(11:00 AM-12:20 PM-09H-33C)\nWEDNESDAY(11:00 AM-12:20 PM-09H-33C)"
-    },
-    {
-      "sectionId": 185661,
-      "courseId": 1462,
-      "sectionName": "17",
-      "courseCredit": 0,
-      "courseCode": "ENG091",
-      "sectionType": "OTHER",
-      "capacity": 20,
-      "consumedSeat": 0,
-      "semesterSessionId": 20262,
-      "parentSectionId": null,
-      "faculties": "TBA",
-      "roomName": "07B-11C",
-      "roomNumber": "07B-11C",
-      "courseType": "THEORY",
-      "academicDegree": "UNDERGRADUATE",
-      "sectionSchedule": {
-        "classPairId": null,
-        "classSlotId": null,
-        "finalExamDate": "2026-09-12",
-        "finalExamStartTime": "11:00:00",
-        "finalExamEndTime": "13:00:00",
-        "midExamDate": "2026-07-25",
-        "midExamStartTime": "11:00:00",
-        "midExamEndTime": "12:30:00",
-        "finalExamDetail": "Sep 12, 2026 11:00 AM - 1:00 PM",
-        "midExamDetail": "Jul 25, 2026 11:00 AM - 12:30 PM",
-        "classStartDate": "2026-06-09",
-        "classEndDate": "2026-09-08",
-        "classSchedules": [
-          {
-            "startTime": "11:00:00",
-            "endTime": "12:20:00",
-            "day": "SUNDAY"
-          },
-          {
-            "startTime": "11:00:00",
-            "endTime": "12:20:00",
-            "day": "TUESDAY"
-          }
-        ]
-      },
-      "courseName": "FOUNDATION COURSE (IN ENGLISH)",
-      "prerequisiteCourses": null,
-      "labSchedules": null,
-      "labSectionId": null,
-      "labCourseCode": null,
-      "labFaculties": null,
-      "labName": null,
-      "labRoomName": null,
-      "preRegLabSchedule": null,
-      "preRegSchedule": "SUNDAY(11:00 AM-12:20 PM-07B-11C)\nTUESDAY(11:00 AM-12:20 PM-07B-11C)"
     },
     {
       "sectionId": 186281,
@@ -4380,107 +4167,6 @@
       "preRegSchedule": "MONDAY(12:30 PM-1:50 PM-11A-02L)\nWEDNESDAY(12:30 PM-1:50 PM-11A-02L)"
     },
     {
-      "sectionId": 187489,
-      "courseId": 1189,
-      "sectionName": "03",
-      "courseCredit": 3,
-      "courseCode": "MIC355",
-      "sectionType": "LAB",
-      "capacity": 20,
-      "consumedSeat": 15,
-      "semesterSessionId": 20262,
-      "parentSectionId": null,
-      "faculties": "TBA",
-      "roomName": "11A-02L",
-      "roomNumber": "11A-02L",
-      "courseType": "LAB",
-      "academicDegree": "UNDERGRADUATE",
-      "sectionSchedule": {
-        "classPairId": null,
-        "classSlotId": null,
-        "finalExamDate": null,
-        "finalExamStartTime": null,
-        "finalExamEndTime": null,
-        "midExamDate": null,
-        "midExamStartTime": null,
-        "midExamEndTime": null,
-        "finalExamDetail": null,
-        "midExamDetail": null,
-        "classStartDate": "2026-06-09",
-        "classEndDate": "2026-09-08",
-        "classSchedules": [
-          {
-            "startTime": "11:00:00",
-            "endTime": "13:50:00",
-            "day": "SATURDAY"
-          }
-        ]
-      },
-      "courseName": "MICROBIOL LAB III",
-      "prerequisiteCourses": "(MIC255L)",
-      "labSchedules": null,
-      "labSectionId": null,
-      "labCourseCode": null,
-      "labFaculties": null,
-      "labName": null,
-      "labRoomName": null,
-      "preRegLabSchedule": null,
-      "preRegSchedule": "SATURDAY(11:00 AM-1:50 PM-11A-02L)"
-    },
-    {
-      "sectionId": 187831,
-      "courseId": 1362,
-      "sectionName": "01",
-      "courseCredit": 3,
-      "courseCode": "MAT216",
-      "sectionType": "OTHER",
-      "capacity": 40,
-      "consumedSeat": 40,
-      "semesterSessionId": 20262,
-      "parentSectionId": null,
-      "faculties": "TBA",
-      "roomName": "12A-07C",
-      "roomNumber": "12A-07C",
-      "courseType": "THEORY",
-      "academicDegree": "UNDERGRADUATE",
-      "sectionSchedule": {
-        "classPairId": null,
-        "classSlotId": null,
-        "finalExamDate": "2026-09-12",
-        "finalExamStartTime": "08:30:00",
-        "finalExamEndTime": "10:30:00",
-        "midExamDate": "2026-07-25",
-        "midExamStartTime": "08:30:00",
-        "midExamEndTime": "10:30:00",
-        "finalExamDetail": "Sep 12, 2026 8:30 AM - 10:30 AM",
-        "midExamDetail": "Jul 25, 2026 8:30 AM - 10:30 AM",
-        "classStartDate": "2026-06-09",
-        "classEndDate": "2026-09-08",
-        "classSchedules": [
-          {
-            "startTime": "08:00:00",
-            "endTime": "09:20:00",
-            "day": "SATURDAY"
-          },
-          {
-            "startTime": "08:00:00",
-            "endTime": "09:20:00",
-            "day": "THURSDAY"
-          }
-        ]
-      },
-      "courseName": "MATHEMATICS IV: LINEAR ALGEBRA & FOURIER ANALYSIS",
-      "prerequisiteCourses": "(MAT120)",
-      "labSchedules": null,
-      "labSectionId": null,
-      "labCourseCode": null,
-      "labFaculties": null,
-      "labName": null,
-      "labRoomName": null,
-      "preRegLabSchedule": null,
-      "preRegSchedule": "SATURDAY(8:00 AM-9:20 AM-12A-07C)\nTHURSDAY(8:00 AM-9:20 AM-12A-07C)"
-    },
-    {
       "sectionId": 187380,
       "courseId": 849,
       "sectionName": "03",
@@ -4706,118 +4392,6 @@
       "preRegSchedule": "SUNDAY(11:00 AM-12:20 PM-07H-27C)\nTUESDAY(11:00 AM-12:20 PM-07H-27C)"
     },
     {
-      "sectionId": 186905,
-      "courseId": 2053,
-      "sectionName": "05",
-      "courseCredit": 3,
-      "courseCode": "CSE370",
-      "sectionType": "OTHER",
-      "capacity": 38,
-      "consumedSeat": 38,
-      "semesterSessionId": 20262,
-      "parentSectionId": null,
-      "faculties": "FEK",
-      "roomName": "09A-05C",
-      "roomNumber": "09A-05C",
-      "courseType": "THEORY",
-      "academicDegree": "UNDERGRADUATE",
-      "sectionSchedule": {
-        "classPairId": null,
-        "classSlotId": null,
-        "finalExamDate": "2026-09-16",
-        "finalExamStartTime": "16:30:00",
-        "finalExamEndTime": "18:30:00",
-        "midExamDate": "2026-07-29",
-        "midExamStartTime": "16:30:00",
-        "midExamEndTime": "18:30:00",
-        "finalExamDetail": "Sep 16, 2026 4:30 PM - 6:30 PM",
-        "midExamDetail": "Jul 29, 2026 4:30 PM - 6:30 PM",
-        "classStartDate": "2026-06-09",
-        "classEndDate": "2026-09-08",
-        "classSchedules": [
-          {
-            "startTime": "14:00:00",
-            "endTime": "15:20:00",
-            "day": "SUNDAY"
-          },
-          {
-            "startTime": "14:00:00",
-            "endTime": "15:20:00",
-            "day": "TUESDAY"
-          }
-        ]
-      },
-      "courseName": "DATABASE SYSTEMS",
-      "prerequisiteCourses": "(CSE221)",
-      "labSchedules": [
-        {
-          "startTime": "14:00:00",
-          "endTime": "16:50:00",
-          "day": "THURSDAY"
-        }
-      ],
-      "labSectionId": 186906,
-      "labCourseCode": "CSE370L",
-      "labFaculties": "TBA",
-      "labName": "DATABASE SYSTEMS LAB",
-      "labRoomName": "12F-30L",
-      "preRegLabSchedule": "THURSDAY(2:00 PM-4:50 PM-12F-30L)",
-      "preRegSchedule": "SUNDAY(2:00 PM-3:20 PM-09A-05C)\nTUESDAY(2:00 PM-3:20 PM-09A-05C)"
-    },
-    {
-      "sectionId": 186725,
-      "courseId": 1326,
-      "sectionName": "13",
-      "courseCredit": 3,
-      "courseCode": "CSE320",
-      "sectionType": "OTHER",
-      "capacity": 38,
-      "consumedSeat": 38,
-      "semesterSessionId": 20262,
-      "parentSectionId": null,
-      "faculties": "SHAH",
-      "roomName": "10B-13C",
-      "roomNumber": "10B-13C",
-      "courseType": "THEORY",
-      "academicDegree": "UNDERGRADUATE",
-      "sectionSchedule": {
-        "classPairId": null,
-        "classSlotId": null,
-        "finalExamDate": "2026-09-12",
-        "finalExamStartTime": "14:00:00",
-        "finalExamEndTime": "16:00:00",
-        "midExamDate": "2026-07-25",
-        "midExamStartTime": "14:00:00",
-        "midExamEndTime": "16:00:00",
-        "finalExamDetail": "Sep 12, 2026 2:00 PM - 4:00 PM",
-        "midExamDetail": "Jul 25, 2026 2:00 PM - 4:00 PM",
-        "classStartDate": "2026-06-09",
-        "classEndDate": "2026-09-08",
-        "classSchedules": [
-          {
-            "startTime": "15:30:00",
-            "endTime": "16:50:00",
-            "day": "MONDAY"
-          },
-          {
-            "startTime": "15:30:00",
-            "endTime": "16:50:00",
-            "day": "WEDNESDAY"
-          }
-        ]
-      },
-      "courseName": "DATA COMMUNICATIONS",
-      "prerequisiteCourses": null,
-      "labSchedules": null,
-      "labSectionId": null,
-      "labCourseCode": null,
-      "labFaculties": null,
-      "labName": null,
-      "labRoomName": null,
-      "preRegLabSchedule": null,
-      "preRegSchedule": "MONDAY(3:30 PM-4:50 PM-10B-13C)\nWEDNESDAY(3:30 PM-4:50 PM-10B-13C)"
-    },
-    {
       "sectionId": 187228,
       "courseId": 594,
       "sectionName": "14",
@@ -4922,59 +4496,6 @@
       "labRoomName": null,
       "preRegLabSchedule": null,
       "preRegSchedule": "SATURDAY(9:30 AM-10:50 AM-07D-21C)\nTHURSDAY(9:30 AM-10:50 AM-07D-21C)"
-    },
-    {
-      "sectionId": 187729,
-      "courseId": 1439,
-      "sectionName": "03",
-      "courseCredit": 3,
-      "courseCode": "MAT110",
-      "sectionType": "OTHER",
-      "capacity": 40,
-      "consumedSeat": 8,
-      "semesterSessionId": 20262,
-      "parentSectionId": null,
-      "faculties": "TBA",
-      "roomName": "12A-11C",
-      "roomNumber": "12A-11C",
-      "courseType": "THEORY",
-      "academicDegree": "UNDERGRADUATE",
-      "sectionSchedule": {
-        "classPairId": null,
-        "classSlotId": null,
-        "finalExamDate": "2026-09-13",
-        "finalExamStartTime": "14:00:00",
-        "finalExamEndTime": "16:00:00",
-        "midExamDate": "2026-07-26",
-        "midExamStartTime": "14:00:00",
-        "midExamEndTime": "16:00:00",
-        "finalExamDetail": "Sep 13, 2026 2:00 PM - 4:00 PM",
-        "midExamDetail": "Jul 26, 2026 2:00 PM - 4:00 PM",
-        "classStartDate": "2026-06-09",
-        "classEndDate": "2026-09-08",
-        "classSchedules": [
-          {
-            "startTime": "11:00:00",
-            "endTime": "12:20:00",
-            "day": "SATURDAY"
-          },
-          {
-            "startTime": "11:00:00",
-            "endTime": "12:20:00",
-            "day": "THURSDAY"
-          }
-        ]
-      },
-      "courseName": "MATHEMATICS I: DIFFERENTIAL CALCULUS & COORDINATE GEOMETRY",
-      "prerequisiteCourses": null,
-      "labSchedules": null,
-      "labSectionId": null,
-      "labCourseCode": null,
-      "labFaculties": null,
-      "labName": null,
-      "labRoomName": null,
-      "preRegLabSchedule": null,
-      "preRegSchedule": "SATURDAY(11:00 AM-12:20 PM-12A-11C)\nTHURSDAY(11:00 AM-12:20 PM-12A-11C)"
     },
     {
       "sectionId": 187470,
@@ -5311,59 +4832,6 @@
       "labRoomName": "09F-26L",
       "preRegLabSchedule": "SUNDAY(11:00 AM-1:50 PM-09F-26L)",
       "preRegSchedule": "SATURDAY(9:30 AM-10:50 AM-10B-13C)\nTHURSDAY(9:30 AM-10:50 AM-10B-13C)"
-    },
-    {
-      "sectionId": 187828,
-      "courseId": 1361,
-      "sectionName": "18",
-      "courseCredit": 3,
-      "courseCode": "MAT215",
-      "sectionType": "OTHER",
-      "capacity": 40,
-      "consumedSeat": 40,
-      "semesterSessionId": 20262,
-      "parentSectionId": null,
-      "faculties": "TBA",
-      "roomName": "12A-08C",
-      "roomNumber": "12A-08C",
-      "courseType": "THEORY",
-      "academicDegree": "UNDERGRADUATE",
-      "sectionSchedule": {
-        "classPairId": null,
-        "classSlotId": null,
-        "finalExamDate": "2026-09-14",
-        "finalExamStartTime": "08:30:00",
-        "finalExamEndTime": "10:30:00",
-        "midExamDate": "2026-07-27",
-        "midExamStartTime": "08:30:00",
-        "midExamEndTime": "10:30:00",
-        "finalExamDetail": "Sep 14, 2026 8:30 AM - 10:30 AM",
-        "midExamDetail": "Jul 27, 2026 8:30 AM - 10:30 AM",
-        "classStartDate": "2026-06-09",
-        "classEndDate": "2026-09-08",
-        "classSchedules": [
-          {
-            "startTime": "15:30:00",
-            "endTime": "16:50:00",
-            "day": "MONDAY"
-          },
-          {
-            "startTime": "15:30:00",
-            "endTime": "16:50:00",
-            "day": "WEDNESDAY"
-          }
-        ]
-      },
-      "courseName": "MATHEMATICS III: COMPLEX VARIABLES & LAPLACE TRANSFORMATIONS",
-      "prerequisiteCourses": "(MAT216)",
-      "labSchedules": null,
-      "labSectionId": null,
-      "labCourseCode": null,
-      "labFaculties": null,
-      "labName": null,
-      "labRoomName": null,
-      "preRegLabSchedule": null,
-      "preRegSchedule": "MONDAY(3:30 PM-4:50 PM-12A-08C)\nWEDNESDAY(3:30 PM-4:50 PM-12A-08C)"
     },
     {
       "sectionId": 186059,
@@ -5795,6 +5263,1903 @@
       "labRoomName": "09B-09L",
       "preRegLabSchedule": "MONDAY(8:00 AM-10:50 AM-09B-09L)",
       "preRegSchedule": "SUNDAY(3:30 PM-4:50 PM-09A-01C)\nTUESDAY(3:30 PM-4:50 PM-09A-01C)"
+    },
+    {
+      "sectionId": 186168,
+      "courseId": 2027,
+      "sectionName": "01",
+      "courseCredit": 3,
+      "courseCode": "FIN301",
+      "sectionType": "OTHER",
+      "capacity": 36,
+      "consumedSeat": 36,
+      "semesterSessionId": 20262,
+      "parentSectionId": null,
+      "faculties": "AAC",
+      "roomName": "07A-02C",
+      "roomNumber": "07A-02C",
+      "courseType": "THEORY",
+      "academicDegree": "UNDERGRADUATE",
+      "sectionSchedule": {
+        "classPairId": null,
+        "classSlotId": null,
+        "finalExamDate": "2026-09-17",
+        "finalExamStartTime": "11:00:00",
+        "finalExamEndTime": "13:00:00",
+        "midExamDate": "2026-07-30",
+        "midExamStartTime": "11:00:00",
+        "midExamEndTime": "13:00:00",
+        "finalExamDetail": "Sep 17, 2026 11:00 AM - 1:00 PM",
+        "midExamDetail": "Jul 30, 2026 11:00 AM - 1:00 PM",
+        "classStartDate": "2026-06-09",
+        "classEndDate": "2026-09-08",
+        "classSchedules": [
+          {
+            "startTime": "08:00:00",
+            "endTime": "09:20:00",
+            "day": "MONDAY"
+          },
+          {
+            "startTime": "08:00:00",
+            "endTime": "09:20:00",
+            "day": "WEDNESDAY"
+          }
+        ]
+      },
+      "courseName": "PRINCIPLES OF FINANCE",
+      "prerequisiteCourses": "(FIN201)",
+      "labSchedules": null,
+      "labSectionId": null,
+      "labCourseCode": null,
+      "labFaculties": null,
+      "labName": null,
+      "labRoomName": null,
+      "preRegLabSchedule": null,
+      "preRegSchedule": "MONDAY(8:00 AM-9:20 AM-07A-02C)\nWEDNESDAY(8:00 AM-9:20 AM-07A-02C)"
+    },
+    {
+      "sectionId": 187743,
+      "courseId": 1407,
+      "sectionName": "05",
+      "courseCredit": 3,
+      "courseCode": "CHE110",
+      "sectionType": "OTHER",
+      "capacity": 40,
+      "consumedSeat": 40,
+      "semesterSessionId": 20262,
+      "parentSectionId": null,
+      "faculties": "TBA",
+      "roomName": "10H-39C",
+      "roomNumber": "10H-39C",
+      "courseType": "THEORY",
+      "academicDegree": "UNDERGRADUATE",
+      "sectionSchedule": {
+        "classPairId": 3,
+        "classSlotId": 13091,
+        "finalExamDate": "2026-09-17",
+        "finalExamStartTime": "08:30:00",
+        "finalExamEndTime": "10:30:00",
+        "midExamDate": "2026-07-30",
+        "midExamStartTime": "08:30:00",
+        "midExamEndTime": "10:30:00",
+        "finalExamDetail": "Thursday, September 17, 2026 8:30 AM - 10:30 AM",
+        "midExamDetail": "Thursday, July 30, 2026 8:30 AM - 10:30 AM",
+        "classStartDate": "2026-06-09",
+        "classEndDate": "2026-09-08",
+        "classSchedules": [
+          {
+            "startTime": "09:30:00",
+            "endTime": "10:50:00",
+            "day": "MONDAY"
+          },
+          {
+            "startTime": "09:30:00",
+            "endTime": "10:50:00",
+            "day": "WEDNESDAY"
+          }
+        ]
+      },
+      "courseName": "PRINCIPLES OF CHEMISTRY",
+      "prerequisiteCourses": null,
+      "labSchedules": null,
+      "labSectionId": null,
+      "labCourseCode": null,
+      "labFaculties": null,
+      "labName": null,
+      "labRoomName": null,
+      "preRegLabSchedule": null,
+      "preRegSchedule": "MONDAY(9:30 AM-10:50 AM-10H-39C)\nWEDNESDAY(9:30 AM-10:50 AM-10H-39C)"
+    },
+    {
+      "sectionId": 187519,
+      "courseId": 86,
+      "sectionName": "04",
+      "courseCredit": 3,
+      "courseCode": "PHY101",
+      "sectionType": "OTHER",
+      "capacity": 40,
+      "consumedSeat": 40,
+      "semesterSessionId": 20262,
+      "parentSectionId": null,
+      "faculties": "TBA",
+      "roomName": "10H-36C",
+      "roomNumber": "10H-36C",
+      "courseType": "THEORY",
+      "academicDegree": "UNDERGRADUATE",
+      "sectionSchedule": {
+        "classPairId": 3,
+        "classSlotId": 13093,
+        "finalExamDate": "2026-09-17",
+        "finalExamStartTime": "11:00:00",
+        "finalExamEndTime": "13:00:00",
+        "midExamDate": "2026-07-30",
+        "midExamStartTime": "11:00:00",
+        "midExamEndTime": "13:00:00",
+        "finalExamDetail": "Thursday, September 17, 2026 11:00 AM - 1:00 PM",
+        "midExamDetail": "Thursday, July 30, 2026 11:00 AM - 1:00 PM",
+        "classStartDate": "2026-06-09",
+        "classEndDate": "2026-09-08",
+        "classSchedules": [
+          {
+            "startTime": "12:30:00",
+            "endTime": "13:50:00",
+            "day": "MONDAY"
+          },
+          {
+            "startTime": "12:30:00",
+            "endTime": "13:50:00",
+            "day": "WEDNESDAY"
+          }
+        ]
+      },
+      "courseName": "INTRODUCTION TO PHYSICS",
+      "prerequisiteCourses": null,
+      "labSchedules": null,
+      "labSectionId": null,
+      "labCourseCode": null,
+      "labFaculties": null,
+      "labName": null,
+      "labRoomName": null,
+      "preRegLabSchedule": null,
+      "preRegSchedule": "MONDAY(12:30 PM-1:50 PM-10H-36C)\nWEDNESDAY(12:30 PM-1:50 PM-10H-36C)"
+    },
+    {
+      "sectionId": 185841,
+      "courseId": 1392,
+      "sectionName": "03",
+      "courseCredit": 3,
+      "courseCode": "BCH202",
+      "sectionType": "OTHER",
+      "capacity": 40,
+      "consumedSeat": 40,
+      "semesterSessionId": 20262,
+      "parentSectionId": null,
+      "faculties": "TBA",
+      "roomName": "10D-23C",
+      "roomNumber": "10D-23C",
+      "courseType": "THEORY",
+      "academicDegree": "UNDERGRADUATE",
+      "sectionSchedule": {
+        "classPairId": 2,
+        "classSlotId": 13091,
+        "finalExamDate": "2026-09-15",
+        "finalExamStartTime": "08:30:00",
+        "finalExamEndTime": "10:30:00",
+        "midExamDate": "2026-07-28",
+        "midExamStartTime": "08:30:00",
+        "midExamEndTime": "10:30:00",
+        "finalExamDetail": "Tuesday, September 15, 2026 8:30 AM - 10:30 AM",
+        "midExamDetail": "Tuesday, July 28, 2026 8:30 AM - 10:30 AM",
+        "classStartDate": "2026-06-09",
+        "classEndDate": "2026-09-08",
+        "classSchedules": [
+          {
+            "startTime": "09:30:00",
+            "endTime": "10:50:00",
+            "day": "SUNDAY"
+          },
+          {
+            "startTime": "09:30:00",
+            "endTime": "10:50:00",
+            "day": "TUESDAY"
+          }
+        ]
+      },
+      "courseName": "ENZYMES AND ENZYME KINETICS",
+      "prerequisiteCourses": "(BCH101)",
+      "labSchedules": null,
+      "labSectionId": null,
+      "labCourseCode": null,
+      "labFaculties": null,
+      "labName": null,
+      "labRoomName": null,
+      "preRegLabSchedule": null,
+      "preRegSchedule": "SUNDAY(9:30 AM-10:50 AM-10D-23C)\nTUESDAY(9:30 AM-10:50 AM-10D-23C)"
+    },
+    {
+      "sectionId": 186012,
+      "courseId": 1528,
+      "sectionName": "11",
+      "courseCredit": 3,
+      "courseCode": "ECO102",
+      "sectionType": "OTHER",
+      "capacity": 40,
+      "consumedSeat": 40,
+      "semesterSessionId": 20262,
+      "parentSectionId": null,
+      "faculties": "RFU",
+      "roomName": "08B-08C",
+      "roomNumber": "08B-08C",
+      "courseType": "THEORY",
+      "academicDegree": "UNDERGRADUATE",
+      "sectionSchedule": {
+        "classPairId": null,
+        "classSlotId": null,
+        "finalExamDate": "2026-09-13",
+        "finalExamStartTime": "14:00:00",
+        "finalExamEndTime": "16:00:00",
+        "midExamDate": "2026-07-26",
+        "midExamStartTime": "14:00:00",
+        "midExamEndTime": "15:30:00",
+        "finalExamDetail": "Sep 13, 2026 2:00 PM - 4:00 PM",
+        "midExamDetail": "Jul 26, 2026 2:00 PM - 3:30 PM",
+        "classStartDate": "2026-06-09",
+        "classEndDate": "2026-09-08",
+        "classSchedules": [
+          {
+            "startTime": "14:00:00",
+            "endTime": "15:20:00",
+            "day": "SUNDAY"
+          },
+          {
+            "startTime": "14:00:00",
+            "endTime": "15:20:00",
+            "day": "TUESDAY"
+          }
+        ]
+      },
+      "courseName": "INTRODUCTION TO MACROECONOMICS",
+      "prerequisiteCourses": "(ECO101)",
+      "labSchedules": null,
+      "labSectionId": null,
+      "labCourseCode": null,
+      "labFaculties": null,
+      "labName": null,
+      "labRoomName": null,
+      "preRegLabSchedule": null,
+      "preRegSchedule": "SUNDAY(2:00 PM-3:20 PM-08B-08C)\nTUESDAY(2:00 PM-3:20 PM-08B-08C)"
+    },
+    {
+      "sectionId": 187477,
+      "courseId": 1425,
+      "sectionName": "02",
+      "courseCredit": 3,
+      "courseCode": "MIC155",
+      "sectionType": "LAB",
+      "capacity": 20,
+      "consumedSeat": 20,
+      "semesterSessionId": 20262,
+      "parentSectionId": null,
+      "faculties": "TBA",
+      "roomName": "10F-28L",
+      "roomNumber": "10F-28L",
+      "courseType": "LAB",
+      "academicDegree": "UNDERGRADUATE",
+      "sectionSchedule": {
+        "classPairId": null,
+        "classSlotId": null,
+        "finalExamDate": null,
+        "finalExamStartTime": null,
+        "finalExamEndTime": null,
+        "midExamDate": null,
+        "midExamStartTime": null,
+        "midExamEndTime": null,
+        "finalExamDetail": null,
+        "midExamDetail": null,
+        "classStartDate": "2026-06-09",
+        "classEndDate": "2026-09-08",
+        "classSchedules": [
+          {
+            "startTime": "11:00:00",
+            "endTime": "13:50:00",
+            "day": "THURSDAY"
+          }
+        ]
+      },
+      "courseName": "MICROBIOL LAB I",
+      "prerequisiteCourses": null,
+      "labSchedules": null,
+      "labSectionId": null,
+      "labCourseCode": null,
+      "labFaculties": null,
+      "labName": null,
+      "labRoomName": null,
+      "preRegLabSchedule": null,
+      "preRegSchedule": "THURSDAY(11:00 AM-1:50 PM-10F-28L)"
+    },
+    {
+      "sectionId": 187627,
+      "courseId": 259,
+      "sectionName": "04A",
+      "courseCredit": 3,
+      "courseCode": "CSE350",
+      "sectionType": "OTHER",
+      "capacity": 21,
+      "consumedSeat": 21,
+      "semesterSessionId": 20262,
+      "parentSectionId": null,
+      "faculties": "TBA",
+      "roomName": "09A-07C",
+      "roomNumber": "09A-07C",
+      "courseType": "THEORY",
+      "academicDegree": "UNDERGRADUATE",
+      "sectionSchedule": {
+        "classPairId": null,
+        "classSlotId": null,
+        "finalExamDate": "2026-09-12",
+        "finalExamStartTime": "16:30:00",
+        "finalExamEndTime": "18:30:00",
+        "midExamDate": "2026-07-25",
+        "midExamStartTime": "16:30:00",
+        "midExamEndTime": "18:30:00",
+        "finalExamDetail": "Sep 12, 2026 4:30 PM - 6:30 PM",
+        "midExamDetail": "Jul 25, 2026 4:30 PM - 6:30 PM",
+        "classStartDate": "2026-06-09",
+        "classEndDate": "2026-09-08",
+        "classSchedules": [
+          {
+            "startTime": "08:00:00",
+            "endTime": "09:20:00",
+            "day": "SUNDAY"
+          },
+          {
+            "startTime": "08:00:00",
+            "endTime": "09:20:00",
+            "day": "TUESDAY"
+          }
+        ]
+      },
+      "courseName": "DIGITAL ELECTRONICS AND PULSE TECHNIQUES",
+      "prerequisiteCourses": "(CSE251)",
+      "labSchedules": [
+        {
+          "startTime": "11:00:00",
+          "endTime": "13:50:00",
+          "day": "THURSDAY"
+        }
+      ],
+      "labSectionId": 187628,
+      "labCourseCode": "CSE350L",
+      "labFaculties": "TBA",
+      "labName": "DIGITAL ELECTRONICS AND PULSE TECHNIQUES LAB",
+      "labRoomName": "FT10-01L",
+      "preRegLabSchedule": "THURSDAY(11:00 AM-1:50 PM-FT10-01L)",
+      "preRegSchedule": "SUNDAY(8:00 AM-9:20 AM-09A-07C)\nTUESDAY(8:00 AM-9:20 AM-09A-07C)"
+    },
+    {
+      "sectionId": 185798,
+      "courseId": 1139,
+      "sectionName": "02",
+      "courseCredit": 4,
+      "courseCode": "CSE400",
+      "sectionType": "OTHER",
+      "capacity": 99,
+      "consumedSeat": 89,
+      "semesterSessionId": 20262,
+      "parentSectionId": null,
+      "faculties": "GRA",
+      "roomName": "12B-21L",
+      "roomNumber": "12B-21L",
+      "courseType": "PROJECT",
+      "academicDegree": "UNDERGRADUATE",
+      "sectionSchedule": {
+        "classPairId": null,
+        "classSlotId": null,
+        "finalExamDate": null,
+        "finalExamStartTime": null,
+        "finalExamEndTime": null,
+        "midExamDate": null,
+        "midExamStartTime": null,
+        "midExamEndTime": null,
+        "finalExamDetail": null,
+        "midExamDetail": null,
+        "classStartDate": "2026-06-09",
+        "classEndDate": "2026-09-08",
+        "classSchedules": []
+      },
+      "courseName": "PROJECT & THESIS",
+      "prerequisiteCourses": null,
+      "labSchedules": null,
+      "labSectionId": null,
+      "labCourseCode": null,
+      "labFaculties": null,
+      "labName": null,
+      "labRoomName": null,
+      "preRegLabSchedule": null,
+      "preRegSchedule": ""
+    },
+    {
+      "sectionId": 187734,
+      "courseId": 1407,
+      "sectionName": "03",
+      "courseCredit": 3,
+      "courseCode": "CHE110",
+      "sectionType": "OTHER",
+      "capacity": 40,
+      "consumedSeat": 40,
+      "semesterSessionId": 20262,
+      "parentSectionId": null,
+      "faculties": "TBA",
+      "roomName": "10H-39C",
+      "roomNumber": "10H-39C",
+      "courseType": "THEORY",
+      "academicDegree": "UNDERGRADUATE",
+      "sectionSchedule": {
+        "classPairId": 2,
+        "classSlotId": 13092,
+        "finalExamDate": "2026-09-14",
+        "finalExamStartTime": "11:00:00",
+        "finalExamEndTime": "13:00:00",
+        "midExamDate": "2026-07-27",
+        "midExamStartTime": "11:00:00",
+        "midExamEndTime": "13:00:00",
+        "finalExamDetail": "Monday, September 14, 2026 11:00 AM - 1:00 PM",
+        "midExamDetail": "Monday, July 27, 2026 11:00 AM - 1:00 PM",
+        "classStartDate": "2026-06-09",
+        "classEndDate": "2026-09-08",
+        "classSchedules": [
+          {
+            "startTime": "11:00:00",
+            "endTime": "12:20:00",
+            "day": "SUNDAY"
+          },
+          {
+            "startTime": "11:00:00",
+            "endTime": "12:20:00",
+            "day": "TUESDAY"
+          }
+        ]
+      },
+      "courseName": "PRINCIPLES OF CHEMISTRY",
+      "prerequisiteCourses": null,
+      "labSchedules": null,
+      "labSectionId": null,
+      "labCourseCode": null,
+      "labFaculties": null,
+      "labName": null,
+      "labRoomName": null,
+      "preRegLabSchedule": null,
+      "preRegSchedule": "SUNDAY(11:00 AM-12:20 PM-10H-39C)\nTUESDAY(11:00 AM-12:20 PM-10H-39C)"
+    },
+    {
+      "sectionId": 187679,
+      "courseId": 644,
+      "sectionName": "10",
+      "courseCredit": 3,
+      "courseCode": "PHY112",
+      "sectionType": "OTHER",
+      "capacity": 40,
+      "consumedSeat": 40,
+      "semesterSessionId": 20262,
+      "parentSectionId": null,
+      "faculties": "TBA",
+      "roomName": "10H-37C",
+      "roomNumber": "10H-37C",
+      "courseType": "THEORY",
+      "academicDegree": "UNDERGRADUATE",
+      "sectionSchedule": {
+        "classPairId": null,
+        "classSlotId": null,
+        "finalExamDate": "2026-09-17",
+        "finalExamStartTime": "08:30:00",
+        "finalExamEndTime": "10:30:00",
+        "midExamDate": "2026-07-30",
+        "midExamStartTime": "08:30:00",
+        "midExamEndTime": "10:30:00",
+        "finalExamDetail": "Sep 17, 2026 8:30 AM - 10:30 AM",
+        "midExamDetail": "Jul 30, 2026 8:30 AM - 10:30 AM",
+        "classStartDate": "2026-06-09",
+        "classEndDate": "2026-09-08",
+        "classSchedules": [
+          {
+            "startTime": "12:30:00",
+            "endTime": "13:50:00",
+            "day": "SUNDAY"
+          },
+          {
+            "startTime": "12:30:00",
+            "endTime": "13:50:00",
+            "day": "TUESDAY"
+          }
+        ]
+      },
+      "courseName": "PRINCIPLES OF PHYSICS II",
+      "prerequisiteCourses": "(PHY111)",
+      "labSchedules": [
+        {
+          "startTime": "14:00:00",
+          "endTime": "16:50:00",
+          "day": "MONDAY"
+        }
+      ],
+      "labSectionId": 187680,
+      "labCourseCode": "PHY112L",
+      "labFaculties": "TBA",
+      "labName": "PRINCIPLES OF PHYSICS II LAB",
+      "labRoomName": "10A-02L",
+      "preRegLabSchedule": "MONDAY(2:00 PM-4:50 PM-10A-02L)",
+      "preRegSchedule": "SUNDAY(12:30 PM-1:50 PM-10H-37C)\nTUESDAY(12:30 PM-1:50 PM-10H-37C)"
+    },
+    {
+      "sectionId": 186324,
+      "courseId": 1720,
+      "sectionName": "01",
+      "courseCredit": 3,
+      "courseCode": "BIO101",
+      "sectionType": "OTHER",
+      "capacity": 40,
+      "consumedSeat": 40,
+      "semesterSessionId": 20262,
+      "parentSectionId": null,
+      "faculties": "TBA",
+      "roomName": "07H-29C",
+      "roomNumber": "07H-29C",
+      "courseType": "THEORY",
+      "academicDegree": "UNDERGRADUATE",
+      "sectionSchedule": {
+        "classPairId": 1,
+        "classSlotId": 13091,
+        "finalExamDate": "2026-09-19",
+        "finalExamStartTime": "08:30:00",
+        "finalExamEndTime": "10:30:00",
+        "midExamDate": "2026-08-02",
+        "midExamStartTime": "08:30:00",
+        "midExamEndTime": "10:30:00",
+        "finalExamDetail": "Saturday, September 19, 2026 8:30 AM - 10:30 AM",
+        "midExamDetail": "Sunday, August 2, 2026 8:30 AM - 10:30 AM",
+        "classStartDate": "2026-06-09",
+        "classEndDate": "2026-09-08",
+        "classSchedules": [
+          {
+            "startTime": "09:30:00",
+            "endTime": "10:50:00",
+            "day": "SATURDAY"
+          },
+          {
+            "startTime": "09:30:00",
+            "endTime": "10:50:00",
+            "day": "THURSDAY"
+          }
+        ]
+      },
+      "courseName": "INTRODUCTION TO BIOLOGY",
+      "prerequisiteCourses": null,
+      "labSchedules": null,
+      "labSectionId": null,
+      "labCourseCode": null,
+      "labFaculties": null,
+      "labName": null,
+      "labRoomName": null,
+      "preRegLabSchedule": null,
+      "preRegSchedule": "SATURDAY(9:30 AM-10:50 AM-07H-29C)\nTHURSDAY(9:30 AM-10:50 AM-07H-29C)"
+    },
+    {
+      "sectionId": 185748,
+      "courseId": 1509,
+      "sectionName": "06",
+      "courseCredit": 3,
+      "courseCode": "ENG102",
+      "sectionType": "OTHER",
+      "capacity": 20,
+      "consumedSeat": 14,
+      "semesterSessionId": 20262,
+      "parentSectionId": null,
+      "faculties": "TBA",
+      "roomName": "07B-16C",
+      "roomNumber": "07B-16C",
+      "courseType": "THEORY",
+      "academicDegree": "UNDERGRADUATE",
+      "sectionSchedule": {
+        "classPairId": null,
+        "classSlotId": null,
+        "finalExamDate": "2026-09-12",
+        "finalExamStartTime": "11:00:00",
+        "finalExamEndTime": "13:00:00",
+        "midExamDate": "2026-07-25",
+        "midExamStartTime": "11:00:00",
+        "midExamEndTime": "12:30:00",
+        "finalExamDetail": "Sep 12, 2026 11:00 AM - 1:00 PM",
+        "midExamDetail": "Jul 25, 2026 11:00 AM - 12:30 PM",
+        "classStartDate": "2026-06-09",
+        "classEndDate": "2026-09-08",
+        "classSchedules": [
+          {
+            "startTime": "12:30:00",
+            "endTime": "13:50:00",
+            "day": "MONDAY"
+          },
+          {
+            "startTime": "12:30:00",
+            "endTime": "13:50:00",
+            "day": "WEDNESDAY"
+          }
+        ]
+      },
+      "courseName": "ENGLISH COMPOSITION I",
+      "prerequisiteCourses": null,
+      "labSchedules": null,
+      "labSectionId": null,
+      "labCourseCode": null,
+      "labFaculties": null,
+      "labName": null,
+      "labRoomName": null,
+      "preRegLabSchedule": null,
+      "preRegSchedule": "MONDAY(12:30 PM-1:50 PM-07B-16C)\nWEDNESDAY(12:30 PM-1:50 PM-07B-16C)"
+    },
+    {
+      "sectionId": 187838,
+      "courseId": 1362,
+      "sectionName": "08",
+      "courseCredit": 3,
+      "courseCode": "MAT216",
+      "sectionType": "OTHER",
+      "capacity": 40,
+      "consumedSeat": 40,
+      "semesterSessionId": 20262,
+      "parentSectionId": null,
+      "faculties": "TBA",
+      "roomName": "12A-07C",
+      "roomNumber": "12A-07C",
+      "courseType": "THEORY",
+      "academicDegree": "UNDERGRADUATE",
+      "sectionSchedule": {
+        "classPairId": null,
+        "classSlotId": null,
+        "finalExamDate": "2026-09-12",
+        "finalExamStartTime": "08:30:00",
+        "finalExamEndTime": "10:30:00",
+        "midExamDate": "2026-07-25",
+        "midExamStartTime": "08:30:00",
+        "midExamEndTime": "10:30:00",
+        "finalExamDetail": "Sep 12, 2026 8:30 AM - 10:30 AM",
+        "midExamDetail": "Jul 25, 2026 8:30 AM - 10:30 AM",
+        "classStartDate": "2026-06-09",
+        "classEndDate": "2026-09-08",
+        "classSchedules": [
+          {
+            "startTime": "09:30:00",
+            "endTime": "10:50:00",
+            "day": "SUNDAY"
+          },
+          {
+            "startTime": "09:30:00",
+            "endTime": "10:50:00",
+            "day": "TUESDAY"
+          }
+        ]
+      },
+      "courseName": "MATHEMATICS IV: LINEAR ALGEBRA & FOURIER ANALYSIS",
+      "prerequisiteCourses": "(MAT120)",
+      "labSchedules": null,
+      "labSectionId": null,
+      "labCourseCode": null,
+      "labFaculties": null,
+      "labName": null,
+      "labRoomName": null,
+      "preRegLabSchedule": null,
+      "preRegSchedule": "SUNDAY(9:30 AM-10:50 AM-12A-07C)\nTUESDAY(9:30 AM-10:50 AM-12A-07C)"
+    },
+    {
+      "sectionId": 187218,
+      "courseId": 594,
+      "sectionName": "04",
+      "courseCredit": 3,
+      "courseCode": "CSE470",
+      "sectionType": "OTHER",
+      "capacity": 38,
+      "consumedSeat": 38,
+      "semesterSessionId": 20262,
+      "parentSectionId": null,
+      "faculties": "PLN",
+      "roomName": "07F-22C",
+      "roomNumber": "07F-22C",
+      "courseType": "THEORY",
+      "academicDegree": "UNDERGRADUATE",
+      "sectionSchedule": {
+        "classPairId": null,
+        "classSlotId": null,
+        "finalExamDate": "2026-09-16",
+        "finalExamStartTime": "16:30:00",
+        "finalExamEndTime": "18:30:00",
+        "midExamDate": "2026-07-29",
+        "midExamStartTime": "16:30:00",
+        "midExamEndTime": "18:30:00",
+        "finalExamDetail": "Sep 16, 2026 4:30 PM - 6:30 PM",
+        "midExamDetail": "Jul 29, 2026 4:30 PM - 6:30 PM",
+        "classStartDate": "2026-06-09",
+        "classEndDate": "2026-09-08",
+        "classSchedules": [
+          {
+            "startTime": "12:30:00",
+            "endTime": "13:50:00",
+            "day": "SATURDAY"
+          },
+          {
+            "startTime": "12:30:00",
+            "endTime": "13:50:00",
+            "day": "THURSDAY"
+          }
+        ]
+      },
+      "courseName": "SOFTWARE ENGINEERING",
+      "prerequisiteCourses": "(CSE370)",
+      "labSchedules": null,
+      "labSectionId": null,
+      "labCourseCode": null,
+      "labFaculties": null,
+      "labName": null,
+      "labRoomName": null,
+      "preRegLabSchedule": null,
+      "preRegSchedule": "SATURDAY(12:30 PM-1:50 PM-07F-22C)\nTHURSDAY(12:30 PM-1:50 PM-07F-22C)"
+    },
+    {
+      "sectionId": 188306,
+      "courseId": 1037,
+      "sectionName": "01",
+      "courseCredit": 3,
+      "courseCode": "ANT401",
+      "sectionType": "OTHER",
+      "capacity": 40,
+      "consumedSeat": 0,
+      "semesterSessionId": 20262,
+      "parentSectionId": null,
+      "faculties": "TBA",
+      "roomName": "UB0000",
+      "roomNumber": "UB0000",
+      "courseType": "THESIS",
+      "academicDegree": "UNDERGRADUATE",
+      "sectionSchedule": {
+        "classPairId": null,
+        "classSlotId": null,
+        "finalExamDate": null,
+        "finalExamStartTime": null,
+        "finalExamEndTime": null,
+        "midExamDate": null,
+        "midExamStartTime": null,
+        "midExamEndTime": null,
+        "finalExamDetail": null,
+        "midExamDetail": null,
+        "classStartDate": "2026-06-09",
+        "classEndDate": "2026-09-08",
+        "classSchedules": []
+      },
+      "courseName": "ANTHROPOLOGICAL THESIS",
+      "prerequisiteCourses": null,
+      "labSchedules": null,
+      "labSectionId": null,
+      "labCourseCode": null,
+      "labFaculties": null,
+      "labName": null,
+      "labRoomName": null,
+      "preRegLabSchedule": null,
+      "preRegSchedule": ""
+    },
+    {
+      "sectionId": 188307,
+      "courseId": 2124,
+      "sectionName": "01",
+      "courseCredit": 3,
+      "courseCode": "ANT402",
+      "sectionType": "OTHER",
+      "capacity": 40,
+      "consumedSeat": 0,
+      "semesterSessionId": 20262,
+      "parentSectionId": null,
+      "faculties": "TBA",
+      "roomName": "UB0000",
+      "roomNumber": "UB0000",
+      "courseType": "THEORY",
+      "academicDegree": "UNDERGRADUATE",
+      "sectionSchedule": {
+        "classPairId": null,
+        "classSlotId": null,
+        "finalExamDate": "2026-09-11",
+        "finalExamStartTime": "08:00:00",
+        "finalExamEndTime": "10:00:00",
+        "midExamDate": "2026-07-24",
+        "midExamStartTime": "08:00:00",
+        "midExamEndTime": "10:00:00",
+        "finalExamDetail": "Sep 11, 2026 8:00 AM - 10:00 AM",
+        "midExamDetail": "Jul 24, 2026 8:00 AM - 10:00 AM",
+        "classStartDate": "2026-06-09",
+        "classEndDate": "2026-09-08",
+        "classSchedules": [
+          {
+            "startTime": "08:00:00",
+            "endTime": "10:00:00",
+            "day": "FRIDAY"
+          }
+        ]
+      },
+      "courseName": "INTERNSHIP",
+      "prerequisiteCourses": null,
+      "labSchedules": null,
+      "labSectionId": null,
+      "labCourseCode": null,
+      "labFaculties": null,
+      "labName": null,
+      "labRoomName": null,
+      "preRegLabSchedule": null,
+      "preRegSchedule": "FRIDAY(8:00 AM-10:00 AM-UB0000)"
+    },
+    {
+      "sectionId": 185661,
+      "courseId": 1462,
+      "sectionName": "17",
+      "courseCredit": 0,
+      "courseCode": "ENG091",
+      "sectionType": "OTHER",
+      "capacity": 20,
+      "consumedSeat": 0,
+      "semesterSessionId": 20262,
+      "parentSectionId": null,
+      "faculties": "TBA",
+      "roomName": "07B-11C",
+      "roomNumber": "07B-11C",
+      "courseType": "THEORY",
+      "academicDegree": "UNDERGRADUATE",
+      "sectionSchedule": {
+        "classPairId": null,
+        "classSlotId": null,
+        "finalExamDate": "2026-09-12",
+        "finalExamStartTime": "11:00:00",
+        "finalExamEndTime": "13:00:00",
+        "midExamDate": "2026-07-25",
+        "midExamStartTime": "11:00:00",
+        "midExamEndTime": "12:30:00",
+        "finalExamDetail": "Sep 12, 2026 11:00 AM - 1:00 PM",
+        "midExamDetail": "Jul 25, 2026 11:00 AM - 12:30 PM",
+        "classStartDate": "2026-06-09",
+        "classEndDate": "2026-09-08",
+        "classSchedules": [
+          {
+            "startTime": "11:00:00",
+            "endTime": "12:20:00",
+            "day": "SUNDAY"
+          },
+          {
+            "startTime": "11:00:00",
+            "endTime": "12:20:00",
+            "day": "TUESDAY"
+          }
+        ]
+      },
+      "courseName": "FOUNDATION COURSE (IN ENGLISH)",
+      "prerequisiteCourses": null,
+      "labSchedules": null,
+      "labSectionId": null,
+      "labCourseCode": null,
+      "labFaculties": null,
+      "labName": null,
+      "labRoomName": null,
+      "preRegLabSchedule": null,
+      "preRegSchedule": "SUNDAY(11:00 AM-12:20 PM-07B-11C)\nTUESDAY(11:00 AM-12:20 PM-07B-11C)"
+    },
+    {
+      "sectionId": 186164,
+      "courseId": 1639,
+      "sectionName": "07",
+      "courseCredit": 3,
+      "courseCode": "FIN201",
+      "sectionType": "OTHER",
+      "capacity": 35,
+      "consumedSeat": 35,
+      "semesterSessionId": 20262,
+      "parentSectionId": null,
+      "faculties": "AAC",
+      "roomName": "07A-02C",
+      "roomNumber": "07A-02C",
+      "courseType": "THEORY",
+      "academicDegree": "UNDERGRADUATE",
+      "sectionSchedule": {
+        "classPairId": null,
+        "classSlotId": null,
+        "finalExamDate": "2026-09-16",
+        "finalExamStartTime": "11:00:00",
+        "finalExamEndTime": "13:00:00",
+        "midExamDate": "2026-07-29",
+        "midExamStartTime": "11:00:00",
+        "midExamEndTime": "13:00:00",
+        "finalExamDetail": "Sep 16, 2026 11:00 AM - 1:00 PM",
+        "midExamDetail": "Jul 29, 2026 11:00 AM - 1:00 PM",
+        "classStartDate": "2026-06-09",
+        "classEndDate": "2026-09-08",
+        "classSchedules": [
+          {
+            "startTime": "14:00:00",
+            "endTime": "15:20:00",
+            "day": "SUNDAY"
+          },
+          {
+            "startTime": "14:00:00",
+            "endTime": "15:20:00",
+            "day": "TUESDAY"
+          }
+        ]
+      },
+      "courseName": "FINANCIAL ENVIRONMENT AND BANKING",
+      "prerequisiteCourses": "(ACT201 AND ECO101) OR (ACT201 AND ECO105)",
+      "labSchedules": null,
+      "labSectionId": null,
+      "labCourseCode": null,
+      "labFaculties": null,
+      "labName": null,
+      "labRoomName": null,
+      "preRegLabSchedule": null,
+      "preRegSchedule": "SUNDAY(2:00 PM-3:20 PM-07A-02C)\nTUESDAY(2:00 PM-3:20 PM-07A-02C)"
+    },
+    {
+      "sectionId": 188222,
+      "courseId": 1447,
+      "sectionName": "15",
+      "courseCredit": 3,
+      "courseCode": "ECE410",
+      "sectionType": "OTHER",
+      "capacity": 5,
+      "consumedSeat": 0,
+      "semesterSessionId": 20262,
+      "parentSectionId": null,
+      "faculties": "LRK",
+      "roomName": "09A-04C",
+      "roomNumber": "09A-04C",
+      "courseType": "THEORY",
+      "academicDegree": "UNDERGRADUATE",
+      "sectionSchedule": {
+        "classPairId": null,
+        "classSlotId": null,
+        "finalExamDate": "2026-09-18",
+        "finalExamStartTime": "11:00:00",
+        "finalExamEndTime": "13:00:00",
+        "midExamDate": "2026-08-01",
+        "midExamStartTime": "11:00:00",
+        "midExamEndTime": "13:00:00",
+        "finalExamDetail": "Sep 18, 2026 11:00 AM - 1:00 PM",
+        "midExamDetail": "Aug 1, 2026 11:00 AM - 1:00 PM",
+        "classStartDate": "2026-06-09",
+        "classEndDate": "2026-09-08",
+        "classSchedules": [
+          {
+            "startTime": "12:30:00",
+            "endTime": "13:50:00",
+            "day": "MONDAY"
+          },
+          {
+            "startTime": "12:30:00",
+            "endTime": "13:50:00",
+            "day": "WEDNESDAY"
+          }
+        ]
+      },
+      "courseName": "OPTICAL COMMUNICATION",
+      "prerequisiteCourses": null,
+      "labSchedules": null,
+      "labSectionId": null,
+      "labCourseCode": null,
+      "labFaculties": null,
+      "labName": null,
+      "labRoomName": null,
+      "preRegLabSchedule": null,
+      "preRegSchedule": "MONDAY(12:30 PM-1:50 PM-09A-04C)\nWEDNESDAY(12:30 PM-1:50 PM-09A-04C)"
+    },
+    {
+      "sectionId": 187255,
+      "courseId": 620,
+      "sectionName": "12",
+      "courseCredit": 3,
+      "courseCode": "CSE471",
+      "sectionType": "OTHER",
+      "capacity": 38,
+      "consumedSeat": 8,
+      "semesterSessionId": 20262,
+      "parentSectionId": null,
+      "faculties": "WHMJ",
+      "roomName": "09A-04C",
+      "roomNumber": "09A-04C",
+      "courseType": "THEORY",
+      "academicDegree": "UNDERGRADUATE",
+      "sectionSchedule": {
+        "classPairId": null,
+        "classSlotId": null,
+        "finalExamDate": "2026-09-16",
+        "finalExamStartTime": "14:00:00",
+        "finalExamEndTime": "16:00:00",
+        "midExamDate": "2026-07-29",
+        "midExamStartTime": "14:00:00",
+        "midExamEndTime": "16:00:00",
+        "finalExamDetail": "Sep 16, 2026 2:00 PM - 4:00 PM",
+        "midExamDetail": "Jul 29, 2026 2:00 PM - 4:00 PM",
+        "classStartDate": "2026-06-09",
+        "classEndDate": "2026-09-08",
+        "classSchedules": [
+          {
+            "startTime": "11:00:00",
+            "endTime": "12:20:00",
+            "day": "SATURDAY"
+          },
+          {
+            "startTime": "11:00:00",
+            "endTime": "12:20:00",
+            "day": "THURSDAY"
+          }
+        ]
+      },
+      "courseName": "SYSTEM ANALYSIS AND DESIGN",
+      "prerequisiteCourses": "(CSE370)",
+      "labSchedules": [
+        {
+          "startTime": "08:00:00",
+          "endTime": "10:50:00",
+          "day": "TUESDAY"
+        }
+      ],
+      "labSectionId": 187256,
+      "labCourseCode": "CSE471L",
+      "labFaculties": "TBA",
+      "labName": "SYSTEM ANALYSIS AND DESIGN LAB",
+      "labRoomName": "09F-25L",
+      "preRegLabSchedule": "TUESDAY(8:00 AM-10:50 AM-09F-25L)",
+      "preRegSchedule": "SATURDAY(11:00 AM-12:20 PM-09A-04C)\nTHURSDAY(11:00 AM-12:20 PM-09A-04C)"
+    },
+    {
+      "sectionId": 187986,
+      "courseId": 1768,
+      "sectionName": "02",
+      "courseCredit": 3,
+      "courseCode": "ECE308",
+      "sectionType": "OTHER",
+      "capacity": 1,
+      "consumedSeat": 0,
+      "semesterSessionId": 20262,
+      "parentSectionId": null,
+      "faculties": "TBA",
+      "roomName": "10B-12C",
+      "roomNumber": "10B-12C",
+      "courseType": "THEORY",
+      "academicDegree": "UNDERGRADUATE",
+      "sectionSchedule": {
+        "classPairId": 1,
+        "classSlotId": 13091,
+        "finalExamDate": "2026-09-19",
+        "finalExamStartTime": "08:30:00",
+        "finalExamEndTime": "10:30:00",
+        "midExamDate": "2026-08-02",
+        "midExamStartTime": "08:30:00",
+        "midExamEndTime": "10:30:00",
+        "finalExamDetail": "Saturday, September 19, 2026 8:30 AM - 10:30 AM",
+        "midExamDetail": "Sunday, August 2, 2026 8:30 AM - 10:30 AM",
+        "classStartDate": "2026-06-09",
+        "classEndDate": "2026-09-08",
+        "classSchedules": [
+          {
+            "startTime": "09:30:00",
+            "endTime": "10:50:00",
+            "day": "SATURDAY"
+          },
+          {
+            "startTime": "09:30:00",
+            "endTime": "10:50:00",
+            "day": "THURSDAY"
+          }
+        ]
+      },
+      "courseName": "ELECTRONIC CIRCUITS II",
+      "prerequisiteCourses": "(ECE205 AND ECE206)",
+      "labSchedules": null,
+      "labSectionId": null,
+      "labCourseCode": null,
+      "labFaculties": null,
+      "labName": null,
+      "labRoomName": null,
+      "preRegLabSchedule": null,
+      "preRegSchedule": "SATURDAY(9:30 AM-10:50 AM-10B-12C)\nTHURSDAY(9:30 AM-10:50 AM-10B-12C)"
+    },
+    {
+      "sectionId": 186694,
+      "courseId": 2127,
+      "sectionName": "16",
+      "courseCredit": 3,
+      "courseCode": "CSE221",
+      "sectionType": "OTHER",
+      "capacity": 38,
+      "consumedSeat": 38,
+      "semesterSessionId": 20262,
+      "parentSectionId": null,
+      "faculties": "FBAW",
+      "roomName": "10A-10C",
+      "roomNumber": "10A-10C",
+      "courseType": "THEORY",
+      "academicDegree": "UNDERGRADUATE",
+      "sectionSchedule": {
+        "classPairId": null,
+        "classSlotId": null,
+        "finalExamDate": "2026-09-13",
+        "finalExamStartTime": "08:30:00",
+        "finalExamEndTime": "10:30:00",
+        "midExamDate": "2026-07-26",
+        "midExamStartTime": "08:30:00",
+        "midExamEndTime": "10:30:00",
+        "finalExamDetail": "Sep 13, 2026 8:30 AM - 10:30 AM",
+        "midExamDetail": "Jul 26, 2026 8:30 AM - 10:30 AM",
+        "classStartDate": "2026-06-09",
+        "classEndDate": "2026-09-08",
+        "classSchedules": [
+          {
+            "startTime": "09:30:00",
+            "endTime": "10:50:00",
+            "day": "MONDAY"
+          },
+          {
+            "startTime": "09:30:00",
+            "endTime": "10:50:00",
+            "day": "WEDNESDAY"
+          }
+        ]
+      },
+      "courseName": "ALGORITHMS",
+      "prerequisiteCourses": "(CSE220)",
+      "labSchedules": [
+        {
+          "startTime": "08:00:00",
+          "endTime": "10:50:00",
+          "day": "SUNDAY"
+        }
+      ],
+      "labSectionId": 186695,
+      "labCourseCode": "CSE221L",
+      "labFaculties": "TBA",
+      "labName": "ALGORITHMS LAB",
+      "labRoomName": "09E-21L",
+      "preRegLabSchedule": "SUNDAY(8:00 AM-10:50 AM-09E-21L)",
+      "preRegSchedule": "MONDAY(9:30 AM-10:50 AM-10A-10C)\nWEDNESDAY(9:30 AM-10:50 AM-10A-10C)"
+    },
+    {
+      "sectionId": 187385,
+      "courseId": 1424,
+      "sectionName": "02",
+      "courseCredit": 3,
+      "courseCode": "BTE258",
+      "sectionType": "LAB",
+      "capacity": 20,
+      "consumedSeat": 20,
+      "semesterSessionId": 20262,
+      "parentSectionId": null,
+      "faculties": "TBA",
+      "roomName": "11B-14L",
+      "roomNumber": "11B-14L",
+      "courseType": "LAB",
+      "academicDegree": "UNDERGRADUATE",
+      "sectionSchedule": {
+        "classPairId": null,
+        "classSlotId": null,
+        "finalExamDate": null,
+        "finalExamStartTime": null,
+        "finalExamEndTime": null,
+        "midExamDate": null,
+        "midExamStartTime": null,
+        "midExamEndTime": null,
+        "finalExamDetail": null,
+        "midExamDetail": null,
+        "classStartDate": "2026-06-09",
+        "classEndDate": "2026-09-08",
+        "classSchedules": [
+          {
+            "startTime": "14:00:00",
+            "endTime": "16:50:00",
+            "day": "TUESDAY"
+          }
+        ]
+      },
+      "courseName": "Biotech Lab III",
+      "prerequisiteCourses": "(BTE255L)",
+      "labSchedules": null,
+      "labSectionId": null,
+      "labCourseCode": null,
+      "labFaculties": null,
+      "labName": null,
+      "labRoomName": null,
+      "preRegLabSchedule": null,
+      "preRegSchedule": "TUESDAY(2:00 PM-4:50 PM-11B-14L)"
+    },
+    {
+      "sectionId": 187131,
+      "courseId": 611,
+      "sectionName": "05",
+      "courseCredit": 3,
+      "courseCode": "CSE425",
+      "sectionType": "OTHER",
+      "capacity": 38,
+      "consumedSeat": 38,
+      "semesterSessionId": 20262,
+      "parentSectionId": null,
+      "faculties": "DPU",
+      "roomName": "09E-20T",
+      "roomNumber": "09E-20T",
+      "courseType": "THEORY",
+      "academicDegree": "UNDERGRADUATE",
+      "sectionSchedule": {
+        "classPairId": null,
+        "classSlotId": null,
+        "finalExamDate": "2026-09-12",
+        "finalExamStartTime": "11:00:00",
+        "finalExamEndTime": "13:00:00",
+        "midExamDate": "2026-07-25",
+        "midExamStartTime": "11:00:00",
+        "midExamEndTime": "13:00:00",
+        "finalExamDetail": "Sep 12, 2026 11:00 AM - 1:00 PM",
+        "midExamDetail": "Jul 25, 2026 11:00 AM - 1:00 PM",
+        "classStartDate": "2026-06-09",
+        "classEndDate": "2026-09-08",
+        "classSchedules": [
+          {
+            "startTime": "15:30:00",
+            "endTime": "16:50:00",
+            "day": "MONDAY"
+          },
+          {
+            "startTime": "15:30:00",
+            "endTime": "16:50:00",
+            "day": "WEDNESDAY"
+          }
+        ]
+      },
+      "courseName": "NEURAL NETWORKS",
+      "prerequisiteCourses": null,
+      "labSchedules": null,
+      "labSectionId": null,
+      "labCourseCode": null,
+      "labFaculties": null,
+      "labName": null,
+      "labRoomName": null,
+      "preRegLabSchedule": null,
+      "preRegSchedule": "MONDAY(3:30 PM-4:50 PM-09E-20T)\nWEDNESDAY(3:30 PM-4:50 PM-09E-20T)"
+    },
+    {
+      "sectionId": 187224,
+      "courseId": 594,
+      "sectionName": "10",
+      "courseCredit": 3,
+      "courseCode": "CSE470",
+      "sectionType": "OTHER",
+      "capacity": 38,
+      "consumedSeat": 38,
+      "semesterSessionId": 20262,
+      "parentSectionId": null,
+      "faculties": "NAFR",
+      "roomName": "09A-06C",
+      "roomNumber": "09A-06C",
+      "courseType": "THEORY",
+      "academicDegree": "UNDERGRADUATE",
+      "sectionSchedule": {
+        "classPairId": null,
+        "classSlotId": null,
+        "finalExamDate": "2026-09-16",
+        "finalExamStartTime": "16:30:00",
+        "finalExamEndTime": "18:30:00",
+        "midExamDate": "2026-07-29",
+        "midExamStartTime": "16:30:00",
+        "midExamEndTime": "18:30:00",
+        "finalExamDetail": "Sep 16, 2026 4:30 PM - 6:30 PM",
+        "midExamDetail": "Jul 29, 2026 4:30 PM - 6:30 PM",
+        "classStartDate": "2026-06-09",
+        "classEndDate": "2026-09-08",
+        "classSchedules": [
+          {
+            "startTime": "08:00:00",
+            "endTime": "09:20:00",
+            "day": "SUNDAY"
+          },
+          {
+            "startTime": "08:00:00",
+            "endTime": "09:20:00",
+            "day": "TUESDAY"
+          }
+        ]
+      },
+      "courseName": "SOFTWARE ENGINEERING",
+      "prerequisiteCourses": "(CSE370)",
+      "labSchedules": null,
+      "labSectionId": null,
+      "labCourseCode": null,
+      "labFaculties": null,
+      "labName": null,
+      "labRoomName": null,
+      "preRegLabSchedule": null,
+      "preRegSchedule": "SUNDAY(8:00 AM-9:20 AM-09A-06C)\nTUESDAY(8:00 AM-9:20 AM-09A-06C)"
+    },
+    {
+      "sectionId": 187468,
+      "courseId": 1540,
+      "sectionName": "13",
+      "courseCredit": 3,
+      "courseCode": "STA201",
+      "sectionType": "OTHER",
+      "capacity": 38,
+      "consumedSeat": 38,
+      "semesterSessionId": 20262,
+      "parentSectionId": null,
+      "faculties": "TBA",
+      "roomName": "09H-37C",
+      "roomNumber": "09H-37C",
+      "courseType": "THEORY",
+      "academicDegree": "UNDERGRADUATE",
+      "sectionSchedule": {
+        "classPairId": 3,
+        "classSlotId": 13095,
+        "finalExamDate": "2026-09-17",
+        "finalExamStartTime": "14:00:00",
+        "finalExamEndTime": "16:00:00",
+        "midExamDate": "2026-07-30",
+        "midExamStartTime": "14:00:00",
+        "midExamEndTime": "16:00:00",
+        "finalExamDetail": "Thursday, September 17, 2026 2:00 PM - 4:00 PM",
+        "midExamDetail": "Thursday, July 30, 2026 2:00 PM - 4:00 PM",
+        "classStartDate": "2026-06-09",
+        "classEndDate": "2026-09-08",
+        "classSchedules": [
+          {
+            "startTime": "15:30:00",
+            "endTime": "16:50:00",
+            "day": "MONDAY"
+          },
+          {
+            "startTime": "15:30:00",
+            "endTime": "16:50:00",
+            "day": "WEDNESDAY"
+          }
+        ]
+      },
+      "courseName": "ELEMENTS OF STATISTICS AND PROBABILITY",
+      "prerequisiteCourses": null,
+      "labSchedules": null,
+      "labSectionId": null,
+      "labCourseCode": null,
+      "labFaculties": null,
+      "labName": null,
+      "labRoomName": null,
+      "preRegLabSchedule": null,
+      "preRegSchedule": "MONDAY(3:30 PM-4:50 PM-09H-37C)\nWEDNESDAY(3:30 PM-4:50 PM-09H-37C)"
+    },
+    {
+      "sectionId": 187513,
+      "courseId": 1243,
+      "sectionName": "01",
+      "courseCredit": 3,
+      "courseCode": "PHY202",
+      "sectionType": "OTHER",
+      "capacity": 40,
+      "consumedSeat": 7,
+      "semesterSessionId": 20262,
+      "parentSectionId": null,
+      "faculties": "TBA",
+      "roomName": "10H-36C",
+      "roomNumber": "10H-36C",
+      "courseType": "THEORY",
+      "academicDegree": "UNDERGRADUATE",
+      "sectionSchedule": {
+        "classPairId": 2,
+        "classSlotId": 13095,
+        "finalExamDate": "2026-09-15",
+        "finalExamStartTime": "14:00:00",
+        "finalExamEndTime": "16:00:00",
+        "midExamDate": "2026-07-28",
+        "midExamStartTime": "14:00:00",
+        "midExamEndTime": "16:00:00",
+        "finalExamDetail": "Tuesday, September 15, 2026 2:00 PM - 4:00 PM",
+        "midExamDetail": "Tuesday, July 28, 2026 2:00 PM - 4:00 PM",
+        "classStartDate": "2026-06-09",
+        "classEndDate": "2026-09-08",
+        "classSchedules": [
+          {
+            "startTime": "15:30:00",
+            "endTime": "16:50:00",
+            "day": "SUNDAY"
+          },
+          {
+            "startTime": "15:30:00",
+            "endTime": "16:50:00",
+            "day": "TUESDAY"
+          }
+        ]
+      },
+      "courseName": "OPTICS",
+      "prerequisiteCourses": "(PHY110 AND PHY115)",
+      "labSchedules": null,
+      "labSectionId": null,
+      "labCourseCode": null,
+      "labFaculties": null,
+      "labName": null,
+      "labRoomName": null,
+      "preRegLabSchedule": null,
+      "preRegSchedule": "SUNDAY(3:30 PM-4:50 PM-10H-36C)\nTUESDAY(3:30 PM-4:50 PM-10H-36C)"
+    },
+    {
+      "sectionId": 187770,
+      "courseId": 865,
+      "sectionName": "07",
+      "courseCredit": 3,
+      "courseCode": "MAT120",
+      "sectionType": "OTHER",
+      "capacity": 40,
+      "consumedSeat": 5,
+      "semesterSessionId": 20262,
+      "parentSectionId": null,
+      "faculties": "TBA",
+      "roomName": "12A-10C",
+      "roomNumber": "12A-10C",
+      "courseType": "THEORY",
+      "academicDegree": "UNDERGRADUATE",
+      "sectionSchedule": {
+        "classPairId": null,
+        "classSlotId": null,
+        "finalExamDate": "2026-09-18",
+        "finalExamStartTime": "14:30:00",
+        "finalExamEndTime": "16:30:00",
+        "midExamDate": "2026-08-01",
+        "midExamStartTime": "14:00:00",
+        "midExamEndTime": "16:00:00",
+        "finalExamDetail": "Sep 18, 2026 2:30 PM - 4:30 PM",
+        "midExamDetail": "Aug 1, 2026 2:00 PM - 4:00 PM",
+        "classStartDate": "2026-06-09",
+        "classEndDate": "2026-09-08",
+        "classSchedules": [
+          {
+            "startTime": "08:00:00",
+            "endTime": "21:20:00",
+            "day": "SUNDAY"
+          },
+          {
+            "startTime": "08:00:00",
+            "endTime": "21:20:00",
+            "day": "TUESDAY"
+          }
+        ]
+      },
+      "courseName": "MATHEMATICS II: INTEGRAL CALCULUS & DIFFERENTIAL EQUATIONS",
+      "prerequisiteCourses": "(MAT110)",
+      "labSchedules": [
+        {
+          "startTime": "08:00:00",
+          "endTime": "09:20:00",
+          "day": "MONDAY"
+        }
+      ],
+      "labSectionId": 187773,
+      "labCourseCode": "MAT120L",
+      "labFaculties": "TBA",
+      "labName": "MATHEMATICS II: INTEGRAL CALCULUS & DIFFERENTIAL EQUATIONS LAB",
+      "labRoomName": "10E-26L",
+      "preRegLabSchedule": "MONDAY(8:00 AM-9:20 AM-10E-26L)",
+      "preRegSchedule": "SUNDAY(8:00 AM-9:20 PM-12A-10C)\nTUESDAY(8:00 AM-9:20 PM-12A-10C)"
+    },
+    {
+      "sectionId": 187489,
+      "courseId": 1189,
+      "sectionName": "03",
+      "courseCredit": 3,
+      "courseCode": "MIC355",
+      "sectionType": "LAB",
+      "capacity": 20,
+      "consumedSeat": 15,
+      "semesterSessionId": 20262,
+      "parentSectionId": null,
+      "faculties": "TBA",
+      "roomName": "11A-02L",
+      "roomNumber": "11A-02L",
+      "courseType": "LAB",
+      "academicDegree": "UNDERGRADUATE",
+      "sectionSchedule": {
+        "classPairId": null,
+        "classSlotId": null,
+        "finalExamDate": null,
+        "finalExamStartTime": null,
+        "finalExamEndTime": null,
+        "midExamDate": null,
+        "midExamStartTime": null,
+        "midExamEndTime": null,
+        "finalExamDetail": null,
+        "midExamDetail": null,
+        "classStartDate": "2026-06-09",
+        "classEndDate": "2026-09-08",
+        "classSchedules": [
+          {
+            "startTime": "11:00:00",
+            "endTime": "13:50:00",
+            "day": "SATURDAY"
+          }
+        ]
+      },
+      "courseName": "MICROBIOL LAB III",
+      "prerequisiteCourses": "(MIC255L)",
+      "labSchedules": null,
+      "labSectionId": null,
+      "labCourseCode": null,
+      "labFaculties": null,
+      "labName": null,
+      "labRoomName": null,
+      "preRegLabSchedule": null,
+      "preRegSchedule": "SATURDAY(11:00 AM-1:50 PM-11A-02L)"
+    },
+    {
+      "sectionId": 187831,
+      "courseId": 1362,
+      "sectionName": "01",
+      "courseCredit": 3,
+      "courseCode": "MAT216",
+      "sectionType": "OTHER",
+      "capacity": 40,
+      "consumedSeat": 40,
+      "semesterSessionId": 20262,
+      "parentSectionId": null,
+      "faculties": "TBA",
+      "roomName": "12A-07C",
+      "roomNumber": "12A-07C",
+      "courseType": "THEORY",
+      "academicDegree": "UNDERGRADUATE",
+      "sectionSchedule": {
+        "classPairId": null,
+        "classSlotId": null,
+        "finalExamDate": "2026-09-12",
+        "finalExamStartTime": "08:30:00",
+        "finalExamEndTime": "10:30:00",
+        "midExamDate": "2026-07-25",
+        "midExamStartTime": "08:30:00",
+        "midExamEndTime": "10:30:00",
+        "finalExamDetail": "Sep 12, 2026 8:30 AM - 10:30 AM",
+        "midExamDetail": "Jul 25, 2026 8:30 AM - 10:30 AM",
+        "classStartDate": "2026-06-09",
+        "classEndDate": "2026-09-08",
+        "classSchedules": [
+          {
+            "startTime": "08:00:00",
+            "endTime": "09:20:00",
+            "day": "SATURDAY"
+          },
+          {
+            "startTime": "08:00:00",
+            "endTime": "09:20:00",
+            "day": "THURSDAY"
+          }
+        ]
+      },
+      "courseName": "MATHEMATICS IV: LINEAR ALGEBRA & FOURIER ANALYSIS",
+      "prerequisiteCourses": "(MAT120)",
+      "labSchedules": null,
+      "labSectionId": null,
+      "labCourseCode": null,
+      "labFaculties": null,
+      "labName": null,
+      "labRoomName": null,
+      "preRegLabSchedule": null,
+      "preRegSchedule": "SATURDAY(8:00 AM-9:20 AM-12A-07C)\nTHURSDAY(8:00 AM-9:20 AM-12A-07C)"
+    },
+    {
+      "sectionId": 186905,
+      "courseId": 2053,
+      "sectionName": "05",
+      "courseCredit": 3,
+      "courseCode": "CSE370",
+      "sectionType": "OTHER",
+      "capacity": 38,
+      "consumedSeat": 38,
+      "semesterSessionId": 20262,
+      "parentSectionId": null,
+      "faculties": "FEK",
+      "roomName": "09A-05C",
+      "roomNumber": "09A-05C",
+      "courseType": "THEORY",
+      "academicDegree": "UNDERGRADUATE",
+      "sectionSchedule": {
+        "classPairId": null,
+        "classSlotId": null,
+        "finalExamDate": "2026-09-16",
+        "finalExamStartTime": "16:30:00",
+        "finalExamEndTime": "18:30:00",
+        "midExamDate": "2026-07-29",
+        "midExamStartTime": "16:30:00",
+        "midExamEndTime": "18:30:00",
+        "finalExamDetail": "Sep 16, 2026 4:30 PM - 6:30 PM",
+        "midExamDetail": "Jul 29, 2026 4:30 PM - 6:30 PM",
+        "classStartDate": "2026-06-09",
+        "classEndDate": "2026-09-08",
+        "classSchedules": [
+          {
+            "startTime": "14:00:00",
+            "endTime": "15:20:00",
+            "day": "SUNDAY"
+          },
+          {
+            "startTime": "14:00:00",
+            "endTime": "15:20:00",
+            "day": "TUESDAY"
+          }
+        ]
+      },
+      "courseName": "DATABASE SYSTEMS",
+      "prerequisiteCourses": "(CSE221)",
+      "labSchedules": [
+        {
+          "startTime": "14:00:00",
+          "endTime": "16:50:00",
+          "day": "THURSDAY"
+        }
+      ],
+      "labSectionId": 186906,
+      "labCourseCode": "CSE370L",
+      "labFaculties": "TBA",
+      "labName": "DATABASE SYSTEMS LAB",
+      "labRoomName": "12F-30L",
+      "preRegLabSchedule": "THURSDAY(2:00 PM-4:50 PM-12F-30L)",
+      "preRegSchedule": "SUNDAY(2:00 PM-3:20 PM-09A-05C)\nTUESDAY(2:00 PM-3:20 PM-09A-05C)"
+    },
+    {
+      "sectionId": 186725,
+      "courseId": 1326,
+      "sectionName": "13",
+      "courseCredit": 3,
+      "courseCode": "CSE320",
+      "sectionType": "OTHER",
+      "capacity": 38,
+      "consumedSeat": 38,
+      "semesterSessionId": 20262,
+      "parentSectionId": null,
+      "faculties": "SHAH",
+      "roomName": "10B-13C",
+      "roomNumber": "10B-13C",
+      "courseType": "THEORY",
+      "academicDegree": "UNDERGRADUATE",
+      "sectionSchedule": {
+        "classPairId": null,
+        "classSlotId": null,
+        "finalExamDate": "2026-09-12",
+        "finalExamStartTime": "14:00:00",
+        "finalExamEndTime": "16:00:00",
+        "midExamDate": "2026-07-25",
+        "midExamStartTime": "14:00:00",
+        "midExamEndTime": "16:00:00",
+        "finalExamDetail": "Sep 12, 2026 2:00 PM - 4:00 PM",
+        "midExamDetail": "Jul 25, 2026 2:00 PM - 4:00 PM",
+        "classStartDate": "2026-06-09",
+        "classEndDate": "2026-09-08",
+        "classSchedules": [
+          {
+            "startTime": "15:30:00",
+            "endTime": "16:50:00",
+            "day": "MONDAY"
+          },
+          {
+            "startTime": "15:30:00",
+            "endTime": "16:50:00",
+            "day": "WEDNESDAY"
+          }
+        ]
+      },
+      "courseName": "DATA COMMUNICATIONS",
+      "prerequisiteCourses": null,
+      "labSchedules": null,
+      "labSectionId": null,
+      "labCourseCode": null,
+      "labFaculties": null,
+      "labName": null,
+      "labRoomName": null,
+      "preRegLabSchedule": null,
+      "preRegSchedule": "MONDAY(3:30 PM-4:50 PM-10B-13C)\nWEDNESDAY(3:30 PM-4:50 PM-10B-13C)"
+    },
+    {
+      "sectionId": 187828,
+      "courseId": 1361,
+      "sectionName": "18",
+      "courseCredit": 3,
+      "courseCode": "MAT215",
+      "sectionType": "OTHER",
+      "capacity": 40,
+      "consumedSeat": 40,
+      "semesterSessionId": 20262,
+      "parentSectionId": null,
+      "faculties": "TBA",
+      "roomName": "12A-08C",
+      "roomNumber": "12A-08C",
+      "courseType": "THEORY",
+      "academicDegree": "UNDERGRADUATE",
+      "sectionSchedule": {
+        "classPairId": null,
+        "classSlotId": null,
+        "finalExamDate": "2026-09-14",
+        "finalExamStartTime": "08:30:00",
+        "finalExamEndTime": "10:30:00",
+        "midExamDate": "2026-07-27",
+        "midExamStartTime": "08:30:00",
+        "midExamEndTime": "10:30:00",
+        "finalExamDetail": "Sep 14, 2026 8:30 AM - 10:30 AM",
+        "midExamDetail": "Jul 27, 2026 8:30 AM - 10:30 AM",
+        "classStartDate": "2026-06-09",
+        "classEndDate": "2026-09-08",
+        "classSchedules": [
+          {
+            "startTime": "15:30:00",
+            "endTime": "16:50:00",
+            "day": "MONDAY"
+          },
+          {
+            "startTime": "15:30:00",
+            "endTime": "16:50:00",
+            "day": "WEDNESDAY"
+          }
+        ]
+      },
+      "courseName": "MATHEMATICS III: COMPLEX VARIABLES & LAPLACE TRANSFORMATIONS",
+      "prerequisiteCourses": "(MAT216)",
+      "labSchedules": null,
+      "labSectionId": null,
+      "labCourseCode": null,
+      "labFaculties": null,
+      "labName": null,
+      "labRoomName": null,
+      "preRegLabSchedule": null,
+      "preRegSchedule": "MONDAY(3:30 PM-4:50 PM-12A-08C)\nWEDNESDAY(3:30 PM-4:50 PM-12A-08C)"
+    },
+    {
+      "sectionId": 186071,
+      "courseId": 1704,
+      "sectionName": "07",
+      "courseCredit": 3,
+      "courseCode": "BUS102",
+      "sectionType": "OTHER",
+      "capacity": 35,
+      "consumedSeat": 39,
+      "semesterSessionId": 20262,
+      "parentSectionId": null,
+      "faculties": "NAC",
+      "roomName": "12B-23C",
+      "roomNumber": "12B-23C",
+      "courseType": "THEORY",
+      "academicDegree": "UNDERGRADUATE",
+      "sectionSchedule": {
+        "classPairId": null,
+        "classSlotId": null,
+        "finalExamDate": "2026-09-13",
+        "finalExamStartTime": "16:30:00",
+        "finalExamEndTime": "18:30:00",
+        "midExamDate": "2026-07-26",
+        "midExamStartTime": "16:30:00",
+        "midExamEndTime": "18:30:00",
+        "finalExamDetail": "Sep 13, 2026 4:30 PM - 6:30 PM",
+        "midExamDetail": "Jul 26, 2026 4:30 PM - 6:30 PM",
+        "classStartDate": "2026-06-09",
+        "classEndDate": "2026-09-08",
+        "classSchedules": [
+          {
+            "startTime": "11:00:00",
+            "endTime": "12:20:00",
+            "day": "SUNDAY"
+          },
+          {
+            "startTime": "11:00:00",
+            "endTime": "12:20:00",
+            "day": "TUESDAY"
+          }
+        ]
+      },
+      "courseName": "BUSINESS - BASICS, ETHICS AND ENVIRONMENT",
+      "prerequisiteCourses": null,
+      "labSchedules": null,
+      "labSectionId": null,
+      "labCourseCode": null,
+      "labFaculties": null,
+      "labName": null,
+      "labRoomName": null,
+      "preRegLabSchedule": null,
+      "preRegSchedule": "SUNDAY(11:00 AM-12:20 PM-12B-23C)\nTUESDAY(11:00 AM-12:20 PM-12B-23C)"
+    },
+    {
+      "sectionId": 187488,
+      "courseId": 1189,
+      "sectionName": "02",
+      "courseCredit": 3,
+      "courseCode": "MIC355",
+      "sectionType": "LAB",
+      "capacity": 20,
+      "consumedSeat": 20,
+      "semesterSessionId": 20262,
+      "parentSectionId": null,
+      "faculties": "TBA",
+      "roomName": "11A-01L",
+      "roomNumber": "11A-01L",
+      "courseType": "LAB",
+      "academicDegree": "UNDERGRADUATE",
+      "sectionSchedule": {
+        "classPairId": null,
+        "classSlotId": null,
+        "finalExamDate": null,
+        "finalExamStartTime": null,
+        "finalExamEndTime": null,
+        "midExamDate": null,
+        "midExamStartTime": null,
+        "midExamEndTime": null,
+        "finalExamDetail": null,
+        "midExamDetail": null,
+        "classStartDate": "2026-06-09",
+        "classEndDate": "2026-09-08",
+        "classSchedules": [
+          {
+            "startTime": "12:30:00",
+            "endTime": "15:20:00",
+            "day": "WEDNESDAY"
+          }
+        ]
+      },
+      "courseName": "MICROBIOL LAB III",
+      "prerequisiteCourses": "(MIC255L)",
+      "labSchedules": null,
+      "labSectionId": null,
+      "labCourseCode": null,
+      "labFaculties": null,
+      "labName": null,
+      "labRoomName": null,
+      "preRegLabSchedule": null,
+      "preRegSchedule": "WEDNESDAY(12:30 PM-3:20 PM-11A-01L)"
+    },
+    {
+      "sectionId": 187729,
+      "courseId": 1439,
+      "sectionName": "03",
+      "courseCredit": 3,
+      "courseCode": "MAT110",
+      "sectionType": "OTHER",
+      "capacity": 40,
+      "consumedSeat": 8,
+      "semesterSessionId": 20262,
+      "parentSectionId": null,
+      "faculties": "TBA",
+      "roomName": "12A-11C",
+      "roomNumber": "12A-11C",
+      "courseType": "THEORY",
+      "academicDegree": "UNDERGRADUATE",
+      "sectionSchedule": {
+        "classPairId": null,
+        "classSlotId": null,
+        "finalExamDate": "2026-09-13",
+        "finalExamStartTime": "14:00:00",
+        "finalExamEndTime": "16:00:00",
+        "midExamDate": "2026-07-26",
+        "midExamStartTime": "14:00:00",
+        "midExamEndTime": "16:00:00",
+        "finalExamDetail": "Sep 13, 2026 2:00 PM - 4:00 PM",
+        "midExamDetail": "Jul 26, 2026 2:00 PM - 4:00 PM",
+        "classStartDate": "2026-06-09",
+        "classEndDate": "2026-09-08",
+        "classSchedules": [
+          {
+            "startTime": "11:00:00",
+            "endTime": "12:20:00",
+            "day": "SATURDAY"
+          },
+          {
+            "startTime": "11:00:00",
+            "endTime": "12:20:00",
+            "day": "THURSDAY"
+          }
+        ]
+      },
+      "courseName": "MATHEMATICS I: DIFFERENTIAL CALCULUS & COORDINATE GEOMETRY",
+      "prerequisiteCourses": null,
+      "labSchedules": null,
+      "labSectionId": null,
+      "labCourseCode": null,
+      "labFaculties": null,
+      "labName": null,
+      "labRoomName": null,
+      "preRegLabSchedule": null,
+      "preRegSchedule": "SATURDAY(11:00 AM-12:20 PM-12A-11C)\nTHURSDAY(11:00 AM-12:20 PM-12A-11C)"
     },
     {
       "sectionId": 186703,
@@ -6504,59 +7869,6 @@
       "preRegSchedule": "SUNDAY(5:00 PM-6:20 PM-07A-04C)\nTUESDAY(5:00 PM-6:20 PM-07A-04C)"
     },
     {
-      "sectionId": 186164,
-      "courseId": 1639,
-      "sectionName": "07",
-      "courseCredit": 3,
-      "courseCode": "FIN201",
-      "sectionType": "OTHER",
-      "capacity": 35,
-      "consumedSeat": 35,
-      "semesterSessionId": 20262,
-      "parentSectionId": null,
-      "faculties": "AAC",
-      "roomName": "07A-02C",
-      "roomNumber": "07A-02C",
-      "courseType": "THEORY",
-      "academicDegree": "UNDERGRADUATE",
-      "sectionSchedule": {
-        "classPairId": null,
-        "classSlotId": null,
-        "finalExamDate": "2026-09-16",
-        "finalExamStartTime": "11:00:00",
-        "finalExamEndTime": "13:00:00",
-        "midExamDate": "2026-07-29",
-        "midExamStartTime": "11:00:00",
-        "midExamEndTime": "13:00:00",
-        "finalExamDetail": "Sep 16, 2026 11:00 AM - 1:00 PM",
-        "midExamDetail": "Jul 29, 2026 11:00 AM - 1:00 PM",
-        "classStartDate": "2026-06-09",
-        "classEndDate": "2026-09-08",
-        "classSchedules": [
-          {
-            "startTime": "14:00:00",
-            "endTime": "15:20:00",
-            "day": "SUNDAY"
-          },
-          {
-            "startTime": "14:00:00",
-            "endTime": "15:20:00",
-            "day": "TUESDAY"
-          }
-        ]
-      },
-      "courseName": "FINANCIAL ENVIRONMENT AND BANKING",
-      "prerequisiteCourses": "(ACT201 AND ECO101) OR (ACT201 AND ECO105)",
-      "labSchedules": null,
-      "labSectionId": null,
-      "labCourseCode": null,
-      "labFaculties": null,
-      "labName": null,
-      "labRoomName": null,
-      "preRegLabSchedule": null,
-      "preRegSchedule": "SUNDAY(2:00 PM-3:20 PM-07A-02C)\nTUESDAY(2:00 PM-3:20 PM-07A-02C)"
-    },
-    {
       "sectionId": 187416,
       "courseId": 1097,
       "sectionName": "18",
@@ -7258,59 +8570,6 @@
       "preRegSchedule": "MONDAY(8:00 AM-9:20 AM-09E-20T)\nWEDNESDAY(8:00 AM-9:20 AM-09E-20T)"
     },
     {
-      "sectionId": 186168,
-      "courseId": 2027,
-      "sectionName": "01",
-      "courseCredit": 3,
-      "courseCode": "FIN301",
-      "sectionType": "OTHER",
-      "capacity": 36,
-      "consumedSeat": 36,
-      "semesterSessionId": 20262,
-      "parentSectionId": null,
-      "faculties": "AAC",
-      "roomName": "07A-02C",
-      "roomNumber": "07A-02C",
-      "courseType": "THEORY",
-      "academicDegree": "UNDERGRADUATE",
-      "sectionSchedule": {
-        "classPairId": null,
-        "classSlotId": null,
-        "finalExamDate": "2026-09-17",
-        "finalExamStartTime": "11:00:00",
-        "finalExamEndTime": "13:00:00",
-        "midExamDate": "2026-07-30",
-        "midExamStartTime": "11:00:00",
-        "midExamEndTime": "13:00:00",
-        "finalExamDetail": "Sep 17, 2026 11:00 AM - 1:00 PM",
-        "midExamDetail": "Jul 30, 2026 11:00 AM - 1:00 PM",
-        "classStartDate": "2026-06-09",
-        "classEndDate": "2026-09-08",
-        "classSchedules": [
-          {
-            "startTime": "08:00:00",
-            "endTime": "09:20:00",
-            "day": "MONDAY"
-          },
-          {
-            "startTime": "08:00:00",
-            "endTime": "09:20:00",
-            "day": "WEDNESDAY"
-          }
-        ]
-      },
-      "courseName": "PRINCIPLES OF FINANCE",
-      "prerequisiteCourses": "(FIN201)",
-      "labSchedules": null,
-      "labSectionId": null,
-      "labCourseCode": null,
-      "labFaculties": null,
-      "labName": null,
-      "labRoomName": null,
-      "preRegLabSchedule": null,
-      "preRegSchedule": "MONDAY(8:00 AM-9:20 AM-07A-02C)\nWEDNESDAY(8:00 AM-9:20 AM-07A-02C)"
-    },
-    {
       "sectionId": 186620,
       "courseId": 2054,
       "sectionName": "12",
@@ -7368,59 +8627,6 @@
       "labRoomName": "09E-21L",
       "preRegLabSchedule": "WEDNESDAY(11:00 AM-1:50 PM-09E-21L)",
       "preRegSchedule": "SUNDAY(12:30 PM-1:50 PM-09A-01C)\nTUESDAY(12:30 PM-1:50 PM-09A-01C)"
-    },
-    {
-      "sectionId": 187743,
-      "courseId": 1407,
-      "sectionName": "05",
-      "courseCredit": 3,
-      "courseCode": "CHE110",
-      "sectionType": "OTHER",
-      "capacity": 40,
-      "consumedSeat": 40,
-      "semesterSessionId": 20262,
-      "parentSectionId": null,
-      "faculties": "TBA",
-      "roomName": "10H-39C",
-      "roomNumber": "10H-39C",
-      "courseType": "THEORY",
-      "academicDegree": "UNDERGRADUATE",
-      "sectionSchedule": {
-        "classPairId": 3,
-        "classSlotId": 13091,
-        "finalExamDate": "2026-09-17",
-        "finalExamStartTime": "08:30:00",
-        "finalExamEndTime": "10:30:00",
-        "midExamDate": "2026-07-30",
-        "midExamStartTime": "08:30:00",
-        "midExamEndTime": "10:30:00",
-        "finalExamDetail": "Thursday, September 17, 2026 8:30 AM - 10:30 AM",
-        "midExamDetail": "Thursday, July 30, 2026 8:30 AM - 10:30 AM",
-        "classStartDate": "2026-06-09",
-        "classEndDate": "2026-09-08",
-        "classSchedules": [
-          {
-            "startTime": "09:30:00",
-            "endTime": "10:50:00",
-            "day": "MONDAY"
-          },
-          {
-            "startTime": "09:30:00",
-            "endTime": "10:50:00",
-            "day": "WEDNESDAY"
-          }
-        ]
-      },
-      "courseName": "PRINCIPLES OF CHEMISTRY",
-      "prerequisiteCourses": null,
-      "labSchedules": null,
-      "labSectionId": null,
-      "labCourseCode": null,
-      "labFaculties": null,
-      "labName": null,
-      "labRoomName": null,
-      "preRegLabSchedule": null,
-      "preRegSchedule": "MONDAY(9:30 AM-10:50 AM-10H-39C)\nWEDNESDAY(9:30 AM-10:50 AM-10H-39C)"
     },
     {
       "sectionId": 186769,
@@ -7647,112 +8853,6 @@
       "preRegSchedule": "MONDAY(3:30 PM-4:50 PM-10A-10C)\nWEDNESDAY(3:30 PM-4:50 PM-10A-10C)"
     },
     {
-      "sectionId": 187519,
-      "courseId": 86,
-      "sectionName": "04",
-      "courseCredit": 3,
-      "courseCode": "PHY101",
-      "sectionType": "OTHER",
-      "capacity": 40,
-      "consumedSeat": 40,
-      "semesterSessionId": 20262,
-      "parentSectionId": null,
-      "faculties": "TBA",
-      "roomName": "10H-36C",
-      "roomNumber": "10H-36C",
-      "courseType": "THEORY",
-      "academicDegree": "UNDERGRADUATE",
-      "sectionSchedule": {
-        "classPairId": 3,
-        "classSlotId": 13093,
-        "finalExamDate": "2026-09-17",
-        "finalExamStartTime": "11:00:00",
-        "finalExamEndTime": "13:00:00",
-        "midExamDate": "2026-07-30",
-        "midExamStartTime": "11:00:00",
-        "midExamEndTime": "13:00:00",
-        "finalExamDetail": "Thursday, September 17, 2026 11:00 AM - 1:00 PM",
-        "midExamDetail": "Thursday, July 30, 2026 11:00 AM - 1:00 PM",
-        "classStartDate": "2026-06-09",
-        "classEndDate": "2026-09-08",
-        "classSchedules": [
-          {
-            "startTime": "12:30:00",
-            "endTime": "13:50:00",
-            "day": "MONDAY"
-          },
-          {
-            "startTime": "12:30:00",
-            "endTime": "13:50:00",
-            "day": "WEDNESDAY"
-          }
-        ]
-      },
-      "courseName": "INTRODUCTION TO PHYSICS",
-      "prerequisiteCourses": null,
-      "labSchedules": null,
-      "labSectionId": null,
-      "labCourseCode": null,
-      "labFaculties": null,
-      "labName": null,
-      "labRoomName": null,
-      "preRegLabSchedule": null,
-      "preRegSchedule": "MONDAY(12:30 PM-1:50 PM-10H-36C)\nWEDNESDAY(12:30 PM-1:50 PM-10H-36C)"
-    },
-    {
-      "sectionId": 188222,
-      "courseId": 1447,
-      "sectionName": "15",
-      "courseCredit": 3,
-      "courseCode": "ECE410",
-      "sectionType": "OTHER",
-      "capacity": 5,
-      "consumedSeat": 0,
-      "semesterSessionId": 20262,
-      "parentSectionId": null,
-      "faculties": "LRK",
-      "roomName": "09A-04C",
-      "roomNumber": "09A-04C",
-      "courseType": "THEORY",
-      "academicDegree": "UNDERGRADUATE",
-      "sectionSchedule": {
-        "classPairId": null,
-        "classSlotId": null,
-        "finalExamDate": "2026-09-18",
-        "finalExamStartTime": "11:00:00",
-        "finalExamEndTime": "13:00:00",
-        "midExamDate": "2026-08-01",
-        "midExamStartTime": "11:00:00",
-        "midExamEndTime": "13:00:00",
-        "finalExamDetail": "Sep 18, 2026 11:00 AM - 1:00 PM",
-        "midExamDetail": "Aug 1, 2026 11:00 AM - 1:00 PM",
-        "classStartDate": "2026-06-09",
-        "classEndDate": "2026-09-08",
-        "classSchedules": [
-          {
-            "startTime": "12:30:00",
-            "endTime": "13:50:00",
-            "day": "MONDAY"
-          },
-          {
-            "startTime": "12:30:00",
-            "endTime": "13:50:00",
-            "day": "WEDNESDAY"
-          }
-        ]
-      },
-      "courseName": "OPTICAL COMMUNICATION",
-      "prerequisiteCourses": null,
-      "labSchedules": null,
-      "labSectionId": null,
-      "labCourseCode": null,
-      "labFaculties": null,
-      "labName": null,
-      "labRoomName": null,
-      "preRegLabSchedule": null,
-      "preRegSchedule": "MONDAY(12:30 PM-1:50 PM-09A-04C)\nWEDNESDAY(12:30 PM-1:50 PM-09A-04C)"
-    },
-    {
       "sectionId": 186157,
       "courseId": 2528,
       "sectionName": "02",
@@ -7804,59 +8904,6 @@
       "labRoomName": null,
       "preRegLabSchedule": null,
       "preRegSchedule": "SATURDAY(12:30 PM-1:50 PM-AN1-02C)\nSATURDAY(3:30 PM-4:50 PM-AN1-02C)"
-    },
-    {
-      "sectionId": 185841,
-      "courseId": 1392,
-      "sectionName": "03",
-      "courseCredit": 3,
-      "courseCode": "BCH202",
-      "sectionType": "OTHER",
-      "capacity": 40,
-      "consumedSeat": 40,
-      "semesterSessionId": 20262,
-      "parentSectionId": null,
-      "faculties": "TBA",
-      "roomName": "10D-23C",
-      "roomNumber": "10D-23C",
-      "courseType": "THEORY",
-      "academicDegree": "UNDERGRADUATE",
-      "sectionSchedule": {
-        "classPairId": 2,
-        "classSlotId": 13091,
-        "finalExamDate": "2026-09-15",
-        "finalExamStartTime": "08:30:00",
-        "finalExamEndTime": "10:30:00",
-        "midExamDate": "2026-07-28",
-        "midExamStartTime": "08:30:00",
-        "midExamEndTime": "10:30:00",
-        "finalExamDetail": "Tuesday, September 15, 2026 8:30 AM - 10:30 AM",
-        "midExamDetail": "Tuesday, July 28, 2026 8:30 AM - 10:30 AM",
-        "classStartDate": "2026-06-09",
-        "classEndDate": "2026-09-08",
-        "classSchedules": [
-          {
-            "startTime": "09:30:00",
-            "endTime": "10:50:00",
-            "day": "SUNDAY"
-          },
-          {
-            "startTime": "09:30:00",
-            "endTime": "10:50:00",
-            "day": "TUESDAY"
-          }
-        ]
-      },
-      "courseName": "ENZYMES AND ENZYME KINETICS",
-      "prerequisiteCourses": "(BCH101)",
-      "labSchedules": null,
-      "labSectionId": null,
-      "labCourseCode": null,
-      "labFaculties": null,
-      "labName": null,
-      "labRoomName": null,
-      "preRegLabSchedule": null,
-      "preRegSchedule": "SUNDAY(9:30 AM-10:50 AM-10D-23C)\nTUESDAY(9:30 AM-10:50 AM-10D-23C)"
     },
     {
       "sectionId": 186654,
@@ -7969,59 +9016,6 @@
       "labRoomName": null,
       "preRegLabSchedule": null,
       "preRegSchedule": "SATURDAY(12:15 PM-1:10 PM-10A-06L)\nWEDNESDAY(4:00 PM-4:55 PM-10A-06L)"
-    },
-    {
-      "sectionId": 186012,
-      "courseId": 1528,
-      "sectionName": "11",
-      "courseCredit": 3,
-      "courseCode": "ECO102",
-      "sectionType": "OTHER",
-      "capacity": 40,
-      "consumedSeat": 40,
-      "semesterSessionId": 20262,
-      "parentSectionId": null,
-      "faculties": "RFU",
-      "roomName": "08B-08C",
-      "roomNumber": "08B-08C",
-      "courseType": "THEORY",
-      "academicDegree": "UNDERGRADUATE",
-      "sectionSchedule": {
-        "classPairId": null,
-        "classSlotId": null,
-        "finalExamDate": "2026-09-13",
-        "finalExamStartTime": "14:00:00",
-        "finalExamEndTime": "16:00:00",
-        "midExamDate": "2026-07-26",
-        "midExamStartTime": "14:00:00",
-        "midExamEndTime": "15:30:00",
-        "finalExamDetail": "Sep 13, 2026 2:00 PM - 4:00 PM",
-        "midExamDetail": "Jul 26, 2026 2:00 PM - 3:30 PM",
-        "classStartDate": "2026-06-09",
-        "classEndDate": "2026-09-08",
-        "classSchedules": [
-          {
-            "startTime": "14:00:00",
-            "endTime": "15:20:00",
-            "day": "SUNDAY"
-          },
-          {
-            "startTime": "14:00:00",
-            "endTime": "15:20:00",
-            "day": "TUESDAY"
-          }
-        ]
-      },
-      "courseName": "INTRODUCTION TO MACROECONOMICS",
-      "prerequisiteCourses": "(ECO101)",
-      "labSchedules": null,
-      "labSectionId": null,
-      "labCourseCode": null,
-      "labFaculties": null,
-      "labName": null,
-      "labRoomName": null,
-      "preRegLabSchedule": null,
-      "preRegSchedule": "SUNDAY(2:00 PM-3:20 PM-08B-08C)\nTUESDAY(2:00 PM-3:20 PM-08B-08C)"
     },
     {
       "sectionId": 187850,
@@ -8401,65 +9395,6 @@
       "preRegSchedule": "MONDAY(9:30 AM-10:50 AM-07H-30C)\nWEDNESDAY(9:30 AM-10:50 AM-07H-30C)"
     },
     {
-      "sectionId": 187255,
-      "courseId": 620,
-      "sectionName": "12",
-      "courseCredit": 3,
-      "courseCode": "CSE471",
-      "sectionType": "OTHER",
-      "capacity": 38,
-      "consumedSeat": 8,
-      "semesterSessionId": 20262,
-      "parentSectionId": null,
-      "faculties": "WHMJ",
-      "roomName": "09A-04C",
-      "roomNumber": "09A-04C",
-      "courseType": "THEORY",
-      "academicDegree": "UNDERGRADUATE",
-      "sectionSchedule": {
-        "classPairId": null,
-        "classSlotId": null,
-        "finalExamDate": "2026-09-16",
-        "finalExamStartTime": "14:00:00",
-        "finalExamEndTime": "16:00:00",
-        "midExamDate": "2026-07-29",
-        "midExamStartTime": "14:00:00",
-        "midExamEndTime": "16:00:00",
-        "finalExamDetail": "Sep 16, 2026 2:00 PM - 4:00 PM",
-        "midExamDetail": "Jul 29, 2026 2:00 PM - 4:00 PM",
-        "classStartDate": "2026-06-09",
-        "classEndDate": "2026-09-08",
-        "classSchedules": [
-          {
-            "startTime": "11:00:00",
-            "endTime": "12:20:00",
-            "day": "SATURDAY"
-          },
-          {
-            "startTime": "11:00:00",
-            "endTime": "12:20:00",
-            "day": "THURSDAY"
-          }
-        ]
-      },
-      "courseName": "SYSTEM ANALYSIS AND DESIGN",
-      "prerequisiteCourses": "(CSE370)",
-      "labSchedules": [
-        {
-          "startTime": "08:00:00",
-          "endTime": "10:50:00",
-          "day": "TUESDAY"
-        }
-      ],
-      "labSectionId": 187256,
-      "labCourseCode": "CSE471L",
-      "labFaculties": "TBA",
-      "labName": "SYSTEM ANALYSIS AND DESIGN LAB",
-      "labRoomName": "09F-25L",
-      "preRegLabSchedule": "TUESDAY(8:00 AM-10:50 AM-09F-25L)",
-      "preRegSchedule": "SATURDAY(11:00 AM-12:20 PM-09A-04C)\nTHURSDAY(11:00 AM-12:20 PM-09A-04C)"
-    },
-    {
       "sectionId": 186989,
       "courseId": 2051,
       "sectionName": "04",
@@ -8576,65 +9511,6 @@
       "labRoomName": "12F-31L",
       "preRegLabSchedule": "SUNDAY(11:00 AM-1:50 PM-12F-31L)",
       "preRegSchedule": "SATURDAY(11:00 AM-12:20 PM-09C-16T)\nTHURSDAY(11:00 AM-12:20 PM-09C-16T)"
-    },
-    {
-      "sectionId": 186694,
-      "courseId": 2127,
-      "sectionName": "16",
-      "courseCredit": 3,
-      "courseCode": "CSE221",
-      "sectionType": "OTHER",
-      "capacity": 38,
-      "consumedSeat": 38,
-      "semesterSessionId": 20262,
-      "parentSectionId": null,
-      "faculties": "FBAW",
-      "roomName": "10A-10C",
-      "roomNumber": "10A-10C",
-      "courseType": "THEORY",
-      "academicDegree": "UNDERGRADUATE",
-      "sectionSchedule": {
-        "classPairId": null,
-        "classSlotId": null,
-        "finalExamDate": "2026-09-13",
-        "finalExamStartTime": "08:30:00",
-        "finalExamEndTime": "10:30:00",
-        "midExamDate": "2026-07-26",
-        "midExamStartTime": "08:30:00",
-        "midExamEndTime": "10:30:00",
-        "finalExamDetail": "Sep 13, 2026 8:30 AM - 10:30 AM",
-        "midExamDetail": "Jul 26, 2026 8:30 AM - 10:30 AM",
-        "classStartDate": "2026-06-09",
-        "classEndDate": "2026-09-08",
-        "classSchedules": [
-          {
-            "startTime": "09:30:00",
-            "endTime": "10:50:00",
-            "day": "MONDAY"
-          },
-          {
-            "startTime": "09:30:00",
-            "endTime": "10:50:00",
-            "day": "WEDNESDAY"
-          }
-        ]
-      },
-      "courseName": "ALGORITHMS",
-      "prerequisiteCourses": "(CSE220)",
-      "labSchedules": [
-        {
-          "startTime": "08:00:00",
-          "endTime": "10:50:00",
-          "day": "SUNDAY"
-        }
-      ],
-      "labSectionId": 186695,
-      "labCourseCode": "CSE221L",
-      "labFaculties": "TBA",
-      "labName": "ALGORITHMS LAB",
-      "labRoomName": "09E-21L",
-      "preRegLabSchedule": "SUNDAY(8:00 AM-10:50 AM-09E-21L)",
-      "preRegSchedule": "MONDAY(9:30 AM-10:50 AM-10A-10C)\nWEDNESDAY(9:30 AM-10:50 AM-10A-10C)"
     },
     {
       "sectionId": 186700,
@@ -9957,6 +10833,59 @@
       "preRegSchedule": "MONDAY(11:00 AM-12:20 PM-10H-40C)\nWEDNESDAY(11:00 AM-12:20 PM-10H-40C)"
     },
     {
+      "sectionId": 186837,
+      "courseId": 587,
+      "sectionName": "09",
+      "courseCredit": 3,
+      "courseCode": "CSE340",
+      "sectionType": "OTHER",
+      "capacity": 38,
+      "consumedSeat": 38,
+      "semesterSessionId": 20262,
+      "parentSectionId": null,
+      "faculties": "AFQ",
+      "roomName": "09C-16T",
+      "roomNumber": "09C-16T",
+      "courseType": "THEORY",
+      "academicDegree": "UNDERGRADUATE",
+      "sectionSchedule": {
+        "classPairId": null,
+        "classSlotId": null,
+        "finalExamDate": "2026-09-18",
+        "finalExamStartTime": "11:00:00",
+        "finalExamEndTime": "13:00:00",
+        "midExamDate": "2026-08-01",
+        "midExamStartTime": "11:00:00",
+        "midExamEndTime": "13:00:00",
+        "finalExamDetail": "Sep 18, 2026 11:00 AM - 1:00 PM",
+        "midExamDetail": "Aug 1, 2026 11:00 AM - 1:00 PM",
+        "classStartDate": "2026-06-09",
+        "classEndDate": "2026-09-08",
+        "classSchedules": [
+          {
+            "startTime": "08:00:00",
+            "endTime": "09:20:00",
+            "day": "SATURDAY"
+          },
+          {
+            "startTime": "08:00:00",
+            "endTime": "09:20:00",
+            "day": "THURSDAY"
+          }
+        ]
+      },
+      "courseName": "COMPUTER ARCHITECTURE",
+      "prerequisiteCourses": "(CSE260) OR (EEE283) OR (EEE301)",
+      "labSchedules": null,
+      "labSectionId": null,
+      "labCourseCode": null,
+      "labFaculties": null,
+      "labName": null,
+      "labRoomName": null,
+      "preRegLabSchedule": null,
+      "preRegSchedule": "SATURDAY(8:00 AM-9:20 AM-09C-16T)\nTHURSDAY(8:00 AM-9:20 AM-09C-16T)"
+    },
+    {
       "sectionId": 187791,
       "courseId": 1533,
       "sectionName": "07",
@@ -10992,213 +11921,6 @@
       "labRoomName": null,
       "preRegLabSchedule": null,
       "preRegSchedule": "MONDAY(2:00 PM-3:20 PM-12A-08C)\nWEDNESDAY(2:00 PM-3:20 PM-12A-08C)"
-    },
-    {
-      "sectionId": 187131,
-      "courseId": 611,
-      "sectionName": "05",
-      "courseCredit": 3,
-      "courseCode": "CSE425",
-      "sectionType": "OTHER",
-      "capacity": 38,
-      "consumedSeat": 38,
-      "semesterSessionId": 20262,
-      "parentSectionId": null,
-      "faculties": "DPU",
-      "roomName": "09E-20T",
-      "roomNumber": "09E-20T",
-      "courseType": "THEORY",
-      "academicDegree": "UNDERGRADUATE",
-      "sectionSchedule": {
-        "classPairId": null,
-        "classSlotId": null,
-        "finalExamDate": "2026-09-12",
-        "finalExamStartTime": "11:00:00",
-        "finalExamEndTime": "13:00:00",
-        "midExamDate": "2026-07-25",
-        "midExamStartTime": "11:00:00",
-        "midExamEndTime": "13:00:00",
-        "finalExamDetail": "Sep 12, 2026 11:00 AM - 1:00 PM",
-        "midExamDetail": "Jul 25, 2026 11:00 AM - 1:00 PM",
-        "classStartDate": "2026-06-09",
-        "classEndDate": "2026-09-08",
-        "classSchedules": [
-          {
-            "startTime": "15:30:00",
-            "endTime": "16:50:00",
-            "day": "MONDAY"
-          },
-          {
-            "startTime": "15:30:00",
-            "endTime": "16:50:00",
-            "day": "WEDNESDAY"
-          }
-        ]
-      },
-      "courseName": "NEURAL NETWORKS",
-      "prerequisiteCourses": null,
-      "labSchedules": null,
-      "labSectionId": null,
-      "labCourseCode": null,
-      "labFaculties": null,
-      "labName": null,
-      "labRoomName": null,
-      "preRegLabSchedule": null,
-      "preRegSchedule": "MONDAY(3:30 PM-4:50 PM-09E-20T)\nWEDNESDAY(3:30 PM-4:50 PM-09E-20T)"
-    },
-    {
-      "sectionId": 187224,
-      "courseId": 594,
-      "sectionName": "10",
-      "courseCredit": 3,
-      "courseCode": "CSE470",
-      "sectionType": "OTHER",
-      "capacity": 38,
-      "consumedSeat": 38,
-      "semesterSessionId": 20262,
-      "parentSectionId": null,
-      "faculties": "NAFR",
-      "roomName": "09A-06C",
-      "roomNumber": "09A-06C",
-      "courseType": "THEORY",
-      "academicDegree": "UNDERGRADUATE",
-      "sectionSchedule": {
-        "classPairId": null,
-        "classSlotId": null,
-        "finalExamDate": "2026-09-16",
-        "finalExamStartTime": "16:30:00",
-        "finalExamEndTime": "18:30:00",
-        "midExamDate": "2026-07-29",
-        "midExamStartTime": "16:30:00",
-        "midExamEndTime": "18:30:00",
-        "finalExamDetail": "Sep 16, 2026 4:30 PM - 6:30 PM",
-        "midExamDetail": "Jul 29, 2026 4:30 PM - 6:30 PM",
-        "classStartDate": "2026-06-09",
-        "classEndDate": "2026-09-08",
-        "classSchedules": [
-          {
-            "startTime": "08:00:00",
-            "endTime": "09:20:00",
-            "day": "SUNDAY"
-          },
-          {
-            "startTime": "08:00:00",
-            "endTime": "09:20:00",
-            "day": "TUESDAY"
-          }
-        ]
-      },
-      "courseName": "SOFTWARE ENGINEERING",
-      "prerequisiteCourses": "(CSE370)",
-      "labSchedules": null,
-      "labSectionId": null,
-      "labCourseCode": null,
-      "labFaculties": null,
-      "labName": null,
-      "labRoomName": null,
-      "preRegLabSchedule": null,
-      "preRegSchedule": "SUNDAY(8:00 AM-9:20 AM-09A-06C)\nTUESDAY(8:00 AM-9:20 AM-09A-06C)"
-    },
-    {
-      "sectionId": 187468,
-      "courseId": 1540,
-      "sectionName": "13",
-      "courseCredit": 3,
-      "courseCode": "STA201",
-      "sectionType": "OTHER",
-      "capacity": 38,
-      "consumedSeat": 38,
-      "semesterSessionId": 20262,
-      "parentSectionId": null,
-      "faculties": "TBA",
-      "roomName": "09H-37C",
-      "roomNumber": "09H-37C",
-      "courseType": "THEORY",
-      "academicDegree": "UNDERGRADUATE",
-      "sectionSchedule": {
-        "classPairId": 3,
-        "classSlotId": 13095,
-        "finalExamDate": "2026-09-17",
-        "finalExamStartTime": "14:00:00",
-        "finalExamEndTime": "16:00:00",
-        "midExamDate": "2026-07-30",
-        "midExamStartTime": "14:00:00",
-        "midExamEndTime": "16:00:00",
-        "finalExamDetail": "Thursday, September 17, 2026 2:00 PM - 4:00 PM",
-        "midExamDetail": "Thursday, July 30, 2026 2:00 PM - 4:00 PM",
-        "classStartDate": "2026-06-09",
-        "classEndDate": "2026-09-08",
-        "classSchedules": [
-          {
-            "startTime": "15:30:00",
-            "endTime": "16:50:00",
-            "day": "MONDAY"
-          },
-          {
-            "startTime": "15:30:00",
-            "endTime": "16:50:00",
-            "day": "WEDNESDAY"
-          }
-        ]
-      },
-      "courseName": "ELEMENTS OF STATISTICS AND PROBABILITY",
-      "prerequisiteCourses": null,
-      "labSchedules": null,
-      "labSectionId": null,
-      "labCourseCode": null,
-      "labFaculties": null,
-      "labName": null,
-      "labRoomName": null,
-      "preRegLabSchedule": null,
-      "preRegSchedule": "MONDAY(3:30 PM-4:50 PM-09H-37C)\nWEDNESDAY(3:30 PM-4:50 PM-09H-37C)"
-    },
-    {
-      "sectionId": 187477,
-      "courseId": 1425,
-      "sectionName": "02",
-      "courseCredit": 3,
-      "courseCode": "MIC155",
-      "sectionType": "LAB",
-      "capacity": 20,
-      "consumedSeat": 20,
-      "semesterSessionId": 20262,
-      "parentSectionId": null,
-      "faculties": "TBA",
-      "roomName": "10F-28L",
-      "roomNumber": "10F-28L",
-      "courseType": "LAB",
-      "academicDegree": "UNDERGRADUATE",
-      "sectionSchedule": {
-        "classPairId": null,
-        "classSlotId": null,
-        "finalExamDate": null,
-        "finalExamStartTime": null,
-        "finalExamEndTime": null,
-        "midExamDate": null,
-        "midExamStartTime": null,
-        "midExamEndTime": null,
-        "finalExamDetail": null,
-        "midExamDetail": null,
-        "classStartDate": "2026-06-09",
-        "classEndDate": "2026-09-08",
-        "classSchedules": [
-          {
-            "startTime": "11:00:00",
-            "endTime": "13:50:00",
-            "day": "THURSDAY"
-          }
-        ]
-      },
-      "courseName": "MICROBIOL LAB I",
-      "prerequisiteCourses": null,
-      "labSchedules": null,
-      "labSectionId": null,
-      "labCourseCode": null,
-      "labFaculties": null,
-      "labName": null,
-      "labRoomName": null,
-      "preRegLabSchedule": null,
-      "preRegSchedule": "THURSDAY(11:00 AM-1:50 PM-10F-28L)"
     },
     {
       "sectionId": 186514,
@@ -12327,65 +13049,6 @@
       "preRegSchedule": "MONDAY(9:30 AM-10:50 AM-10B-17C)\nWEDNESDAY(9:30 AM-10:50 AM-10B-17C)"
     },
     {
-      "sectionId": 187627,
-      "courseId": 259,
-      "sectionName": "04A",
-      "courseCredit": 3,
-      "courseCode": "CSE350",
-      "sectionType": "OTHER",
-      "capacity": 21,
-      "consumedSeat": 21,
-      "semesterSessionId": 20262,
-      "parentSectionId": null,
-      "faculties": "TBA",
-      "roomName": "09A-07C",
-      "roomNumber": "09A-07C",
-      "courseType": "THEORY",
-      "academicDegree": "UNDERGRADUATE",
-      "sectionSchedule": {
-        "classPairId": null,
-        "classSlotId": null,
-        "finalExamDate": "2026-09-12",
-        "finalExamStartTime": "16:30:00",
-        "finalExamEndTime": "18:30:00",
-        "midExamDate": "2026-07-25",
-        "midExamStartTime": "16:30:00",
-        "midExamEndTime": "18:30:00",
-        "finalExamDetail": "Sep 12, 2026 4:30 PM - 6:30 PM",
-        "midExamDetail": "Jul 25, 2026 4:30 PM - 6:30 PM",
-        "classStartDate": "2026-06-09",
-        "classEndDate": "2026-09-08",
-        "classSchedules": [
-          {
-            "startTime": "08:00:00",
-            "endTime": "09:20:00",
-            "day": "SUNDAY"
-          },
-          {
-            "startTime": "08:00:00",
-            "endTime": "09:20:00",
-            "day": "TUESDAY"
-          }
-        ]
-      },
-      "courseName": "DIGITAL ELECTRONICS AND PULSE TECHNIQUES",
-      "prerequisiteCourses": "(CSE251)",
-      "labSchedules": [
-        {
-          "startTime": "11:00:00",
-          "endTime": "13:50:00",
-          "day": "THURSDAY"
-        }
-      ],
-      "labSectionId": 187628,
-      "labCourseCode": "CSE350L",
-      "labFaculties": "TBA",
-      "labName": "DIGITAL ELECTRONICS AND PULSE TECHNIQUES LAB",
-      "labRoomName": "FT10-01L",
-      "preRegLabSchedule": "THURSDAY(11:00 AM-1:50 PM-FT10-01L)",
-      "preRegSchedule": "SUNDAY(8:00 AM-9:20 AM-09A-07C)\nTUESDAY(8:00 AM-9:20 AM-09A-07C)"
-    },
-    {
       "sectionId": 185854,
       "courseId": 664,
       "sectionName": "01",
@@ -13109,48 +13772,6 @@
       "labRoomName": "10E-26L",
       "preRegLabSchedule": "MONDAY(9:30 AM-10:50 AM-10E-26L)",
       "preRegSchedule": "SUNDAY(9:30 AM-10:50 AM-12A-10C)\nTUESDAY(9:30 AM-10:50 AM-12A-10C)"
-    },
-    {
-      "sectionId": 185798,
-      "courseId": 1139,
-      "sectionName": "02",
-      "courseCredit": 4,
-      "courseCode": "CSE400",
-      "sectionType": "OTHER",
-      "capacity": 99,
-      "consumedSeat": 89,
-      "semesterSessionId": 20262,
-      "parentSectionId": null,
-      "faculties": "GRA",
-      "roomName": "12B-21L",
-      "roomNumber": "12B-21L",
-      "courseType": "PROJECT",
-      "academicDegree": "UNDERGRADUATE",
-      "sectionSchedule": {
-        "classPairId": null,
-        "classSlotId": null,
-        "finalExamDate": null,
-        "finalExamStartTime": null,
-        "finalExamEndTime": null,
-        "midExamDate": null,
-        "midExamStartTime": null,
-        "midExamEndTime": null,
-        "finalExamDetail": null,
-        "midExamDetail": null,
-        "classStartDate": "2026-06-09",
-        "classEndDate": "2026-09-08",
-        "classSchedules": []
-      },
-      "courseName": "PROJECT & THESIS",
-      "prerequisiteCourses": null,
-      "labSchedules": null,
-      "labSectionId": null,
-      "labCourseCode": null,
-      "labFaculties": null,
-      "labName": null,
-      "labRoomName": null,
-      "preRegLabSchedule": null,
-      "preRegSchedule": ""
     },
     {
       "sectionId": 187162,
@@ -14191,224 +14812,6 @@
       "preRegSchedule": "SATURDAY(2:00 PM-3:20 PM-12B-23C)\nTHURSDAY(2:00 PM-3:20 PM-12B-23C)"
     },
     {
-      "sectionId": 187734,
-      "courseId": 1407,
-      "sectionName": "03",
-      "courseCredit": 3,
-      "courseCode": "CHE110",
-      "sectionType": "OTHER",
-      "capacity": 40,
-      "consumedSeat": 40,
-      "semesterSessionId": 20262,
-      "parentSectionId": null,
-      "faculties": "TBA",
-      "roomName": "10H-39C",
-      "roomNumber": "10H-39C",
-      "courseType": "THEORY",
-      "academicDegree": "UNDERGRADUATE",
-      "sectionSchedule": {
-        "classPairId": 2,
-        "classSlotId": 13092,
-        "finalExamDate": "2026-09-14",
-        "finalExamStartTime": "11:00:00",
-        "finalExamEndTime": "13:00:00",
-        "midExamDate": "2026-07-27",
-        "midExamStartTime": "11:00:00",
-        "midExamEndTime": "13:00:00",
-        "finalExamDetail": "Monday, September 14, 2026 11:00 AM - 1:00 PM",
-        "midExamDetail": "Monday, July 27, 2026 11:00 AM - 1:00 PM",
-        "classStartDate": "2026-06-09",
-        "classEndDate": "2026-09-08",
-        "classSchedules": [
-          {
-            "startTime": "11:00:00",
-            "endTime": "12:20:00",
-            "day": "SUNDAY"
-          },
-          {
-            "startTime": "11:00:00",
-            "endTime": "12:20:00",
-            "day": "TUESDAY"
-          }
-        ]
-      },
-      "courseName": "PRINCIPLES OF CHEMISTRY",
-      "prerequisiteCourses": null,
-      "labSchedules": null,
-      "labSectionId": null,
-      "labCourseCode": null,
-      "labFaculties": null,
-      "labName": null,
-      "labRoomName": null,
-      "preRegLabSchedule": null,
-      "preRegSchedule": "SUNDAY(11:00 AM-12:20 PM-10H-39C)\nTUESDAY(11:00 AM-12:20 PM-10H-39C)"
-    },
-    {
-      "sectionId": 187679,
-      "courseId": 644,
-      "sectionName": "10",
-      "courseCredit": 3,
-      "courseCode": "PHY112",
-      "sectionType": "OTHER",
-      "capacity": 40,
-      "consumedSeat": 40,
-      "semesterSessionId": 20262,
-      "parentSectionId": null,
-      "faculties": "TBA",
-      "roomName": "10H-37C",
-      "roomNumber": "10H-37C",
-      "courseType": "THEORY",
-      "academicDegree": "UNDERGRADUATE",
-      "sectionSchedule": {
-        "classPairId": null,
-        "classSlotId": null,
-        "finalExamDate": "2026-09-17",
-        "finalExamStartTime": "08:30:00",
-        "finalExamEndTime": "10:30:00",
-        "midExamDate": "2026-07-30",
-        "midExamStartTime": "08:30:00",
-        "midExamEndTime": "10:30:00",
-        "finalExamDetail": "Sep 17, 2026 8:30 AM - 10:30 AM",
-        "midExamDetail": "Jul 30, 2026 8:30 AM - 10:30 AM",
-        "classStartDate": "2026-06-09",
-        "classEndDate": "2026-09-08",
-        "classSchedules": [
-          {
-            "startTime": "12:30:00",
-            "endTime": "13:50:00",
-            "day": "SUNDAY"
-          },
-          {
-            "startTime": "12:30:00",
-            "endTime": "13:50:00",
-            "day": "TUESDAY"
-          }
-        ]
-      },
-      "courseName": "PRINCIPLES OF PHYSICS II",
-      "prerequisiteCourses": "(PHY111)",
-      "labSchedules": [
-        {
-          "startTime": "14:00:00",
-          "endTime": "16:50:00",
-          "day": "MONDAY"
-        }
-      ],
-      "labSectionId": 187680,
-      "labCourseCode": "PHY112L",
-      "labFaculties": "TBA",
-      "labName": "PRINCIPLES OF PHYSICS II LAB",
-      "labRoomName": "10A-02L",
-      "preRegLabSchedule": "MONDAY(2:00 PM-4:50 PM-10A-02L)",
-      "preRegSchedule": "SUNDAY(12:30 PM-1:50 PM-10H-37C)\nTUESDAY(12:30 PM-1:50 PM-10H-37C)"
-    },
-    {
-      "sectionId": 186324,
-      "courseId": 1720,
-      "sectionName": "01",
-      "courseCredit": 3,
-      "courseCode": "BIO101",
-      "sectionType": "OTHER",
-      "capacity": 40,
-      "consumedSeat": 40,
-      "semesterSessionId": 20262,
-      "parentSectionId": null,
-      "faculties": "TBA",
-      "roomName": "07H-29C",
-      "roomNumber": "07H-29C",
-      "courseType": "THEORY",
-      "academicDegree": "UNDERGRADUATE",
-      "sectionSchedule": {
-        "classPairId": 1,
-        "classSlotId": 13091,
-        "finalExamDate": "2026-09-19",
-        "finalExamStartTime": "08:30:00",
-        "finalExamEndTime": "10:30:00",
-        "midExamDate": "2026-08-02",
-        "midExamStartTime": "08:30:00",
-        "midExamEndTime": "10:30:00",
-        "finalExamDetail": "Saturday, September 19, 2026 8:30 AM - 10:30 AM",
-        "midExamDetail": "Sunday, August 2, 2026 8:30 AM - 10:30 AM",
-        "classStartDate": "2026-06-09",
-        "classEndDate": "2026-09-08",
-        "classSchedules": [
-          {
-            "startTime": "09:30:00",
-            "endTime": "10:50:00",
-            "day": "SATURDAY"
-          },
-          {
-            "startTime": "09:30:00",
-            "endTime": "10:50:00",
-            "day": "THURSDAY"
-          }
-        ]
-      },
-      "courseName": "INTRODUCTION TO BIOLOGY",
-      "prerequisiteCourses": null,
-      "labSchedules": null,
-      "labSectionId": null,
-      "labCourseCode": null,
-      "labFaculties": null,
-      "labName": null,
-      "labRoomName": null,
-      "preRegLabSchedule": null,
-      "preRegSchedule": "SATURDAY(9:30 AM-10:50 AM-07H-29C)\nTHURSDAY(9:30 AM-10:50 AM-07H-29C)"
-    },
-    {
-      "sectionId": 185748,
-      "courseId": 1509,
-      "sectionName": "06",
-      "courseCredit": 3,
-      "courseCode": "ENG102",
-      "sectionType": "OTHER",
-      "capacity": 20,
-      "consumedSeat": 14,
-      "semesterSessionId": 20262,
-      "parentSectionId": null,
-      "faculties": "TBA",
-      "roomName": "07B-16C",
-      "roomNumber": "07B-16C",
-      "courseType": "THEORY",
-      "academicDegree": "UNDERGRADUATE",
-      "sectionSchedule": {
-        "classPairId": null,
-        "classSlotId": null,
-        "finalExamDate": "2026-09-12",
-        "finalExamStartTime": "11:00:00",
-        "finalExamEndTime": "13:00:00",
-        "midExamDate": "2026-07-25",
-        "midExamStartTime": "11:00:00",
-        "midExamEndTime": "12:30:00",
-        "finalExamDetail": "Sep 12, 2026 11:00 AM - 1:00 PM",
-        "midExamDetail": "Jul 25, 2026 11:00 AM - 12:30 PM",
-        "classStartDate": "2026-06-09",
-        "classEndDate": "2026-09-08",
-        "classSchedules": [
-          {
-            "startTime": "12:30:00",
-            "endTime": "13:50:00",
-            "day": "MONDAY"
-          },
-          {
-            "startTime": "12:30:00",
-            "endTime": "13:50:00",
-            "day": "WEDNESDAY"
-          }
-        ]
-      },
-      "courseName": "ENGLISH COMPOSITION I",
-      "prerequisiteCourses": null,
-      "labSchedules": null,
-      "labSectionId": null,
-      "labCourseCode": null,
-      "labFaculties": null,
-      "labName": null,
-      "labRoomName": null,
-      "preRegLabSchedule": null,
-      "preRegSchedule": "MONDAY(12:30 PM-1:50 PM-07B-16C)\nWEDNESDAY(12:30 PM-1:50 PM-07B-16C)"
-    },
-    {
       "sectionId": 187175,
       "courseId": 1779,
       "sectionName": "03",
@@ -14875,59 +15278,6 @@
       "preRegSchedule": "SATURDAY(11:00 AM-12:20 PM-07A-07C)\nTHURSDAY(11:00 AM-12:20 PM-07A-07C)"
     },
     {
-      "sectionId": 187513,
-      "courseId": 1243,
-      "sectionName": "01",
-      "courseCredit": 3,
-      "courseCode": "PHY202",
-      "sectionType": "OTHER",
-      "capacity": 40,
-      "consumedSeat": 7,
-      "semesterSessionId": 20262,
-      "parentSectionId": null,
-      "faculties": "TBA",
-      "roomName": "10H-36C",
-      "roomNumber": "10H-36C",
-      "courseType": "THEORY",
-      "academicDegree": "UNDERGRADUATE",
-      "sectionSchedule": {
-        "classPairId": 2,
-        "classSlotId": 13095,
-        "finalExamDate": "2026-09-15",
-        "finalExamStartTime": "14:00:00",
-        "finalExamEndTime": "16:00:00",
-        "midExamDate": "2026-07-28",
-        "midExamStartTime": "14:00:00",
-        "midExamEndTime": "16:00:00",
-        "finalExamDetail": "Tuesday, September 15, 2026 2:00 PM - 4:00 PM",
-        "midExamDetail": "Tuesday, July 28, 2026 2:00 PM - 4:00 PM",
-        "classStartDate": "2026-06-09",
-        "classEndDate": "2026-09-08",
-        "classSchedules": [
-          {
-            "startTime": "15:30:00",
-            "endTime": "16:50:00",
-            "day": "SUNDAY"
-          },
-          {
-            "startTime": "15:30:00",
-            "endTime": "16:50:00",
-            "day": "TUESDAY"
-          }
-        ]
-      },
-      "courseName": "OPTICS",
-      "prerequisiteCourses": "(PHY110 AND PHY115)",
-      "labSchedules": null,
-      "labSectionId": null,
-      "labCourseCode": null,
-      "labFaculties": null,
-      "labName": null,
-      "labRoomName": null,
-      "preRegLabSchedule": null,
-      "preRegSchedule": "SUNDAY(3:30 PM-4:50 PM-10H-36C)\nTUESDAY(3:30 PM-4:50 PM-10H-36C)"
-    },
-    {
       "sectionId": 186366,
       "courseId": 1526,
       "sectionName": "20",
@@ -15193,59 +15543,6 @@
       "preRegSchedule": "SUNDAY(11:00 AM-12:20 PM-07H-31C)\nTUESDAY(11:00 AM-12:20 PM-07H-31C)"
     },
     {
-      "sectionId": 187838,
-      "courseId": 1362,
-      "sectionName": "08",
-      "courseCredit": 3,
-      "courseCode": "MAT216",
-      "sectionType": "OTHER",
-      "capacity": 40,
-      "consumedSeat": 40,
-      "semesterSessionId": 20262,
-      "parentSectionId": null,
-      "faculties": "TBA",
-      "roomName": "12A-07C",
-      "roomNumber": "12A-07C",
-      "courseType": "THEORY",
-      "academicDegree": "UNDERGRADUATE",
-      "sectionSchedule": {
-        "classPairId": null,
-        "classSlotId": null,
-        "finalExamDate": "2026-09-12",
-        "finalExamStartTime": "08:30:00",
-        "finalExamEndTime": "10:30:00",
-        "midExamDate": "2026-07-25",
-        "midExamStartTime": "08:30:00",
-        "midExamEndTime": "10:30:00",
-        "finalExamDetail": "Sep 12, 2026 8:30 AM - 10:30 AM",
-        "midExamDetail": "Jul 25, 2026 8:30 AM - 10:30 AM",
-        "classStartDate": "2026-06-09",
-        "classEndDate": "2026-09-08",
-        "classSchedules": [
-          {
-            "startTime": "09:30:00",
-            "endTime": "10:50:00",
-            "day": "SUNDAY"
-          },
-          {
-            "startTime": "09:30:00",
-            "endTime": "10:50:00",
-            "day": "TUESDAY"
-          }
-        ]
-      },
-      "courseName": "MATHEMATICS IV: LINEAR ALGEBRA & FOURIER ANALYSIS",
-      "prerequisiteCourses": "(MAT120)",
-      "labSchedules": null,
-      "labSectionId": null,
-      "labCourseCode": null,
-      "labFaculties": null,
-      "labName": null,
-      "labRoomName": null,
-      "preRegLabSchedule": null,
-      "preRegSchedule": "SUNDAY(9:30 AM-10:50 AM-12A-07C)\nTUESDAY(9:30 AM-10:50 AM-12A-07C)"
-    },
-    {
       "sectionId": 187392,
       "courseId": 1097,
       "sectionName": "01",
@@ -15297,59 +15594,6 @@
       "labRoomName": null,
       "preRegLabSchedule": null,
       "preRegSchedule": "SATURDAY(8:00 AM-9:20 AM-07B-18C)\nTHURSDAY(8:00 AM-9:20 AM-07B-18C)"
-    },
-    {
-      "sectionId": 187218,
-      "courseId": 594,
-      "sectionName": "04",
-      "courseCredit": 3,
-      "courseCode": "CSE470",
-      "sectionType": "OTHER",
-      "capacity": 38,
-      "consumedSeat": 38,
-      "semesterSessionId": 20262,
-      "parentSectionId": null,
-      "faculties": "PLN",
-      "roomName": "07F-22C",
-      "roomNumber": "07F-22C",
-      "courseType": "THEORY",
-      "academicDegree": "UNDERGRADUATE",
-      "sectionSchedule": {
-        "classPairId": null,
-        "classSlotId": null,
-        "finalExamDate": "2026-09-16",
-        "finalExamStartTime": "16:30:00",
-        "finalExamEndTime": "18:30:00",
-        "midExamDate": "2026-07-29",
-        "midExamStartTime": "16:30:00",
-        "midExamEndTime": "18:30:00",
-        "finalExamDetail": "Sep 16, 2026 4:30 PM - 6:30 PM",
-        "midExamDetail": "Jul 29, 2026 4:30 PM - 6:30 PM",
-        "classStartDate": "2026-06-09",
-        "classEndDate": "2026-09-08",
-        "classSchedules": [
-          {
-            "startTime": "12:30:00",
-            "endTime": "13:50:00",
-            "day": "SATURDAY"
-          },
-          {
-            "startTime": "12:30:00",
-            "endTime": "13:50:00",
-            "day": "THURSDAY"
-          }
-        ]
-      },
-      "courseName": "SOFTWARE ENGINEERING",
-      "prerequisiteCourses": "(CSE370)",
-      "labSchedules": null,
-      "labSectionId": null,
-      "labCourseCode": null,
-      "labFaculties": null,
-      "labName": null,
-      "labRoomName": null,
-      "preRegLabSchedule": null,
-      "preRegSchedule": "SATURDAY(12:30 PM-1:50 PM-07F-22C)\nTHURSDAY(12:30 PM-1:50 PM-07F-22C)"
     },
     {
       "sectionId": 188220,
@@ -15456,6 +15700,59 @@
       "labRoomName": null,
       "preRegLabSchedule": null,
       "preRegSchedule": "MONDAY(2:00 PM-3:20 PM-09A-04C)\nWEDNESDAY(2:00 PM-3:20 PM-09A-04C)"
+    },
+    {
+      "sectionId": 187817,
+      "courseId": 1361,
+      "sectionName": "07",
+      "courseCredit": 3,
+      "courseCode": "MAT215",
+      "sectionType": "OTHER",
+      "capacity": 40,
+      "consumedSeat": 40,
+      "semesterSessionId": 20262,
+      "parentSectionId": null,
+      "faculties": "TBA",
+      "roomName": "12A-08C",
+      "roomNumber": "12A-08C",
+      "courseType": "THEORY",
+      "academicDegree": "UNDERGRADUATE",
+      "sectionSchedule": {
+        "classPairId": null,
+        "classSlotId": null,
+        "finalExamDate": "2026-09-14",
+        "finalExamStartTime": "08:30:00",
+        "finalExamEndTime": "10:30:00",
+        "midExamDate": "2026-07-27",
+        "midExamStartTime": "08:30:00",
+        "midExamEndTime": "10:30:00",
+        "finalExamDetail": "Sep 14, 2026 8:30 AM - 10:30 AM",
+        "midExamDetail": "Jul 27, 2026 8:30 AM - 10:30 AM",
+        "classStartDate": "2026-06-09",
+        "classEndDate": "2026-09-08",
+        "classSchedules": [
+          {
+            "startTime": "08:00:00",
+            "endTime": "09:20:00",
+            "day": "SUNDAY"
+          },
+          {
+            "startTime": "08:00:00",
+            "endTime": "09:20:00",
+            "day": "TUESDAY"
+          }
+        ]
+      },
+      "courseName": "MATHEMATICS III: COMPLEX VARIABLES & LAPLACE TRANSFORMATIONS",
+      "prerequisiteCourses": "(MAT216)",
+      "labSchedules": null,
+      "labSectionId": null,
+      "labCourseCode": null,
+      "labFaculties": null,
+      "labName": null,
+      "labRoomName": null,
+      "preRegLabSchedule": null,
+      "preRegSchedule": "SUNDAY(8:00 AM-9:20 AM-12A-08C)\nTUESDAY(8:00 AM-9:20 AM-12A-08C)"
     },
     {
       "sectionId": 187479,
@@ -15783,149 +16080,6 @@
       "preRegSchedule": "SUNDAY(2:00 PM-3:20 PM-07H-27C)\nTUESDAY(2:00 PM-3:20 PM-07H-27C)"
     },
     {
-      "sectionId": 188306,
-      "courseId": 1037,
-      "sectionName": "01",
-      "courseCredit": 3,
-      "courseCode": "ANT401",
-      "sectionType": "OTHER",
-      "capacity": 40,
-      "consumedSeat": 0,
-      "semesterSessionId": 20262,
-      "parentSectionId": null,
-      "faculties": "TBA",
-      "roomName": "UB0000",
-      "roomNumber": "UB0000",
-      "courseType": "THESIS",
-      "academicDegree": "UNDERGRADUATE",
-      "sectionSchedule": {
-        "classPairId": null,
-        "classSlotId": null,
-        "finalExamDate": null,
-        "finalExamStartTime": null,
-        "finalExamEndTime": null,
-        "midExamDate": null,
-        "midExamStartTime": null,
-        "midExamEndTime": null,
-        "finalExamDetail": null,
-        "midExamDetail": null,
-        "classStartDate": "2026-06-09",
-        "classEndDate": "2026-09-08",
-        "classSchedules": []
-      },
-      "courseName": "ANTHROPOLOGICAL THESIS",
-      "prerequisiteCourses": null,
-      "labSchedules": null,
-      "labSectionId": null,
-      "labCourseCode": null,
-      "labFaculties": null,
-      "labName": null,
-      "labRoomName": null,
-      "preRegLabSchedule": null,
-      "preRegSchedule": ""
-    },
-    {
-      "sectionId": 188307,
-      "courseId": 2124,
-      "sectionName": "01",
-      "courseCredit": 3,
-      "courseCode": "ANT402",
-      "sectionType": "OTHER",
-      "capacity": 40,
-      "consumedSeat": 0,
-      "semesterSessionId": 20262,
-      "parentSectionId": null,
-      "faculties": "TBA",
-      "roomName": "UB0000",
-      "roomNumber": "UB0000",
-      "courseType": "THEORY",
-      "academicDegree": "UNDERGRADUATE",
-      "sectionSchedule": {
-        "classPairId": null,
-        "classSlotId": null,
-        "finalExamDate": "2026-09-11",
-        "finalExamStartTime": "08:00:00",
-        "finalExamEndTime": "10:00:00",
-        "midExamDate": "2026-07-24",
-        "midExamStartTime": "08:00:00",
-        "midExamEndTime": "10:00:00",
-        "finalExamDetail": "Sep 11, 2026 8:00 AM - 10:00 AM",
-        "midExamDetail": "Jul 24, 2026 8:00 AM - 10:00 AM",
-        "classStartDate": "2026-06-09",
-        "classEndDate": "2026-09-08",
-        "classSchedules": [
-          {
-            "startTime": "08:00:00",
-            "endTime": "10:00:00",
-            "day": "FRIDAY"
-          }
-        ]
-      },
-      "courseName": "INTERNSHIP",
-      "prerequisiteCourses": null,
-      "labSchedules": null,
-      "labSectionId": null,
-      "labCourseCode": null,
-      "labFaculties": null,
-      "labName": null,
-      "labRoomName": null,
-      "preRegLabSchedule": null,
-      "preRegSchedule": "FRIDAY(8:00 AM-10:00 AM-UB0000)"
-    },
-    {
-      "sectionId": 187986,
-      "courseId": 1768,
-      "sectionName": "02",
-      "courseCredit": 3,
-      "courseCode": "ECE308",
-      "sectionType": "OTHER",
-      "capacity": 1,
-      "consumedSeat": 0,
-      "semesterSessionId": 20262,
-      "parentSectionId": null,
-      "faculties": "TBA",
-      "roomName": "10B-12C",
-      "roomNumber": "10B-12C",
-      "courseType": "THEORY",
-      "academicDegree": "UNDERGRADUATE",
-      "sectionSchedule": {
-        "classPairId": 1,
-        "classSlotId": 13091,
-        "finalExamDate": "2026-09-19",
-        "finalExamStartTime": "08:30:00",
-        "finalExamEndTime": "10:30:00",
-        "midExamDate": "2026-08-02",
-        "midExamStartTime": "08:30:00",
-        "midExamEndTime": "10:30:00",
-        "finalExamDetail": "Saturday, September 19, 2026 8:30 AM - 10:30 AM",
-        "midExamDetail": "Sunday, August 2, 2026 8:30 AM - 10:30 AM",
-        "classStartDate": "2026-06-09",
-        "classEndDate": "2026-09-08",
-        "classSchedules": [
-          {
-            "startTime": "09:30:00",
-            "endTime": "10:50:00",
-            "day": "SATURDAY"
-          },
-          {
-            "startTime": "09:30:00",
-            "endTime": "10:50:00",
-            "day": "THURSDAY"
-          }
-        ]
-      },
-      "courseName": "ELECTRONIC CIRCUITS II",
-      "prerequisiteCourses": "(ECE205 AND ECE206)",
-      "labSchedules": null,
-      "labSectionId": null,
-      "labCourseCode": null,
-      "labFaculties": null,
-      "labName": null,
-      "labRoomName": null,
-      "preRegLabSchedule": null,
-      "preRegSchedule": "SATURDAY(9:30 AM-10:50 AM-10B-12C)\nTHURSDAY(9:30 AM-10:50 AM-10B-12C)"
-    },
-    {
       "sectionId": 186237,
       "courseId": 1165,
       "sectionName": "01",
@@ -15979,20 +16133,20 @@
       "preRegSchedule": "SUNDAY(8:00 AM-9:20 AM-12B-23C)\nTUESDAY(8:00 AM-9:20 AM-12B-23C)"
     },
     {
-      "sectionId": 187385,
-      "courseId": 1424,
-      "sectionName": "02",
-      "courseCredit": 3,
-      "courseCode": "BTE258",
+      "sectionId": 186053,
+      "courseId": 599,
+      "sectionName": "01",
+      "courseCredit": 2,
+      "courseCode": "ARC293",
       "sectionType": "LAB",
-      "capacity": 20,
-      "consumedSeat": 20,
+      "capacity": 40,
+      "consumedSeat": 3,
       "semesterSessionId": 20262,
       "parentSectionId": null,
       "faculties": "TBA",
-      "roomName": "11B-14L",
-      "roomNumber": "11B-14L",
-      "courseType": "LAB",
+      "roomName": "11B-19L",
+      "roomNumber": "11B-19L",
+      "courseType": "STUDIO",
       "academicDegree": "UNDERGRADUATE",
       "sectionSchedule": {
         "classPairId": null,
@@ -16010,13 +16164,13 @@
         "classSchedules": [
           {
             "startTime": "14:00:00",
-            "endTime": "16:50:00",
+            "endTime": "16:55:00",
             "day": "TUESDAY"
           }
         ]
       },
-      "courseName": "Biotech Lab III",
-      "prerequisiteCourses": "(BTE255L)",
+      "courseName": "MUSIC APPRECIATION",
+      "prerequisiteCourses": null,
       "labSchedules": null,
       "labSectionId": null,
       "labCourseCode": null,
@@ -16024,22 +16178,75 @@
       "labName": null,
       "labRoomName": null,
       "preRegLabSchedule": null,
-      "preRegSchedule": "TUESDAY(2:00 PM-4:50 PM-11B-14L)"
+      "preRegSchedule": "TUESDAY(2:00 PM-4:55 PM-11B-19L)"
     },
     {
-      "sectionId": 186837,
-      "courseId": 587,
-      "sectionName": "09",
+      "sectionId": 186255,
+      "courseId": 2480,
+      "sectionName": "01",
       "courseCredit": 3,
-      "courseCode": "CSE340",
+      "courseCode": "MIS449",
+      "sectionType": "OTHER",
+      "capacity": 30,
+      "consumedSeat": 30,
+      "semesterSessionId": 20262,
+      "parentSectionId": null,
+      "faculties": "SHV",
+      "roomName": "10E-25L",
+      "roomNumber": "10E-25L",
+      "courseType": "THEORY",
+      "academicDegree": "UNDERGRADUATE",
+      "sectionSchedule": {
+        "classPairId": null,
+        "classSlotId": null,
+        "finalExamDate": "2026-09-16",
+        "finalExamStartTime": "08:30:00",
+        "finalExamEndTime": "10:30:00",
+        "midExamDate": "2026-07-29",
+        "midExamStartTime": "08:30:00",
+        "midExamEndTime": "10:30:00",
+        "finalExamDetail": "Sep 16, 2026 8:30 AM - 10:30 AM",
+        "midExamDetail": "Jul 29, 2026 8:30 AM - 10:30 AM",
+        "classStartDate": "2026-06-09",
+        "classEndDate": "2026-09-08",
+        "classSchedules": [
+          {
+            "startTime": "11:00:00",
+            "endTime": "12:20:00",
+            "day": "MONDAY"
+          },
+          {
+            "startTime": "11:00:00",
+            "endTime": "12:20:00",
+            "day": "WEDNESDAY"
+          }
+        ]
+      },
+      "courseName": "INTRODUCTION TO PYTHON FOR BUSINESS ANALYTICS",
+      "prerequisiteCourses": "(MSC321 AND BUS232) OR (BUS302 AND MSC321)",
+      "labSchedules": null,
+      "labSectionId": null,
+      "labCourseCode": null,
+      "labFaculties": null,
+      "labName": null,
+      "labRoomName": null,
+      "preRegLabSchedule": null,
+      "preRegSchedule": "MONDAY(11:00 AM-12:20 PM-10E-25L)\nWEDNESDAY(11:00 AM-12:20 PM-10E-25L)"
+    },
+    {
+      "sectionId": 187433,
+      "courseId": 1003,
+      "sectionName": "06",
+      "courseCredit": 3,
+      "courseCode": "STA101",
       "sectionType": "OTHER",
       "capacity": 38,
       "consumedSeat": 38,
       "semesterSessionId": 20262,
       "parentSectionId": null,
-      "faculties": "AFQ",
-      "roomName": "09C-16T",
-      "roomNumber": "09C-16T",
+      "faculties": "TBA",
+      "roomName": "09H-37C",
+      "roomNumber": "09H-37C",
       "courseType": "THEORY",
       "academicDegree": "UNDERGRADUATE",
       "sectionSchedule": {
@@ -16057,19 +16264,19 @@
         "classEndDate": "2026-09-08",
         "classSchedules": [
           {
-            "startTime": "08:00:00",
-            "endTime": "09:20:00",
-            "day": "SATURDAY"
+            "startTime": "09:30:00",
+            "endTime": "10:50:00",
+            "day": "MONDAY"
           },
           {
-            "startTime": "08:00:00",
-            "endTime": "09:20:00",
-            "day": "THURSDAY"
+            "startTime": "09:30:00",
+            "endTime": "10:50:00",
+            "day": "WEDNESDAY"
           }
         ]
       },
-      "courseName": "COMPUTER ARCHITECTURE",
-      "prerequisiteCourses": "(CSE260) OR (EEE283) OR (EEE301)",
+      "courseName": "INTRODUCTION TO STATISTICS",
+      "prerequisiteCourses": null,
       "labSchedules": null,
       "labSectionId": null,
       "labCourseCode": null,
@@ -16077,7 +16284,7 @@
       "labName": null,
       "labRoomName": null,
       "preRegLabSchedule": null,
-      "preRegSchedule": "SATURDAY(8:00 AM-9:20 AM-09C-16T)\nTHURSDAY(8:00 AM-9:20 AM-09C-16T)"
+      "preRegSchedule": "MONDAY(9:30 AM-10:50 AM-09H-37C)\nWEDNESDAY(9:30 AM-10:50 AM-09H-37C)"
     },
     {
       "sectionId": 185714,
@@ -16133,59 +16340,6 @@
       "preRegSchedule": "SATURDAY(9:30 AM-10:50 AM-07A-10C)\nTHURSDAY(9:30 AM-10:50 AM-07A-10C)"
     },
     {
-      "sectionId": 187817,
-      "courseId": 1361,
-      "sectionName": "07",
-      "courseCredit": 3,
-      "courseCode": "MAT215",
-      "sectionType": "OTHER",
-      "capacity": 40,
-      "consumedSeat": 40,
-      "semesterSessionId": 20262,
-      "parentSectionId": null,
-      "faculties": "TBA",
-      "roomName": "12A-08C",
-      "roomNumber": "12A-08C",
-      "courseType": "THEORY",
-      "academicDegree": "UNDERGRADUATE",
-      "sectionSchedule": {
-        "classPairId": null,
-        "classSlotId": null,
-        "finalExamDate": "2026-09-14",
-        "finalExamStartTime": "08:30:00",
-        "finalExamEndTime": "10:30:00",
-        "midExamDate": "2026-07-27",
-        "midExamStartTime": "08:30:00",
-        "midExamEndTime": "10:30:00",
-        "finalExamDetail": "Sep 14, 2026 8:30 AM - 10:30 AM",
-        "midExamDetail": "Jul 27, 2026 8:30 AM - 10:30 AM",
-        "classStartDate": "2026-06-09",
-        "classEndDate": "2026-09-08",
-        "classSchedules": [
-          {
-            "startTime": "08:00:00",
-            "endTime": "09:20:00",
-            "day": "SUNDAY"
-          },
-          {
-            "startTime": "08:00:00",
-            "endTime": "09:20:00",
-            "day": "TUESDAY"
-          }
-        ]
-      },
-      "courseName": "MATHEMATICS III: COMPLEX VARIABLES & LAPLACE TRANSFORMATIONS",
-      "prerequisiteCourses": "(MAT216)",
-      "labSchedules": null,
-      "labSectionId": null,
-      "labCourseCode": null,
-      "labFaculties": null,
-      "labName": null,
-      "labRoomName": null,
-      "preRegLabSchedule": null,
-      "preRegSchedule": "SUNDAY(8:00 AM-9:20 AM-12A-08C)\nTUESDAY(8:00 AM-9:20 AM-12A-08C)"
-    },
-    {
       "sectionId": 187461,
       "courseId": 1540,
       "sectionName": "04",
@@ -16237,6 +16391,107 @@
       "labRoomName": null,
       "preRegLabSchedule": null,
       "preRegSchedule": "SUNDAY(12:30 PM-1:50 PM-09H-37C)\nTUESDAY(12:30 PM-1:50 PM-09H-37C)"
+    },
+    {
+      "sectionId": 186154,
+      "courseId": 2055,
+      "sectionName": "01",
+      "courseCredit": 4,
+      "courseCode": "BUS490",
+      "sectionType": "OTHER",
+      "capacity": 99,
+      "consumedSeat": 70,
+      "semesterSessionId": 20262,
+      "parentSectionId": null,
+      "faculties": "TBA",
+      "roomName": "UB0000",
+      "roomNumber": "UB0000",
+      "courseType": "THEORY",
+      "academicDegree": "UNDERGRADUATE",
+      "sectionSchedule": {
+        "classPairId": null,
+        "classSlotId": null,
+        "finalExamDate": "2026-09-11",
+        "finalExamStartTime": "08:30:00",
+        "finalExamEndTime": "10:30:00",
+        "midExamDate": "2026-07-24",
+        "midExamStartTime": "08:30:00",
+        "midExamEndTime": "10:30:00",
+        "finalExamDetail": "Sep 11, 2026 8:30 AM - 10:30 AM",
+        "midExamDetail": "Jul 24, 2026 8:30 AM - 10:30 AM",
+        "classStartDate": "2026-06-09",
+        "classEndDate": "2026-09-08",
+        "classSchedules": [
+          {
+            "startTime": "08:00:00",
+            "endTime": "09:20:00",
+            "day": "FRIDAY"
+          }
+        ]
+      },
+      "courseName": "INTERNSHIP",
+      "prerequisiteCourses": null,
+      "labSchedules": null,
+      "labSectionId": null,
+      "labCourseCode": null,
+      "labFaculties": null,
+      "labName": null,
+      "labRoomName": null,
+      "preRegLabSchedule": null,
+      "preRegSchedule": "FRIDAY(8:00 AM-9:20 AM-UB0000)"
+    },
+    {
+      "sectionId": 188153,
+      "courseId": 79,
+      "sectionName": "01",
+      "courseCredit": 3,
+      "courseCode": "EEE373",
+      "sectionType": "OTHER",
+      "capacity": 32,
+      "consumedSeat": 32,
+      "semesterSessionId": 20262,
+      "parentSectionId": null,
+      "faculties": "TBA",
+      "roomName": "08A-02C",
+      "roomNumber": "08A-02C",
+      "courseType": "THEORY",
+      "academicDegree": "UNDERGRADUATE",
+      "sectionSchedule": {
+        "classPairId": 2,
+        "classSlotId": 13090,
+        "finalExamDate": "2026-09-14",
+        "finalExamStartTime": "08:30:00",
+        "finalExamEndTime": "10:30:00",
+        "midExamDate": "2026-07-27",
+        "midExamStartTime": "08:30:00",
+        "midExamEndTime": "10:30:00",
+        "finalExamDetail": "Monday, September 14, 2026 8:30 AM - 10:30 AM",
+        "midExamDetail": "Monday, July 27, 2026 8:30 AM - 10:30 AM",
+        "classStartDate": "2026-06-09",
+        "classEndDate": "2026-09-08",
+        "classSchedules": [
+          {
+            "startTime": "08:00:00",
+            "endTime": "09:20:00",
+            "day": "SUNDAY"
+          },
+          {
+            "startTime": "08:00:00",
+            "endTime": "09:20:00",
+            "day": "TUESDAY"
+          }
+        ]
+      },
+      "courseName": "EMBEDDED SYSTEM DESIGN",
+      "prerequisiteCourses": "(EEE103 AND EEE283 AND EEE283L) OR (ECE103 AND EEE283 AND EEE283L)",
+      "labSchedules": null,
+      "labSectionId": null,
+      "labCourseCode": null,
+      "labFaculties": null,
+      "labName": null,
+      "labRoomName": null,
+      "preRegLabSchedule": null,
+      "preRegSchedule": "SUNDAY(8:00 AM-9:20 AM-08A-02C)\nTUESDAY(8:00 AM-9:20 AM-08A-02C)"
     },
     {
       "sectionId": 188223,
@@ -34021,54 +34276,6 @@
       "labRoomName": null,
       "preRegLabSchedule": null,
       "preRegSchedule": "SUNDAY(9:00 AM-1:10 PM-11A-12L)\nTUESDAY(9:00 AM-1:10 PM-11A-12L)\nTHURSDAY(9:00 AM-1:10 PM-11A-12L)"
-    },
-    {
-      "sectionId": 186053,
-      "courseId": 599,
-      "sectionName": "01",
-      "courseCredit": 2,
-      "courseCode": "ARC293",
-      "sectionType": "LAB",
-      "capacity": 40,
-      "consumedSeat": 3,
-      "semesterSessionId": 20262,
-      "parentSectionId": null,
-      "faculties": "TBA",
-      "roomName": "11B-19L",
-      "roomNumber": "11B-19L",
-      "courseType": "STUDIO",
-      "academicDegree": "UNDERGRADUATE",
-      "sectionSchedule": {
-        "classPairId": null,
-        "classSlotId": null,
-        "finalExamDate": null,
-        "finalExamStartTime": null,
-        "finalExamEndTime": null,
-        "midExamDate": null,
-        "midExamStartTime": null,
-        "midExamEndTime": null,
-        "finalExamDetail": null,
-        "midExamDetail": null,
-        "classStartDate": "2026-06-09",
-        "classEndDate": "2026-09-08",
-        "classSchedules": [
-          {
-            "startTime": "14:00:00",
-            "endTime": "16:55:00",
-            "day": "TUESDAY"
-          }
-        ]
-      },
-      "courseName": "MUSIC APPRECIATION",
-      "prerequisiteCourses": null,
-      "labSchedules": null,
-      "labSectionId": null,
-      "labCourseCode": null,
-      "labFaculties": null,
-      "labName": null,
-      "labRoomName": null,
-      "preRegLabSchedule": null,
-      "preRegSchedule": "TUESDAY(2:00 PM-4:55 PM-11B-19L)"
     },
     {
       "sectionId": 186054,
@@ -73124,59 +73331,6 @@
       "preRegSchedule": "SATURDAY(8:00 AM-9:20 AM-08F-21C)\nTHURSDAY(8:00 AM-9:20 AM-08F-21C)"
     },
     {
-      "sectionId": 186255,
-      "courseId": 2480,
-      "sectionName": "01",
-      "courseCredit": 3,
-      "courseCode": "MIS449",
-      "sectionType": "OTHER",
-      "capacity": 30,
-      "consumedSeat": 30,
-      "semesterSessionId": 20262,
-      "parentSectionId": null,
-      "faculties": "SHV",
-      "roomName": "10E-25L",
-      "roomNumber": "10E-25L",
-      "courseType": "THEORY",
-      "academicDegree": "UNDERGRADUATE",
-      "sectionSchedule": {
-        "classPairId": null,
-        "classSlotId": null,
-        "finalExamDate": "2026-09-16",
-        "finalExamStartTime": "08:30:00",
-        "finalExamEndTime": "10:30:00",
-        "midExamDate": "2026-07-29",
-        "midExamStartTime": "08:30:00",
-        "midExamEndTime": "10:30:00",
-        "finalExamDetail": "Sep 16, 2026 8:30 AM - 10:30 AM",
-        "midExamDetail": "Jul 29, 2026 8:30 AM - 10:30 AM",
-        "classStartDate": "2026-06-09",
-        "classEndDate": "2026-09-08",
-        "classSchedules": [
-          {
-            "startTime": "11:00:00",
-            "endTime": "12:20:00",
-            "day": "MONDAY"
-          },
-          {
-            "startTime": "11:00:00",
-            "endTime": "12:20:00",
-            "day": "WEDNESDAY"
-          }
-        ]
-      },
-      "courseName": "INTRODUCTION TO PYTHON FOR BUSINESS ANALYTICS",
-      "prerequisiteCourses": "(MSC321 AND BUS232) OR (BUS302 AND MSC321)",
-      "labSchedules": null,
-      "labSectionId": null,
-      "labCourseCode": null,
-      "labFaculties": null,
-      "labName": null,
-      "labRoomName": null,
-      "preRegLabSchedule": null,
-      "preRegSchedule": "MONDAY(11:00 AM-12:20 PM-10E-25L)\nWEDNESDAY(11:00 AM-12:20 PM-10E-25L)"
-    },
-    {
       "sectionId": 187329,
       "courseId": 1122,
       "sectionName": "15B",
@@ -77038,54 +77192,6 @@
       "labRoomName": "12F-31L",
       "preRegLabSchedule": "THURSDAY(2:00 PM-4:50 PM-12F-31L)",
       "preRegSchedule": "MONDAY(2:00 PM-3:20 PM-08H-22C)\nWEDNESDAY(2:00 PM-3:20 PM-08H-22C)"
-    },
-    {
-      "sectionId": 186154,
-      "courseId": 2055,
-      "sectionName": "01",
-      "courseCredit": 4,
-      "courseCode": "BUS490",
-      "sectionType": "OTHER",
-      "capacity": 99,
-      "consumedSeat": 70,
-      "semesterSessionId": 20262,
-      "parentSectionId": null,
-      "faculties": "TBA",
-      "roomName": "UB0000",
-      "roomNumber": "UB0000",
-      "courseType": "THEORY",
-      "academicDegree": "UNDERGRADUATE",
-      "sectionSchedule": {
-        "classPairId": null,
-        "classSlotId": null,
-        "finalExamDate": "2026-09-11",
-        "finalExamStartTime": "08:30:00",
-        "finalExamEndTime": "10:30:00",
-        "midExamDate": "2026-07-24",
-        "midExamStartTime": "08:30:00",
-        "midExamEndTime": "10:30:00",
-        "finalExamDetail": "Sep 11, 2026 8:30 AM - 10:30 AM",
-        "midExamDetail": "Jul 24, 2026 8:30 AM - 10:30 AM",
-        "classStartDate": "2026-06-09",
-        "classEndDate": "2026-09-08",
-        "classSchedules": [
-          {
-            "startTime": "08:00:00",
-            "endTime": "09:20:00",
-            "day": "FRIDAY"
-          }
-        ]
-      },
-      "courseName": "INTERNSHIP",
-      "prerequisiteCourses": null,
-      "labSchedules": null,
-      "labSectionId": null,
-      "labCourseCode": null,
-      "labFaculties": null,
-      "labName": null,
-      "labRoomName": null,
-      "preRegLabSchedule": null,
-      "preRegSchedule": "FRIDAY(8:00 AM-9:20 AM-UB0000)"
     },
     {
       "sectionId": 187391,
@@ -81148,59 +81254,6 @@
       "labRoomName": null,
       "preRegLabSchedule": null,
       "preRegSchedule": "MONDAY(11:00 AM-12:20 PM-07A-02C)\nWEDNESDAY(11:00 AM-12:20 PM-07A-02C)"
-    },
-    {
-      "sectionId": 187433,
-      "courseId": 1003,
-      "sectionName": "06",
-      "courseCredit": 3,
-      "courseCode": "STA101",
-      "sectionType": "OTHER",
-      "capacity": 38,
-      "consumedSeat": 38,
-      "semesterSessionId": 20262,
-      "parentSectionId": null,
-      "faculties": "TBA",
-      "roomName": "09H-37C",
-      "roomNumber": "09H-37C",
-      "courseType": "THEORY",
-      "academicDegree": "UNDERGRADUATE",
-      "sectionSchedule": {
-        "classPairId": null,
-        "classSlotId": null,
-        "finalExamDate": "2026-09-18",
-        "finalExamStartTime": "11:00:00",
-        "finalExamEndTime": "13:00:00",
-        "midExamDate": "2026-08-01",
-        "midExamStartTime": "11:00:00",
-        "midExamEndTime": "13:00:00",
-        "finalExamDetail": "Sep 18, 2026 11:00 AM - 1:00 PM",
-        "midExamDetail": "Aug 1, 2026 11:00 AM - 1:00 PM",
-        "classStartDate": "2026-06-09",
-        "classEndDate": "2026-09-08",
-        "classSchedules": [
-          {
-            "startTime": "09:30:00",
-            "endTime": "10:50:00",
-            "day": "MONDAY"
-          },
-          {
-            "startTime": "09:30:00",
-            "endTime": "10:50:00",
-            "day": "WEDNESDAY"
-          }
-        ]
-      },
-      "courseName": "INTRODUCTION TO STATISTICS",
-      "prerequisiteCourses": null,
-      "labSchedules": null,
-      "labSectionId": null,
-      "labCourseCode": null,
-      "labFaculties": null,
-      "labName": null,
-      "labRoomName": null,
-      "preRegLabSchedule": null,
-      "preRegSchedule": "MONDAY(9:30 AM-10:50 AM-09H-37C)\nWEDNESDAY(9:30 AM-10:50 AM-09H-37C)"
     },
     {
       "sectionId": 187578,
@@ -86273,59 +86326,6 @@
       "labRoomName": "10E-26L",
       "preRegLabSchedule": "THURSDAY(12:30 PM-1:50 PM-10E-26L)",
       "preRegSchedule": "MONDAY(12:30 PM-1:50 PM-12A-10C)\nWEDNESDAY(12:30 PM-1:50 PM-12A-10C)"
-    },
-    {
-      "sectionId": 188153,
-      "courseId": 79,
-      "sectionName": "01",
-      "courseCredit": 3,
-      "courseCode": "EEE373",
-      "sectionType": "OTHER",
-      "capacity": 32,
-      "consumedSeat": 32,
-      "semesterSessionId": 20262,
-      "parentSectionId": null,
-      "faculties": "TBA",
-      "roomName": "08A-02C",
-      "roomNumber": "08A-02C",
-      "courseType": "THEORY",
-      "academicDegree": "UNDERGRADUATE",
-      "sectionSchedule": {
-        "classPairId": 2,
-        "classSlotId": 13090,
-        "finalExamDate": "2026-09-14",
-        "finalExamStartTime": "08:30:00",
-        "finalExamEndTime": "10:30:00",
-        "midExamDate": "2026-07-27",
-        "midExamStartTime": "08:30:00",
-        "midExamEndTime": "10:30:00",
-        "finalExamDetail": "Monday, September 14, 2026 8:30 AM - 10:30 AM",
-        "midExamDetail": "Monday, July 27, 2026 8:30 AM - 10:30 AM",
-        "classStartDate": "2026-06-09",
-        "classEndDate": "2026-09-08",
-        "classSchedules": [
-          {
-            "startTime": "08:00:00",
-            "endTime": "09:20:00",
-            "day": "SUNDAY"
-          },
-          {
-            "startTime": "08:00:00",
-            "endTime": "09:20:00",
-            "day": "TUESDAY"
-          }
-        ]
-      },
-      "courseName": "EMBEDDED SYSTEM DESIGN",
-      "prerequisiteCourses": "(EEE103 AND EEE283 AND EEE283L) OR (ECE103 AND EEE283 AND EEE283L)",
-      "labSchedules": null,
-      "labSectionId": null,
-      "labCourseCode": null,
-      "labFaculties": null,
-      "labName": null,
-      "labRoomName": null,
-      "preRegLabSchedule": null,
-      "preRegSchedule": "SUNDAY(8:00 AM-9:20 AM-08A-02C)\nTUESDAY(8:00 AM-9:20 AM-08A-02C)"
     },
     {
       "sectionId": 186240,
