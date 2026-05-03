@@ -7,6 +7,7 @@ Analyzes lab room usage and identifies free time slots for each lab.
 import json
 import os
 import gzip
+import requests
 from datetime import datetime, timezone
 from collections import defaultdict
 from typing import Dict, List, Set, Tuple
@@ -195,19 +196,22 @@ def generate_free_labs_json():
     print("Free Labs Analyzer")
     print("=" * 60)
 
-    # Load current connect.json
-    connect_path = os.path.join(SCRIPT_DIR, "connect.json")
-
-    if not os.path.exists(connect_path):
-        print("✗ connect.json not found. Run update_cdn.py first.")
+    # Load section data from table.json instead of local latest connect.json
+    table_url = "https://usis-cdn.eniamza.com/table.json"
+    print(f"\nLoading table.json from {table_url}...")
+    try:
+        response = requests.get(table_url, timeout=30)
+        response.raise_for_status()
+        sections = response.json()
+    except requests.RequestException as e:
+        print(f"✗ Failed to load table.json: {e}")
         return False
 
-    print("\nLoading connect.json...")
-    with open(connect_path, 'r', encoding='utf-8') as f:
-        data = json.load(f)
-
-    sections = data.get('sections', [])
-    metadata = data.get('metadata', {})
+    metadata = {}
+    connect_path = os.path.join(SCRIPT_DIR, "connect.json")
+    if os.path.exists(connect_path):
+        with open(connect_path, 'r', encoding='utf-8') as f:
+            metadata = json.load(f).get('metadata', {})
 
     print(f"✓ Loaded {len(sections)} sections")
 
