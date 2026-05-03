@@ -195,19 +195,18 @@ def generate_free_labs_json():
     print("Free Labs Analyzer")
     print("=" * 60)
 
-    # Load current connect.json
-    connect_path = os.path.join(SCRIPT_DIR, "connect.json")
-
-    if not os.path.exists(connect_path):
-        print("✗ connect.json not found. Run update_cdn.py first.")
+    # Load section data from stable.json so open labs stay aligned with stable semester
+    stable_path = os.path.join(SCRIPT_DIR, "stable.json")
+    if not os.path.exists(stable_path):
+        print("✗ stable.json not found. Run update_cdn.py first.")
         return False
 
-    print("\nLoading connect.json...")
-    with open(connect_path, 'r', encoding='utf-8') as f:
-        data = json.load(f)
+    print("\nLoading stable.json...")
+    with open(stable_path, 'r', encoding='utf-8') as f:
+        stable_data = json.load(f)
 
-    sections = data.get('sections', [])
-    metadata = data.get('metadata', {})
+    sections = stable_data.get('sections', [])
+    metadata = stable_data.get('metadata', {})
 
     print(f"✓ Loaded {len(sections)} sections")
 

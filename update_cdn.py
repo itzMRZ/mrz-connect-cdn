@@ -320,11 +320,14 @@ def generate_exams_json(sections: List[Dict], output_path: str = "exams.json"):
         if not mid_date and not final_date:
             continue
 
+        section_type = section.get('sectionType')
+        normalized_section_type = "LAB" if section_type == "LAB" else "THEORY"
+
         exam_entry = {
             "courseCode": section.get('courseCode'),
             "sectionName": section.get('sectionName'),
             "sectionId": section.get('sectionId'),
-            "sectionType": section.get('sectionType'),
+            "sectionType": normalized_section_type,
             "midExamDate": mid_date,
             "midExamTime": mid_time,
             "midExamRoom": None,  # To be updated later
