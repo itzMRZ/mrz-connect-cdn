@@ -202,16 +202,23 @@ def generate_free_labs_json():
     try:
         response = requests.get(table_url, timeout=30)
         response.raise_for_status()
-        sections = response.json()
+        try:
+            sections = response.json()
+        except json.JSONDecodeError as e:
+            print(f"✗ Failed to decode JSON from table.json: {e}")
+            return False
     except requests.RequestException as e:
         print(f"✗ Failed to load table.json: {e}")
         return False
 
     metadata = {}
-    connect_path = os.path.join(SCRIPT_DIR, "connect.json")
+    connect_path = os.path.join(SCRIPT_DIR, "connect_metadata.json")
     if os.path.exists(connect_path):
-        with open(connect_path, 'r', encoding='utf-8') as f:
-            metadata = json.load(f).get('metadata', {})
+        try:
+            with open(connect_path, 'r', encoding='utf-8') as f:
+                metadata = json.load(f).get('metadata', {})
+        except (json.JSONDecodeError, FileNotFoundError):
+            metadata = {}
 
     print(f"✓ Loaded {len(sections)} sections")
 
