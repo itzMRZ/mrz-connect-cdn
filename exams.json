@@ -5,7 +5,7 @@
     "midExamEndDate": "2026-10-30",
     "finalExamStartDate": "2026-09-05",
     "finalExamEndDate": "2026-12-21",
-    "lastUpdated": "2026-08-09T06:56:36.296113+00:00"
+    "lastUpdated": "2026-08-10T07:41:53.188601+00:00"
   },
   "exams": [
     {
@@ -1845,18 +1845,6 @@
       "finalExamRoom": null
     },
     {
-      "courseCode": "ENG101",
-      "sectionName": "18",
-      "sectionId": 185691,
-      "sectionType": "THEORY",
-      "midExamDate": "2026-07-25",
-      "midExamTime": "08:30:00",
-      "midExamRoom": null,
-      "finalExamDate": "2026-09-12",
-      "finalExamTime": "08:30:00",
-      "finalExamRoom": null
-    },
-    {
       "courseCode": "BTE308",
       "sectionName": "04",
       "sectionId": 186492,
@@ -2349,18 +2337,6 @@
       "finalExamRoom": null
     },
     {
-      "courseCode": "ENG101",
-      "sectionName": "34",
-      "sectionId": 185707,
-      "sectionType": "THEORY",
-      "midExamDate": "2026-07-25",
-      "midExamTime": "08:30:00",
-      "midExamRoom": null,
-      "finalExamDate": "2026-09-12",
-      "finalExamTime": "08:30:00",
-      "finalExamRoom": null
-    },
-    {
       "courseCode": "MAT216",
       "sectionName": "06",
       "sectionId": 187836,
@@ -2454,18 +2430,6 @@
       "midExamRoom": null,
       "finalExamDate": "2026-09-14",
       "finalExamTime": "11:00:00",
-      "finalExamRoom": null
-    },
-    {
-      "courseCode": "ENG111",
-      "sectionName": "01",
-      "sectionId": 186556,
-      "sectionType": "THEORY",
-      "midExamDate": "2026-07-29",
-      "midExamTime": "08:30:00",
-      "midExamRoom": null,
-      "finalExamDate": "2026-09-16",
-      "finalExamTime": "08:30:00",
       "finalExamRoom": null
     },
     {
@@ -2565,18 +2529,6 @@
       "finalExamRoom": null
     },
     {
-      "courseCode": "ENG101",
-      "sectionName": "14 (PHR)",
-      "sectionId": 185687,
-      "sectionType": "THEORY",
-      "midExamDate": "2026-07-25",
-      "midExamTime": "08:30:00",
-      "midExamRoom": null,
-      "finalExamDate": "2026-09-12",
-      "finalExamTime": "08:30:00",
-      "finalExamRoom": null
-    },
-    {
       "courseCode": "ECO208",
       "sectionName": "02",
       "sectionId": 185969,
@@ -2649,18 +2601,6 @@
       "finalExamRoom": null
     },
     {
-      "courseCode": "MIC201",
-      "sectionName": "02",
-      "sectionId": 185855,
-      "sectionType": "THEORY",
-      "midExamDate": "2026-07-29",
-      "midExamTime": "08:30:00",
-      "midExamRoom": null,
-      "finalExamDate": "2026-09-16",
-      "finalExamTime": "08:30:00",
-      "finalExamRoom": null
-    },
-    {
       "courseCode": "PHB307",
       "sectionName": "02",
       "sectionId": 188782,
@@ -2730,18 +2670,6 @@
       "midExamRoom": null,
       "finalExamDate": "2026-09-14",
       "finalExamTime": "14:00:00",
-      "finalExamRoom": null
-    },
-    {
-      "courseCode": "MIC402",
-      "sectionName": "02",
-      "sectionId": 185906,
-      "sectionType": "THEORY",
-      "midExamDate": "2026-07-30",
-      "midExamTime": "11:00:00",
-      "midExamRoom": null,
-      "finalExamDate": "2026-09-17",
-      "finalExamTime": "11:00:00",
       "finalExamRoom": null
     },
     {
@@ -4389,6 +4317,18 @@
       "finalExamRoom": null
     },
     {
+      "courseCode": "MIC402",
+      "sectionName": "02",
+      "sectionId": 185906,
+      "sectionType": "THEORY",
+      "midExamDate": "2026-07-30",
+      "midExamTime": "11:00:00",
+      "midExamRoom": null,
+      "finalExamDate": "2026-09-17",
+      "finalExamTime": "11:00:00",
+      "finalExamRoom": null
+    },
+    {
       "courseCode": "BTE203",
       "sectionName": "01",
       "sectionId": 186435,
@@ -4428,6 +4368,18 @@
       "courseCode": "MAT216",
       "sectionName": "15",
       "sectionId": 187845,
+      "sectionType": "THEORY",
+      "midExamDate": "2026-07-25",
+      "midExamTime": "08:30:00",
+      "midExamRoom": null,
+      "finalExamDate": "2026-09-12",
+      "finalExamTime": "08:30:00",
+      "finalExamRoom": null
+    },
+    {
+      "courseCode": "ENG101",
+      "sectionName": "34",
+      "sectionId": 185707,
       "sectionType": "THEORY",
       "midExamDate": "2026-07-25",
       "midExamTime": "08:30:00",
@@ -4517,6 +4469,18 @@
       "midExamTime": "08:30:00",
       "midExamRoom": null,
       "finalExamDate": "2026-09-15",
+      "finalExamTime": "08:30:00",
+      "finalExamRoom": null
+    },
+    {
+      "courseCode": "MIC201",
+      "sectionName": "02",
+      "sectionId": 185855,
+      "sectionType": "THEORY",
+      "midExamDate": "2026-07-29",
+      "midExamTime": "08:30:00",
+      "midExamRoom": null,
+      "finalExamDate": "2026-09-16",
       "finalExamTime": "08:30:00",
       "finalExamRoom": null
     },
@@ -5973,6 +5937,30 @@
       "finalExamRoom": null
     },
     {
+      "courseCode": "ENG101",
+      "sectionName": "14 (PHR)",
+      "sectionId": 185687,
+      "sectionType": "THEORY",
+      "midExamDate": "2026-07-25",
+      "midExamTime": "08:30:00",
+      "midExamRoom": null,
+      "finalExamDate": "2026-09-12",
+      "finalExamTime": "08:30:00",
+      "finalExamRoom": null
+    },
+    {
+      "courseCode": "ENG111",
+      "sectionName": "01",
+      "sectionId": 186556,
+      "sectionType": "THEORY",
+      "midExamDate": "2026-07-29",
+      "midExamTime": "08:30:00",
+      "midExamRoom": null,
+      "finalExamDate": "2026-09-16",
+      "finalExamTime": "08:30:00",
+      "finalExamRoom": null
+    },
+    {
       "courseCode": "CSE423",
       "sectionName": "16",
       "sectionId": 187109,
@@ -6318,6 +6306,18 @@
       "midExamRoom": null,
       "finalExamDate": "2026-09-14",
       "finalExamTime": "14:00:00",
+      "finalExamRoom": null
+    },
+    {
+      "courseCode": "ENG101",
+      "sectionName": "18",
+      "sectionId": 185691,
+      "sectionType": "THEORY",
+      "midExamDate": "2026-07-25",
+      "midExamTime": "08:30:00",
+      "midExamRoom": null,
+      "finalExamDate": "2026-09-12",
+      "finalExamTime": "08:30:00",
       "finalExamRoom": null
     },
     {
