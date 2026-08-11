@@ -5,7 +5,7 @@
     "midExamEndDate": "2026-10-30",
     "finalExamStartDate": "2026-09-05",
     "finalExamEndDate": "2026-12-21",
-    "lastUpdated": "2026-08-10T07:41:53.188601+00:00"
+    "lastUpdated": "2026-08-11T07:07:30.867525+00:00"
   },
   "exams": [
     {
@@ -1893,18 +1893,6 @@
       "finalExamRoom": null
     },
     {
-      "courseCode": "ACT202",
-      "sectionName": "01",
-      "sectionId": 186045,
-      "sectionType": "THEORY",
-      "midExamDate": "2026-08-01",
-      "midExamTime": "11:00:00",
-      "midExamRoom": null,
-      "finalExamDate": "2026-09-18",
-      "finalExamTime": "11:00:00",
-      "finalExamRoom": null
-    },
-    {
       "courseCode": "CSE110",
       "sectionName": "14",
       "sectionId": 186596,
@@ -2778,18 +2766,6 @@
       "midExamRoom": null,
       "finalExamDate": "2026-09-19",
       "finalExamTime": "08:30:00",
-      "finalExamRoom": null
-    },
-    {
-      "courseCode": "MAT120",
-      "sectionName": "07",
-      "sectionId": 187770,
-      "sectionType": "THEORY",
-      "midExamDate": "2026-08-01",
-      "midExamTime": "14:00:00",
-      "midExamRoom": null,
-      "finalExamDate": "2026-09-18",
-      "finalExamTime": "14:30:00",
       "finalExamRoom": null
     },
     {
@@ -6945,6 +6921,18 @@
       "finalExamRoom": null
     },
     {
+      "courseCode": "ACT202",
+      "sectionName": "01",
+      "sectionId": 186045,
+      "sectionType": "THEORY",
+      "midExamDate": "2026-08-01",
+      "midExamTime": "11:00:00",
+      "midExamRoom": null,
+      "finalExamDate": "2026-09-18",
+      "finalExamTime": "11:00:00",
+      "finalExamRoom": null
+    },
+    {
       "courseCode": "MSC321",
       "sectionName": "03",
       "sectionId": 186386,
@@ -8805,18 +8793,6 @@
       "finalExamRoom": null
     },
     {
-      "courseCode": "SOC101",
-      "sectionName": "02",
-      "sectionId": 185776,
-      "sectionType": "THEORY",
-      "midExamDate": "2026-07-28",
-      "midExamTime": "16:30:00",
-      "midExamRoom": null,
-      "finalExamDate": "2026-09-15",
-      "finalExamTime": "16:30:00",
-      "finalExamRoom": null
-    },
-    {
       "courseCode": "MAT091",
       "sectionName": "02",
       "sectionId": 187855,
@@ -8874,18 +8850,6 @@
       "midExamRoom": null,
       "finalExamDate": "2026-09-13",
       "finalExamTime": "16:30:00",
-      "finalExamRoom": null
-    },
-    {
-      "courseCode": "BTE102",
-      "sectionName": "02",
-      "sectionId": 186425,
-      "sectionType": "THEORY",
-      "midExamDate": "2026-07-27",
-      "midExamTime": "08:30:00",
-      "midExamRoom": null,
-      "finalExamDate": "2026-09-14",
-      "finalExamTime": "08:30:00",
       "finalExamRoom": null
     },
     {
@@ -8985,6 +8949,18 @@
       "finalExamRoom": null
     },
     {
+      "courseCode": "MAT120",
+      "sectionName": "07",
+      "sectionId": 187770,
+      "sectionType": "THEORY",
+      "midExamDate": "2026-08-01",
+      "midExamTime": "14:00:00",
+      "midExamRoom": null,
+      "finalExamDate": "2026-09-18",
+      "finalExamTime": "14:30:00",
+      "finalExamRoom": null
+    },
+    {
       "courseCode": "CSE437",
       "sectionName": "10",
       "sectionId": 187170,
@@ -8994,6 +8970,18 @@
       "midExamRoom": null,
       "finalExamDate": "2026-09-15",
       "finalExamTime": "11:00:00",
+      "finalExamRoom": null
+    },
+    {
+      "courseCode": "BTE102",
+      "sectionName": "02",
+      "sectionId": 186425,
+      "sectionType": "THEORY",
+      "midExamDate": "2026-07-27",
+      "midExamTime": "08:30:00",
+      "midExamRoom": null,
+      "finalExamDate": "2026-09-14",
+      "finalExamTime": "08:30:00",
       "finalExamRoom": null
     },
     {
@@ -9054,6 +9042,18 @@
       "midExamRoom": null,
       "finalExamDate": "2026-12-17",
       "finalExamTime": "13:30:00",
+      "finalExamRoom": null
+    },
+    {
+      "courseCode": "SOC101",
+      "sectionName": "02",
+      "sectionId": 185776,
+      "sectionType": "THEORY",
+      "midExamDate": "2026-07-28",
+      "midExamTime": "16:30:00",
+      "midExamRoom": null,
+      "finalExamDate": "2026-09-15",
+      "finalExamTime": "16:30:00",
       "finalExamRoom": null
     },
     {
