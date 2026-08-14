@@ -10,7 +10,7 @@
     "midExamEndDate": "2026-10-30",
     "finalExamStartDate": "2026-09-05",
     "finalExamEndDate": "2026-12-21",
-    "lastUpdated": "2026-08-13T07:26:36.240491+00:00"
+    "lastUpdated": "2026-08-14T07:24:36.356601+00:00"
   },
   "sections": [
     {
@@ -13993,59 +13993,6 @@
       "labRoomName": null,
       "preRegLabSchedule": null,
       "preRegSchedule": "SUNDAY(9:30 AM-10:50 AM-AN1-03C)\nMONDAY(9:30 AM-10:50 AM-AN1-03C)\nTUESDAY(9:30 AM-10:50 AM-AN1-03C)\nWEDNESDAY(9:30 AM-10:50 AM-AN1-03C)"
-    },
-    {
-      "academicDegree": "UNDERGRADUATE",
-      "capacity": 40,
-      "consumedSeat": 40,
-      "courseCode": "MAT215",
-      "courseCredit": 3,
-      "courseId": 1361,
-      "courseType": "THEORY",
-      "faculties": "MHL",
-      "parentSectionId": null,
-      "roomName": "12A-08C",
-      "roomNumber": "12A-08C",
-      "sectionId": 187816,
-      "sectionName": "06",
-      "sectionSchedule": {
-        "classPairId": null,
-        "classSlotId": null,
-        "midExamDate": "2026-07-27",
-        "classEndDate": "2026-09-08",
-        "finalExamDate": "2026-09-14",
-        "midExamDetail": "Jul 27, 2026 8:30 AM - 10:30 AM",
-        "classSchedules": [
-          {
-            "day": "SATURDAY",
-            "endTime": "16:50:00",
-            "startTime": "15:30:00"
-          },
-          {
-            "day": "THURSDAY",
-            "endTime": "16:50:00",
-            "startTime": "15:30:00"
-          }
-        ],
-        "classStartDate": "2026-06-09",
-        "midExamEndTime": "10:30:00",
-        "finalExamDetail": "Sep 14, 2026 8:30 AM - 10:30 AM",
-        "finalExamEndTime": "10:30:00",
-        "midExamStartTime": "08:30:00",
-        "finalExamStartTime": "08:30:00"
-      },
-      "sectionType": "OTHER",
-      "semesterSessionId": 20262,
-      "courseName": "MATHEMATICS III: COMPLEX VARIABLES & LAPLACE TRANSFORMATIONS",
-      "prerequisiteCourses": "(MAT216)",
-      "labSchedules": null,
-      "labSectionId": null,
-      "labCourseCode": null,
-      "labFaculties": null,
-      "labName": null,
-      "labRoomName": null,
-      "preRegLabSchedule": null,
-      "preRegSchedule": "SATURDAY(3:30 PM-4:50 PM-12A-08C)\nTHURSDAY(3:30 PM-4:50 PM-12A-08C)"
     },
     {
       "academicDegree": "UNDERGRADUATE",
@@ -51389,23 +51336,23 @@
       "sectionSchedule": {
         "classPairId": null,
         "classSlotId": null,
-        "finalExamDate": null,
-        "finalExamStartTime": null,
-        "finalExamEndTime": null,
         "midExamDate": null,
-        "midExamStartTime": null,
-        "midExamEndTime": null,
-        "finalExamDetail": null,
-        "midExamDetail": null,
-        "classStartDate": "2026-08-02",
         "classEndDate": "2026-12-03",
+        "finalExamDate": null,
+        "midExamDetail": null,
         "classSchedules": [
           {
-            "startTime": "14:00:00",
+            "day": "THURSDAY",
             "endTime": "16:50:00",
-            "day": "THURSDAY"
+            "startTime": "14:00:00"
           }
-        ]
+        ],
+        "classStartDate": "2026-08-02",
+        "midExamEndTime": null,
+        "finalExamDetail": null,
+        "finalExamEndTime": null,
+        "midExamStartTime": null,
+        "finalExamStartTime": null
       },
       "sectionType": "LAB",
       "semesterSessionId": 20262,
@@ -63608,23 +63555,23 @@
       "sectionSchedule": {
         "classPairId": null,
         "classSlotId": null,
-        "finalExamDate": null,
-        "finalExamStartTime": null,
-        "finalExamEndTime": null,
         "midExamDate": null,
-        "midExamStartTime": null,
-        "midExamEndTime": null,
-        "finalExamDetail": null,
-        "midExamDetail": null,
-        "classStartDate": "2026-08-02",
         "classEndDate": "2026-12-03",
+        "finalExamDate": null,
+        "midExamDetail": null,
         "classSchedules": [
           {
-            "startTime": "14:00:00",
+            "day": "THURSDAY",
             "endTime": "16:50:00",
-            "day": "THURSDAY"
+            "startTime": "14:00:00"
           }
-        ]
+        ],
+        "classStartDate": "2026-08-02",
+        "midExamEndTime": null,
+        "finalExamDetail": null,
+        "finalExamEndTime": null,
+        "midExamStartTime": null,
+        "finalExamStartTime": null
       },
       "sectionType": "LAB",
       "semesterSessionId": 20262,
@@ -66821,59 +66768,6 @@
     },
     {
       "academicDegree": "UNDERGRADUATE",
-      "capacity": 40,
-      "consumedSeat": 39,
-      "courseCode": "ECO101",
-      "courseCredit": 3,
-      "courseId": 1527,
-      "courseType": "THEORY",
-      "faculties": "YRNZ",
-      "parentSectionId": null,
-      "roomName": "08B-08C",
-      "roomNumber": "08B-08C",
-      "sectionId": 185957,
-      "sectionName": "30",
-      "sectionSchedule": {
-        "classPairId": null,
-        "classSlotId": null,
-        "midExamDate": "2026-07-26",
-        "classEndDate": "2026-09-08",
-        "finalExamDate": "2026-09-13",
-        "midExamDetail": "Jul 26, 2026 11:00 AM - 12:30 PM",
-        "classSchedules": [
-          {
-            "day": "SATURDAY",
-            "endTime": "09:20:00",
-            "startTime": "08:00:00"
-          },
-          {
-            "day": "THURSDAY",
-            "endTime": "09:20:00",
-            "startTime": "08:00:00"
-          }
-        ],
-        "classStartDate": "2026-06-09",
-        "midExamEndTime": "12:30:00",
-        "finalExamDetail": "Sep 13, 2026 11:00 AM - 1:00 PM",
-        "finalExamEndTime": "13:00:00",
-        "midExamStartTime": "11:00:00",
-        "finalExamStartTime": "11:00:00"
-      },
-      "sectionType": "OTHER",
-      "semesterSessionId": 20262,
-      "courseName": "INTRODUCTION TO MICROECONOMICS",
-      "prerequisiteCourses": null,
-      "labSchedules": null,
-      "labSectionId": null,
-      "labCourseCode": null,
-      "labFaculties": null,
-      "labName": null,
-      "labRoomName": null,
-      "preRegLabSchedule": null,
-      "preRegSchedule": "SATURDAY(8:00 AM-9:20 AM-08B-08C)\nTHURSDAY(8:00 AM-9:20 AM-08B-08C)"
-    },
-    {
-      "academicDegree": "UNDERGRADUATE",
       "capacity": 30,
       "consumedSeat": 35,
       "courseCode": "ENG201",
@@ -66983,6 +66877,59 @@
       "labRoomName": "09B-08L",
       "preRegLabSchedule": "THURSDAY(8:00 AM-10:50 AM-09B-08L)",
       "preRegSchedule": "MONDAY(11:00 AM-12:20 PM-10B-16C)\nWEDNESDAY(11:00 AM-12:20 PM-10B-16C)"
+    },
+    {
+      "academicDegree": "UNDERGRADUATE",
+      "capacity": 40,
+      "consumedSeat": 39,
+      "courseCode": "ECO101",
+      "courseCredit": 3,
+      "courseId": 1527,
+      "courseType": "THEORY",
+      "faculties": "YRNZ",
+      "parentSectionId": null,
+      "roomName": "08B-08C",
+      "roomNumber": "08B-08C",
+      "sectionId": 185957,
+      "sectionName": "30",
+      "sectionSchedule": {
+        "classPairId": null,
+        "classSlotId": null,
+        "midExamDate": "2026-07-26",
+        "classEndDate": "2026-09-08",
+        "finalExamDate": "2026-09-13",
+        "midExamDetail": "Jul 26, 2026 11:00 AM - 12:30 PM",
+        "classSchedules": [
+          {
+            "day": "SATURDAY",
+            "endTime": "09:20:00",
+            "startTime": "08:00:00"
+          },
+          {
+            "day": "THURSDAY",
+            "endTime": "09:20:00",
+            "startTime": "08:00:00"
+          }
+        ],
+        "classStartDate": "2026-06-09",
+        "midExamEndTime": "12:30:00",
+        "finalExamDetail": "Sep 13, 2026 11:00 AM - 1:00 PM",
+        "finalExamEndTime": "13:00:00",
+        "midExamStartTime": "11:00:00",
+        "finalExamStartTime": "11:00:00"
+      },
+      "sectionType": "OTHER",
+      "semesterSessionId": 20262,
+      "courseName": "INTRODUCTION TO MICROECONOMICS",
+      "prerequisiteCourses": null,
+      "labSchedules": null,
+      "labSectionId": null,
+      "labCourseCode": null,
+      "labFaculties": null,
+      "labName": null,
+      "labRoomName": null,
+      "preRegLabSchedule": null,
+      "preRegSchedule": "SATURDAY(8:00 AM-9:20 AM-08B-08C)\nTHURSDAY(8:00 AM-9:20 AM-08B-08C)"
     },
     {
       "academicDegree": "UNDERGRADUATE",
@@ -67396,6 +67343,59 @@
       "labRoomName": null,
       "preRegLabSchedule": null,
       "preRegSchedule": "SUNDAY(8:00 AM-9:20 AM-08A-03C)\nTUESDAY(8:00 AM-9:20 AM-08A-03C)"
+    },
+    {
+      "academicDegree": "UNDERGRADUATE",
+      "capacity": 40,
+      "consumedSeat": 40,
+      "courseCode": "MAT215",
+      "courseCredit": 3,
+      "courseId": 1361,
+      "courseType": "THEORY",
+      "faculties": "MHL",
+      "parentSectionId": null,
+      "roomName": "12A-08C",
+      "roomNumber": "12A-08C",
+      "sectionId": 187816,
+      "sectionName": "06",
+      "sectionSchedule": {
+        "classPairId": null,
+        "classSlotId": null,
+        "midExamDate": "2026-07-27",
+        "classEndDate": "2026-09-08",
+        "finalExamDate": "2026-09-14",
+        "midExamDetail": "Jul 27, 2026 8:30 AM - 10:30 AM",
+        "classSchedules": [
+          {
+            "day": "SATURDAY",
+            "endTime": "16:50:00",
+            "startTime": "15:30:00"
+          },
+          {
+            "day": "THURSDAY",
+            "endTime": "16:50:00",
+            "startTime": "15:30:00"
+          }
+        ],
+        "classStartDate": "2026-06-09",
+        "midExamEndTime": "10:30:00",
+        "finalExamDetail": "Sep 14, 2026 8:30 AM - 10:30 AM",
+        "finalExamEndTime": "10:30:00",
+        "midExamStartTime": "08:30:00",
+        "finalExamStartTime": "08:30:00"
+      },
+      "sectionType": "OTHER",
+      "semesterSessionId": 20262,
+      "courseName": "MATHEMATICS III: COMPLEX VARIABLES & LAPLACE TRANSFORMATIONS",
+      "prerequisiteCourses": "(MAT216)",
+      "labSchedules": null,
+      "labSectionId": null,
+      "labCourseCode": null,
+      "labFaculties": null,
+      "labName": null,
+      "labRoomName": null,
+      "preRegLabSchedule": null,
+      "preRegSchedule": "SATURDAY(3:30 PM-4:50 PM-12A-08C)\nTHURSDAY(3:30 PM-4:50 PM-12A-08C)"
     },
     {
       "academicDegree": "UNDERGRADUATE",

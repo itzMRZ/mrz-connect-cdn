@@ -5,7 +5,7 @@
     "midExamEndDate": "2026-10-30",
     "finalExamStartDate": "2026-09-05",
     "finalExamEndDate": "2026-12-21",
-    "lastUpdated": "2026-08-13T07:26:37.061993+00:00"
+    "lastUpdated": "2026-08-14T07:24:37.034977+00:00"
   },
   "exams": [
     {
@@ -2717,18 +2717,6 @@
       "midExamTime": "08:30:00",
       "midExamRoom": null,
       "finalExamDate": "2026-09-15",
-      "finalExamTime": "08:30:00",
-      "finalExamRoom": null
-    },
-    {
-      "courseCode": "MAT215",
-      "sectionName": "06",
-      "sectionId": 187816,
-      "sectionType": "THEORY",
-      "midExamDate": "2026-07-27",
-      "midExamTime": "08:30:00",
-      "midExamRoom": null,
-      "finalExamDate": "2026-09-14",
       "finalExamTime": "08:30:00",
       "finalExamRoom": null
     },
@@ -12525,18 +12513,6 @@
       "finalExamRoom": null
     },
     {
-      "courseCode": "ECO101",
-      "sectionName": "30",
-      "sectionId": 185957,
-      "sectionType": "THEORY",
-      "midExamDate": "2026-07-26",
-      "midExamTime": "11:00:00",
-      "midExamRoom": null,
-      "finalExamDate": "2026-09-13",
-      "finalExamTime": "11:00:00",
-      "finalExamRoom": null
-    },
-    {
       "courseCode": "ENG201",
       "sectionName": "02",
       "sectionId": 186509,
@@ -12558,6 +12534,18 @@
       "midExamRoom": null,
       "finalExamDate": "2026-09-13",
       "finalExamTime": "08:30:00",
+      "finalExamRoom": null
+    },
+    {
+      "courseCode": "ECO101",
+      "sectionName": "30",
+      "sectionId": 185957,
+      "sectionType": "THEORY",
+      "midExamDate": "2026-07-26",
+      "midExamTime": "11:00:00",
+      "midExamRoom": null,
+      "finalExamDate": "2026-09-13",
+      "finalExamTime": "11:00:00",
       "finalExamRoom": null
     },
     {
@@ -12612,6 +12600,18 @@
       "courseCode": "ECE309",
       "sectionName": "03",
       "sectionId": 188625,
+      "sectionType": "THEORY",
+      "midExamDate": "2026-07-27",
+      "midExamTime": "08:30:00",
+      "midExamRoom": null,
+      "finalExamDate": "2026-09-14",
+      "finalExamTime": "08:30:00",
+      "finalExamRoom": null
+    },
+    {
+      "courseCode": "MAT215",
+      "sectionName": "06",
+      "sectionId": 187816,
       "sectionType": "THEORY",
       "midExamDate": "2026-07-27",
       "midExamTime": "08:30:00",
