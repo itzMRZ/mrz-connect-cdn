@@ -10,7 +10,7 @@
     "midExamEndDate": "2026-10-30",
     "finalExamStartDate": "2026-09-05",
     "finalExamEndDate": "2026-12-21",
-    "lastUpdated": "2026-08-14T07:24:36.356601+00:00"
+    "lastUpdated": "2026-08-15T06:37:50.331902+00:00"
   },
   "sections": [
     {
@@ -66609,112 +66609,6 @@
     },
     {
       "academicDegree": "UNDERGRADUATE",
-      "capacity": 35,
-      "consumedSeat": 34,
-      "courseCode": "MSC221",
-      "courseCredit": 3,
-      "courseId": 1809,
-      "courseType": "THEORY",
-      "faculties": "BIJD",
-      "parentSectionId": null,
-      "roomName": "FT11-02L",
-      "roomNumber": "FT11-02L",
-      "sectionId": 186364,
-      "sectionName": "13",
-      "sectionSchedule": {
-        "classPairId": null,
-        "classSlotId": null,
-        "midExamDate": "2026-07-28",
-        "classEndDate": "2026-09-08",
-        "finalExamDate": "2026-09-15",
-        "midExamDetail": "Jul 28, 2026 10:30 AM - 12:30 PM",
-        "classSchedules": [
-          {
-            "day": "SATURDAY",
-            "endTime": "12:20:00",
-            "startTime": "11:00:00"
-          },
-          {
-            "day": "THURSDAY",
-            "endTime": "12:20:00",
-            "startTime": "11:00:00"
-          }
-        ],
-        "classStartDate": "2026-06-09",
-        "midExamEndTime": "12:30:00",
-        "finalExamDetail": "Sep 15, 2026 10:30 AM - 12:30 PM",
-        "finalExamEndTime": "12:30:00",
-        "midExamStartTime": "10:30:00",
-        "finalExamStartTime": "10:30:00"
-      },
-      "sectionType": "OTHER",
-      "semesterSessionId": 20262,
-      "courseName": "COMPUTER APPLICATIONS IN BUSINESS",
-      "prerequisiteCourses": "(STA101 AND MAT101) OR (MAT101 AND STA201) OR (MAT110 AND STA201) OR (STA101 AND MAT110)",
-      "labSchedules": null,
-      "labSectionId": null,
-      "labCourseCode": null,
-      "labFaculties": null,
-      "labName": null,
-      "labRoomName": null,
-      "preRegLabSchedule": null,
-      "preRegSchedule": "SATURDAY(11:00 AM-12:20 PM-FT11-02L)\nTHURSDAY(11:00 AM-12:20 PM-FT11-02L)"
-    },
-    {
-      "academicDegree": "UNDERGRADUATE",
-      "capacity": 40,
-      "consumedSeat": 39,
-      "courseCode": "MAT216",
-      "courseCredit": 3,
-      "courseId": 1362,
-      "courseType": "THEORY",
-      "faculties": "TBSW",
-      "parentSectionId": null,
-      "roomName": "12A-07C",
-      "roomNumber": "12A-07C",
-      "sectionId": 187831,
-      "sectionName": "01",
-      "sectionSchedule": {
-        "classPairId": null,
-        "classSlotId": null,
-        "midExamDate": "2026-07-25",
-        "classEndDate": "2026-09-08",
-        "finalExamDate": "2026-09-12",
-        "midExamDetail": "Jul 25, 2026 8:30 AM - 10:30 AM",
-        "classSchedules": [
-          {
-            "day": "SATURDAY",
-            "endTime": "09:20:00",
-            "startTime": "08:00:00"
-          },
-          {
-            "day": "THURSDAY",
-            "endTime": "09:20:00",
-            "startTime": "08:00:00"
-          }
-        ],
-        "classStartDate": "2026-06-09",
-        "midExamEndTime": "10:30:00",
-        "finalExamDetail": "Sep 12, 2026 8:30 AM - 10:30 AM",
-        "finalExamEndTime": "10:30:00",
-        "midExamStartTime": "08:30:00",
-        "finalExamStartTime": "08:30:00"
-      },
-      "sectionType": "OTHER",
-      "semesterSessionId": 20262,
-      "courseName": "MATHEMATICS IV: LINEAR ALGEBRA & FOURIER ANALYSIS",
-      "prerequisiteCourses": "(MAT120)",
-      "labSchedules": null,
-      "labSectionId": null,
-      "labCourseCode": null,
-      "labFaculties": null,
-      "labName": null,
-      "labRoomName": null,
-      "preRegLabSchedule": null,
-      "preRegSchedule": "SATURDAY(8:00 AM-9:20 AM-12A-07C)\nTHURSDAY(8:00 AM-9:20 AM-12A-07C)"
-    },
-    {
-      "academicDegree": "UNDERGRADUATE",
       "capacity": 39,
       "consumedSeat": 15,
       "courseCode": "CSE340",
@@ -66877,59 +66771,6 @@
       "labRoomName": "09B-08L",
       "preRegLabSchedule": "THURSDAY(8:00 AM-10:50 AM-09B-08L)",
       "preRegSchedule": "MONDAY(11:00 AM-12:20 PM-10B-16C)\nWEDNESDAY(11:00 AM-12:20 PM-10B-16C)"
-    },
-    {
-      "academicDegree": "UNDERGRADUATE",
-      "capacity": 40,
-      "consumedSeat": 39,
-      "courseCode": "ECO101",
-      "courseCredit": 3,
-      "courseId": 1527,
-      "courseType": "THEORY",
-      "faculties": "YRNZ",
-      "parentSectionId": null,
-      "roomName": "08B-08C",
-      "roomNumber": "08B-08C",
-      "sectionId": 185957,
-      "sectionName": "30",
-      "sectionSchedule": {
-        "classPairId": null,
-        "classSlotId": null,
-        "midExamDate": "2026-07-26",
-        "classEndDate": "2026-09-08",
-        "finalExamDate": "2026-09-13",
-        "midExamDetail": "Jul 26, 2026 11:00 AM - 12:30 PM",
-        "classSchedules": [
-          {
-            "day": "SATURDAY",
-            "endTime": "09:20:00",
-            "startTime": "08:00:00"
-          },
-          {
-            "day": "THURSDAY",
-            "endTime": "09:20:00",
-            "startTime": "08:00:00"
-          }
-        ],
-        "classStartDate": "2026-06-09",
-        "midExamEndTime": "12:30:00",
-        "finalExamDetail": "Sep 13, 2026 11:00 AM - 1:00 PM",
-        "finalExamEndTime": "13:00:00",
-        "midExamStartTime": "11:00:00",
-        "finalExamStartTime": "11:00:00"
-      },
-      "sectionType": "OTHER",
-      "semesterSessionId": 20262,
-      "courseName": "INTRODUCTION TO MICROECONOMICS",
-      "prerequisiteCourses": null,
-      "labSchedules": null,
-      "labSectionId": null,
-      "labCourseCode": null,
-      "labFaculties": null,
-      "labName": null,
-      "labRoomName": null,
-      "preRegLabSchedule": null,
-      "preRegSchedule": "SATURDAY(8:00 AM-9:20 AM-08B-08C)\nTHURSDAY(8:00 AM-9:20 AM-08B-08C)"
     },
     {
       "academicDegree": "UNDERGRADUATE",
@@ -71637,6 +71478,165 @@
       "labRoomName": null,
       "preRegLabSchedule": null,
       "preRegSchedule": "SATURDAY(3:30 PM-4:50 PM-12A-11C)\nTHURSDAY(3:30 PM-4:50 PM-12A-11C)"
+    },
+    {
+      "academicDegree": "UNDERGRADUATE",
+      "capacity": 40,
+      "consumedSeat": 39,
+      "courseCode": "ECO101",
+      "courseCredit": 3,
+      "courseId": 1527,
+      "courseType": "THEORY",
+      "faculties": "YRNZ",
+      "parentSectionId": null,
+      "roomName": "08B-08C",
+      "roomNumber": "08B-08C",
+      "sectionId": 185957,
+      "sectionName": "30",
+      "sectionSchedule": {
+        "classPairId": null,
+        "classSlotId": null,
+        "midExamDate": "2026-07-26",
+        "classEndDate": "2026-09-08",
+        "finalExamDate": "2026-09-13",
+        "midExamDetail": "Jul 26, 2026 11:00 AM - 12:30 PM",
+        "classSchedules": [
+          {
+            "day": "SATURDAY",
+            "endTime": "09:20:00",
+            "startTime": "08:00:00"
+          },
+          {
+            "day": "THURSDAY",
+            "endTime": "09:20:00",
+            "startTime": "08:00:00"
+          }
+        ],
+        "classStartDate": "2026-06-09",
+        "midExamEndTime": "12:30:00",
+        "finalExamDetail": "Sep 13, 2026 11:00 AM - 1:00 PM",
+        "finalExamEndTime": "13:00:00",
+        "midExamStartTime": "11:00:00",
+        "finalExamStartTime": "11:00:00"
+      },
+      "sectionType": "OTHER",
+      "semesterSessionId": 20262,
+      "courseName": "INTRODUCTION TO MICROECONOMICS",
+      "prerequisiteCourses": null,
+      "labSchedules": null,
+      "labSectionId": null,
+      "labCourseCode": null,
+      "labFaculties": null,
+      "labName": null,
+      "labRoomName": null,
+      "preRegLabSchedule": null,
+      "preRegSchedule": "SATURDAY(8:00 AM-9:20 AM-08B-08C)\nTHURSDAY(8:00 AM-9:20 AM-08B-08C)"
+    },
+    {
+      "academicDegree": "UNDERGRADUATE",
+      "capacity": 40,
+      "consumedSeat": 39,
+      "courseCode": "MAT216",
+      "courseCredit": 3,
+      "courseId": 1362,
+      "courseType": "THEORY",
+      "faculties": "TBSW",
+      "parentSectionId": null,
+      "roomName": "12A-07C",
+      "roomNumber": "12A-07C",
+      "sectionId": 187831,
+      "sectionName": "01",
+      "sectionSchedule": {
+        "classPairId": null,
+        "classSlotId": null,
+        "midExamDate": "2026-07-25",
+        "classEndDate": "2026-09-08",
+        "finalExamDate": "2026-09-12",
+        "midExamDetail": "Jul 25, 2026 8:30 AM - 10:30 AM",
+        "classSchedules": [
+          {
+            "day": "SATURDAY",
+            "endTime": "09:20:00",
+            "startTime": "08:00:00"
+          },
+          {
+            "day": "THURSDAY",
+            "endTime": "09:20:00",
+            "startTime": "08:00:00"
+          }
+        ],
+        "classStartDate": "2026-06-09",
+        "midExamEndTime": "10:30:00",
+        "finalExamDetail": "Sep 12, 2026 8:30 AM - 10:30 AM",
+        "finalExamEndTime": "10:30:00",
+        "midExamStartTime": "08:30:00",
+        "finalExamStartTime": "08:30:00"
+      },
+      "sectionType": "OTHER",
+      "semesterSessionId": 20262,
+      "courseName": "MATHEMATICS IV: LINEAR ALGEBRA & FOURIER ANALYSIS",
+      "prerequisiteCourses": "(MAT120)",
+      "labSchedules": null,
+      "labSectionId": null,
+      "labCourseCode": null,
+      "labFaculties": null,
+      "labName": null,
+      "labRoomName": null,
+      "preRegLabSchedule": null,
+      "preRegSchedule": "SATURDAY(8:00 AM-9:20 AM-12A-07C)\nTHURSDAY(8:00 AM-9:20 AM-12A-07C)"
+    },
+    {
+      "academicDegree": "UNDERGRADUATE",
+      "capacity": 35,
+      "consumedSeat": 34,
+      "courseCode": "MSC221",
+      "courseCredit": 3,
+      "courseId": 1809,
+      "courseType": "THEORY",
+      "faculties": "BIJD",
+      "parentSectionId": null,
+      "roomName": "FT11-02L",
+      "roomNumber": "FT11-02L",
+      "sectionId": 186364,
+      "sectionName": "13",
+      "sectionSchedule": {
+        "classPairId": null,
+        "classSlotId": null,
+        "midExamDate": "2026-07-28",
+        "classEndDate": "2026-09-08",
+        "finalExamDate": "2026-09-15",
+        "midExamDetail": "Jul 28, 2026 10:30 AM - 12:30 PM",
+        "classSchedules": [
+          {
+            "day": "SATURDAY",
+            "endTime": "12:20:00",
+            "startTime": "11:00:00"
+          },
+          {
+            "day": "THURSDAY",
+            "endTime": "12:20:00",
+            "startTime": "11:00:00"
+          }
+        ],
+        "classStartDate": "2026-06-09",
+        "midExamEndTime": "12:30:00",
+        "finalExamDetail": "Sep 15, 2026 10:30 AM - 12:30 PM",
+        "finalExamEndTime": "12:30:00",
+        "midExamStartTime": "10:30:00",
+        "finalExamStartTime": "10:30:00"
+      },
+      "sectionType": "OTHER",
+      "semesterSessionId": 20262,
+      "courseName": "COMPUTER APPLICATIONS IN BUSINESS",
+      "prerequisiteCourses": "(STA101 AND MAT101) OR (MAT101 AND STA201) OR (MAT110 AND STA201) OR (STA101 AND MAT110)",
+      "labSchedules": null,
+      "labSectionId": null,
+      "labCourseCode": null,
+      "labFaculties": null,
+      "labName": null,
+      "labRoomName": null,
+      "preRegLabSchedule": null,
+      "preRegSchedule": "SATURDAY(11:00 AM-12:20 PM-FT11-02L)\nTHURSDAY(11:00 AM-12:20 PM-FT11-02L)"
     },
     {
       "academicDegree": "UNDERGRADUATE",
