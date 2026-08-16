@@ -5,7 +5,7 @@
     "midExamEndDate": "2026-10-30",
     "finalExamStartDate": "2026-09-05",
     "finalExamEndDate": "2026-12-21",
-    "lastUpdated": "2026-08-15T06:37:50.972636+00:00"
+    "lastUpdated": "2026-08-16T06:39:24.848563+00:00"
   },
   "exams": [
     {
@@ -12489,18 +12489,6 @@
       "finalExamRoom": null
     },
     {
-      "courseCode": "ENG201",
-      "sectionName": "02",
-      "sectionId": 186509,
-      "sectionType": "THEORY",
-      "midExamDate": "2026-07-27",
-      "midExamTime": "11:00:00",
-      "midExamRoom": null,
-      "finalExamDate": "2026-09-14",
-      "finalExamTime": "11:00:00",
-      "finalExamRoom": null
-    },
-    {
       "courseCode": "CSE110",
       "sectionName": "04",
       "sectionId": 186584,
@@ -13614,6 +13602,18 @@
       "midExamRoom": null,
       "finalExamDate": "2026-09-14",
       "finalExamTime": "16:30:00",
+      "finalExamRoom": null
+    },
+    {
+      "courseCode": "ENG201",
+      "sectionName": "02",
+      "sectionId": 186509,
+      "sectionType": "THEORY",
+      "midExamDate": "2026-07-27",
+      "midExamTime": "11:00:00",
+      "midExamRoom": null,
+      "finalExamDate": "2026-09-14",
+      "finalExamTime": "11:00:00",
       "finalExamRoom": null
     },
     {
