@@ -76,6 +76,7 @@ jobs:
           git add \
             connect.json connect.json.gz \
             connect_metadata.json connect_metadata.json.gz \
+            status.json exam_status.json \
             connect.etag \
             exams.json exams.json.gz \
             connect_backup.json \

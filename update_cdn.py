@@ -17,6 +17,9 @@ from typing import Dict, List, Optional
 SCRIPT_DIR = os.path.dirname(os.path.abspath(__file__))
 BACKUPS_DIR = os.path.join(SCRIPT_DIR, "backups")
 VERSION_FILE = os.path.join(SCRIPT_DIR, "version.json")
+EXAM_STATUS_FILE = os.path.join(SCRIPT_DIR, "exam_status.json")
+STATUS_FILE = os.path.join(SCRIPT_DIR, "status.json")
+LIVE_DATA_URL = "https://usis-cdn.eniamza.com/connect.json"
 
 
 def load_version() -> Dict:
@@ -48,7 +51,7 @@ def bump_version(semester_changed: bool) -> str:
 
 def fetch_mrz_data(force: bool = False) -> Optional[List[Dict]]:
     """Fetch course data from MRZ Connect API with conditional GET."""
-    url = "https://usis-cdn.eniamza.com/connect.json"
+    url = LIVE_DATA_URL
     etag_file = os.path.join(SCRIPT_DIR, "connect.etag")
     headers = {}
 
@@ -78,12 +81,58 @@ def fetch_mrz_data(force: bool = False) -> Optional[List[Dict]]:
             with open(etag_file, 'w') as f:
                 f.write(response.headers['ETag'])
 
-        data = response.json()
+        data = extract_sections(response.json())
         print(f"✓ Successfully fetched {len(data)} sections")
         return data
     except requests.RequestException as e:
         print(f"✗ Error fetching data: {e}")
         raise
+
+
+def extract_sections(payload) -> List[Dict]:
+    """Accept the upstream list and the wrapped payloads used by clients."""
+    if isinstance(payload, list):
+        return payload
+
+    if isinstance(payload, dict):
+        for key in ("sections", "data"):
+            value = payload.get(key)
+            if isinstance(value, list):
+                return value
+
+    raise ValueError("Unsupported Connect payload. Expected a list, {data: []}, or {sections: []}.")
+
+
+def build_status_document(metadata: Dict, status_path: str = EXAM_STATUS_FILE) -> Dict:
+    """Build additive status metadata without changing existing API payloads."""
+    existing = {}
+    try:
+        with open(status_path, "r", encoding="utf-8") as f:
+            existing = json.load(f)
+    except (FileNotFoundError, json.JSONDecodeError):
+        existing = {"schemaVersion": 1, "semesters": {}}
+
+    semester = get_current_semester(metadata.get("midExamStartDate"))
+    semester_key = semester.lower()
+    semesters = existing.get("semesters")
+    if not isinstance(semesters, dict):
+        semesters = {}
+
+    return {
+        "schemaVersion": 1,
+        "currentSemester": semester,
+        "currentSemesterKey": semester_key,
+        "liveDataUrl": LIVE_DATA_URL,
+        "stableDataUrl": "https://connect-cdn.itzmrz.xyz/stable.json",
+        "lastUpdated": metadata.get("lastUpdated"),
+        "semesters": semesters,
+    }
+
+
+def write_json_file(path: str, data: Dict) -> None:
+    with open(path, "w", encoding="utf-8") as f:
+        json.dump(data, f, indent=2, ensure_ascii=False)
+        f.write("\n")
 
 
 def calculate_connect_metadata(sections: List[Dict]) -> Dict:
@@ -144,7 +193,7 @@ def calculate_connect_metadata(sections: List[Dict]) -> Dict:
     return metadata
 
 
-def get_current_semester(mid_exam_start: str) -> str:
+def get_current_semester(mid_exam_start: Optional[str]) -> str:
     """Determine current semester based on mid exam start date."""
     if not mid_exam_start:
         return "Unknown"
@@ -411,6 +460,12 @@ def main():
         # Bump version (daily +1, or semester +1 & daily reset)
         version = bump_version(semester_changed)
         metadata["version"] = version
+
+        # Write additive detection/confirmation metadata. Existing public
+        # payloads remain unchanged for backwards compatibility.
+        status_document = build_status_document(metadata)
+        write_json_file(STATUS_FILE, status_document)
+        print("✓ status.json updated (live-data detection metadata)")
 
         # Generate both JSON files
         output_data = {

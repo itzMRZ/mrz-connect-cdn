@@ -64,6 +64,8 @@ Rule of thumb:
 | <https://connect-cdn.itzmrz.xyz/exams.json> | Exams only | Timetables/calendars |
 | <https://connect-cdn.itzmrz.xyz/open_labs.json> | Lab availability | Open lab finder |
 | <https://connect-cdn.itzmrz.xyz/connect_metadata.json> | Metadata only (tiny) | Homepage stats, quick checks |
+| `status.json` | Semester detection + official-exam status metadata | Integrations that need labels without replacing live data |
+| `exam_status.json` | Manual confirmation flags for published routines | Marking a specific midterm/final as official |
 | <https://connect-cdn.itzmrz.xyz/connect_backup.json> | Index of semester backups | Discover history |
 | <https://connect-cdn.itzmrz.xyz/backups/spring2026.json> | One semester snapshot | Historical compare |
 
@@ -177,8 +179,11 @@ fetch('https://connect-cdn.itzmrz.xyz/connect.json.gz')
 
 - Daily job runs at 12:00 PM BDT (6:00 AM UTC).
 - `connect.json` is written from the latest USIS snapshot.
+- `status.json` is additive metadata; it does not alter `connect.json`, `stable.json`, or `exams.json`.
 - `stable.json` updates daily within the same semester, but it **won’t switch semesters** until `finalExamEndDate` is in the past.
 - Backups are created per semester inside `backups/` with clean names like `spring2026.json`.
+
+Official exam confirmation is documented in [`docs/official-exam-confirmation.md`](docs/official-exam-confirmation.md).
 
 ## Run locally
 
