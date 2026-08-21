@@ -35,12 +35,39 @@ class UpdateCdnCompatibilityTests(unittest.TestCase):
 
             status = update_cdn.build_status_document(
                 {"midExamStartDate": "2026-07-24", "finalExamEndDate": "2026-12-21"},
-                status_path,
+                str(status_path),
             )
 
             self.assertTrue(status["semesters"]["summer2026"]["midterm"]["confirmed"])
             self.assertEqual(status["currentSemesterKey"], "summer2026")
             self.assertEqual(status["liveDataUrl"], "https://usis-cdn.eniamza.com/connect.json")
+
+    def test_status_update_rejects_invalid_confirmed_record(self):
+        with tempfile.TemporaryDirectory() as tmp:
+            status_path = Path(tmp) / "exam_status.json"
+            status_path.write_text(json.dumps({
+                "schemaVersion": 1,
+                "semesters": {
+                    "summer2026": {"midterm": {"confirmed": True}}
+                }
+            }))
+
+            with self.assertRaises(ValueError):
+                update_cdn.build_status_document(
+                    {"midExamStartDate": "2026-07-24"},
+                    str(status_path),
+                )
+
+    def test_status_update_rejects_malformed_json_instead_of_erasing_it(self):
+        with tempfile.TemporaryDirectory() as tmp:
+            status_path = Path(tmp) / "exam_status.json"
+            status_path.write_text("{not-json")
+
+            with self.assertRaises(ValueError):
+                update_cdn.build_status_document(
+                    {"midExamStartDate": "2026-07-24"},
+                    str(status_path),
+                )
 
 
 if __name__ == "__main__":

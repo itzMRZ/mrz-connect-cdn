@@ -103,14 +103,36 @@ def extract_sections(payload) -> List[Dict]:
     raise ValueError("Unsupported Connect payload. Expected a list, {data: []}, or {sections: []}.")
 
 
+def validate_exam_status_document(document: Dict) -> None:
+    if not isinstance(document, dict):
+        raise ValueError("exam_status.json must be an object")
+
+    semesters = document.get("semesters", {})
+    if not isinstance(semesters, dict):
+        raise ValueError("exam_status.json semesters must be an object")
+
+    for semester, exams in semesters.items():
+        if not isinstance(exams, dict):
+            raise ValueError(f"exam_status.json entry {semester} must be an object")
+        for exam_type, record in exams.items():
+            if not isinstance(record, dict):
+                raise ValueError(f"exam_status.json {semester}.{exam_type} must be an object")
+            if record.get("confirmed") is True and not isinstance(record.get("dataUrl"), str):
+                raise ValueError(f"confirmed exam {semester}.{exam_type} requires dataUrl")
+
+
 def build_status_document(metadata: Dict, status_path: str = EXAM_STATUS_FILE) -> Dict:
     """Build additive status metadata without changing existing API payloads."""
     existing = {}
     try:
         with open(status_path, "r", encoding="utf-8") as f:
             existing = json.load(f)
-    except (FileNotFoundError, json.JSONDecodeError):
+    except FileNotFoundError:
         existing = {"schemaVersion": 1, "semesters": {}}
+    except json.JSONDecodeError as error:
+        raise ValueError(f"Invalid exam_status.json: {error}") from error
+
+    validate_exam_status_document(existing)
 
     semester = get_current_semester(metadata.get("midExamStartDate"))
     semester_key = semester.lower()
