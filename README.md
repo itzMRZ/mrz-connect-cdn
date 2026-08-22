@@ -109,14 +109,21 @@ This section is intentionally short: it shows the important top-level keys and t
   "metadata": {
     "totalExams": 2353,
     "midExamStartDate": "YYYY-MM-DD",
-    "finalExamEndDate": "YYYY-MM-DD"
+    "finalExamEndDate": "YYYY-MM-DD",
+    "semester": "Fall2026",
+    "sources": {
+      "midterm": { "source": "cdn", "confirmed": false },
+      "final": { "source": "cdn", "confirmed": false }
+    }
   },
   "exams": [
     {
       "courseCode": "CSE110",
       "sectionName": "01",
       "midExamDate": "YYYY-MM-DD",
-      "finalExamDate": "YYYY-MM-DD"
+      "finalExamDate": "YYYY-MM-DD",
+      "midExamSource": "cdn",
+      "finalExamSource": "cdn"
     }
   ]
 }

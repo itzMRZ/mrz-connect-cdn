@@ -1,6 +1,6 @@
 # Official exam confirmation
 
-`exam_status.json` is an additive compatibility endpoint. It does not change `connect.json`, `stable.json`, or `exams.json`.
+`exam_status.json` controls the official PDF overlay used when generating `exams.json`. Confirmed matching records replace the CDN values and are marked with `source: "pdf"`; unmatched records remain `source: "cdn"`.
 
 After manually parsing an official PDF in `exam-routine`, add a record under the normalized semester key:
 

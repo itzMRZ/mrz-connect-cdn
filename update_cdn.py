@@ -365,6 +365,100 @@ def manage_stable_json(metadata: Dict, sections: List[Dict]):
     print(f"  ✓ stable.json written ({file_size:.1f} KB, gzipped: {gz_size:.1f} KB)")
 
 
+def load_confirmed_exam_overlay(semester: str, exam_type: str) -> tuple[dict | None, dict | None]:
+    """Fetch a confirmed official PDF-derived schedule when configured."""
+    try:
+        with open(EXAM_STATUS_FILE, "r", encoding="utf-8") as f:
+            status = json.load(f)
+        validate_exam_status_document(status)
+        record = status.get("semesters", {}).get(semester.lower(), {}).get(exam_type)
+        if not isinstance(record, dict) or record.get("confirmed") is not True:
+            return None, None
+
+        data_url = record.get("dataUrl")
+        if not isinstance(data_url, str) or not data_url.startswith("https://"):
+            return None, None
+
+        response = requests.get(data_url, timeout=30)
+        response.raise_for_status()
+        payload = response.json()
+        if not isinstance(payload, dict) or not isinstance(payload.get("exams"), list):
+            raise ValueError("official exam payload must contain an exams list")
+        return payload, record
+    except (FileNotFoundError, json.JSONDecodeError, ValueError, requests.RequestException) as error:
+        print(f"  Official {exam_type} overlay unavailable; keeping CDN data: {error}")
+        return None, None
+
+
+def official_exam_index(payload: dict | None, exam_type: str) -> dict[tuple[str, str], dict]:
+    if not payload:
+        return {}
+
+    date_key = "Final Date" if exam_type == "final" else "Mid Date"
+    result = {}
+    for exam in payload.get("exams", []):
+        if not isinstance(exam, dict):
+            continue
+        course = exam.get("Course") or exam.get("courseCode")
+        section = exam.get("Section") or exam.get("sectionName")
+        date = exam.get(date_key) or exam.get("finalExamDate" if exam_type == "final" else "midExamDate")
+        if course and section and date:
+            result[(str(course).strip().upper(), str(section).strip().zfill(2))] = exam
+    return result
+
+
+def apply_official_overlay(exams: List[Dict], official: dict[tuple[str, str], dict], exam_type: str) -> int:
+    date_key = "Final Date" if exam_type == "final" else "Mid Date"
+    time_start_key = "finalExamTime" if exam_type == "final" else "midExamTime"
+    room_key = "finalExamRoom" if exam_type == "final" else "midExamRoom"
+    applied = 0
+
+    for exam in exams:
+        key = (str(exam.get("courseCode", "")).strip().upper(), str(exam.get("sectionName", "")).strip().zfill(2))
+        official_exam = official.get(key)
+        if not official_exam:
+            continue
+
+        official_date = official_exam.get(date_key) or official_exam.get(
+            "finalExamDate" if exam_type == "final" else "midExamDate"
+        )
+        official_time = official_exam.get("Start Time") or official_exam.get(time_start_key)
+        official_end = official_exam.get("End Time")
+        official_room = official_exam.get("Room.") or official_exam.get(room_key)
+        source_key = "finalExamSource" if exam_type == "final" else "midExamSource"
+        date_output_key = "finalExamDate" if exam_type == "final" else "midExamDate"
+        if official_date:
+            exam[date_output_key] = official_date
+        if official_time:
+            if exam_type == "final":
+                exam["finalExamTime"] = official_time if not official_end else f"{official_time}-{official_end}"
+            else:
+                exam["midExamTime"] = official_time if not official_end else f"{official_time}-{official_end}"
+        if official_room:
+            exam[room_key] = official_room
+        exam[source_key] = "pdf"
+        applied += 1
+
+    return applied
+
+
+def generate_exam_source_metadata(semester: str, overlays: dict[str, tuple[dict | None, dict | None]], applied: dict[str, int], totals: dict[str, int]) -> Dict:
+    sources = {}
+    for exam_type, (payload, record) in overlays.items():
+        matched = applied.get(exam_type, 0)
+        total = totals.get(exam_type, 0)
+        source = "pdf" if total and matched == total else "mixed" if matched else "cdn"
+        sources[exam_type] = {
+            "source": source,
+            "confirmed": source == "pdf",
+            "matchedEntries": matched,
+            "totalEntries": total,
+            "updatedAt": record.get("updatedAt") if record else None,
+            "dataUrl": record.get("dataUrl") if record and matched else None,
+        }
+    return {"semester": semester, "sources": sources}
+
+
 def generate_exams_json(sections: List[Dict], output_path: str = "exams.json"):
     """Generate exams.json with exam schedule data."""
     # Ensure output path is in the script directory
@@ -401,10 +495,12 @@ def generate_exams_json(sections: List[Dict], output_path: str = "exams.json"):
             "sectionType": normalized_section_type,
             "midExamDate": mid_date,
             "midExamTime": mid_time,
-            "midExamRoom": None,  # To be updated later
+            "midExamRoom": None,
+            "midExamSource": "cdn" if mid_date else None,
             "finalExamDate": final_date,
             "finalExamTime": final_time,
-            "finalExamRoom": None  # To be updated later
+            "finalExamRoom": None,
+            "finalExamSource": "cdn" if final_date else None
         }
 
         exams.append(exam_entry)
@@ -415,9 +511,23 @@ def generate_exams_json(sections: List[Dict], output_path: str = "exams.json"):
         if final_date:
             final_dates.append(final_date)
 
+    semester = get_current_semester(mid_dates[0] if mid_dates else final_dates[0] if final_dates else None)
+    overlays = {
+        "midterm": load_confirmed_exam_overlay(semester, "midterm"),
+        "final": load_confirmed_exam_overlay(semester, "final"),
+    }
+    applied = {
+        exam_type: apply_official_overlay(exams, official_exam_index(payload, exam_type), exam_type)
+        for exam_type, (payload, record) in overlays.items()
+    }
+    totals = {
+        "midterm": sum(1 for exam in exams if exam.get("midExamDate")),
+        "final": sum(1 for exam in exams if exam.get("finalExamDate")),
+    }
+
     # Sort dates
-    mid_dates.sort()
-    final_dates.sort()
+    mid_dates = sorted(exam["midExamDate"] for exam in exams if exam.get("midExamDate"))
+    final_dates = sorted(exam["finalExamDate"] for exam in exams if exam.get("finalExamDate"))
 
     metadata = {
         "totalExams": len(exams),
@@ -425,7 +535,8 @@ def generate_exams_json(sections: List[Dict], output_path: str = "exams.json"):
         "midExamEndDate": mid_dates[-1] if mid_dates else None,
         "finalExamStartDate": final_dates[0] if final_dates else None,
         "finalExamEndDate": final_dates[-1] if final_dates else None,
-        "lastUpdated": datetime.now(timezone.utc).isoformat()
+        "lastUpdated": datetime.now(timezone.utc).isoformat(),
+        **generate_exam_source_metadata(semester, overlays, applied, totals)
     }
 
     output_data = {
