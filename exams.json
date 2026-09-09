@@ -5,17 +5,9 @@
     "midExamEndDate": "2026-08-02",
     "finalExamStartDate": "2026-09-12",
     "finalExamEndDate": "2026-09-19",
-    "lastUpdated": "2026-09-09T09:38:18.110257+00:00",
+    "lastUpdated": "2026-09-09T10:52:06.997753+00:00",
     "semester": "Summer2026",
     "sources": {
-      "midterm": {
-        "source": "cdn",
-        "confirmed": false,
-        "matchedEntries": 0,
-        "totalEntries": 0,
-        "updatedAt": null,
-        "dataUrl": null
-      },
       "final": {
         "source": "pdf",
         "confirmed": true,
@@ -23,6 +15,14 @@
         "totalEntries": 1565,
         "updatedAt": "2026-09-09T09:35:35Z",
         "dataUrl": "https://bracu-exam-routine.itzmrz.xyz/exam_data.json"
+      },
+      "midterm": {
+        "source": "cdn",
+        "confirmed": false,
+        "matchedEntries": 0,
+        "totalEntries": 0,
+        "updatedAt": null,
+        "dataUrl": null
       }
     }
   },
