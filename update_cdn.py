@@ -10,7 +10,7 @@ import sys
 import gzip
 import requests
 import glob
-from datetime import datetime, timezone
+from datetime import datetime, timezone, timedelta
 from typing import Dict, List, Optional
 
 # Get the directory where this script is located
@@ -459,6 +459,209 @@ def generate_exam_source_metadata(semester: str, overlays: dict[str, tuple[dict 
     return {"semester": semester, "sources": sources}
 
 
+# Grace windows around a confirmed official exam period during which it is
+# considered "active": show it a few days before it starts and keep serving it
+# briefly after it ends.
+ACTIVE_EXAM_GRACE_BEFORE_DAYS = 14
+ACTIVE_EXAM_GRACE_AFTER_DAYS = 2
+
+
+def _fetch_payload(url: str) -> Dict:
+    response = requests.get(url, timeout=30)
+    response.raise_for_status()
+    return response.json()
+
+
+def official_exam_window(payload: dict | None, exam_type: str) -> tuple[str, str] | None:
+    """Return (start, end) of the official exam window for exam_type from a
+    PDF-derived payload, or None when no usable dates exist."""
+    if not payload or not isinstance(payload.get("exams"), list):
+        return None
+    date_key = "Final Date" if exam_type == "final" else "Mid Date"
+    alt_key = "finalExamDate" if exam_type == "final" else "midExamDate"
+    dates = []
+    for exam in payload["exams"]:
+        if not isinstance(exam, dict):
+            continue
+        value = (exam.get(date_key) or exam.get(alt_key) or "").strip()
+        if value:
+            dates.append(value)
+    if not dates:
+        return None
+    dates.sort()
+    return dates[0], dates[-1]
+
+
+def find_active_confirmed_exam(now=None, status_path: str = EXAM_STATUS_FILE, fetch_payload=None):
+    """Find a confirmed official exam record whose exam window is active or
+    imminent, across ALL semesters in exam_status.json.
+
+    Returns a dict with semester_key/exam_type/payload/record/window, preferring
+    the record whose window ends latest. Returns None when nothing qualifies.
+
+    This is what keeps exams.json on the real exam period during the transition
+    window (e.g. Summer finals while USIS has already published the next
+    semester), where the same-semester overlay merge cannot apply.
+    """
+    fetch = fetch_payload or _fetch_payload
+    today = (now or datetime.now(timezone.utc).date())
+    grace_before = (today + timedelta(days=ACTIVE_EXAM_GRACE_BEFORE_DAYS)).isoformat()
+    grace_after = (today - timedelta(days=ACTIVE_EXAM_GRACE_AFTER_DAYS)).isoformat()
+    try:
+        with open(status_path, "r", encoding="utf-8") as f:
+            status = json.load(f)
+        validate_exam_status_document(status)
+    except (FileNotFoundError, json.JSONDecodeError, ValueError) as error:
+        print(f"  Confirmed-exam lookup skipped: {error}")
+        return None
+
+    candidates = []
+    for semester_key, exams in status.get("semesters", {}).items():
+        if not isinstance(exams, dict):
+            continue
+        for exam_type, record in exams.items():
+            if not isinstance(record, dict) or record.get("confirmed") is not True:
+                continue
+            data_url = record.get("dataUrl")
+            if not isinstance(data_url, str) or not data_url.startswith("https://"):
+                continue
+            try:
+                payload = fetch(data_url)
+            except Exception as error:
+                print(f"  Official {exam_type} overlay unavailable ({semester_key}): {error}")
+                continue
+            window = official_exam_window(payload, exam_type)
+            if not window:
+                continue
+            start, end = window
+            if start <= grace_before and end >= grace_after:
+                candidates.append({
+                    "semester_key": semester_key,
+                    "exam_type": exam_type,
+                    "payload": payload,
+                    "record": record,
+                    "window": window,
+                    "window_end": end,
+                })
+
+    if not candidates:
+        return None
+    return max(candidates, key=lambda c: c["window_end"])
+
+
+def build_foreign_semester_exams_json(payload: Dict, record: Dict, semester_key: str, exam_type: str) -> tuple[List[Dict], Dict]:
+    """Build an exams.json payload entirely from a confirmed official PDF
+    payload for a semester other than the one USIS currently publishes."""
+    date_key = "Final Date" if exam_type == "final" else "Mid Date"
+    out_date_key = "finalExamDate" if exam_type == "final" else "midExamDate"
+    out_time_key = "finalExamTime" if exam_type == "final" else "midExamTime"
+    out_room_key = "finalExamRoom" if exam_type == "final" else "midExamRoom"
+    source_key = "finalExamSource" if exam_type == "final" else "midExamSource"
+    other_out_date_key = "midExamDate" if exam_type == "final" else "finalExamDate"
+    other_out_time_key = "midExamTime" if exam_type == "final" else "finalExamTime"
+    other_out_room_key = "midExamRoom" if exam_type == "final" else "finalExamRoom"
+    other_source_key = "midExamSource" if exam_type == "final" else "finalExamSource"
+
+    exams = []
+    for exam in payload.get("exams", []):
+        if not isinstance(exam, dict):
+            continue
+        course = exam.get("Course") or exam.get("courseCode")
+        section = exam.get("Section") or exam.get("sectionName")
+        date = exam.get(date_key) or exam.get(out_date_key)
+        if not course or not section or not date:
+            continue
+
+        start = exam.get("Start Time")
+        end = exam.get("End Time")
+        time_value = exam.get(out_time_key)
+        if start and end:
+            time_value = f"{start}-{end}"
+        elif start and not time_value:
+            time_value = start
+
+        exams.append({
+            "courseCode": str(course).strip(),
+            "sectionName": str(section).strip(),
+            "sectionId": None,
+            "sectionType": "THEORY",
+            other_out_date_key: None,
+            other_out_time_key: None,
+            other_out_room_key: None,
+            other_source_key: None,
+            out_date_key: str(date).strip(),
+            out_time_key: time_value,
+            out_room_key: exam.get("Room.") or exam.get(out_room_key) or None,
+            source_key: "pdf",
+        })
+
+    window = official_exam_window(payload, exam_type)
+    if not window:
+        raise ValueError("official payload has no usable exam window")
+    if exam_type == "final":
+        mid_start = record.get("midExamStartDate")
+        mid_end = record.get("midExamEndDate")
+        final_start, final_end = window
+    else:
+        mid_start, mid_end = window
+        final_start = record.get("finalExamStartDate")
+        final_end = record.get("finalExamEndDate")
+
+    metadata = {
+        "totalExams": len(exams),
+        "midExamStartDate": mid_start,
+        "midExamEndDate": mid_end,
+        "finalExamStartDate": final_start,
+        "finalExamEndDate": final_end,
+        "lastUpdated": datetime.now(timezone.utc).isoformat(),
+        "semester": semester_key[0].upper() + semester_key[1:],
+        "sources": {
+            exam_type: {
+                "source": "pdf",
+                "confirmed": True,
+                "matchedEntries": len(exams),
+                "totalEntries": len(exams),
+                "updatedAt": record.get("updatedAt"),
+                "dataUrl": record.get("dataUrl"),
+            },
+            ("midterm" if exam_type == "final" else "final"): {
+                "source": "cdn",
+                "confirmed": False,
+                "matchedEntries": 0,
+                "totalEntries": 0,
+                "updatedAt": None,
+                "dataUrl": None,
+            },
+        },
+    }
+    return exams, metadata
+
+
+def write_exams_files(output_data: Dict, output_path: str) -> None:
+    """Write exams.json and its gzipped variant, printing size stats."""
+    if not os.path.isabs(output_path):
+        output_path = os.path.join(SCRIPT_DIR, output_path)
+
+    with open(output_path, 'w', encoding='utf-8') as f:
+        json.dump(output_data, f, indent=2, ensure_ascii=False)
+
+    gzip_path = output_path + '.gz'
+    with gzip.open(gzip_path, 'wt', encoding='utf-8') as f:
+        json.dump(output_data, f, separators=(',', ':'), ensure_ascii=False)
+
+    regular_size = os.path.getsize(output_path) / 1024  # KB
+    gzip_size = os.path.getsize(gzip_path) / 1024  # KB
+    compression_ratio = ((regular_size - gzip_size) / regular_size * 100)
+
+    print(f"✓ {output_path} created successfully")
+    print(f"  Regular: {regular_size:.1f} KB | Gzipped: {gzip_size:.1f} KB (saved {compression_ratio:.1f}%)")
+    metadata = output_data.get("metadata", {})
+    print(f"  Total exams: {metadata.get('totalExams')}")
+    print(f"  Mid exams: {metadata.get('midExamStartDate')} to {metadata.get('midExamEndDate')}")
+    print(f"  Final exams: {metadata.get('finalExamStartDate')} to {metadata.get('finalExamEndDate')}")
+
+
+
 def generate_exams_json(sections: List[Dict], output_path: str = "exams.json"):
     """Generate exams.json with exam schedule data."""
     # Ensure output path is in the script directory
@@ -512,6 +715,32 @@ def generate_exams_json(sections: List[Dict], output_path: str = "exams.json"):
             final_dates.append(final_date)
 
     semester = get_current_semester(mid_dates[0] if mid_dates else final_dates[0] if final_dates else None)
+
+    # If a confirmed official exam for a semester OTHER than the one USIS is
+    # currently publishing has an active or imminent exam window, serve that
+    # official schedule directly. This keeps exams.json on the real exam period
+    # during the transition window (e.g. Summer finals while USIS has already
+    # published the next semester) instead of falling back to tentative data.
+    # The same-semester overlay merge below remains the path when USIS and the
+    # confirmed record agree on the semester.
+    try:
+        active_confirmed = find_active_confirmed_exam()
+    except Exception as error:
+        print(f"  Confirmed-exam lookup failed; using USIS-derived schedule: {error}")
+        active_confirmed = None
+    if active_confirmed and active_confirmed["semester_key"] != semester.lower():
+        print(f"  Serving active official {active_confirmed['exam_type']} schedule for "
+              f"{active_confirmed['semester_key']} (window {active_confirmed['window'][0]} to "
+              f"{active_confirmed['window'][1]}) instead of USIS {semester} data")
+        exams, metadata = build_foreign_semester_exams_json(
+            active_confirmed["payload"],
+            active_confirmed["record"],
+            active_confirmed["semester_key"],
+            active_confirmed["exam_type"],
+        )
+        write_exams_files({"metadata": metadata, "exams": exams}, output_path)
+        return
+
     overlays = {
         "midterm": load_confirmed_exam_overlay(semester, "midterm"),
         "final": load_confirmed_exam_overlay(semester, "final"),
@@ -544,27 +773,7 @@ def generate_exams_json(sections: List[Dict], output_path: str = "exams.json"):
         "exams": exams
     }
 
-    # Write regular JSON
-    with open(output_path, 'w', encoding='utf-8') as f:
-        json.dump(output_data, f, indent=2, ensure_ascii=False)
-
-    # Write gzipped version
-    gzip_path = output_path + '.gz'
-    with gzip.open(gzip_path, 'wt', encoding='utf-8') as f:
-        json.dump(output_data, f, separators=(',', ':'), ensure_ascii=False)
-
-    regular_size = os.path.getsize(output_path) / 1024  # KB
-    gzip_size = os.path.getsize(gzip_path) / 1024  # KB
-    compression_ratio = ((regular_size - gzip_size) / regular_size * 100)
-
-    print(f"✓ {output_path} created successfully")
-    print(
-        f"  Regular: {regular_size:.1f} KB | Gzipped: {gzip_size:.1f} KB (saved {compression_ratio:.1f}%)")
-    print(f"  Total exams: {metadata['totalExams']}")
-    print(
-        f"  Mid exams: {metadata['midExamStartDate']} to {metadata['midExamEndDate']}")
-    print(
-        f"  Final exams: {metadata['finalExamStartDate']} to {metadata['finalExamEndDate']}")
+    write_exams_files(output_data, output_path)
 
 
 def main():
