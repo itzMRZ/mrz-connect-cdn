@@ -1,4 +1,13 @@
 {
   "schemaVersion": 1,
-  "semesters": {}
+  "semesters": {
+    "summer2026": {
+      "final": {
+        "confirmed": true,
+        "source": "official-pdf",
+        "dataUrl": "https://bracu-exam-routine.itzmrz.xyz/exam_data.json",
+        "updatedAt": "2026-09-09T09:35:35Z"
+      }
+    }
+  }
 }
