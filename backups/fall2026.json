@@ -3,14 +3,14 @@
     "firstSectionId": 188960,
     "lastSectionId": 191997,
     "totalSections": 2130,
-    "totalConsumedSeats": 64967,
-    "totalEmptySeats": 6673,
-    "totalCapacity": 71640,
+    "totalConsumedSeats": 64945,
+    "totalEmptySeats": 6576,
+    "totalCapacity": 71521,
     "midExamStartDate": "2026-11-07",
     "midExamEndDate": "2026-11-29",
     "finalExamStartDate": "2026-12-28",
     "finalExamEndDate": "2027-01-15",
-    "lastUpdated": "2026-10-08T12:56:12.162047+00:00"
+    "lastUpdated": "2026-10-09T12:42:16.231186+00:00"
   },
   "sections": [
     {
@@ -649,7 +649,7 @@
     {
       "academicDegree": "UNDERGRADUATE",
       "capacity": 30,
-      "consumedSeat": 8,
+      "consumedSeat": 1,
       "courseCode": "ARC512",
       "courseCredit": 1.5,
       "courseId": 595,
@@ -856,7 +856,7 @@
     {
       "academicDegree": "UNDERGRADUATE",
       "capacity": 19,
-      "consumedSeat": 18,
+      "consumedSeat": 17,
       "courseCode": "EEE203L",
       "courseCredit": 1,
       "courseId": 1679,
@@ -904,7 +904,7 @@
     {
       "academicDegree": "UNDERGRADUATE",
       "capacity": 40,
-      "consumedSeat": 37,
+      "consumedSeat": 39,
       "courseCode": "ARC491",
       "courseCredit": 2,
       "courseId": 470,
@@ -1000,7 +1000,7 @@
     {
       "academicDegree": "UNDERGRADUATE",
       "capacity": 38,
-      "consumedSeat": 38,
+      "consumedSeat": 37,
       "courseCode": "CSE110",
       "courseCredit": 3,
       "courseId": 1510,
@@ -1543,7 +1543,7 @@
     {
       "academicDegree": "UNDERGRADUATE",
       "capacity": 40,
-      "consumedSeat": 40,
+      "consumedSeat": 41,
       "courseCode": "LAW391",
       "courseCredit": 3,
       "courseId": 2160,
@@ -1714,7 +1714,7 @@
     {
       "academicDegree": "UNDERGRADUATE",
       "capacity": 38,
-      "consumedSeat": 15,
+      "consumedSeat": 14,
       "courseCode": "CSE331",
       "courseCredit": 3,
       "courseId": 1146,
@@ -2406,7 +2406,7 @@
     {
       "academicDegree": "UNDERGRADUATE",
       "capacity": 38,
-      "consumedSeat": 26,
+      "consumedSeat": 24,
       "courseCode": "CSE220",
       "courseCredit": 3,
       "courseId": 2052,
@@ -2636,7 +2636,7 @@
     {
       "academicDegree": "UNDERGRADUATE",
       "capacity": 38,
-      "consumedSeat": 38,
+      "consumedSeat": 39,
       "courseCode": "CSE331",
       "courseCredit": 3,
       "courseId": 1146,
@@ -2910,8 +2910,8 @@
       "labCourseCode": "CSE421L",
       "labFaculties": "TBA",
       "labName": "COMPUTER NETWORKS LAB",
-      "labRoomName": "12F-31L",
-      "preRegLabSchedule": "WEDNESDAY(2:00 PM-4:50 PM-12F-31L)",
+      "labRoomName": "09F-25L",
+      "preRegLabSchedule": "WEDNESDAY(2:00 PM-4:50 PM-09F-25L)",
       "preRegSchedule": "SATURDAY(2:00 PM-3:20 PM-09A-02C)\nTHURSDAY(2:00 PM-3:20 PM-09A-02C)"
     },
     {
@@ -3513,7 +3513,7 @@
     {
       "academicDegree": "UNDERGRADUATE",
       "capacity": 40,
-      "consumedSeat": 38,
+      "consumedSeat": 37,
       "courseCode": "HST103",
       "courseCredit": 3,
       "courseId": 1515,
@@ -3891,7 +3891,7 @@
     {
       "academicDegree": "UNDERGRADUATE",
       "capacity": 38,
-      "consumedSeat": 9,
+      "consumedSeat": 8,
       "courseCode": "CSE101",
       "courseCredit": 3,
       "courseId": 1505,
@@ -3950,7 +3950,7 @@
     {
       "academicDegree": "UNDERGRADUATE",
       "capacity": 40,
-      "consumedSeat": 40,
+      "consumedSeat": 38,
       "courseCode": "ENG115",
       "courseCredit": 3,
       "courseId": 446,
@@ -4003,7 +4003,7 @@
     {
       "academicDegree": "UNDERGRADUATE",
       "capacity": 38,
-      "consumedSeat": 39,
+      "consumedSeat": 38,
       "courseCode": "CSE230",
       "courseCredit": 3,
       "courseId": 1128,
@@ -4056,7 +4056,7 @@
     {
       "academicDegree": "UNDERGRADUATE",
       "capacity": 38,
-      "consumedSeat": 29,
+      "consumedSeat": 27,
       "courseCode": "CSE426",
       "courseCredit": 3,
       "courseId": 1648,
@@ -4109,7 +4109,7 @@
     {
       "academicDegree": "UNDERGRADUATE",
       "capacity": 38,
-      "consumedSeat": 37,
+      "consumedSeat": 38,
       "courseCode": "CSE426",
       "courseCredit": 3,
       "courseId": 1648,
@@ -4221,7 +4221,7 @@
     {
       "academicDegree": "UNDERGRADUATE",
       "capacity": 0,
-      "consumedSeat": 1,
+      "consumedSeat": 0,
       "courseCode": "CSE446",
       "courseCredit": 3,
       "courseId": 1796,
@@ -5120,7 +5120,7 @@
     {
       "academicDegree": "UNDERGRADUATE",
       "capacity": 38,
-      "consumedSeat": 37,
+      "consumedSeat": 35,
       "courseCode": "CSE425",
       "courseCredit": 3,
       "courseId": 611,
@@ -5437,43 +5437,43 @@
     },
     {
       "academicDegree": "UNDERGRADUATE",
-      "capacity": 30,
-      "consumedSeat": 2,
+      "capacity": 0,
+      "consumedSeat": 0,
       "courseCode": "DEV104",
       "courseCredit": 3,
       "courseId": 1937,
       "courseType": "THEORY",
-      "faculties": "CWS",
+      "faculties": "TBA",
       "parentSectionId": null,
       "roomName": "09G-28C",
       "roomNumber": "09G-28C",
       "sectionId": 190208,
-      "sectionName": "03",
+      "sectionName": "03 (Closed)",
       "sectionSchedule": {
         "classPairId": 3,
         "classSlotId": 13090,
-        "midExamDate": "2026-11-25",
-        "classEndDate": "2027-01-04",
         "finalExamDate": "2027-01-11",
-        "midExamDetail": "Wednesday, November 25, 2026 8:30 AM - 10:30 AM",
-        "classSchedules": [
-          {
-            "day": "MONDAY",
-            "endTime": "09:20:00",
-            "startTime": "08:00:00"
-          },
-          {
-            "day": "WEDNESDAY",
-            "endTime": "09:20:00",
-            "startTime": "08:00:00"
-          }
-        ],
-        "classStartDate": "2026-10-03",
+        "finalExamStartTime": "08:30:00",
+        "finalExamEndTime": "10:30:00",
+        "midExamDate": "2026-11-25",
+        "midExamStartTime": "08:30:00",
         "midExamEndTime": "10:30:00",
         "finalExamDetail": "Monday, January 11, 2027 8:30 AM - 10:30 AM",
-        "finalExamEndTime": "10:30:00",
-        "midExamStartTime": "08:30:00",
-        "finalExamStartTime": "08:30:00"
+        "midExamDetail": "Wednesday, November 25, 2026 8:30 AM - 10:30 AM",
+        "classStartDate": "2026-10-03",
+        "classEndDate": "2027-01-04",
+        "classSchedules": [
+          {
+            "startTime": "08:00:00",
+            "endTime": "09:20:00",
+            "day": "MONDAY"
+          },
+          {
+            "startTime": "08:00:00",
+            "endTime": "09:20:00",
+            "day": "WEDNESDAY"
+          }
+        ]
       },
       "sectionType": "OTHER",
       "semesterSessionId": 20263,
@@ -5650,7 +5650,7 @@
     {
       "academicDegree": "UNDERGRADUATE",
       "capacity": 40,
-      "consumedSeat": 23,
+      "consumedSeat": 24,
       "courseCode": "ARC252",
       "courseCredit": 2,
       "courseId": 1210,
@@ -5756,7 +5756,7 @@
     {
       "academicDegree": "UNDERGRADUATE",
       "capacity": 40,
-      "consumedSeat": 36,
+      "consumedSeat": 37,
       "courseCode": "BCH102",
       "courseCredit": 3,
       "courseId": 758,
@@ -5915,7 +5915,7 @@
     {
       "academicDegree": "UNDERGRADUATE",
       "capacity": 38,
-      "consumedSeat": 37,
+      "consumedSeat": 38,
       "courseCode": "CSE421",
       "courseCredit": 3,
       "courseId": 2051,
@@ -6481,7 +6481,7 @@
     {
       "academicDegree": "UNDERGRADUATE",
       "capacity": 38,
-      "consumedSeat": 33,
+      "consumedSeat": 32,
       "courseCode": "CSE330",
       "courseCredit": 3,
       "courseId": 1015,
@@ -7029,7 +7029,7 @@
     {
       "academicDegree": "UNDERGRADUATE",
       "capacity": 38,
-      "consumedSeat": 38,
+      "consumedSeat": 36,
       "courseCode": "CSE472",
       "courseCredit": 3,
       "courseId": 621,
@@ -7507,7 +7507,7 @@
     {
       "academicDegree": "UNDERGRADUATE",
       "capacity": 38,
-      "consumedSeat": 35,
+      "consumedSeat": 33,
       "courseCode": "CSE330",
       "courseCredit": 3,
       "courseId": 1015,
@@ -7566,7 +7566,7 @@
     {
       "academicDegree": "UNDERGRADUATE",
       "capacity": 38,
-      "consumedSeat": 33,
+      "consumedSeat": 32,
       "courseCode": "CSE471",
       "courseCredit": 3,
       "courseId": 620,
@@ -8482,7 +8482,7 @@
     {
       "academicDegree": "UNDERGRADUATE",
       "capacity": 30,
-      "consumedSeat": 8,
+      "consumedSeat": 1,
       "courseCode": "ARC412",
       "courseCredit": 2,
       "courseId": 887,
@@ -8530,7 +8530,7 @@
     {
       "academicDegree": "UNDERGRADUATE",
       "capacity": 30,
-      "consumedSeat": 33,
+      "consumedSeat": 32,
       "courseCode": "CST306",
       "courseCredit": 3,
       "courseId": 1946,
@@ -9019,7 +9019,7 @@
     {
       "academicDegree": "UNDERGRADUATE",
       "capacity": 40,
-      "consumedSeat": 40,
+      "consumedSeat": 41,
       "courseCode": "SOC101",
       "courseCredit": 3,
       "courseId": 1523,
@@ -10538,7 +10538,7 @@
     {
       "academicDegree": "UNDERGRADUATE",
       "capacity": 30,
-      "consumedSeat": 29,
+      "consumedSeat": 27,
       "courseCode": "HUM101",
       "courseCredit": 3,
       "courseId": 1097,
@@ -11345,7 +11345,7 @@
     {
       "academicDegree": "UNDERGRADUATE",
       "capacity": 37,
-      "consumedSeat": 37,
+      "consumedSeat": 38,
       "courseCode": "BUS102",
       "courseCredit": 3,
       "courseId": 1704,
@@ -11457,7 +11457,7 @@
     {
       "academicDegree": "UNDERGRADUATE",
       "capacity": 38,
-      "consumedSeat": 38,
+      "consumedSeat": 37,
       "courseCode": "CSE422",
       "courseCredit": 3,
       "courseId": 704,
@@ -11569,7 +11569,7 @@
     {
       "academicDegree": "UNDERGRADUATE",
       "capacity": 30,
-      "consumedSeat": 30,
+      "consumedSeat": 37,
       "courseCode": "ARC452",
       "courseCredit": 2,
       "courseId": 703,
@@ -12042,7 +12042,7 @@
     {
       "academicDegree": "UNDERGRADUATE",
       "capacity": 35,
-      "consumedSeat": 34,
+      "consumedSeat": 33,
       "courseCode": "ECO104",
       "courseCredit": 2,
       "courseId": 1546,
@@ -12095,7 +12095,7 @@
     {
       "academicDegree": "UNDERGRADUATE",
       "capacity": 40,
-      "consumedSeat": 30,
+      "consumedSeat": 36,
       "courseCode": "ARC431",
       "courseCredit": 2,
       "courseId": 577,
@@ -12143,7 +12143,7 @@
     {
       "academicDegree": "UNDERGRADUATE",
       "capacity": 38,
-      "consumedSeat": 36,
+      "consumedSeat": 38,
       "courseCode": "CSE427",
       "courseCredit": 3,
       "courseId": 612,
@@ -12355,18 +12355,18 @@
     },
     {
       "academicDegree": "UNDERGRADUATE",
-      "capacity": 30,
-      "consumedSeat": 1,
+      "capacity": 0,
+      "consumedSeat": 0,
       "courseCode": "POL101",
       "courseCredit": 3,
       "courseId": 1525,
       "courseType": "THEORY",
-      "faculties": "TBEL",
+      "faculties": "TBA",
       "parentSectionId": null,
       "roomName": "09G-29C",
       "roomNumber": "09G-29C",
       "sectionId": 190520,
-      "sectionName": "07",
+      "sectionName": "07 (Closed)",
       "sectionSchedule": {
         "classPairId": 1,
         "classSlotId": 13090,
@@ -12568,7 +12568,7 @@
     {
       "academicDegree": "UNDERGRADUATE",
       "capacity": 37,
-      "consumedSeat": 37,
+      "consumedSeat": 36,
       "courseCode": "BUS201",
       "courseCredit": 3,
       "courseId": 2025,
@@ -13204,7 +13204,7 @@
     {
       "academicDegree": "UNDERGRADUATE",
       "capacity": 99,
-      "consumedSeat": 28,
+      "consumedSeat": 34,
       "courseCode": "CSE400",
       "courseCredit": 4,
       "courseId": 1139,
@@ -13582,7 +13582,7 @@
     {
       "academicDegree": "UNDERGRADUATE",
       "capacity": 40,
-      "consumedSeat": 29,
+      "consumedSeat": 28,
       "courseCode": "MAT215",
       "courseCredit": 3,
       "courseId": 1361,
@@ -13741,7 +13741,7 @@
     {
       "academicDegree": "UNDERGRADUATE",
       "capacity": 37,
-      "consumedSeat": 36,
+      "consumedSeat": 37,
       "courseCode": "BUS102",
       "courseCredit": 3,
       "courseId": 1704,
@@ -13900,7 +13900,7 @@
     {
       "academicDegree": "UNDERGRADUATE",
       "capacity": 30,
-      "consumedSeat": 28,
+      "consumedSeat": 29,
       "courseCode": "HUM101",
       "courseCredit": 3,
       "courseId": 1097,
@@ -14154,7 +14154,7 @@
     {
       "academicDegree": "UNDERGRADUATE",
       "capacity": 38,
-      "consumedSeat": 38,
+      "consumedSeat": 39,
       "courseCode": "CSE471",
       "courseCredit": 3,
       "courseId": 620,
@@ -14638,7 +14638,7 @@
     {
       "academicDegree": "UNDERGRADUATE",
       "capacity": 38,
-      "consumedSeat": 32,
+      "consumedSeat": 31,
       "courseCode": "CSE422",
       "courseCredit": 3,
       "courseId": 704,
@@ -14798,7 +14798,7 @@
     {
       "academicDegree": "UNDERGRADUATE",
       "capacity": 40,
-      "consumedSeat": 31,
+      "consumedSeat": 30,
       "courseCode": "MAT101",
       "courseCredit": 3,
       "courseId": 1535,
@@ -15244,7 +15244,7 @@
     {
       "academicDegree": "UNDERGRADUATE",
       "capacity": 38,
-      "consumedSeat": 38,
+      "consumedSeat": 36,
       "courseCode": "CSE321",
       "courseCredit": 3,
       "courseId": 586,
@@ -16017,7 +16017,7 @@
     {
       "academicDegree": "UNDERGRADUATE",
       "capacity": 40,
-      "consumedSeat": 39,
+      "consumedSeat": 40,
       "courseCode": "MAT215",
       "courseCredit": 3,
       "courseId": 1361,
@@ -16224,7 +16224,7 @@
     {
       "academicDegree": "UNDERGRADUATE",
       "capacity": 38,
-      "consumedSeat": 38,
+      "consumedSeat": 39,
       "courseCode": "CSE111",
       "courseCredit": 3,
       "courseId": 2054,
@@ -16719,7 +16719,7 @@
     {
       "academicDegree": "UNDERGRADUATE",
       "capacity": 30,
-      "consumedSeat": 31,
+      "consumedSeat": 42,
       "courseCode": "ARC231",
       "courseCredit": 2,
       "courseId": 344,
@@ -16879,7 +16879,7 @@
     {
       "academicDegree": "UNDERGRADUATE",
       "capacity": 30,
-      "consumedSeat": 30,
+      "consumedSeat": 31,
       "courseCode": "HUM101",
       "courseCredit": 3,
       "courseId": 1097,
@@ -17038,7 +17038,7 @@
     {
       "academicDegree": "UNDERGRADUATE",
       "capacity": 30,
-      "consumedSeat": 17,
+      "consumedSeat": 18,
       "courseCode": "HUM102",
       "courseCredit": 3,
       "courseId": 37,
@@ -18324,7 +18324,7 @@
     {
       "academicDegree": "UNDERGRADUATE",
       "capacity": 30,
-      "consumedSeat": 8,
+      "consumedSeat": 1,
       "courseCode": "ARC452",
       "courseCredit": 2,
       "courseId": 703,
@@ -18696,7 +18696,7 @@
     {
       "academicDegree": "UNDERGRADUATE",
       "capacity": 40,
-      "consumedSeat": 32,
+      "consumedSeat": 31,
       "courseCode": "ENG490",
       "courseCredit": 3,
       "courseId": 605,
@@ -19575,7 +19575,7 @@
     {
       "academicDegree": "UNDERGRADUATE",
       "capacity": 38,
-      "consumedSeat": 37,
+      "consumedSeat": 38,
       "courseCode": "CSE321",
       "courseCredit": 3,
       "courseId": 586,
@@ -20123,7 +20123,7 @@
     {
       "academicDegree": "UNDERGRADUATE",
       "capacity": 39,
-      "consumedSeat": 36,
+      "consumedSeat": 35,
       "courseCode": "EEE359",
       "courseCredit": 3,
       "courseId": 1782,
@@ -20706,7 +20706,7 @@
     {
       "academicDegree": "UNDERGRADUATE",
       "capacity": 38,
-      "consumedSeat": 38,
+      "consumedSeat": 37,
       "courseCode": "CSE110",
       "courseCredit": 3,
       "courseId": 1510,
@@ -20982,18 +20982,18 @@
     },
     {
       "academicDegree": "UNDERGRADUATE",
-      "capacity": 30,
-      "consumedSeat": 1,
+      "capacity": 0,
+      "consumedSeat": 0,
       "courseCode": "HUM101",
       "courseCredit": 3,
       "courseId": 1097,
       "courseType": "THEORY",
-      "faculties": "MRME",
+      "faculties": "TBA",
       "parentSectionId": null,
       "roomName": "09H-36C",
       "roomNumber": "09H-36C",
       "sectionId": 190459,
-      "sectionName": "29",
+      "sectionName": "29 (Closed)",
       "sectionSchedule": {
         "classPairId": 1,
         "classSlotId": 13090,
@@ -21982,7 +21982,7 @@
     {
       "academicDegree": "UNDERGRADUATE",
       "capacity": 30,
-      "consumedSeat": 30,
+      "consumedSeat": 29,
       "courseCode": "CST305",
       "courseCredit": 3,
       "courseId": 1780,
@@ -22035,7 +22035,7 @@
     {
       "academicDegree": "UNDERGRADUATE",
       "capacity": 30,
-      "consumedSeat": 29,
+      "consumedSeat": 30,
       "courseCode": "HUM101",
       "courseCredit": 3,
       "courseId": 1097,
@@ -22312,7 +22312,7 @@
     {
       "academicDegree": "UNDERGRADUATE",
       "capacity": 36,
-      "consumedSeat": 36,
+      "consumedSeat": 35,
       "courseCode": "CSE260",
       "courseCredit": 3,
       "courseId": 1122,
@@ -22477,7 +22477,7 @@
     {
       "academicDegree": "UNDERGRADUATE",
       "capacity": 30,
-      "consumedSeat": 40,
+      "consumedSeat": 39,
       "courseCode": "CST305",
       "courseCredit": 3,
       "courseId": 1780,
@@ -22737,7 +22737,7 @@
     {
       "academicDegree": "UNDERGRADUATE",
       "capacity": 40,
-      "consumedSeat": 44,
+      "consumedSeat": 45,
       "courseCode": "MAT120",
       "courseCredit": 3,
       "courseId": 865,
@@ -22796,7 +22796,7 @@
     {
       "academicDegree": "UNDERGRADUATE",
       "capacity": 40,
-      "consumedSeat": 38,
+      "consumedSeat": 37,
       "courseCode": "ECO102",
       "courseCredit": 3,
       "courseId": 1528,
@@ -22902,7 +22902,7 @@
     {
       "academicDegree": "UNDERGRADUATE",
       "capacity": 38,
-      "consumedSeat": 36,
+      "consumedSeat": 35,
       "courseCode": "CSE420",
       "courseCredit": 3,
       "courseId": 445,
@@ -23062,7 +23062,7 @@
     {
       "academicDegree": "UNDERGRADUATE",
       "capacity": 40,
-      "consumedSeat": 32,
+      "consumedSeat": 33,
       "courseCode": "ARC294",
       "courseCredit": 2,
       "courseId": 1332,
@@ -23428,7 +23428,7 @@
     {
       "academicDegree": "UNDERGRADUATE",
       "capacity": 40,
-      "consumedSeat": 36,
+      "consumedSeat": 37,
       "courseCode": "PHY112",
       "courseCredit": 3,
       "courseId": 644,
@@ -23658,7 +23658,7 @@
     {
       "academicDegree": "UNDERGRADUATE",
       "capacity": 30,
-      "consumedSeat": 26,
+      "consumedSeat": 24,
       "courseCode": "CST303",
       "courseCredit": 3,
       "courseId": 1686,
@@ -23913,7 +23913,7 @@
     {
       "academicDegree": "UNDERGRADUATE",
       "capacity": 38,
-      "consumedSeat": 13,
+      "consumedSeat": 12,
       "courseCode": "CSE341",
       "courseCredit": 3,
       "courseId": 1488,
@@ -24024,43 +24024,43 @@
     },
     {
       "academicDegree": "UNDERGRADUATE",
-      "capacity": 30,
-      "consumedSeat": 1,
+      "capacity": 0,
+      "consumedSeat": 0,
       "courseCode": "HUM101",
       "courseCredit": 3,
       "courseId": 1097,
       "courseType": "THEORY",
-      "faculties": "NZL",
+      "faculties": "TBA",
       "parentSectionId": null,
       "roomName": "09E-23C",
       "roomNumber": "09E-23C",
       "sectionId": 190460,
-      "sectionName": "30",
+      "sectionName": "30 (Closed)",
       "sectionSchedule": {
         "classPairId": null,
         "classSlotId": null,
-        "midExamDate": "2026-11-25",
-        "classEndDate": "2027-01-04",
         "finalExamDate": "2027-01-11",
-        "midExamDetail": "Nov 25, 2026 4:30 PM - 6:30 PM",
-        "classSchedules": [
-          {
-            "day": "MONDAY",
-            "endTime": "18:20:00",
-            "startTime": "17:00:00"
-          },
-          {
-            "day": "WEDNESDAY",
-            "endTime": "18:20:00",
-            "startTime": "17:00:00"
-          }
-        ],
-        "classStartDate": "2026-10-03",
+        "finalExamStartTime": "16:30:00",
+        "finalExamEndTime": "18:30:00",
+        "midExamDate": "2026-11-25",
+        "midExamStartTime": "16:30:00",
         "midExamEndTime": "18:30:00",
         "finalExamDetail": "Jan 11, 2027 4:30 PM - 6:30 PM",
-        "finalExamEndTime": "18:30:00",
-        "midExamStartTime": "16:30:00",
-        "finalExamStartTime": "16:30:00"
+        "midExamDetail": "Nov 25, 2026 4:30 PM - 6:30 PM",
+        "classStartDate": "2026-10-03",
+        "classEndDate": "2027-01-04",
+        "classSchedules": [
+          {
+            "startTime": "17:00:00",
+            "endTime": "18:20:00",
+            "day": "MONDAY"
+          },
+          {
+            "startTime": "17:00:00",
+            "endTime": "18:20:00",
+            "day": "WEDNESDAY"
+          }
+        ]
       },
       "sectionType": "OTHER",
       "semesterSessionId": 20263,
@@ -24823,7 +24823,7 @@
     {
       "academicDegree": "UNDERGRADUATE",
       "capacity": 38,
-      "consumedSeat": 38,
+      "consumedSeat": 39,
       "courseCode": "CSE110",
       "courseCredit": 3,
       "courseId": 1510,
@@ -25689,8 +25689,8 @@
       "labCourseCode": "CSE370L",
       "labFaculties": "TBA",
       "labName": "DATABASE SYSTEMS LAB",
-      "labRoomName": "ASG-12L",
-      "preRegLabSchedule": "SUNDAY(11:00 AM-1:50 PM-ASG-12L)",
+      "labRoomName": "12B-18L",
+      "preRegLabSchedule": "SUNDAY(11:00 AM-1:50 PM-12B-18L)",
       "preRegSchedule": "MONDAY(2:00 PM-3:20 PM-09B-12C)\nWEDNESDAY(2:00 PM-3:20 PM-09B-12C)"
     },
     {
@@ -25749,7 +25749,7 @@
     {
       "academicDegree": "UNDERGRADUATE",
       "capacity": 37,
-      "consumedSeat": 36,
+      "consumedSeat": 35,
       "courseCode": "MGT423",
       "courseCredit": 3,
       "courseId": 1165,
@@ -25950,7 +25950,7 @@
     {
       "academicDegree": "UNDERGRADUATE",
       "capacity": 40,
-      "consumedSeat": 25,
+      "consumedSeat": 26,
       "courseCode": "PHY113",
       "courseCredit": 3,
       "courseId": 645,
@@ -26280,7 +26280,7 @@
     {
       "academicDegree": "UNDERGRADUATE",
       "capacity": 38,
-      "consumedSeat": 38,
+      "consumedSeat": 39,
       "courseCode": "CSE220",
       "courseCredit": 3,
       "courseId": 2052,
@@ -26445,7 +26445,7 @@
     {
       "academicDegree": "UNDERGRADUATE",
       "capacity": 38,
-      "consumedSeat": 37,
+      "consumedSeat": 38,
       "courseCode": "CSE221",
       "courseCredit": 3,
       "courseId": 2127,
@@ -26775,7 +26775,7 @@
     {
       "academicDegree": "UNDERGRADUATE",
       "capacity": 38,
-      "consumedSeat": 40,
+      "consumedSeat": 39,
       "courseCode": "CSE422",
       "courseCredit": 3,
       "courseId": 704,
@@ -26940,7 +26940,7 @@
     {
       "academicDegree": "UNDERGRADUATE",
       "capacity": 38,
-      "consumedSeat": 36,
+      "consumedSeat": 37,
       "courseCode": "CSE421",
       "courseCredit": 3,
       "courseId": 2051,
@@ -27182,28 +27182,28 @@
       "sectionSchedule": {
         "classPairId": null,
         "classSlotId": null,
-        "finalExamDate": "2027-01-09",
-        "finalExamStartTime": "16:30:00",
-        "finalExamEndTime": "18:30:00",
         "midExamDate": "2026-11-23",
-        "midExamStartTime": "16:30:00",
-        "midExamEndTime": "18:30:00",
-        "finalExamDetail": "Jan 9, 2027 4:30 PM - 6:30 PM",
-        "midExamDetail": "Nov 23, 2026 4:30 PM - 6:30 PM",
-        "classStartDate": "2026-10-03",
         "classEndDate": "2027-01-04",
+        "finalExamDate": "2027-01-09",
+        "midExamDetail": "Nov 23, 2026 4:30 PM - 6:30 PM",
         "classSchedules": [
           {
-            "startTime": "12:30:00",
+            "day": "SATURDAY",
             "endTime": "13:50:00",
-            "day": "SATURDAY"
+            "startTime": "12:30:00"
           },
           {
-            "startTime": "12:30:00",
+            "day": "THURSDAY",
             "endTime": "13:50:00",
-            "day": "THURSDAY"
+            "startTime": "12:30:00"
           }
-        ]
+        ],
+        "classStartDate": "2026-10-03",
+        "midExamEndTime": "18:30:00",
+        "finalExamDetail": "Jan 9, 2027 4:30 PM - 6:30 PM",
+        "finalExamEndTime": "18:30:00",
+        "midExamStartTime": "16:30:00",
+        "finalExamStartTime": "16:30:00"
       },
       "sectionType": "OTHER",
       "semesterSessionId": 20263,
@@ -27333,7 +27333,7 @@
     {
       "academicDegree": "UNDERGRADUATE",
       "capacity": 38,
-      "consumedSeat": 37,
+      "consumedSeat": 36,
       "courseCode": "CSE340",
       "courseCredit": 3,
       "courseId": 587,
@@ -27439,7 +27439,7 @@
     {
       "academicDegree": "UNDERGRADUATE",
       "capacity": 30,
-      "consumedSeat": 30,
+      "consumedSeat": 29,
       "courseCode": "ENG334",
       "courseCredit": 3,
       "courseId": 1197,
@@ -28530,7 +28530,7 @@
     {
       "academicDegree": "UNDERGRADUATE",
       "capacity": 38,
-      "consumedSeat": 38,
+      "consumedSeat": 39,
       "courseCode": "CSE340",
       "courseCredit": 3,
       "courseId": 587,
@@ -28583,7 +28583,7 @@
     {
       "academicDegree": "UNDERGRADUATE",
       "capacity": 40,
-      "consumedSeat": 35,
+      "consumedSeat": 34,
       "courseCode": "MAT215",
       "courseCredit": 3,
       "courseId": 1361,
@@ -28742,7 +28742,7 @@
     {
       "academicDegree": "UNDERGRADUATE",
       "capacity": 40,
-      "consumedSeat": 40,
+      "consumedSeat": 39,
       "courseCode": "ECO102",
       "courseCredit": 3,
       "courseId": 1528,
@@ -29274,7 +29274,7 @@
     {
       "academicDegree": "UNDERGRADUATE",
       "capacity": 38,
-      "consumedSeat": 33,
+      "consumedSeat": 32,
       "courseCode": "CSE471",
       "courseCredit": 3,
       "courseId": 620,
@@ -29605,7 +29605,7 @@
     {
       "academicDegree": "UNDERGRADUATE",
       "capacity": 38,
-      "consumedSeat": 37,
+      "consumedSeat": 38,
       "courseCode": "CSE221",
       "courseCredit": 3,
       "courseId": 2127,
@@ -29829,7 +29829,7 @@
     {
       "academicDegree": "UNDERGRADUATE",
       "capacity": 38,
-      "consumedSeat": 36,
+      "consumedSeat": 38,
       "courseCode": "CSE340",
       "courseCredit": 3,
       "courseId": 587,
@@ -29930,7 +29930,7 @@
     {
       "academicDegree": "UNDERGRADUATE",
       "capacity": 38,
-      "consumedSeat": 38,
+      "consumedSeat": 39,
       "courseCode": "CSE460",
       "courseCredit": 3,
       "courseId": 1668,
@@ -30796,7 +30796,7 @@
     {
       "academicDegree": "UNDERGRADUATE",
       "capacity": 30,
-      "consumedSeat": 31,
+      "consumedSeat": 32,
       "courseCode": "PSY101",
       "courseCredit": 3,
       "courseId": 1526,
@@ -31822,7 +31822,7 @@
     {
       "academicDegree": "UNDERGRADUATE",
       "capacity": 30,
-      "consumedSeat": 31,
+      "consumedSeat": 32,
       "courseCode": "POL101",
       "courseCredit": 3,
       "courseId": 1525,
@@ -31875,7 +31875,7 @@
     {
       "academicDegree": "UNDERGRADUATE",
       "capacity": 36,
-      "consumedSeat": 35,
+      "consumedSeat": 36,
       "courseCode": "CSE251",
       "courseCredit": 3,
       "courseId": 1636,
@@ -32425,7 +32425,7 @@
     {
       "academicDegree": "UNDERGRADUATE",
       "capacity": 40,
-      "consumedSeat": 40,
+      "consumedSeat": 39,
       "courseCode": "MAT216",
       "courseCredit": 3,
       "courseId": 1362,
@@ -32526,7 +32526,7 @@
     {
       "academicDegree": "UNDERGRADUATE",
       "capacity": 40,
-      "consumedSeat": 38,
+      "consumedSeat": 40,
       "courseCode": "ECO102",
       "courseCredit": 3,
       "courseId": 1528,
@@ -32579,7 +32579,7 @@
     {
       "academicDegree": "UNDERGRADUATE",
       "capacity": 30,
-      "consumedSeat": 29,
+      "consumedSeat": 27,
       "courseCode": "ECO105",
       "courseCredit": 3,
       "courseId": 1641,
@@ -32733,7 +32733,7 @@
     {
       "academicDegree": "UNDERGRADUATE",
       "capacity": 38,
-      "consumedSeat": 25,
+      "consumedSeat": 26,
       "courseCode": "CSE447",
       "courseCredit": 3,
       "courseId": 2941,
@@ -32898,7 +32898,7 @@
     {
       "academicDegree": "UNDERGRADUATE",
       "capacity": 40,
-      "consumedSeat": 39,
+      "consumedSeat": 40,
       "courseCode": "ENG110",
       "courseCredit": 3,
       "courseId": 2161,
@@ -33116,7 +33116,7 @@
     {
       "academicDegree": "UNDERGRADUATE",
       "capacity": 40,
-      "consumedSeat": 39,
+      "consumedSeat": 40,
       "courseCode": "ECO101",
       "courseCredit": 3,
       "courseId": 1527,
@@ -33371,7 +33371,7 @@
     {
       "academicDegree": "UNDERGRADUATE",
       "capacity": 37,
-      "consumedSeat": 36,
+      "consumedSeat": 35,
       "courseCode": "BUS232",
       "courseCredit": 3,
       "courseId": 2018,
@@ -33530,7 +33530,7 @@
     {
       "academicDegree": "UNDERGRADUATE",
       "capacity": 40,
-      "consumedSeat": 23,
+      "consumedSeat": 30,
       "courseCode": "ARC327",
       "courseCredit": 2,
       "courseId": 609,
@@ -34385,7 +34385,7 @@
     {
       "academicDegree": "UNDERGRADUATE",
       "capacity": 40,
-      "consumedSeat": 24,
+      "consumedSeat": 25,
       "courseCode": "ARC511",
       "courseCredit": 1.5,
       "courseId": 590,
@@ -34486,7 +34486,7 @@
     {
       "academicDegree": "UNDERGRADUATE",
       "capacity": 40,
-      "consumedSeat": 38,
+      "consumedSeat": 37,
       "courseCode": "ENG113",
       "courseCredit": 3,
       "courseId": 303,
@@ -34598,7 +34598,7 @@
     {
       "academicDegree": "UNDERGRADUATE",
       "capacity": 38,
-      "consumedSeat": 36,
+      "consumedSeat": 37,
       "courseCode": "CSE425",
       "courseCredit": 3,
       "courseId": 611,
@@ -34923,7 +34923,7 @@
     {
       "academicDegree": "UNDERGRADUATE",
       "capacity": 38,
-      "consumedSeat": 31,
+      "consumedSeat": 32,
       "courseCode": "CSE111",
       "courseCredit": 3,
       "courseId": 2054,
@@ -34982,7 +34982,7 @@
     {
       "academicDegree": "UNDERGRADUATE",
       "capacity": 35,
-      "consumedSeat": 21,
+      "consumedSeat": 20,
       "courseCode": "EEE283",
       "courseCredit": 3,
       "courseId": 1893,
@@ -35507,7 +35507,7 @@
     {
       "academicDegree": "UNDERGRADUATE",
       "capacity": 30,
-      "consumedSeat": 21,
+      "consumedSeat": 22,
       "courseCode": "FRN101",
       "courseCredit": 3,
       "courseId": 1168,
@@ -35878,7 +35878,7 @@
     {
       "academicDegree": "UNDERGRADUATE",
       "capacity": 40,
-      "consumedSeat": 40,
+      "consumedSeat": 41,
       "courseCode": "MIC206",
       "courseCredit": 3,
       "courseId": 391,
@@ -35931,7 +35931,7 @@
     {
       "academicDegree": "UNDERGRADUATE",
       "capacity": 40,
-      "consumedSeat": 40,
+      "consumedSeat": 39,
       "courseCode": "MIC206",
       "courseCredit": 3,
       "courseId": 391,
@@ -36196,7 +36196,7 @@
     {
       "academicDegree": "UNDERGRADUATE",
       "capacity": 40,
-      "consumedSeat": 40,
+      "consumedSeat": 39,
       "courseCode": "MIC306",
       "courseCredit": 3,
       "courseId": 660,
@@ -36875,7 +36875,7 @@
     {
       "academicDegree": "UNDERGRADUATE",
       "capacity": 40,
-      "consumedSeat": 41,
+      "consumedSeat": 40,
       "courseCode": "MIC401",
       "courseCredit": 3,
       "courseId": 661,
@@ -37034,7 +37034,7 @@
     {
       "academicDegree": "UNDERGRADUATE",
       "capacity": 38,
-      "consumedSeat": 22,
+      "consumedSeat": 21,
       "courseCode": "CSE460",
       "courseCredit": 3,
       "courseId": 1668,
@@ -37423,7 +37423,7 @@
     {
       "academicDegree": "UNDERGRADUATE",
       "capacity": 40,
-      "consumedSeat": 38,
+      "consumedSeat": 39,
       "courseCode": "ENV103",
       "courseCredit": 3,
       "courseId": 1533,
@@ -37476,7 +37476,7 @@
     {
       "academicDegree": "UNDERGRADUATE",
       "capacity": 40,
-      "consumedSeat": 40,
+      "consumedSeat": 41,
       "courseCode": "PHY112",
       "courseCredit": 3,
       "courseId": 644,
@@ -37588,7 +37588,7 @@
     {
       "academicDegree": "UNDERGRADUATE",
       "capacity": 40,
-      "consumedSeat": 40,
+      "consumedSeat": 38,
       "courseCode": "PHY112",
       "courseCredit": 3,
       "courseId": 644,
@@ -38344,7 +38344,7 @@
     {
       "academicDegree": "UNDERGRADUATE",
       "capacity": 38,
-      "consumedSeat": 36,
+      "consumedSeat": 37,
       "courseCode": "CSE340",
       "courseCredit": 3,
       "courseId": 587,
@@ -38616,7 +38616,7 @@
     {
       "academicDegree": "UNDERGRADUATE",
       "capacity": 0,
-      "consumedSeat": 2,
+      "consumedSeat": 0,
       "courseCode": "CSE471",
       "courseCredit": 3,
       "courseId": 620,
@@ -39052,7 +39052,7 @@
     {
       "academicDegree": "UNDERGRADUATE",
       "capacity": 40,
-      "consumedSeat": 40,
+      "consumedSeat": 39,
       "courseCode": "BTE101",
       "courseCredit": 3,
       "courseId": 1356,
@@ -39784,7 +39784,7 @@
     {
       "academicDegree": "UNDERGRADUATE",
       "capacity": 40,
-      "consumedSeat": 15,
+      "consumedSeat": 16,
       "courseCode": "MAT101",
       "courseCredit": 3,
       "courseId": 1535,
@@ -40055,7 +40055,7 @@
     {
       "academicDegree": "UNDERGRADUATE",
       "capacity": 40,
-      "consumedSeat": 39,
+      "consumedSeat": 38,
       "courseCode": "MAT120",
       "courseCredit": 3,
       "courseId": 865,
@@ -40114,7 +40114,7 @@
     {
       "academicDegree": "UNDERGRADUATE",
       "capacity": 40,
-      "consumedSeat": 43,
+      "consumedSeat": 44,
       "courseCode": "MAT215",
       "courseCredit": 3,
       "courseId": 1361,
@@ -40273,7 +40273,7 @@
     {
       "academicDegree": "UNDERGRADUATE",
       "capacity": 40,
-      "consumedSeat": 40,
+      "consumedSeat": 38,
       "courseCode": "MAT216",
       "courseCredit": 3,
       "courseId": 1362,
@@ -40326,7 +40326,7 @@
     {
       "academicDegree": "UNDERGRADUATE",
       "capacity": 40,
-      "consumedSeat": 40,
+      "consumedSeat": 39,
       "courseCode": "MAT216",
       "courseCredit": 3,
       "courseId": 1362,
@@ -41505,7 +41505,7 @@
     {
       "academicDegree": "UNDERGRADUATE",
       "capacity": 40,
-      "consumedSeat": 40,
+      "consumedSeat": 39,
       "courseCode": "STA201",
       "courseCredit": 3,
       "courseId": 1540,
@@ -41606,7 +41606,7 @@
     {
       "academicDegree": "UNDERGRADUATE",
       "capacity": 38,
-      "consumedSeat": 39,
+      "consumedSeat": 38,
       "courseCode": "CSE220",
       "courseCredit": 3,
       "courseId": 2052,
@@ -41766,7 +41766,7 @@
     {
       "academicDegree": "UNDERGRADUATE",
       "capacity": 38,
-      "consumedSeat": 29,
+      "consumedSeat": 28,
       "courseCode": "CSE340",
       "courseCredit": 3,
       "courseId": 587,
@@ -41819,7 +41819,7 @@
     {
       "academicDegree": "UNDERGRADUATE",
       "capacity": 38,
-      "consumedSeat": 38,
+      "consumedSeat": 39,
       "courseCode": "CSE470",
       "courseCredit": 3,
       "courseId": 594,
@@ -42250,7 +42250,7 @@
     {
       "academicDegree": "UNDERGRADUATE",
       "capacity": 30,
-      "consumedSeat": 30,
+      "consumedSeat": 29,
       "courseCode": "CST301",
       "courseCredit": 3,
       "courseId": 1792,
@@ -42976,7 +42976,7 @@
     {
       "academicDegree": "UNDERGRADUATE",
       "capacity": 37,
-      "consumedSeat": 36,
+      "consumedSeat": 35,
       "courseCode": "BUS201",
       "courseCredit": 3,
       "courseId": 2025,
@@ -43088,7 +43088,7 @@
     {
       "academicDegree": "UNDERGRADUATE",
       "capacity": 38,
-      "consumedSeat": 39,
+      "consumedSeat": 38,
       "courseCode": "CSE220",
       "courseCredit": 3,
       "courseId": 2052,
@@ -43147,7 +43147,7 @@
     {
       "academicDegree": "UNDERGRADUATE",
       "capacity": 40,
-      "consumedSeat": 40,
+      "consumedSeat": 41,
       "courseCode": "HST103",
       "courseCredit": 3,
       "courseId": 1515,
@@ -43200,7 +43200,7 @@
     {
       "academicDegree": "UNDERGRADUATE",
       "capacity": 30,
-      "consumedSeat": 34,
+      "consumedSeat": 33,
       "courseCode": "CST308",
       "courseCredit": 3,
       "courseId": 1947,
@@ -43306,7 +43306,7 @@
     {
       "academicDegree": "UNDERGRADUATE",
       "capacity": 38,
-      "consumedSeat": 32,
+      "consumedSeat": 33,
       "courseCode": "CSE440",
       "courseCredit": 3,
       "courseId": 1779,
@@ -43524,7 +43524,7 @@
     {
       "academicDegree": "UNDERGRADUATE",
       "capacity": 38,
-      "consumedSeat": 38,
+      "consumedSeat": 39,
       "courseCode": "CSE421",
       "courseCredit": 3,
       "courseId": 2051,
@@ -43583,7 +43583,7 @@
     {
       "academicDegree": "UNDERGRADUATE",
       "capacity": 38,
-      "consumedSeat": 36,
+      "consumedSeat": 35,
       "courseCode": "CSE422",
       "courseCredit": 3,
       "courseId": 704,
@@ -44743,7 +44743,7 @@
     {
       "academicDegree": "UNDERGRADUATE",
       "capacity": 38,
-      "consumedSeat": 39,
+      "consumedSeat": 38,
       "courseCode": "CSE420",
       "courseCredit": 3,
       "courseId": 445,
@@ -45020,7 +45020,7 @@
     {
       "academicDegree": "UNDERGRADUATE",
       "capacity": 40,
-      "consumedSeat": 39,
+      "consumedSeat": 40,
       "courseCode": "MAT120",
       "courseCredit": 3,
       "courseId": 865,
@@ -45339,7 +45339,7 @@
     {
       "academicDegree": "UNDERGRADUATE",
       "capacity": 38,
-      "consumedSeat": 16,
+      "consumedSeat": 17,
       "courseCode": "CSE360",
       "courseCredit": 3,
       "courseId": 424,
@@ -46237,7 +46237,7 @@
     {
       "academicDegree": "UNDERGRADUATE",
       "capacity": 40,
-      "consumedSeat": 6,
+      "consumedSeat": 0,
       "courseCode": "ARC431",
       "courseCredit": 2,
       "courseId": 577,
@@ -46699,7 +46699,7 @@
     {
       "academicDegree": "UNDERGRADUATE",
       "capacity": 40,
-      "consumedSeat": 39,
+      "consumedSeat": 36,
       "courseCode": "ECO102",
       "courseCredit": 3,
       "courseId": 1528,
@@ -46870,7 +46870,7 @@
     {
       "academicDegree": "UNDERGRADUATE",
       "capacity": 40,
-      "consumedSeat": 37,
+      "consumedSeat": 36,
       "courseCode": "ECO102",
       "courseCredit": 3,
       "courseId": 1528,
@@ -47938,7 +47938,7 @@
     {
       "academicDegree": "UNDERGRADUATE",
       "capacity": 30,
-      "consumedSeat": 28,
+      "consumedSeat": 30,
       "courseCode": "POL101",
       "courseCredit": 3,
       "courseId": 1525,
@@ -47991,7 +47991,7 @@
     {
       "academicDegree": "UNDERGRADUATE",
       "capacity": 38,
-      "consumedSeat": 28,
+      "consumedSeat": 27,
       "courseCode": "CSE461",
       "courseCredit": 3,
       "courseId": 1651,
@@ -48050,7 +48050,7 @@
     {
       "academicDegree": "UNDERGRADUATE",
       "capacity": 38,
-      "consumedSeat": 37,
+      "consumedSeat": 36,
       "courseCode": "CSE471",
       "courseCredit": 3,
       "courseId": 620,
@@ -48221,7 +48221,7 @@
     {
       "academicDegree": "UNDERGRADUATE",
       "capacity": 38,
-      "consumedSeat": 38,
+      "consumedSeat": 37,
       "courseCode": "CSE331",
       "courseCredit": 3,
       "courseId": 1146,
@@ -49570,8 +49570,8 @@
       "labCourseCode": "CSE370L",
       "labFaculties": "TBA",
       "labName": "DATABASE SYSTEMS LAB",
-      "labRoomName": "ASG-12L",
-      "preRegLabSchedule": "SUNDAY(2:00 PM-4:50 PM-ASG-12L)",
+      "labRoomName": "12B-18L",
+      "preRegLabSchedule": "SUNDAY(2:00 PM-4:50 PM-12B-18L)",
       "preRegSchedule": "SATURDAY(12:30 PM-1:50 PM-10B-16C)\nTHURSDAY(12:30 PM-1:50 PM-10B-16C)"
     },
     {
@@ -50055,7 +50055,7 @@
     {
       "academicDegree": "UNDERGRADUATE",
       "capacity": 38,
-      "consumedSeat": 37,
+      "consumedSeat": 38,
       "courseCode": "CSE460",
       "courseCredit": 3,
       "courseId": 1668,
@@ -50167,7 +50167,7 @@
     {
       "academicDegree": "UNDERGRADUATE",
       "capacity": 30,
-      "consumedSeat": 40,
+      "consumedSeat": 41,
       "courseCode": "CST302",
       "courseCredit": 3,
       "courseId": 1781,
@@ -50868,7 +50868,7 @@
     {
       "academicDegree": "UNDERGRADUATE",
       "capacity": 38,
-      "consumedSeat": 37,
+      "consumedSeat": 38,
       "courseCode": "CSE422",
       "courseCredit": 3,
       "courseId": 704,
@@ -51613,7 +51613,7 @@
     {
       "academicDegree": "UNDERGRADUATE",
       "capacity": 0,
-      "consumedSeat": 1,
+      "consumedSeat": 0,
       "courseCode": "PHY112",
       "courseCredit": 3,
       "courseId": 644,
@@ -52411,7 +52411,7 @@
     {
       "academicDegree": "UNDERGRADUATE",
       "capacity": 40,
-      "consumedSeat": 37,
+      "consumedSeat": 36,
       "courseCode": "ENG113",
       "courseCredit": 3,
       "courseId": 303,
@@ -52517,7 +52517,7 @@
     {
       "academicDegree": "UNDERGRADUATE",
       "capacity": 30,
-      "consumedSeat": 21,
+      "consumedSeat": 20,
       "courseCode": "POL202",
       "courseCredit": 3,
       "courseId": 1948,
@@ -52788,7 +52788,7 @@
     {
       "academicDegree": "UNDERGRADUATE",
       "capacity": 30,
-      "consumedSeat": 26,
+      "consumedSeat": 39,
       "courseCode": "CEE213",
       "courseCredit": 2,
       "courseId": 759,
@@ -53171,7 +53171,7 @@
     {
       "academicDegree": "UNDERGRADUATE",
       "capacity": 38,
-      "consumedSeat": 38,
+      "consumedSeat": 33,
       "courseCode": "CSE425",
       "courseCredit": 3,
       "courseId": 611,
@@ -53224,7 +53224,7 @@
     {
       "academicDegree": "UNDERGRADUATE",
       "capacity": 40,
-      "consumedSeat": 31,
+      "consumedSeat": 32,
       "courseCode": "MAT215",
       "courseCredit": 3,
       "courseId": 1361,
@@ -53708,7 +53708,7 @@
     {
       "academicDegree": "UNDERGRADUATE",
       "capacity": 38,
-      "consumedSeat": 30,
+      "consumedSeat": 28,
       "courseCode": "CSE427",
       "courseCredit": 3,
       "courseId": 612,
@@ -53874,7 +53874,7 @@
     {
       "academicDegree": "UNDERGRADUATE",
       "capacity": 38,
-      "consumedSeat": 38,
+      "consumedSeat": 39,
       "courseCode": "CSE331",
       "courseCredit": 3,
       "courseId": 1146,
@@ -53927,7 +53927,7 @@
     {
       "academicDegree": "UNDERGRADUATE",
       "capacity": 40,
-      "consumedSeat": 42,
+      "consumedSeat": 41,
       "courseCode": "PHY111",
       "courseCredit": 3,
       "courseId": 1270,
@@ -53986,7 +53986,7 @@
     {
       "academicDegree": "UNDERGRADUATE",
       "capacity": 40,
-      "consumedSeat": 36,
+      "consumedSeat": 37,
       "courseCode": "MAT215",
       "courseCredit": 3,
       "courseId": 1361,
@@ -54363,7 +54363,7 @@
     {
       "academicDegree": "UNDERGRADUATE",
       "capacity": 40,
-      "consumedSeat": 38,
+      "consumedSeat": 37,
       "courseCode": "PHY112",
       "courseCredit": 3,
       "courseId": 644,
@@ -54523,7 +54523,7 @@
     {
       "academicDegree": "UNDERGRADUATE",
       "capacity": 38,
-      "consumedSeat": 17,
+      "consumedSeat": 15,
       "courseCode": "CSE446",
       "courseCredit": 3,
       "courseId": 1796,
@@ -54847,7 +54847,7 @@
     {
       "academicDegree": "UNDERGRADUATE",
       "capacity": 38,
-      "consumedSeat": 37,
+      "consumedSeat": 38,
       "courseCode": "CSE340",
       "courseCredit": 3,
       "courseId": 587,
@@ -55071,7 +55071,7 @@
     {
       "academicDegree": "UNDERGRADUATE",
       "capacity": 40,
-      "consumedSeat": 41,
+      "consumedSeat": 40,
       "courseCode": "ECO101",
       "courseCredit": 3,
       "courseId": 1527,
@@ -55295,7 +55295,7 @@
     {
       "academicDegree": "UNDERGRADUATE",
       "capacity": 30,
-      "consumedSeat": 30,
+      "consumedSeat": 29,
       "courseCode": "SPN101",
       "courseCredit": 3,
       "courseId": 2443,
@@ -55443,7 +55443,7 @@
     {
       "academicDegree": "UNDERGRADUATE",
       "capacity": 38,
-      "consumedSeat": 38,
+      "consumedSeat": 39,
       "courseCode": "CSE490D",
       "courseCredit": 3,
       "courseId": 2791,
@@ -55703,7 +55703,7 @@
     {
       "academicDegree": "UNDERGRADUATE",
       "capacity": 37,
-      "consumedSeat": 37,
+      "consumedSeat": 36,
       "courseCode": "BUS201",
       "courseCredit": 3,
       "courseId": 2025,
@@ -56713,7 +56713,7 @@
     {
       "academicDegree": "UNDERGRADUATE",
       "capacity": 19,
-      "consumedSeat": 16,
+      "consumedSeat": 15,
       "courseCode": "EEE308L",
       "courseCredit": 1,
       "courseId": 1763,
@@ -57340,7 +57340,7 @@
     {
       "academicDegree": "UNDERGRADUATE",
       "capacity": 30,
-      "consumedSeat": 30,
+      "consumedSeat": 37,
       "courseCode": "ARC412",
       "courseCredit": 2,
       "courseId": 887,
@@ -57548,7 +57548,7 @@
     {
       "academicDegree": "UNDERGRADUATE",
       "capacity": 40,
-      "consumedSeat": 40,
+      "consumedSeat": 39,
       "courseCode": "ANT101",
       "courseCredit": 3,
       "courseId": 1522,
@@ -57850,7 +57850,7 @@
     {
       "academicDegree": "UNDERGRADUATE",
       "capacity": 38,
-      "consumedSeat": 35,
+      "consumedSeat": 36,
       "courseCode": "CSE340",
       "courseCredit": 3,
       "courseId": 587,
@@ -57903,7 +57903,7 @@
     {
       "academicDegree": "UNDERGRADUATE",
       "capacity": 36,
-      "consumedSeat": 32,
+      "consumedSeat": 33,
       "courseCode": "CSE350",
       "courseCredit": 3,
       "courseId": 259,
@@ -58068,7 +58068,7 @@
     {
       "academicDegree": "UNDERGRADUATE",
       "capacity": 38,
-      "consumedSeat": 39,
+      "consumedSeat": 40,
       "courseCode": "CSE340",
       "courseCredit": 3,
       "courseId": 587,
@@ -58339,7 +58339,7 @@
     {
       "academicDegree": "UNDERGRADUATE",
       "capacity": 38,
-      "consumedSeat": 34,
+      "consumedSeat": 35,
       "courseCode": "CSE428",
       "courseCredit": 3,
       "courseId": 613,
@@ -58451,7 +58451,7 @@
     {
       "academicDegree": "UNDERGRADUATE",
       "capacity": 38,
-      "consumedSeat": 38,
+      "consumedSeat": 37,
       "courseCode": "CSE360",
       "courseCredit": 3,
       "courseId": 424,
@@ -58510,7 +58510,7 @@
     {
       "academicDegree": "UNDERGRADUATE",
       "capacity": 38,
-      "consumedSeat": 38,
+      "consumedSeat": 37,
       "courseCode": "CSE230",
       "courseCredit": 3,
       "courseId": 1128,
@@ -58563,7 +58563,7 @@
     {
       "academicDegree": "UNDERGRADUATE",
       "capacity": 38,
-      "consumedSeat": 36,
+      "consumedSeat": 35,
       "courseCode": "CSE423",
       "courseCredit": 3,
       "courseId": 646,
@@ -58622,7 +58622,7 @@
     {
       "academicDegree": "UNDERGRADUATE",
       "capacity": 38,
-      "consumedSeat": 37,
+      "consumedSeat": 38,
       "courseCode": "CSE321",
       "courseCredit": 3,
       "courseId": 586,
@@ -58681,7 +58681,7 @@
     {
       "academicDegree": "UNDERGRADUATE",
       "capacity": 38,
-      "consumedSeat": 19,
+      "consumedSeat": 18,
       "courseCode": "CSE320",
       "courseCredit": 3,
       "courseId": 1326,
@@ -58829,7 +58829,7 @@
     {
       "academicDegree": "UNDERGRADUATE",
       "capacity": 30,
-      "consumedSeat": 30,
+      "consumedSeat": 29,
       "courseCode": "POL101",
       "courseCredit": 3,
       "courseId": 1525,
@@ -58882,7 +58882,7 @@
     {
       "academicDegree": "UNDERGRADUATE",
       "capacity": 38,
-      "consumedSeat": 36,
+      "consumedSeat": 34,
       "courseCode": "CSE421",
       "courseCredit": 3,
       "courseId": 2051,
@@ -58989,7 +58989,7 @@
     {
       "academicDegree": "UNDERGRADUATE",
       "capacity": 0,
-      "consumedSeat": 1,
+      "consumedSeat": 0,
       "courseCode": "CSE463",
       "courseCredit": 3,
       "courseId": 2163,
@@ -59101,7 +59101,7 @@
     {
       "academicDegree": "UNDERGRADUATE",
       "capacity": 40,
-      "consumedSeat": 15,
+      "consumedSeat": 17,
       "courseCode": "ENG480",
       "courseCredit": 3,
       "courseId": 2104,
@@ -59420,7 +59420,7 @@
     {
       "academicDegree": "UNDERGRADUATE",
       "capacity": 38,
-      "consumedSeat": 36,
+      "consumedSeat": 37,
       "courseCode": "CSE221",
       "courseCredit": 3,
       "courseId": 2127,
@@ -59532,7 +59532,7 @@
     {
       "academicDegree": "UNDERGRADUATE",
       "capacity": 38,
-      "consumedSeat": 38,
+      "consumedSeat": 37,
       "courseCode": "CSE111",
       "courseCredit": 3,
       "courseId": 2054,
@@ -60507,7 +60507,7 @@
     {
       "academicDegree": "UNDERGRADUATE",
       "capacity": 40,
-      "consumedSeat": 37,
+      "consumedSeat": 36,
       "courseCode": "MIC206",
       "courseCredit": 3,
       "courseId": 391,
@@ -60560,7 +60560,7 @@
     {
       "academicDegree": "UNDERGRADUATE",
       "capacity": 40,
-      "consumedSeat": 43,
+      "consumedSeat": 42,
       "courseCode": "MAT120",
       "courseCredit": 3,
       "courseId": 865,
@@ -60619,7 +60619,7 @@
     {
       "academicDegree": "UNDERGRADUATE",
       "capacity": 38,
-      "consumedSeat": 38,
+      "consumedSeat": 39,
       "courseCode": "CSE220",
       "courseCredit": 3,
       "courseId": 2052,
@@ -60944,7 +60944,7 @@
     {
       "academicDegree": "UNDERGRADUATE",
       "capacity": 99,
-      "consumedSeat": 57,
+      "consumedSeat": 56,
       "courseCode": "BUS490",
       "courseCredit": 4,
       "courseId": 2055,
@@ -60997,7 +60997,7 @@
     {
       "academicDegree": "UNDERGRADUATE",
       "capacity": 40,
-      "consumedSeat": 12,
+      "consumedSeat": 10,
       "courseCode": "MIC308",
       "courseCredit": 3,
       "courseId": 869,
@@ -61262,7 +61262,7 @@
     {
       "academicDegree": "UNDERGRADUATE",
       "capacity": 40,
-      "consumedSeat": 41,
+      "consumedSeat": 40,
       "courseCode": "MAT111",
       "courseCredit": 3,
       "courseId": 1538,
@@ -61532,7 +61532,7 @@
     {
       "academicDegree": "UNDERGRADUATE",
       "capacity": 38,
-      "consumedSeat": 25,
+      "consumedSeat": 24,
       "courseCode": "CSE422",
       "courseCredit": 3,
       "courseId": 704,
@@ -61756,7 +61756,7 @@
     {
       "academicDegree": "UNDERGRADUATE",
       "capacity": 40,
-      "consumedSeat": 20,
+      "consumedSeat": 21,
       "courseCode": "ENG412",
       "courseCredit": 3,
       "courseId": 2434,
@@ -62559,7 +62559,7 @@
     {
       "academicDegree": "UNDERGRADUATE",
       "capacity": 40,
-      "consumedSeat": 25,
+      "consumedSeat": 26,
       "courseCode": "MAT120",
       "courseCredit": 3,
       "courseId": 865,
@@ -62777,7 +62777,7 @@
     {
       "academicDegree": "UNDERGRADUATE",
       "capacity": 38,
-      "consumedSeat": 39,
+      "consumedSeat": 40,
       "courseCode": "CSE230",
       "courseCredit": 3,
       "courseId": 1128,
@@ -62830,7 +62830,7 @@
     {
       "academicDegree": "UNDERGRADUATE",
       "capacity": 30,
-      "consumedSeat": 28,
+      "consumedSeat": 29,
       "courseCode": "POL101",
       "courseCredit": 3,
       "courseId": 1525,
@@ -62984,7 +62984,7 @@
     {
       "academicDegree": "UNDERGRADUATE",
       "capacity": 38,
-      "consumedSeat": 9,
+      "consumedSeat": 8,
       "courseCode": "CSE460",
       "courseCredit": 3,
       "courseId": 1668,
@@ -63974,7 +63974,7 @@
     {
       "academicDegree": "UNDERGRADUATE",
       "capacity": 38,
-      "consumedSeat": 38,
+      "consumedSeat": 39,
       "courseCode": "CSE423",
       "courseCredit": 3,
       "courseId": 646,
@@ -64240,7 +64240,7 @@
     {
       "academicDegree": "UNDERGRADUATE",
       "capacity": 38,
-      "consumedSeat": 35,
+      "consumedSeat": 34,
       "courseCode": "CSE447",
       "courseCredit": 3,
       "courseId": 2941,
@@ -64464,7 +64464,7 @@
     {
       "academicDegree": "UNDERGRADUATE",
       "capacity": 37,
-      "consumedSeat": 36,
+      "consumedSeat": 37,
       "courseCode": "MGT423",
       "courseCredit": 3,
       "courseId": 1165,
@@ -64778,7 +64778,7 @@
     {
       "academicDegree": "UNDERGRADUATE",
       "capacity": 40,
-      "consumedSeat": 39,
+      "consumedSeat": 40,
       "courseCode": "SOC101",
       "courseCredit": 3,
       "courseId": 1523,
@@ -65096,7 +65096,7 @@
     {
       "academicDegree": "UNDERGRADUATE",
       "capacity": 38,
-      "consumedSeat": 38,
+      "consumedSeat": 39,
       "courseCode": "CSE420",
       "courseCredit": 3,
       "courseId": 445,
@@ -65208,7 +65208,7 @@
     {
       "academicDegree": "UNDERGRADUATE",
       "capacity": 35,
-      "consumedSeat": 33,
+      "consumedSeat": 35,
       "courseCode": "EEE103",
       "courseCredit": 3,
       "courseId": 1890,
@@ -65480,7 +65480,7 @@
     {
       "academicDegree": "UNDERGRADUATE",
       "capacity": 38,
-      "consumedSeat": 38,
+      "consumedSeat": 39,
       "courseCode": "CSE422",
       "courseCredit": 3,
       "courseId": 704,
@@ -65751,7 +65751,7 @@
     {
       "academicDegree": "UNDERGRADUATE",
       "capacity": 26,
-      "consumedSeat": 26,
+      "consumedSeat": 25,
       "courseCode": "ENG102",
       "courseCredit": 3,
       "courseId": 1509,
@@ -65963,7 +65963,7 @@
     {
       "academicDegree": "UNDERGRADUATE",
       "capacity": 38,
-      "consumedSeat": 38,
+      "consumedSeat": 37,
       "courseCode": "CSE423",
       "courseCredit": 3,
       "courseId": 646,
@@ -66075,7 +66075,7 @@
     {
       "academicDegree": "UNDERGRADUATE",
       "capacity": 38,
-      "consumedSeat": 37,
+      "consumedSeat": 38,
       "courseCode": "CSE111",
       "courseCredit": 3,
       "courseId": 2054,
@@ -66676,7 +66676,7 @@
     {
       "academicDegree": "UNDERGRADUATE",
       "capacity": 30,
-      "consumedSeat": 30,
+      "consumedSeat": 29,
       "courseCode": "CHN101",
       "courseCredit": 3,
       "courseId": 1247,
@@ -67053,7 +67053,7 @@
     {
       "academicDegree": "UNDERGRADUATE",
       "capacity": 40,
-      "consumedSeat": 38,
+      "consumedSeat": 39,
       "courseCode": "PSY101",
       "courseCredit": 3,
       "courseId": 1526,
@@ -67158,8 +67158,8 @@
       "labCourseCode": "CSE111L",
       "labFaculties": "TBA",
       "labName": "PROGRAMMING LANGUAGE-II LAB",
-      "labRoomName": "ASG-12L",
-      "preRegLabSchedule": "WEDNESDAY(2:00 PM-4:50 PM-ASG-12L)",
+      "labRoomName": "AS2-11L",
+      "preRegLabSchedule": "WEDNESDAY(2:00 PM-4:50 PM-AS2-11L)",
       "preRegSchedule": "SUNDAY(2:00 PM-3:20 PM-09A-04C)\nTUESDAY(2:00 PM-3:20 PM-09A-04C)"
     },
     {
@@ -67998,7 +67998,7 @@
     {
       "academicDegree": "UNDERGRADUATE",
       "capacity": 36,
-      "consumedSeat": 36,
+      "consumedSeat": 35,
       "courseCode": "CSE251",
       "courseCredit": 3,
       "courseId": 1636,
@@ -68222,7 +68222,7 @@
     {
       "academicDegree": "UNDERGRADUATE",
       "capacity": 30,
-      "consumedSeat": 29,
+      "consumedSeat": 30,
       "courseCode": "CST301",
       "courseCredit": 3,
       "courseId": 1792,
@@ -68817,7 +68817,7 @@
     {
       "academicDegree": "UNDERGRADUATE",
       "capacity": 38,
-      "consumedSeat": 38,
+      "consumedSeat": 39,
       "courseCode": "CSE110",
       "courseCredit": 3,
       "courseId": 1510,
@@ -70039,7 +70039,7 @@
     {
       "academicDegree": "UNDERGRADUATE",
       "capacity": 30,
-      "consumedSeat": 24,
+      "consumedSeat": 25,
       "courseCode": "POL101",
       "courseCredit": 3,
       "courseId": 1525,
@@ -70804,7 +70804,7 @@
     {
       "academicDegree": "UNDERGRADUATE",
       "capacity": 30,
-      "consumedSeat": 30,
+      "consumedSeat": 29,
       "courseCode": "HUM101",
       "courseCredit": 3,
       "courseId": 1097,
@@ -70857,7 +70857,7 @@
     {
       "academicDegree": "UNDERGRADUATE",
       "capacity": 40,
-      "consumedSeat": 41,
+      "consumedSeat": 40,
       "courseCode": "ECO305",
       "courseCredit": 3,
       "courseId": 318,
@@ -71942,7 +71942,7 @@
     {
       "academicDegree": "UNDERGRADUATE",
       "capacity": 40,
-      "consumedSeat": 35,
+      "consumedSeat": 36,
       "courseCode": "PHY111",
       "courseCredit": 3,
       "courseId": 1270,
@@ -72001,7 +72001,7 @@
     {
       "academicDegree": "UNDERGRADUATE",
       "capacity": 30,
-      "consumedSeat": 31,
+      "consumedSeat": 32,
       "courseCode": "POL102",
       "courseCredit": 3,
       "courseId": 2013,
@@ -72166,7 +72166,7 @@
     {
       "academicDegree": "UNDERGRADUATE",
       "capacity": 34,
-      "consumedSeat": 33,
+      "consumedSeat": 32,
       "courseCode": "ENG091",
       "courseCredit": 0,
       "courseId": 1462,
@@ -72649,7 +72649,7 @@
     {
       "academicDegree": "UNDERGRADUATE",
       "capacity": 30,
-      "consumedSeat": 33,
+      "consumedSeat": 31,
       "courseCode": "CST309",
       "courseCredit": 3,
       "courseId": 1778,
@@ -72702,7 +72702,7 @@
     {
       "academicDegree": "UNDERGRADUATE",
       "capacity": 40,
-      "consumedSeat": 39,
+      "consumedSeat": 40,
       "courseCode": "ANT101",
       "courseCredit": 3,
       "courseId": 1522,
@@ -73357,7 +73357,7 @@
     {
       "academicDegree": "UNDERGRADUATE",
       "capacity": 40,
-      "consumedSeat": 36,
+      "consumedSeat": 37,
       "courseCode": "ENG114",
       "courseCredit": 3,
       "courseId": 441,
@@ -73749,7 +73749,7 @@
     {
       "academicDegree": "UNDERGRADUATE",
       "capacity": 40,
-      "consumedSeat": 41,
+      "consumedSeat": 42,
       "courseCode": "ECO323",
       "courseCredit": 3,
       "courseId": 370,
@@ -74551,7 +74551,7 @@
     {
       "academicDegree": "UNDERGRADUATE",
       "capacity": 40,
-      "consumedSeat": 38,
+      "consumedSeat": 39,
       "courseCode": "ENG114",
       "courseCredit": 3,
       "courseId": 441,
@@ -74656,7 +74656,7 @@
     },
     {
       "academicDegree": "UNDERGRADUATE",
-      "capacity": 37,
+      "capacity": 38,
       "consumedSeat": 38,
       "courseCode": "CSE111",
       "courseCredit": 3,
@@ -75496,7 +75496,7 @@
     {
       "academicDegree": "UNDERGRADUATE",
       "capacity": 38,
-      "consumedSeat": 38,
+      "consumedSeat": 40,
       "courseCode": "CSE220",
       "courseCredit": 3,
       "courseId": 2052,
@@ -76129,7 +76129,7 @@
     {
       "academicDegree": "UNDERGRADUATE",
       "capacity": 40,
-      "consumedSeat": 18,
+      "consumedSeat": 17,
       "courseCode": "ENG465",
       "courseCredit": 3,
       "courseId": 641,
@@ -76506,7 +76506,7 @@
     {
       "academicDegree": "UNDERGRADUATE",
       "capacity": 38,
-      "consumedSeat": 16,
+      "consumedSeat": 15,
       "courseCode": "CSE463",
       "courseCredit": 3,
       "courseId": 2163,
@@ -76613,7 +76613,7 @@
     {
       "academicDegree": "UNDERGRADUATE",
       "capacity": 38,
-      "consumedSeat": 38,
+      "consumedSeat": 37,
       "courseCode": "CSE110",
       "courseCredit": 3,
       "courseId": 1510,
@@ -76672,7 +76672,7 @@
     {
       "academicDegree": "UNDERGRADUATE",
       "capacity": 34,
-      "consumedSeat": 31,
+      "consumedSeat": 32,
       "courseCode": "ENG091",
       "courseCredit": 0,
       "courseId": 1462,
@@ -76778,7 +76778,7 @@
     {
       "academicDegree": "UNDERGRADUATE",
       "capacity": 40,
-      "consumedSeat": 38,
+      "consumedSeat": 39,
       "courseCode": "ENG320",
       "courseCredit": 3,
       "courseId": 2007,
@@ -76831,7 +76831,7 @@
     {
       "academicDegree": "UNDERGRADUATE",
       "capacity": 38,
-      "consumedSeat": 38,
+      "consumedSeat": 36,
       "courseCode": "CSE461",
       "courseCredit": 3,
       "courseId": 1651,
@@ -77002,7 +77002,7 @@
     {
       "academicDegree": "UNDERGRADUATE",
       "capacity": 36,
-      "consumedSeat": 36,
+      "consumedSeat": 35,
       "courseCode": "CSE251",
       "courseCredit": 3,
       "courseId": 1636,
@@ -77273,7 +77273,7 @@
     {
       "academicDegree": "UNDERGRADUATE",
       "capacity": 40,
-      "consumedSeat": 39,
+      "consumedSeat": 41,
       "courseCode": "MAT216",
       "courseCredit": 3,
       "courseId": 1362,
@@ -77491,7 +77491,7 @@
     {
       "academicDegree": "UNDERGRADUATE",
       "capacity": 40,
-      "consumedSeat": 40,
+      "consumedSeat": 42,
       "courseCode": "MIC308",
       "courseCredit": 3,
       "courseId": 869,
@@ -77544,7 +77544,7 @@
     {
       "academicDegree": "UNDERGRADUATE",
       "capacity": 38,
-      "consumedSeat": 38,
+      "consumedSeat": 39,
       "courseCode": "CSE420",
       "courseCredit": 3,
       "courseId": 445,
@@ -77603,7 +77603,7 @@
     {
       "academicDegree": "UNDERGRADUATE",
       "capacity": 40,
-      "consumedSeat": 39,
+      "consumedSeat": 40,
       "courseCode": "MAT216",
       "courseCredit": 3,
       "courseId": 1362,
@@ -77715,7 +77715,7 @@
     {
       "academicDegree": "UNDERGRADUATE",
       "capacity": 30,
-      "consumedSeat": 12,
+      "consumedSeat": 1,
       "courseCode": "ARC231",
       "courseCredit": 2,
       "courseId": 344,
@@ -78029,7 +78029,7 @@
     {
       "academicDegree": "UNDERGRADUATE",
       "capacity": 30,
-      "consumedSeat": 22,
+      "consumedSeat": 23,
       "courseCode": "ARC312",
       "courseCredit": 1.5,
       "courseId": 573,
@@ -78183,7 +78183,7 @@
     {
       "academicDegree": "UNDERGRADUATE",
       "capacity": 30,
-      "consumedSeat": 7,
+      "consumedSeat": 0,
       "courseCode": "ARC327",
       "courseCredit": 2,
       "courseId": 609,
@@ -78507,7 +78507,7 @@
     {
       "academicDegree": "UNDERGRADUATE",
       "capacity": 38,
-      "consumedSeat": 12,
+      "consumedSeat": 11,
       "courseCode": "CSE437",
       "courseCredit": 3,
       "courseId": 1739,
@@ -78778,7 +78778,7 @@
     {
       "academicDegree": "UNDERGRADUATE",
       "capacity": 38,
-      "consumedSeat": 36,
+      "consumedSeat": 35,
       "courseCode": "CSE321",
       "courseCredit": 3,
       "courseId": 586,
@@ -78896,7 +78896,7 @@
     {
       "academicDegree": "UNDERGRADUATE",
       "capacity": 30,
-      "consumedSeat": 36,
+      "consumedSeat": 37,
       "courseCode": "CST301",
       "courseCredit": 3,
       "courseId": 1792,
@@ -79986,7 +79986,7 @@
     {
       "academicDegree": "UNDERGRADUATE",
       "capacity": 38,
-      "consumedSeat": 37,
+      "consumedSeat": 38,
       "courseCode": "CSE421",
       "courseCredit": 3,
       "courseId": 2051,
@@ -80210,7 +80210,7 @@
     {
       "academicDegree": "UNDERGRADUATE",
       "capacity": 38,
-      "consumedSeat": 33,
+      "consumedSeat": 34,
       "courseCode": "CSE420",
       "courseCredit": 3,
       "courseId": 445,
@@ -80269,7 +80269,7 @@
     {
       "academicDegree": "UNDERGRADUATE",
       "capacity": 30,
-      "consumedSeat": 31,
+      "consumedSeat": 35,
       "courseCode": "HUM101",
       "courseCredit": 3,
       "courseId": 1097,
@@ -80699,7 +80699,7 @@
     {
       "academicDegree": "UNDERGRADUATE",
       "capacity": 30,
-      "consumedSeat": 33,
+      "consumedSeat": 32,
       "courseCode": "CST309",
       "courseCredit": 3,
       "courseId": 1778,
@@ -80970,7 +80970,7 @@
     {
       "academicDegree": "UNDERGRADUATE",
       "capacity": 40,
-      "consumedSeat": 39,
+      "consumedSeat": 40,
       "courseCode": "SOC101",
       "courseCredit": 3,
       "courseId": 1523,
@@ -81177,7 +81177,7 @@
     {
       "academicDegree": "UNDERGRADUATE",
       "capacity": 37,
-      "consumedSeat": 34,
+      "consumedSeat": 35,
       "courseCode": "BUS201",
       "courseCredit": 3,
       "courseId": 2025,
@@ -81708,7 +81708,7 @@
     {
       "academicDegree": "UNDERGRADUATE",
       "capacity": 40,
-      "consumedSeat": 8,
+      "consumedSeat": 7,
       "courseCode": "MAT322",
       "courseCredit": 3,
       "courseId": 690,
@@ -81879,7 +81879,7 @@
     {
       "academicDegree": "UNDERGRADUATE",
       "capacity": 30,
-      "consumedSeat": 30,
+      "consumedSeat": 29,
       "courseCode": "POL101",
       "courseCredit": 3,
       "courseId": 1525,
@@ -82315,7 +82315,7 @@
     {
       "academicDegree": "UNDERGRADUATE",
       "capacity": 30,
-      "consumedSeat": 33,
+      "consumedSeat": 34,
       "courseCode": "CST302",
       "courseCredit": 3,
       "courseId": 1781,
@@ -82427,7 +82427,7 @@
     {
       "academicDegree": "UNDERGRADUATE",
       "capacity": 30,
-      "consumedSeat": 26,
+      "consumedSeat": 25,
       "courseCode": "ARC312",
       "courseCredit": 1.5,
       "courseId": 573,
@@ -82475,7 +82475,7 @@
     {
       "academicDegree": "UNDERGRADUATE",
       "capacity": 37,
-      "consumedSeat": 14,
+      "consumedSeat": 15,
       "courseCode": "FIN421",
       "courseCredit": 3,
       "courseId": 2038,
@@ -82528,7 +82528,7 @@
     {
       "academicDegree": "UNDERGRADUATE",
       "capacity": 38,
-      "consumedSeat": 33,
+      "consumedSeat": 32,
       "courseCode": "CSE101",
       "courseCredit": 3,
       "courseId": 1505,
@@ -82587,7 +82587,7 @@
     {
       "academicDegree": "UNDERGRADUATE",
       "capacity": 37,
-      "consumedSeat": 36,
+      "consumedSeat": 37,
       "courseCode": "BUS201",
       "courseCredit": 3,
       "courseId": 2025,
@@ -83086,7 +83086,7 @@
     {
       "academicDegree": "UNDERGRADUATE",
       "capacity": 40,
-      "consumedSeat": 32,
+      "consumedSeat": 33,
       "courseCode": "ENG217",
       "courseCredit": 3,
       "courseId": 1090,
@@ -83410,7 +83410,7 @@
     {
       "academicDegree": "UNDERGRADUATE",
       "capacity": 40,
-      "consumedSeat": 42,
+      "consumedSeat": 41,
       "courseCode": "STA201",
       "courseCredit": 3,
       "courseId": 1540,
@@ -83793,7 +83793,7 @@
     {
       "academicDegree": "UNDERGRADUATE",
       "capacity": 30,
-      "consumedSeat": 30,
+      "consumedSeat": 31,
       "courseCode": "ECO105",
       "courseCredit": 3,
       "courseId": 1641,
@@ -84111,7 +84111,7 @@
     {
       "academicDegree": "UNDERGRADUATE",
       "capacity": 38,
-      "consumedSeat": 37,
+      "consumedSeat": 38,
       "courseCode": "CSE321",
       "courseCredit": 3,
       "courseId": 586,
@@ -85409,7 +85409,7 @@
     {
       "academicDegree": "UNDERGRADUATE",
       "capacity": 32,
-      "consumedSeat": 32,
+      "consumedSeat": 31,
       "courseCode": "EEE308",
       "courseCredit": 3,
       "courseId": 1762,
@@ -86223,7 +86223,7 @@
     {
       "academicDegree": "UNDERGRADUATE",
       "capacity": 40,
-      "consumedSeat": 40,
+      "consumedSeat": 39,
       "courseCode": "MAT091",
       "courseCredit": 0,
       "courseId": 1833,
@@ -86329,7 +86329,7 @@
     {
       "academicDegree": "UNDERGRADUATE",
       "capacity": 38,
-      "consumedSeat": 36,
+      "consumedSeat": 34,
       "courseCode": "CSE421",
       "courseCredit": 3,
       "courseId": 2051,
@@ -86642,7 +86642,7 @@
     {
       "academicDegree": "UNDERGRADUATE",
       "capacity": 40,
-      "consumedSeat": 40,
+      "consumedSeat": 39,
       "courseCode": "ANT101",
       "courseCredit": 3,
       "courseId": 1522,
@@ -86801,7 +86801,7 @@
     {
       "academicDegree": "UNDERGRADUATE",
       "capacity": 40,
-      "consumedSeat": 43,
+      "consumedSeat": 42,
       "courseCode": "MAT092",
       "courseCredit": 0,
       "courseId": 1819,
@@ -86854,7 +86854,7 @@
     {
       "academicDegree": "UNDERGRADUATE",
       "capacity": 38,
-      "consumedSeat": 38,
+      "consumedSeat": 35,
       "courseCode": "CSE437",
       "courseCredit": 3,
       "courseId": 1739,
@@ -88090,8 +88090,8 @@
       "labCourseCode": "CSE421L",
       "labFaculties": "TBA",
       "labName": "COMPUTER NETWORKS LAB",
-      "labRoomName": "12F-31L",
-      "preRegLabSchedule": "WEDNESDAY(2:00 PM-4:50 PM-12F-31L)",
+      "labRoomName": "09F-25L",
+      "preRegLabSchedule": "WEDNESDAY(2:00 PM-4:50 PM-09F-25L)",
       "preRegSchedule": "SATURDAY(3:30 PM-4:50 PM-09A-02C)\nTHURSDAY(3:30 PM-4:50 PM-09A-02C)"
     },
     {
@@ -88202,8 +88202,8 @@
       "labCourseCode": "CSE490BL",
       "labFaculties": "TBA",
       "labName": "INTRODUCTION TO CYBERSECURITY LAB",
-      "labRoomName": "12F-32L",
-      "preRegLabSchedule": "SUNDAY(2:00 PM-4:50 PM-12F-32L)",
+      "labRoomName": "10E-27L",
+      "preRegLabSchedule": "SUNDAY(2:00 PM-4:50 PM-10E-27L)",
       "preRegSchedule": "SATURDAY(9:30 AM-10:50 AM-09D-18C)\nTHURSDAY(9:30 AM-10:50 AM-09D-18C)"
     },
     {
@@ -88262,7 +88262,7 @@
     {
       "academicDegree": "UNDERGRADUATE",
       "capacity": 40,
-      "consumedSeat": 40,
+      "consumedSeat": 41,
       "courseCode": "ENG465",
       "courseCredit": 3,
       "courseId": 641,
@@ -88368,7 +88368,7 @@
     {
       "academicDegree": "UNDERGRADUATE",
       "capacity": 38,
-      "consumedSeat": 37,
+      "consumedSeat": 38,
       "courseCode": "CSE340",
       "courseCredit": 3,
       "courseId": 587,
@@ -88474,7 +88474,7 @@
     {
       "academicDegree": "UNDERGRADUATE",
       "capacity": 40,
-      "consumedSeat": 36,
+      "consumedSeat": 34,
       "courseCode": "CHE110",
       "courseCredit": 3,
       "courseId": 1407,
@@ -89128,7 +89128,7 @@
     {
       "academicDegree": "UNDERGRADUATE",
       "capacity": 38,
-      "consumedSeat": 38,
+      "consumedSeat": 39,
       "courseCode": "CSE340",
       "courseCredit": 3,
       "courseId": 587,
@@ -89629,7 +89629,7 @@
     {
       "academicDegree": "UNDERGRADUATE",
       "capacity": 30,
-      "consumedSeat": 29,
+      "consumedSeat": 30,
       "courseCode": "PSY101",
       "courseCredit": 3,
       "courseId": 1526,
@@ -89794,7 +89794,7 @@
     {
       "academicDegree": "UNDERGRADUATE",
       "capacity": 38,
-      "consumedSeat": 36,
+      "consumedSeat": 35,
       "courseCode": "CSE321",
       "courseCredit": 3,
       "courseId": 586,
@@ -89853,7 +89853,7 @@
     {
       "academicDegree": "UNDERGRADUATE",
       "capacity": 38,
-      "consumedSeat": 38,
+      "consumedSeat": 37,
       "courseCode": "CSE230",
       "courseCredit": 3,
       "courseId": 1128,
@@ -90599,8 +90599,8 @@
       "courseType": "THEORY",
       "faculties": "ADR",
       "parentSectionId": null,
-      "roomName": "12B-18L",
-      "roomNumber": "12B-18L",
+      "roomName": "ASG-12L",
+      "roomNumber": "ASG-12L",
       "sectionId": 190662,
       "sectionName": "01",
       "sectionSchedule": {
@@ -90641,12 +90641,12 @@
       "labName": "PROGRAMMING FOR THE INTERNET LAB",
       "labRoomName": "ASG-12L",
       "preRegLabSchedule": "TUESDAY(2:00 PM-4:50 PM-ASG-12L)",
-      "preRegSchedule": "SUNDAY(11:00 AM-1:50 PM-12B-18L)"
+      "preRegSchedule": "SUNDAY(11:00 AM-1:50 PM-ASG-12L)"
     },
     {
       "academicDegree": "UNDERGRADUATE",
       "capacity": 30,
-      "consumedSeat": 31,
+      "consumedSeat": 33,
       "courseCode": "DEV104",
       "courseCredit": 3,
       "courseId": 1937,
@@ -90817,7 +90817,7 @@
     {
       "academicDegree": "UNDERGRADUATE",
       "capacity": 37,
-      "consumedSeat": 37,
+      "consumedSeat": 36,
       "courseCode": "MKT201",
       "courseCredit": 3,
       "courseId": 425,
@@ -91305,7 +91305,7 @@
     {
       "academicDegree": "UNDERGRADUATE",
       "capacity": 40,
-      "consumedSeat": 41,
+      "consumedSeat": 42,
       "courseCode": "ECO101",
       "courseCredit": 3,
       "courseId": 1527,
@@ -91411,7 +91411,7 @@
     {
       "academicDegree": "UNDERGRADUATE",
       "capacity": 38,
-      "consumedSeat": 38,
+      "consumedSeat": 39,
       "courseCode": "CSE470",
       "courseCredit": 3,
       "courseId": 594,
@@ -91523,7 +91523,7 @@
     {
       "academicDegree": "UNDERGRADUATE",
       "capacity": 30,
-      "consumedSeat": 33,
+      "consumedSeat": 31,
       "courseCode": "HUM101",
       "courseCredit": 3,
       "courseId": 1097,
@@ -91735,7 +91735,7 @@
     {
       "academicDegree": "UNDERGRADUATE",
       "capacity": 38,
-      "consumedSeat": 36,
+      "consumedSeat": 37,
       "courseCode": "CSE330",
       "courseCredit": 3,
       "courseId": 1015,
@@ -91794,7 +91794,7 @@
     {
       "academicDegree": "UNDERGRADUATE",
       "capacity": 36,
-      "consumedSeat": 32,
+      "consumedSeat": 31,
       "courseCode": "EEE305",
       "courseCredit": 3,
       "courseId": 1912,
@@ -92342,7 +92342,7 @@
     {
       "academicDegree": "UNDERGRADUATE",
       "capacity": 36,
-      "consumedSeat": 34,
+      "consumedSeat": 35,
       "courseCode": "EEE305",
       "courseCredit": 3,
       "courseId": 1912,
@@ -92878,7 +92878,7 @@
     {
       "academicDegree": "UNDERGRADUATE",
       "capacity": 40,
-      "consumedSeat": 31,
+      "consumedSeat": 29,
       "courseCode": "SOC101",
       "courseCredit": 3,
       "courseId": 1523,
@@ -92931,7 +92931,7 @@
     {
       "academicDegree": "UNDERGRADUATE",
       "capacity": 37,
-      "consumedSeat": 36,
+      "consumedSeat": 35,
       "courseCode": "MKT201",
       "courseCredit": 3,
       "courseId": 425,
@@ -93037,7 +93037,7 @@
     {
       "academicDegree": "UNDERGRADUATE",
       "capacity": 40,
-      "consumedSeat": 29,
+      "consumedSeat": 28,
       "courseCode": "SOC101",
       "courseCredit": 3,
       "courseId": 1523,
@@ -93573,7 +93573,7 @@
     {
       "academicDegree": "UNDERGRADUATE",
       "capacity": 38,
-      "consumedSeat": 38,
+      "consumedSeat": 39,
       "courseCode": "CSE220",
       "courseCredit": 3,
       "courseId": 2052,
@@ -93892,7 +93892,7 @@
     {
       "academicDegree": "UNDERGRADUATE",
       "capacity": 30,
-      "consumedSeat": 30,
+      "consumedSeat": 28,
       "courseCode": "CST305",
       "courseCredit": 3,
       "courseId": 1780,
@@ -94647,7 +94647,7 @@
     {
       "academicDegree": "UNDERGRADUATE",
       "capacity": 40,
-      "consumedSeat": 39,
+      "consumedSeat": 40,
       "courseCode": "SOC101",
       "courseCredit": 3,
       "courseId": 1523,
@@ -94806,7 +94806,7 @@
     {
       "academicDegree": "UNDERGRADUATE",
       "capacity": 40,
-      "consumedSeat": 39,
+      "consumedSeat": 40,
       "courseCode": "ECO102",
       "courseCredit": 3,
       "courseId": 1528,
@@ -95177,7 +95177,7 @@
     {
       "academicDegree": "UNDERGRADUATE",
       "capacity": 38,
-      "consumedSeat": 38,
+      "consumedSeat": 37,
       "courseCode": "CSE423",
       "courseCredit": 3,
       "courseId": 646,
@@ -96335,7 +96335,7 @@
     {
       "academicDegree": "UNDERGRADUATE",
       "capacity": 30,
-      "consumedSeat": 36,
+      "consumedSeat": 35,
       "courseCode": "CST309",
       "courseCredit": 3,
       "courseId": 1778,
@@ -96812,15 +96812,15 @@
     {
       "academicDegree": "UNDERGRADUATE",
       "capacity": 38,
-      "consumedSeat": 37,
+      "consumedSeat": 35,
       "courseCode": "CSE489",
       "courseCredit": 3,
       "courseId": 1744,
       "courseType": "THEORY",
       "faculties": "ADR",
       "parentSectionId": null,
-      "roomName": "09E-22L",
-      "roomNumber": "09E-22L",
+      "roomName": "ASG-12L",
+      "roomNumber": "ASG-12L",
       "sectionId": 190663,
       "sectionName": "01",
       "sectionSchedule": {
@@ -96859,9 +96859,9 @@
       "labCourseCode": "CSE489L",
       "labFaculties": "TBA",
       "labName": "ANDROID APP DEVELOPMENT LAB",
-      "labRoomName": "12B-18L",
-      "preRegLabSchedule": "SUNDAY(2:00 PM-4:50 PM-12B-18L)",
-      "preRegSchedule": "TUESDAY(11:00 AM-1:50 PM-09E-22L)"
+      "labRoomName": "ASG-12L",
+      "preRegLabSchedule": "SUNDAY(2:00 PM-4:50 PM-ASG-12L)",
+      "preRegSchedule": "TUESDAY(11:00 AM-1:50 PM-ASG-12L)"
     },
     {
       "academicDegree": "UNDERGRADUATE",
@@ -97085,7 +97085,7 @@
     {
       "academicDegree": "UNDERGRADUATE",
       "capacity": 38,
-      "consumedSeat": 36,
+      "consumedSeat": 34,
       "courseCode": "CSE423",
       "courseCredit": 3,
       "courseId": 646,
@@ -97197,7 +97197,7 @@
     {
       "academicDegree": "UNDERGRADUATE",
       "capacity": 30,
-      "consumedSeat": 30,
+      "consumedSeat": 29,
       "courseCode": "SPN101",
       "courseCredit": 3,
       "courseId": 2443,
@@ -97945,7 +97945,7 @@
     {
       "academicDegree": "UNDERGRADUATE",
       "capacity": 40,
-      "consumedSeat": 39,
+      "consumedSeat": 40,
       "courseCode": "STA201",
       "courseCredit": 3,
       "courseId": 1540,
@@ -98907,7 +98907,7 @@
     {
       "academicDegree": "UNDERGRADUATE",
       "capacity": 38,
-      "consumedSeat": 27,
+      "consumedSeat": 28,
       "courseCode": "CSE471",
       "courseCredit": 3,
       "courseId": 620,
@@ -98966,7 +98966,7 @@
     {
       "academicDegree": "UNDERGRADUATE",
       "capacity": 25,
-      "consumedSeat": 29,
+      "consumedSeat": 28,
       "courseCode": "ENG203",
       "courseCredit": 1.5,
       "courseId": 1549,
@@ -99291,7 +99291,7 @@
     {
       "academicDegree": "UNDERGRADUATE",
       "capacity": 40,
-      "consumedSeat": 39,
+      "consumedSeat": 40,
       "courseCode": "PHY112",
       "courseCredit": 3,
       "courseId": 644,
@@ -99509,7 +99509,7 @@
     {
       "academicDegree": "UNDERGRADUATE",
       "capacity": 40,
-      "consumedSeat": 36,
+      "consumedSeat": 35,
       "courseCode": "STA301",
       "courseCredit": 3,
       "courseId": 42,
@@ -99668,7 +99668,7 @@
     {
       "academicDegree": "UNDERGRADUATE",
       "capacity": 30,
-      "consumedSeat": 23,
+      "consumedSeat": 30,
       "courseCode": "ARC512",
       "courseCredit": 1.5,
       "courseId": 595,
@@ -99769,7 +99769,7 @@
     {
       "academicDegree": "UNDERGRADUATE",
       "capacity": 30,
-      "consumedSeat": 13,
+      "consumedSeat": 0,
       "courseCode": "CEE213",
       "courseCredit": 2,
       "courseId": 759,
@@ -99822,7 +99822,7 @@
     {
       "academicDegree": "UNDERGRADUATE",
       "capacity": 40,
-      "consumedSeat": 39,
+      "consumedSeat": 40,
       "courseCode": "ANT101",
       "courseCredit": 3,
       "courseId": 1522,
@@ -99981,7 +99981,7 @@
     {
       "academicDegree": "UNDERGRADUATE",
       "capacity": 38,
-      "consumedSeat": 38,
+      "consumedSeat": 39,
       "courseCode": "CSE331",
       "courseCredit": 3,
       "courseId": 1146,
@@ -100199,7 +100199,7 @@
     {
       "academicDegree": "UNDERGRADUATE",
       "capacity": 40,
-      "consumedSeat": 34,
+      "consumedSeat": 36,
       "courseCode": "ENG110",
       "courseCredit": 3,
       "courseId": 2161,
@@ -100417,7 +100417,7 @@
     {
       "academicDegree": "UNDERGRADUATE",
       "capacity": 30,
-      "consumedSeat": 25,
+      "consumedSeat": 26,
       "courseCode": "JPN101",
       "courseCredit": 3,
       "courseId": 2512,
@@ -101542,7 +101542,7 @@
     {
       "academicDegree": "UNDERGRADUATE",
       "capacity": 37,
-      "consumedSeat": 30,
+      "consumedSeat": 31,
       "courseCode": "BUS209",
       "courseCredit": 3,
       "courseId": 1808,
@@ -102397,7 +102397,7 @@
     {
       "academicDegree": "UNDERGRADUATE",
       "capacity": 30,
-      "consumedSeat": 30,
+      "consumedSeat": 29,
       "courseCode": "PSY101",
       "courseCredit": 3,
       "courseId": 1526,
@@ -102662,7 +102662,7 @@
     {
       "academicDegree": "UNDERGRADUATE",
       "capacity": 30,
-      "consumedSeat": 31,
+      "consumedSeat": 30,
       "courseCode": "HUM102",
       "courseCredit": 3,
       "courseId": 37,
@@ -103406,7 +103406,7 @@
     {
       "academicDegree": "UNDERGRADUATE",
       "capacity": 38,
-      "consumedSeat": 34,
+      "consumedSeat": 35,
       "courseCode": "CSE428",
       "courseCredit": 3,
       "courseId": 613,
@@ -104050,7 +104050,7 @@
     {
       "academicDegree": "UNDERGRADUATE",
       "capacity": 40,
-      "consumedSeat": 37,
+      "consumedSeat": 39,
       "courseCode": "ARC394",
       "courseCredit": 2,
       "courseId": 1262,
@@ -104687,7 +104687,7 @@
     {
       "academicDegree": "UNDERGRADUATE",
       "capacity": 40,
-      "consumedSeat": 13,
+      "consumedSeat": 14,
       "courseCode": "MAT313",
       "courseCredit": 3,
       "courseId": 604,
@@ -104846,7 +104846,7 @@
     {
       "academicDegree": "UNDERGRADUATE",
       "capacity": 38,
-      "consumedSeat": 38,
+      "consumedSeat": 37,
       "courseCode": "CSE423",
       "courseCredit": 3,
       "courseId": 646,
@@ -105070,7 +105070,7 @@
     {
       "academicDegree": "UNDERGRADUATE",
       "capacity": 40,
-      "consumedSeat": 40,
+      "consumedSeat": 41,
       "courseCode": "MIC310",
       "courseCredit": 3,
       "courseId": 671,
@@ -105395,7 +105395,7 @@
     {
       "academicDegree": "UNDERGRADUATE",
       "capacity": 40,
-      "consumedSeat": 39,
+      "consumedSeat": 38,
       "courseCode": "MAT216",
       "courseCredit": 3,
       "courseId": 1362,
@@ -105501,7 +105501,7 @@
     {
       "academicDegree": "UNDERGRADUATE",
       "capacity": 19,
-      "consumedSeat": 19,
+      "consumedSeat": 18,
       "courseCode": "EEE203L",
       "courseCredit": 1,
       "courseId": 1679,
@@ -105602,7 +105602,7 @@
     {
       "academicDegree": "UNDERGRADUATE",
       "capacity": 99,
-      "consumedSeat": 100,
+      "consumedSeat": 99,
       "courseCode": "CSE400",
       "courseCredit": 4,
       "courseId": 1139,
@@ -105851,7 +105851,7 @@
     {
       "academicDegree": "UNDERGRADUATE",
       "capacity": 40,
-      "consumedSeat": 35,
+      "consumedSeat": 36,
       "courseCode": "MIC204",
       "courseCredit": 3,
       "courseId": 655,
@@ -106148,7 +106148,7 @@
     {
       "academicDegree": "UNDERGRADUATE",
       "capacity": 38,
-      "consumedSeat": 35,
+      "consumedSeat": 37,
       "courseCode": "CSE470",
       "courseCredit": 3,
       "courseId": 594,
@@ -106307,7 +106307,7 @@
     {
       "academicDegree": "UNDERGRADUATE",
       "capacity": 38,
-      "consumedSeat": 38,
+      "consumedSeat": 39,
       "courseCode": "CSE422",
       "courseCredit": 3,
       "courseId": 704,
@@ -106616,7 +106616,7 @@
     {
       "academicDegree": "UNDERGRADUATE",
       "capacity": 99,
-      "consumedSeat": 65,
+      "consumedSeat": 68,
       "courseCode": "MIC450",
       "courseCredit": 4,
       "courseId": 1479,
@@ -108315,7 +108315,7 @@
     {
       "academicDegree": "UNDERGRADUATE",
       "capacity": 38,
-      "consumedSeat": 15,
+      "consumedSeat": 16,
       "courseCode": "CSE221",
       "courseCredit": 3,
       "courseId": 2127,
@@ -108539,7 +108539,7 @@
     {
       "academicDegree": "UNDERGRADUATE",
       "capacity": 36,
-      "consumedSeat": 35,
+      "consumedSeat": 36,
       "courseCode": "CSE260",
       "courseCredit": 3,
       "courseId": 1122,
@@ -108934,7 +108934,7 @@
     {
       "academicDegree": "UNDERGRADUATE",
       "capacity": 36,
-      "consumedSeat": 31,
+      "consumedSeat": 29,
       "courseCode": "CSE350",
       "courseCredit": 3,
       "courseId": 259,
@@ -109223,7 +109223,7 @@
     {
       "academicDegree": "UNDERGRADUATE",
       "capacity": 30,
-      "consumedSeat": 34,
+      "consumedSeat": 33,
       "courseCode": "CST204",
       "courseCredit": 3,
       "courseId": 2159,
@@ -109394,7 +109394,7 @@
     {
       "academicDegree": "UNDERGRADUATE",
       "capacity": 36,
-      "consumedSeat": 36,
+      "consumedSeat": 37,
       "courseCode": "CSE260",
       "courseCredit": 3,
       "courseId": 1122,
@@ -109512,7 +109512,7 @@
     {
       "academicDegree": "UNDERGRADUATE",
       "capacity": 40,
-      "consumedSeat": 40,
+      "consumedSeat": 39,
       "courseCode": "ECO101",
       "courseCredit": 3,
       "courseId": 1527,
@@ -109714,7 +109714,7 @@
     {
       "academicDegree": "UNDERGRADUATE",
       "capacity": 36,
-      "consumedSeat": 33,
+      "consumedSeat": 35,
       "courseCode": "CSE490F",
       "courseCredit": 3,
       "courseId": 2949,
@@ -110299,7 +110299,7 @@
     {
       "academicDegree": "UNDERGRADUATE",
       "capacity": 38,
-      "consumedSeat": 38,
+      "consumedSeat": 37,
       "courseCode": "CSE360",
       "courseCredit": 3,
       "courseId": 424,
@@ -111405,7 +111405,7 @@
     {
       "academicDegree": "UNDERGRADUATE",
       "capacity": 35,
-      "consumedSeat": 37,
+      "consumedSeat": 38,
       "courseCode": "LAW302",
       "courseCredit": 3,
       "courseId": 1191,
@@ -111783,7 +111783,7 @@
     {
       "academicDegree": "UNDERGRADUATE",
       "capacity": 38,
-      "consumedSeat": 32,
+      "consumedSeat": 30,
       "courseCode": "CSE428",
       "courseCredit": 3,
       "courseId": 613,
@@ -112108,7 +112108,7 @@
     {
       "academicDegree": "UNDERGRADUATE",
       "capacity": 30,
-      "consumedSeat": 21,
+      "consumedSeat": 22,
       "courseCode": "HUM101",
       "courseCredit": 3,
       "courseId": 1097,
@@ -112320,7 +112320,7 @@
     {
       "academicDegree": "UNDERGRADUATE",
       "capacity": 30,
-      "consumedSeat": 30,
+      "consumedSeat": 29,
       "courseCode": "PSY101",
       "courseCredit": 3,
       "courseId": 1526,
@@ -112729,7 +112729,7 @@
     {
       "academicDegree": "UNDERGRADUATE",
       "capacity": 40,
-      "consumedSeat": 22,
+      "consumedSeat": 23,
       "courseCode": "MIC401",
       "courseCredit": 3,
       "courseId": 661,
@@ -112782,7 +112782,7 @@
     {
       "academicDegree": "UNDERGRADUATE",
       "capacity": 38,
-      "consumedSeat": 38,
+      "consumedSeat": 39,
       "courseCode": "CSE331",
       "courseCredit": 3,
       "courseId": 1146,
@@ -112941,7 +112941,7 @@
     {
       "academicDegree": "UNDERGRADUATE",
       "capacity": 30,
-      "consumedSeat": 31,
+      "consumedSeat": 30,
       "courseCode": "PSY101",
       "courseCredit": 3,
       "courseId": 1526,
@@ -112994,7 +112994,7 @@
     {
       "academicDegree": "UNDERGRADUATE",
       "capacity": 38,
-      "consumedSeat": 37,
+      "consumedSeat": 36,
       "courseCode": "CSE370",
       "courseCredit": 3,
       "courseId": 2053,
@@ -113515,7 +113515,7 @@
     {
       "academicDegree": "UNDERGRADUATE",
       "capacity": 30,
-      "consumedSeat": 28,
+      "consumedSeat": 29,
       "courseCode": "POL101",
       "courseCredit": 3,
       "courseId": 1525,
@@ -113674,7 +113674,7 @@
     {
       "academicDegree": "UNDERGRADUATE",
       "capacity": 34,
-      "consumedSeat": 34,
+      "consumedSeat": 33,
       "courseCode": "ENG091",
       "courseCredit": 0,
       "courseId": 1462,
@@ -113780,7 +113780,7 @@
     {
       "academicDegree": "UNDERGRADUATE",
       "capacity": 38,
-      "consumedSeat": 39,
+      "consumedSeat": 41,
       "courseCode": "CSE496",
       "courseCredit": 3,
       "courseId": 1908,
