@@ -5,7 +5,7 @@
     "midExamEndDate": "2026-11-29",
     "finalExamStartDate": "2026-12-28",
     "finalExamEndDate": "2027-01-15",
-    "lastUpdated": "2026-10-10T12:01:11.670317+00:00",
+    "lastUpdated": "2026-10-11T12:14:10.092354+00:00",
     "semester": "Fall2026",
     "sources": {
       "midterm": {
@@ -10711,7 +10711,7 @@
     },
     {
       "courseCode": "ARC431",
-      "sectionName": "02",
+      "sectionName": "02 (Closed)",
       "sectionId": 190241,
       "sectionType": "THEORY",
       "midExamDate": "2026-11-21",
@@ -17949,7 +17949,7 @@
     },
     {
       "courseCode": "ARC327",
-      "sectionName": "02",
+      "sectionName": "02 (Closed)",
       "sectionId": 189328,
       "sectionType": "THEORY",
       "midExamDate": "2026-11-22",
@@ -20328,20 +20328,6 @@
       "finalExamSource": "cdn"
     },
     {
-      "courseCode": "BCH101",
-      "sectionName": "01",
-      "sectionId": 189391,
-      "sectionType": "THEORY",
-      "midExamDate": "2026-11-23",
-      "midExamTime": "08:30:00",
-      "midExamRoom": null,
-      "midExamSource": "cdn",
-      "finalExamDate": "2027-01-09",
-      "finalExamTime": "08:30:00",
-      "finalExamRoom": null,
-      "finalExamSource": "cdn"
-    },
-    {
       "courseCode": "MAT120",
       "sectionName": "18",
       "sectionId": 191386,
@@ -21154,20 +21140,6 @@
       "finalExamSource": "cdn"
     },
     {
-      "courseCode": "STA201",
-      "sectionName": "04",
-      "sectionId": 190813,
-      "sectionType": "THEORY",
-      "midExamDate": "2026-11-24",
-      "midExamTime": "11:00:00",
-      "midExamRoom": null,
-      "midExamSource": "cdn",
-      "finalExamDate": "2027-01-10",
-      "finalExamTime": "11:00:00",
-      "finalExamRoom": null,
-      "finalExamSource": "cdn"
-    },
-    {
       "courseCode": "ECO101",
       "sectionName": "15",
       "sectionId": 189070,
@@ -21444,20 +21416,6 @@
       "midExamSource": "cdn",
       "finalExamDate": "2027-01-10",
       "finalExamTime": "14:00:00",
-      "finalExamRoom": null,
-      "finalExamSource": "cdn"
-    },
-    {
-      "courseCode": "MKT426",
-      "sectionName": "03",
-      "sectionId": 190656,
-      "sectionType": "THEORY",
-      "midExamDate": "2026-11-24",
-      "midExamTime": "16:30:00",
-      "midExamRoom": null,
-      "midExamSource": "cdn",
-      "finalExamDate": "2027-01-10",
-      "finalExamTime": "16:30:00",
       "finalExamRoom": null,
       "finalExamSource": "cdn"
     },
@@ -23255,7 +23213,7 @@
     },
     {
       "courseCode": "CEE213",
-      "sectionName": "01",
+      "sectionName": "01 (Closed)",
       "sectionId": 190362,
       "sectionType": "THEORY",
       "midExamDate": "2026-11-23",
@@ -25564,6 +25522,20 @@
       "finalExamSource": "cdn"
     },
     {
+      "courseCode": "BCH101",
+      "sectionName": "01",
+      "sectionId": 189391,
+      "sectionType": "THEORY",
+      "midExamDate": "2026-11-23",
+      "midExamTime": "08:30:00",
+      "midExamRoom": null,
+      "midExamSource": "cdn",
+      "finalExamDate": "2027-01-09",
+      "finalExamTime": "08:30:00",
+      "finalExamRoom": null,
+      "finalExamSource": "cdn"
+    },
+    {
       "courseCode": "MIC300",
       "sectionName": "01",
       "sectionId": 189266,
@@ -25578,6 +25550,20 @@
       "finalExamSource": "cdn"
     },
     {
+      "courseCode": "STA201",
+      "sectionName": "04",
+      "sectionId": 190813,
+      "sectionType": "THEORY",
+      "midExamDate": "2026-11-24",
+      "midExamTime": "11:00:00",
+      "midExamRoom": null,
+      "midExamSource": "cdn",
+      "finalExamDate": "2027-01-10",
+      "finalExamTime": "11:00:00",
+      "finalExamRoom": null,
+      "finalExamSource": "cdn"
+    },
+    {
       "courseCode": "CSE490F",
       "sectionName": "01",
       "sectionId": 191647,
@@ -25588,6 +25574,20 @@
       "midExamSource": "cdn",
       "finalExamDate": "2027-01-10",
       "finalExamTime": "14:00:00",
+      "finalExamRoom": null,
+      "finalExamSource": "cdn"
+    },
+    {
+      "courseCode": "MKT426",
+      "sectionName": "03",
+      "sectionId": 190656,
+      "sectionType": "THEORY",
+      "midExamDate": "2026-11-24",
+      "midExamTime": "16:30:00",
+      "midExamRoom": null,
+      "midExamSource": "cdn",
+      "finalExamDate": "2027-01-10",
+      "finalExamTime": "16:30:00",
       "finalExamRoom": null,
       "finalExamSource": "cdn"
     },
