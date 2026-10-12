@@ -5,7 +5,7 @@
     "midExamEndDate": "2026-11-29",
     "finalExamStartDate": "2026-12-28",
     "finalExamEndDate": "2027-01-15",
-    "lastUpdated": "2026-10-11T12:14:10.092354+00:00",
+    "lastUpdated": "2026-10-12T14:37:24.788072+00:00",
     "semester": "Fall2026",
     "sources": {
       "midterm": {
@@ -25312,20 +25312,6 @@
       "finalExamSource": "cdn"
     },
     {
-      "courseCode": "CSE260",
-      "sectionName": "08",
-      "sectionId": 189575,
-      "sectionType": "THEORY",
-      "midExamDate": "2026-11-21",
-      "midExamTime": "14:00:00",
-      "midExamRoom": null,
-      "midExamSource": "cdn",
-      "finalExamDate": "2027-01-07",
-      "finalExamTime": "14:00:00",
-      "finalExamRoom": null,
-      "finalExamSource": "cdn"
-    },
-    {
       "courseCode": "CSE350",
       "sectionName": "07",
       "sectionId": 190996,
@@ -25560,6 +25546,20 @@
       "midExamSource": "cdn",
       "finalExamDate": "2027-01-10",
       "finalExamTime": "11:00:00",
+      "finalExamRoom": null,
+      "finalExamSource": "cdn"
+    },
+    {
+      "courseCode": "CSE260",
+      "sectionName": "08",
+      "sectionId": 189575,
+      "sectionType": "THEORY",
+      "midExamDate": "2026-11-21",
+      "midExamTime": "14:00:00",
+      "midExamRoom": null,
+      "midExamSource": "cdn",
+      "finalExamDate": "2027-01-07",
+      "finalExamTime": "14:00:00",
       "finalExamRoom": null,
       "finalExamSource": "cdn"
     },
