@@ -5,7 +5,7 @@
     "midExamEndDate": "2026-11-29",
     "finalExamStartDate": "2026-12-28",
     "finalExamEndDate": "2027-01-15",
-    "lastUpdated": "2026-10-13T13:42:15.151399+00:00",
+    "lastUpdated": "2026-10-14T11:20:33.193240+00:00",
     "semester": "Fall2026",
     "sources": {
       "midterm": {
@@ -17836,20 +17836,6 @@
       "finalExamSource": "cdn"
     },
     {
-      "courseCode": "CSE341",
-      "sectionName": "04",
-      "sectionId": 189722,
-      "sectionType": "THEORY",
-      "midExamDate": "2026-11-23",
-      "midExamTime": "16:30:00",
-      "midExamRoom": null,
-      "midExamSource": "cdn",
-      "finalExamDate": "2027-01-09",
-      "finalExamTime": "16:30:00",
-      "finalExamRoom": null,
-      "finalExamSource": "cdn"
-    },
-    {
       "courseCode": "ARC231",
       "sectionName": "01",
       "sectionId": 190230,
@@ -21952,20 +21938,6 @@
       "finalExamSource": "cdn"
     },
     {
-      "courseCode": "ACT202",
-      "sectionName": "08",
-      "sectionId": 190279,
-      "sectionType": "THEORY",
-      "midExamDate": "2026-11-26",
-      "midExamTime": "11:00:00",
-      "midExamRoom": null,
-      "midExamSource": "cdn",
-      "finalExamDate": "2027-01-12",
-      "finalExamTime": "11:00:00",
-      "finalExamRoom": null,
-      "finalExamSource": "cdn"
-    },
-    {
       "courseCode": "SOC101",
       "sectionName": "12",
       "sectionId": 188996,
@@ -24991,7 +24963,7 @@
     },
     {
       "courseCode": "FIN301",
-      "sectionName": "11",
+      "sectionName": "11 (Closed)",
       "sectionId": 190443,
       "sectionType": "THEORY",
       "midExamDate": "2026-11-25",
@@ -25606,6 +25578,20 @@
       "finalExamSource": "cdn"
     },
     {
+      "courseCode": "ACT202",
+      "sectionName": "08",
+      "sectionId": 190279,
+      "sectionType": "THEORY",
+      "midExamDate": "2026-11-26",
+      "midExamTime": "11:00:00",
+      "midExamRoom": null,
+      "midExamSource": "cdn",
+      "finalExamDate": "2027-01-12",
+      "finalExamTime": "11:00:00",
+      "finalExamRoom": null,
+      "finalExamSource": "cdn"
+    },
+    {
       "courseCode": "BTE405",
       "sectionName": "02",
       "sectionId": 190195,
@@ -25616,6 +25602,20 @@
       "midExamSource": "cdn",
       "finalExamDate": "2027-01-14",
       "finalExamTime": "11:00:00",
+      "finalExamRoom": null,
+      "finalExamSource": "cdn"
+    },
+    {
+      "courseCode": "CSE341",
+      "sectionName": "04",
+      "sectionId": 189722,
+      "sectionType": "THEORY",
+      "midExamDate": "2026-11-23",
+      "midExamTime": "16:30:00",
+      "midExamRoom": null,
+      "midExamSource": "cdn",
+      "finalExamDate": "2027-01-09",
+      "finalExamTime": "16:30:00",
       "finalExamRoom": null,
       "finalExamSource": "cdn"
     },
