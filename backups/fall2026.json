@@ -3,14 +3,14 @@
     "firstSectionId": 188960,
     "lastSectionId": 192001,
     "totalSections": 2131,
-    "totalConsumedSeats": 64791,
-    "totalEmptySeats": 6595,
+    "totalConsumedSeats": 64747,
+    "totalEmptySeats": 6639,
     "totalCapacity": 71386,
     "midExamStartDate": "2026-11-07",
     "midExamEndDate": "2026-11-29",
     "finalExamStartDate": "2026-12-28",
     "finalExamEndDate": "2027-01-15",
-    "lastUpdated": "2026-10-14T11:20:32.722250+00:00"
+    "lastUpdated": "2026-10-15T10:57:58.017322+00:00"
   },
   "sections": [
     {
@@ -870,23 +870,23 @@
       "sectionSchedule": {
         "classPairId": null,
         "classSlotId": null,
-        "finalExamDate": null,
-        "finalExamStartTime": null,
-        "finalExamEndTime": null,
         "midExamDate": null,
-        "midExamStartTime": null,
-        "midExamEndTime": null,
-        "finalExamDetail": null,
-        "midExamDetail": null,
-        "classStartDate": "2026-10-03",
         "classEndDate": "2027-01-04",
+        "finalExamDate": null,
+        "midExamDetail": null,
         "classSchedules": [
           {
-            "startTime": "08:00:00",
+            "day": "THURSDAY",
             "endTime": "10:50:00",
-            "day": "THURSDAY"
+            "startTime": "08:00:00"
           }
-        ]
+        ],
+        "classStartDate": "2026-10-03",
+        "midExamEndTime": null,
+        "finalExamDetail": null,
+        "finalExamEndTime": null,
+        "midExamStartTime": null,
+        "finalExamStartTime": null
       },
       "sectionType": "LAB",
       "semesterSessionId": 20263,
@@ -2044,7 +2044,7 @@
       "courseCredit": 3,
       "courseId": 1439,
       "courseType": "THEORY",
-      "faculties": "TBA",
+      "faculties": "NAZU",
       "parentSectionId": null,
       "roomName": "12A-13C",
       "roomNumber": "12A-13C",
@@ -3513,7 +3513,7 @@
     {
       "academicDegree": "UNDERGRADUATE",
       "capacity": 40,
-      "consumedSeat": 37,
+      "consumedSeat": 36,
       "courseCode": "HST103",
       "courseCredit": 3,
       "courseId": 1515,
@@ -4003,7 +4003,7 @@
     {
       "academicDegree": "UNDERGRADUATE",
       "capacity": 38,
-      "consumedSeat": 37,
+      "consumedSeat": 38,
       "courseCode": "CSE230",
       "courseCredit": 3,
       "courseId": 1128,
@@ -6251,7 +6251,7 @@
     {
       "academicDegree": "UNDERGRADUATE",
       "capacity": 40,
-      "consumedSeat": 40,
+      "consumedSeat": 39,
       "courseCode": "PHY112",
       "courseCredit": 3,
       "courseId": 644,
@@ -6540,7 +6540,7 @@
     {
       "academicDegree": "UNDERGRADUATE",
       "capacity": 15,
-      "consumedSeat": 25,
+      "consumedSeat": 26,
       "courseCode": "HUM103",
       "courseCredit": 3,
       "courseId": 1521,
@@ -7289,7 +7289,7 @@
     {
       "academicDegree": "UNDERGRADUATE",
       "capacity": 38,
-      "consumedSeat": 38,
+      "consumedSeat": 37,
       "courseCode": "CSE221",
       "courseCredit": 3,
       "courseId": 2127,
@@ -7580,28 +7580,28 @@
       "sectionSchedule": {
         "classPairId": null,
         "classSlotId": null,
-        "finalExamDate": "2027-01-11",
-        "finalExamStartTime": "14:00:00",
-        "finalExamEndTime": "16:00:00",
         "midExamDate": "2026-11-25",
-        "midExamStartTime": "14:00:00",
-        "midExamEndTime": "16:00:00",
-        "finalExamDetail": "Jan 11, 2027 2:00 PM - 4:00 PM",
-        "midExamDetail": "Nov 25, 2026 2:00 PM - 4:00 PM",
-        "classStartDate": "2026-10-03",
         "classEndDate": "2027-01-04",
+        "finalExamDate": "2027-01-11",
+        "midExamDetail": "Nov 25, 2026 2:00 PM - 4:00 PM",
         "classSchedules": [
           {
-            "startTime": "08:00:00",
+            "day": "SATURDAY",
             "endTime": "09:20:00",
-            "day": "SATURDAY"
+            "startTime": "08:00:00"
           },
           {
-            "startTime": "08:00:00",
+            "day": "THURSDAY",
             "endTime": "09:20:00",
-            "day": "THURSDAY"
+            "startTime": "08:00:00"
           }
-        ]
+        ],
+        "classStartDate": "2026-10-03",
+        "midExamEndTime": "16:00:00",
+        "finalExamDetail": "Jan 11, 2027 2:00 PM - 4:00 PM",
+        "finalExamEndTime": "16:00:00",
+        "midExamStartTime": "14:00:00",
+        "finalExamStartTime": "14:00:00"
       },
       "sectionType": "OTHER",
       "semesterSessionId": 20263,
@@ -8530,7 +8530,7 @@
     {
       "academicDegree": "UNDERGRADUATE",
       "capacity": 30,
-      "consumedSeat": 31,
+      "consumedSeat": 30,
       "courseCode": "CST306",
       "courseCredit": 3,
       "courseId": 1946,
@@ -8821,28 +8821,28 @@
       "sectionSchedule": {
         "classPairId": null,
         "classSlotId": null,
-        "finalExamDate": "2027-01-12",
-        "finalExamStartTime": "11:00:00",
-        "finalExamEndTime": "13:00:00",
         "midExamDate": "2026-11-26",
-        "midExamStartTime": "11:00:00",
-        "midExamEndTime": "13:00:00",
-        "finalExamDetail": "Jan 12, 2027 11:00 AM - 1:00 PM",
-        "midExamDetail": "Nov 26, 2026 11:00 AM - 1:00 PM",
-        "classStartDate": "2026-10-03",
         "classEndDate": "2027-01-04",
+        "finalExamDate": "2027-01-12",
+        "midExamDetail": "Nov 26, 2026 11:00 AM - 1:00 PM",
         "classSchedules": [
           {
-            "startTime": "14:00:00",
+            "day": "MONDAY",
             "endTime": "15:20:00",
-            "day": "MONDAY"
+            "startTime": "14:00:00"
           },
           {
-            "startTime": "14:00:00",
+            "day": "WEDNESDAY",
             "endTime": "15:20:00",
-            "day": "WEDNESDAY"
+            "startTime": "14:00:00"
           }
-        ]
+        ],
+        "classStartDate": "2026-10-03",
+        "midExamEndTime": "13:00:00",
+        "finalExamDetail": "Jan 12, 2027 11:00 AM - 1:00 PM",
+        "finalExamEndTime": "13:00:00",
+        "midExamStartTime": "11:00:00",
+        "finalExamStartTime": "11:00:00"
       },
       "sectionType": "OTHER",
       "semesterSessionId": 20263,
@@ -8966,7 +8966,7 @@
     {
       "academicDegree": "UNDERGRADUATE",
       "capacity": 25,
-      "consumedSeat": 24,
+      "consumedSeat": 23,
       "courseCode": "BUS301",
       "courseCredit": 3,
       "courseId": 1001,
@@ -10915,7 +10915,7 @@
       "courseCredit": 3,
       "courseId": 1535,
       "courseType": "THEORY",
-      "faculties": "TBA",
+      "faculties": "ARAK",
       "parentSectionId": null,
       "roomName": "12A-08C",
       "roomNumber": "12A-08C",
@@ -11234,7 +11234,7 @@
     {
       "academicDegree": "UNDERGRADUATE",
       "capacity": 26,
-      "consumedSeat": 26,
+      "consumedSeat": 25,
       "courseCode": "ENG102",
       "courseCredit": 3,
       "courseId": 1509,
@@ -11823,7 +11823,7 @@
       "courseCredit": 3,
       "courseId": 1361,
       "courseType": "THEORY",
-      "faculties": "TBA",
+      "faculties": "NPRV",
       "parentSectionId": null,
       "roomName": "12A-10C",
       "roomNumber": "12A-10C",
@@ -11871,7 +11871,7 @@
     {
       "academicDegree": "UNDERGRADUATE",
       "capacity": 40,
-      "consumedSeat": 23,
+      "consumedSeat": 24,
       "courseCode": "CHE101",
       "courseCredit": 3,
       "courseId": 1532,
@@ -13204,7 +13204,7 @@
     {
       "academicDegree": "UNDERGRADUATE",
       "capacity": 99,
-      "consumedSeat": 39,
+      "consumedSeat": 43,
       "courseCode": "CSE400",
       "courseCredit": 4,
       "courseId": 1139,
@@ -14803,7 +14803,7 @@
       "courseCredit": 3,
       "courseId": 1535,
       "courseType": "THEORY",
-      "faculties": "TBA",
+      "faculties": "ARAK",
       "parentSectionId": null,
       "roomName": "AN1-06C",
       "roomNumber": "AN1-06C",
@@ -14812,28 +14812,28 @@
       "sectionSchedule": {
         "classPairId": 1,
         "classSlotId": 13091,
-        "finalExamDate": "2027-01-14",
-        "finalExamStartTime": "08:30:00",
-        "finalExamEndTime": "10:30:00",
         "midExamDate": "2026-11-29",
-        "midExamStartTime": "08:30:00",
-        "midExamEndTime": "10:30:00",
-        "finalExamDetail": "Thursday, January 14, 2027 8:30 AM - 10:30 AM",
-        "midExamDetail": "Sunday, November 29, 2026 8:30 AM - 10:30 AM",
-        "classStartDate": "2026-10-03",
         "classEndDate": "2027-01-04",
+        "finalExamDate": "2027-01-14",
+        "midExamDetail": "Sunday, November 29, 2026 8:30 AM - 10:30 AM",
         "classSchedules": [
           {
-            "startTime": "09:30:00",
+            "day": "SATURDAY",
             "endTime": "10:50:00",
-            "day": "SATURDAY"
+            "startTime": "09:30:00"
           },
           {
-            "startTime": "09:30:00",
+            "day": "THURSDAY",
             "endTime": "10:50:00",
-            "day": "THURSDAY"
+            "startTime": "09:30:00"
           }
-        ]
+        ],
+        "classStartDate": "2026-10-03",
+        "midExamEndTime": "10:30:00",
+        "finalExamDetail": "Thursday, January 14, 2027 8:30 AM - 10:30 AM",
+        "finalExamEndTime": "10:30:00",
+        "midExamStartTime": "08:30:00",
+        "finalExamStartTime": "08:30:00"
       },
       "sectionType": "OTHER",
       "semesterSessionId": 20263,
@@ -18164,7 +18164,7 @@
       "courseCredit": 3,
       "courseId": 1439,
       "courseType": "THEORY",
-      "faculties": "TBA",
+      "faculties": "NAZU",
       "parentSectionId": null,
       "roomName": "12A-13C",
       "roomNumber": "12A-13C",
@@ -18542,7 +18542,7 @@
     {
       "academicDegree": "UNDERGRADUATE",
       "capacity": 40,
-      "consumedSeat": 44,
+      "consumedSeat": 45,
       "courseCode": "BCH201",
       "courseCredit": 3,
       "courseId": 797,
@@ -19799,7 +19799,7 @@
     {
       "academicDegree": "UNDERGRADUATE",
       "capacity": 37,
-      "consumedSeat": 26,
+      "consumedSeat": 25,
       "courseCode": "CST333",
       "courseCredit": 3,
       "courseId": 2528,
@@ -20070,7 +20070,7 @@
     {
       "academicDegree": "UNDERGRADUATE",
       "capacity": 40,
-      "consumedSeat": 28,
+      "consumedSeat": 27,
       "courseCode": "ENG335",
       "courseCredit": 3,
       "courseId": 476,
@@ -23062,7 +23062,7 @@
     {
       "academicDegree": "UNDERGRADUATE",
       "capacity": 40,
-      "consumedSeat": 32,
+      "consumedSeat": 31,
       "courseCode": "ARC294",
       "courseCredit": 2,
       "courseId": 1332,
@@ -23322,7 +23322,7 @@
     {
       "academicDegree": "UNDERGRADUATE",
       "capacity": 30,
-      "consumedSeat": 33,
+      "consumedSeat": 34,
       "courseCode": "PSY101",
       "courseCredit": 3,
       "courseId": 1526,
@@ -23658,7 +23658,7 @@
     {
       "academicDegree": "UNDERGRADUATE",
       "capacity": 30,
-      "consumedSeat": 24,
+      "consumedSeat": 23,
       "courseCode": "CST303",
       "courseCredit": 3,
       "courseId": 1686,
@@ -24935,7 +24935,7 @@
     {
       "academicDegree": "UNDERGRADUATE",
       "capacity": 35,
-      "consumedSeat": 34,
+      "consumedSeat": 33,
       "courseCode": "EEE103",
       "courseCredit": 3,
       "courseId": 1890,
@@ -26056,7 +26056,7 @@
     {
       "academicDegree": "UNDERGRADUATE",
       "capacity": 37,
-      "consumedSeat": 31,
+      "consumedSeat": 30,
       "courseCode": "BUS232",
       "courseCredit": 3,
       "courseId": 2018,
@@ -26722,7 +26722,7 @@
     {
       "academicDegree": "UNDERGRADUATE",
       "capacity": 37,
-      "consumedSeat": 37,
+      "consumedSeat": 36,
       "courseCode": "BUS301",
       "courseCredit": 3,
       "courseId": 1001,
@@ -28588,7 +28588,7 @@
       "courseCredit": 3,
       "courseId": 1361,
       "courseType": "THEORY",
-      "faculties": "TBA",
+      "faculties": "HKBR",
       "parentSectionId": null,
       "roomName": "12A-13C",
       "roomNumber": "12A-13C",
@@ -28597,28 +28597,28 @@
       "sectionSchedule": {
         "classPairId": null,
         "classSlotId": null,
-        "finalExamDate": "2027-01-09",
-        "finalExamStartTime": "08:30:00",
-        "finalExamEndTime": "10:30:00",
         "midExamDate": "2026-11-23",
-        "midExamStartTime": "08:30:00",
-        "midExamEndTime": "10:30:00",
-        "finalExamDetail": "Jan 9, 2027 8:30 AM - 10:30 AM",
-        "midExamDetail": "Nov 23, 2026 8:30 AM - 10:30 AM",
-        "classStartDate": "2026-10-03",
         "classEndDate": "2027-01-04",
+        "finalExamDate": "2027-01-09",
+        "midExamDetail": "Nov 23, 2026 8:30 AM - 10:30 AM",
         "classSchedules": [
           {
-            "startTime": "11:00:00",
+            "day": "SATURDAY",
             "endTime": "12:20:00",
-            "day": "SATURDAY"
+            "startTime": "11:00:00"
           },
           {
-            "startTime": "11:00:00",
+            "day": "THURSDAY",
             "endTime": "12:20:00",
-            "day": "THURSDAY"
+            "startTime": "11:00:00"
           }
-        ]
+        ],
+        "classStartDate": "2026-10-03",
+        "midExamEndTime": "10:30:00",
+        "finalExamDetail": "Jan 9, 2027 8:30 AM - 10:30 AM",
+        "finalExamEndTime": "10:30:00",
+        "midExamStartTime": "08:30:00",
+        "finalExamStartTime": "08:30:00"
       },
       "sectionType": "OTHER",
       "semesterSessionId": 20263,
@@ -28650,28 +28650,28 @@
       "sectionSchedule": {
         "classPairId": null,
         "classSlotId": null,
-        "finalExamDate": "2027-01-07",
-        "finalExamStartTime": "11:00:00",
-        "finalExamEndTime": "13:00:00",
         "midExamDate": "2026-11-21",
-        "midExamStartTime": "11:00:00",
-        "midExamEndTime": "13:00:00",
-        "finalExamDetail": "Jan 7, 2027 11:00 AM - 1:00 PM",
-        "midExamDetail": "Nov 21, 2026 11:00 AM - 1:00 PM",
-        "classStartDate": "2026-10-03",
         "classEndDate": "2027-01-04",
+        "finalExamDate": "2027-01-07",
+        "midExamDetail": "Nov 21, 2026 11:00 AM - 1:00 PM",
         "classSchedules": [
           {
-            "startTime": "09:30:00",
+            "day": "SATURDAY",
             "endTime": "10:50:00",
-            "day": "SATURDAY"
+            "startTime": "09:30:00"
           },
           {
-            "startTime": "09:30:00",
+            "day": "THURSDAY",
             "endTime": "10:50:00",
-            "day": "THURSDAY"
+            "startTime": "09:30:00"
           }
-        ]
+        ],
+        "classStartDate": "2026-10-03",
+        "midExamEndTime": "13:00:00",
+        "finalExamDetail": "Jan 7, 2027 11:00 AM - 1:00 PM",
+        "finalExamEndTime": "13:00:00",
+        "midExamStartTime": "11:00:00",
+        "finalExamStartTime": "11:00:00"
       },
       "sectionType": "OTHER",
       "semesterSessionId": 20263,
@@ -32430,7 +32430,7 @@
       "courseCredit": 3,
       "courseId": 1362,
       "courseType": "THEORY",
-      "faculties": "TBA",
+      "faculties": "MMHA",
       "parentSectionId": null,
       "roomName": "12A-11C",
       "roomNumber": "12A-11C",
@@ -32785,8 +32785,8 @@
       "labCourseCode": "CSE447L",
       "labFaculties": "TBA",
       "labName": "CRYPTOGRAPHY AND CRYPTANALYSIS LAB",
-      "labRoomName": "12F-32L",
-      "preRegLabSchedule": "SATURDAY(2:00 PM-4:50 PM-12F-32L)",
+      "labRoomName": "10E-27L",
+      "preRegLabSchedule": "SATURDAY(2:00 PM-4:50 PM-10E-27L)",
       "preRegSchedule": "SUNDAY(2:00 PM-3:20 PM-09C-16T)\nTUESDAY(2:00 PM-3:20 PM-09C-16T)"
     },
     {
@@ -33438,28 +33438,28 @@
       "sectionSchedule": {
         "classPairId": null,
         "classSlotId": null,
-        "finalExamDate": "2027-01-14",
-        "finalExamStartTime": "16:30:00",
-        "finalExamEndTime": "18:30:00",
         "midExamDate": "2026-11-29",
-        "midExamStartTime": "16:30:00",
-        "midExamEndTime": "18:30:00",
-        "finalExamDetail": "Jan 14, 2027 4:30 PM - 6:30 PM",
-        "midExamDetail": "Nov 29, 2026 4:30 PM - 6:30 PM",
-        "classStartDate": "2026-10-03",
         "classEndDate": "2027-01-04",
+        "finalExamDate": "2027-01-14",
+        "midExamDetail": "Nov 29, 2026 4:30 PM - 6:30 PM",
         "classSchedules": [
           {
-            "startTime": "09:30:00",
+            "day": "SATURDAY",
             "endTime": "10:50:00",
-            "day": "SATURDAY"
+            "startTime": "09:30:00"
           },
           {
-            "startTime": "09:30:00",
+            "day": "THURSDAY",
             "endTime": "10:50:00",
-            "day": "THURSDAY"
+            "startTime": "09:30:00"
           }
-        ]
+        ],
+        "classStartDate": "2026-10-03",
+        "midExamEndTime": "18:30:00",
+        "finalExamDetail": "Jan 14, 2027 4:30 PM - 6:30 PM",
+        "finalExamEndTime": "18:30:00",
+        "midExamStartTime": "16:30:00",
+        "finalExamStartTime": "16:30:00"
       },
       "sectionType": "OTHER",
       "semesterSessionId": 20263,
@@ -33848,7 +33848,7 @@
     {
       "academicDegree": "UNDERGRADUATE",
       "capacity": 37,
-      "consumedSeat": 26,
+      "consumedSeat": 23,
       "courseCode": "MKT423",
       "courseCredit": 3,
       "courseId": 516,
@@ -34486,7 +34486,7 @@
     {
       "academicDegree": "UNDERGRADUATE",
       "capacity": 40,
-      "consumedSeat": 36,
+      "consumedSeat": 37,
       "courseCode": "ENG113",
       "courseCredit": 3,
       "courseId": 303,
@@ -35772,7 +35772,7 @@
     {
       "academicDegree": "UNDERGRADUATE",
       "capacity": 40,
-      "consumedSeat": 39,
+      "consumedSeat": 40,
       "courseCode": "MIC102",
       "courseCredit": 3,
       "courseId": 663,
@@ -37700,7 +37700,7 @@
     {
       "academicDegree": "UNDERGRADUATE",
       "capacity": 40,
-      "consumedSeat": 40,
+      "consumedSeat": 39,
       "courseCode": "PHY111",
       "courseCredit": 3,
       "courseId": 1270,
@@ -40910,7 +40910,7 @@
     {
       "academicDegree": "UNDERGRADUATE",
       "capacity": 37,
-      "consumedSeat": 36,
+      "consumedSeat": 35,
       "courseCode": "MKT201",
       "courseCredit": 3,
       "courseId": 425,
@@ -41021,7 +41021,7 @@
       "courseCredit": 3,
       "courseId": 1535,
       "courseType": "THEORY",
-      "faculties": "TBA",
+      "faculties": "SUAL",
       "parentSectionId": null,
       "roomName": "12A-08C",
       "roomNumber": "12A-08C",
@@ -45233,7 +45233,7 @@
     {
       "academicDegree": "UNDERGRADUATE",
       "capacity": 35,
-      "consumedSeat": 35,
+      "consumedSeat": 34,
       "courseCode": "MSC221",
       "courseCredit": 3,
       "courseId": 1809,
@@ -45510,7 +45510,7 @@
     {
       "academicDegree": "UNDERGRADUATE",
       "capacity": 20,
-      "consumedSeat": 19,
+      "consumedSeat": 20,
       "courseCode": "BTE155",
       "courseCredit": 3,
       "courseId": 848,
@@ -45779,28 +45779,28 @@
       "sectionSchedule": {
         "classPairId": 1,
         "classSlotId": 13094,
-        "finalExamDate": "2027-01-13",
-        "finalExamStartTime": "14:00:00",
-        "finalExamEndTime": "16:00:00",
         "midExamDate": "2026-11-28",
-        "midExamStartTime": "14:00:00",
-        "midExamEndTime": "16:00:00",
-        "finalExamDetail": "Wednesday, January 13, 2027 2:00 PM - 4:00 PM",
-        "midExamDetail": "Saturday, November 28, 2026 2:00 PM - 4:00 PM",
-        "classStartDate": "2026-10-03",
         "classEndDate": "2027-01-04",
+        "finalExamDate": "2027-01-13",
+        "midExamDetail": "Saturday, November 28, 2026 2:00 PM - 4:00 PM",
         "classSchedules": [
           {
-            "startTime": "14:00:00",
+            "day": "SATURDAY",
             "endTime": "15:20:00",
-            "day": "SATURDAY"
+            "startTime": "14:00:00"
           },
           {
-            "startTime": "14:00:00",
+            "day": "THURSDAY",
             "endTime": "15:20:00",
-            "day": "THURSDAY"
+            "startTime": "14:00:00"
           }
-        ]
+        ],
+        "classStartDate": "2026-10-03",
+        "midExamEndTime": "16:00:00",
+        "finalExamDetail": "Wednesday, January 13, 2027 2:00 PM - 4:00 PM",
+        "finalExamEndTime": "16:00:00",
+        "midExamStartTime": "14:00:00",
+        "finalExamStartTime": "14:00:00"
       },
       "sectionType": "OTHER",
       "semesterSessionId": 20263,
@@ -47938,7 +47938,7 @@
     {
       "academicDegree": "UNDERGRADUATE",
       "capacity": 30,
-      "consumedSeat": 30,
+      "consumedSeat": 29,
       "courseCode": "POL101",
       "courseCredit": 3,
       "courseId": 1525,
@@ -48875,7 +48875,7 @@
     {
       "academicDegree": "UNDERGRADUATE",
       "capacity": 37,
-      "consumedSeat": 12,
+      "consumedSeat": 11,
       "courseCode": "FIN422",
       "courseCredit": 3,
       "courseId": 1818,
@@ -50499,28 +50499,28 @@
       "sectionSchedule": {
         "classPairId": null,
         "classSlotId": null,
-        "finalExamDate": "2027-01-13",
-        "finalExamStartTime": "11:00:00",
-        "finalExamEndTime": "13:00:00",
         "midExamDate": "2026-11-28",
-        "midExamStartTime": "11:00:00",
-        "midExamEndTime": "13:00:00",
-        "finalExamDetail": "Jan 13, 2027 11:00 AM - 1:00 PM",
-        "midExamDetail": "Nov 28, 2026 11:00 AM - 1:00 PM",
-        "classStartDate": "2026-10-03",
         "classEndDate": "2027-01-04",
+        "finalExamDate": "2027-01-13",
+        "midExamDetail": "Nov 28, 2026 11:00 AM - 1:00 PM",
         "classSchedules": [
           {
-            "startTime": "11:00:00",
+            "day": "SATURDAY",
             "endTime": "12:20:00",
-            "day": "SATURDAY"
+            "startTime": "11:00:00"
           },
           {
-            "startTime": "11:00:00",
+            "day": "THURSDAY",
             "endTime": "12:20:00",
-            "day": "THURSDAY"
+            "startTime": "11:00:00"
           }
-        ]
+        ],
+        "classStartDate": "2026-10-03",
+        "midExamEndTime": "13:00:00",
+        "finalExamDetail": "Jan 13, 2027 11:00 AM - 1:00 PM",
+        "finalExamEndTime": "13:00:00",
+        "midExamStartTime": "11:00:00",
+        "finalExamStartTime": "11:00:00"
       },
       "sectionType": "OTHER",
       "semesterSessionId": 20263,
@@ -51507,7 +51507,7 @@
     {
       "academicDegree": "UNDERGRADUATE",
       "capacity": 37,
-      "consumedSeat": 34,
+      "consumedSeat": 33,
       "courseCode": "MGT213",
       "courseCredit": 3,
       "courseId": 1738,
@@ -51768,12 +51768,12 @@
     {
       "academicDegree": "UNDERGRADUATE",
       "capacity": 40,
-      "consumedSeat": 38,
+      "consumedSeat": 36,
       "courseCode": "MAT120",
       "courseCredit": 3,
       "courseId": 865,
       "courseType": "THEORY",
-      "faculties": "TBA",
+      "faculties": "MEHD",
       "parentSectionId": null,
       "roomName": "12A-09C",
       "roomNumber": "12A-09C",
@@ -51818,7 +51818,7 @@
       ],
       "labSectionId": 191381,
       "labCourseCode": "MAT120L",
-      "labFaculties": "TBA",
+      "labFaculties": "MEHD",
       "labName": "MATHEMATICS II: INTEGRAL CALCULUS & DIFFERENTIAL EQUATIONS LAB",
       "labRoomName": "10E-26L",
       "preRegLabSchedule": "WEDNESDAY(9:30 AM-10:50 AM-10E-26L)",
@@ -51880,7 +51880,7 @@
     {
       "academicDegree": "UNDERGRADUATE",
       "capacity": 40,
-      "consumedSeat": 40,
+      "consumedSeat": 39,
       "courseCode": "CHE110",
       "courseCredit": 3,
       "courseId": 1407,
@@ -52681,7 +52681,7 @@
       "courseCredit": 3,
       "courseId": 1362,
       "courseType": "THEORY",
-      "faculties": "TBA",
+      "faculties": "MMHA",
       "parentSectionId": null,
       "roomName": "12A-11C",
       "roomNumber": "12A-11C",
@@ -53229,7 +53229,7 @@
       "courseCredit": 3,
       "courseId": 1361,
       "courseType": "THEORY",
-      "faculties": "TBA",
+      "faculties": "NPRV",
       "parentSectionId": null,
       "roomName": "12A-10C",
       "roomNumber": "12A-10C",
@@ -53483,8 +53483,8 @@
       "labCourseCode": "CSE447L",
       "labFaculties": "TBA",
       "labName": "CRYPTOGRAPHY AND CRYPTANALYSIS LAB",
-      "labRoomName": "12F-32L",
-      "preRegLabSchedule": "SATURDAY(8:00 AM-10:50 AM-12F-32L)",
+      "labRoomName": "12F-30L",
+      "preRegLabSchedule": "SATURDAY(8:00 AM-10:50 AM-12F-30L)",
       "preRegSchedule": "SUNDAY(2:00 PM-3:20 PM-09C-16T)\nTUESDAY(2:00 PM-3:20 PM-09C-16T)"
     },
     {
@@ -54363,7 +54363,7 @@
     {
       "academicDegree": "UNDERGRADUATE",
       "capacity": 40,
-      "consumedSeat": 36,
+      "consumedSeat": 34,
       "courseCode": "PHY112",
       "courseCredit": 3,
       "courseId": 644,
@@ -54794,7 +54794,7 @@
     {
       "academicDegree": "UNDERGRADUATE",
       "capacity": 40,
-      "consumedSeat": 38,
+      "consumedSeat": 37,
       "courseCode": "ECO101",
       "courseCredit": 3,
       "courseId": 1527,
@@ -55650,7 +55650,7 @@
     {
       "academicDegree": "UNDERGRADUATE",
       "capacity": 40,
-      "consumedSeat": 48,
+      "consumedSeat": 47,
       "courseCode": "HST103",
       "courseCredit": 3,
       "courseId": 1515,
@@ -56196,28 +56196,28 @@
       "sectionSchedule": {
         "classPairId": 1,
         "classSlotId": 13094,
-        "finalExamDate": "2027-01-13",
-        "finalExamStartTime": "14:00:00",
-        "finalExamEndTime": "16:00:00",
         "midExamDate": "2026-11-28",
-        "midExamStartTime": "14:00:00",
-        "midExamEndTime": "16:00:00",
-        "finalExamDetail": "Wednesday, January 13, 2027 2:00 PM - 4:00 PM",
-        "midExamDetail": "Saturday, November 28, 2026 2:00 PM - 4:00 PM",
-        "classStartDate": "2026-10-03",
         "classEndDate": "2027-01-04",
+        "finalExamDate": "2027-01-13",
+        "midExamDetail": "Saturday, November 28, 2026 2:00 PM - 4:00 PM",
         "classSchedules": [
           {
-            "startTime": "14:00:00",
+            "day": "SATURDAY",
             "endTime": "15:20:00",
-            "day": "SATURDAY"
+            "startTime": "14:00:00"
           },
           {
-            "startTime": "14:00:00",
+            "day": "THURSDAY",
             "endTime": "15:20:00",
-            "day": "THURSDAY"
+            "startTime": "14:00:00"
           }
-        ]
+        ],
+        "classStartDate": "2026-10-03",
+        "midExamEndTime": "16:00:00",
+        "finalExamDetail": "Wednesday, January 13, 2027 2:00 PM - 4:00 PM",
+        "finalExamEndTime": "16:00:00",
+        "midExamStartTime": "14:00:00",
+        "finalExamStartTime": "14:00:00"
       },
       "sectionType": "OTHER",
       "semesterSessionId": 20263,
@@ -57033,7 +57033,7 @@
     {
       "academicDegree": "UNDERGRADUATE",
       "capacity": 37,
-      "consumedSeat": 39,
+      "consumedSeat": 38,
       "courseCode": "FIN301",
       "courseCredit": 3,
       "courseId": 2027,
@@ -60027,7 +60027,7 @@
     {
       "academicDegree": "UNDERGRADUATE",
       "capacity": 38,
-      "consumedSeat": 38,
+      "consumedSeat": 37,
       "courseCode": "CSE321",
       "courseCredit": 3,
       "courseId": 586,
@@ -60944,7 +60944,7 @@
     {
       "academicDegree": "UNDERGRADUATE",
       "capacity": 99,
-      "consumedSeat": 58,
+      "consumedSeat": 57,
       "courseCode": "BUS490",
       "courseCredit": 4,
       "courseId": 2055,
@@ -61426,7 +61426,7 @@
     {
       "academicDegree": "UNDERGRADUATE",
       "capacity": 38,
-      "consumedSeat": 39,
+      "consumedSeat": 38,
       "courseCode": "CSE230",
       "courseCredit": 3,
       "courseId": 1128,
@@ -61814,7 +61814,7 @@
       "courseCredit": 3,
       "courseId": 1535,
       "courseType": "THEORY",
-      "faculties": "TBA",
+      "faculties": "SUAL",
       "parentSectionId": null,
       "roomName": "12A-08C",
       "roomNumber": "12A-08C",
@@ -61823,28 +61823,28 @@
       "sectionSchedule": {
         "classPairId": 1,
         "classSlotId": 13092,
-        "finalExamDate": "2027-01-13",
-        "finalExamStartTime": "11:00:00",
-        "finalExamEndTime": "13:00:00",
         "midExamDate": "2026-11-28",
-        "midExamStartTime": "11:00:00",
-        "midExamEndTime": "13:00:00",
-        "finalExamDetail": "Wednesday, January 13, 2027 11:00 AM - 1:00 PM",
-        "midExamDetail": "Saturday, November 28, 2026 11:00 AM - 1:00 PM",
-        "classStartDate": "2026-10-03",
         "classEndDate": "2027-01-04",
+        "finalExamDate": "2027-01-13",
+        "midExamDetail": "Saturday, November 28, 2026 11:00 AM - 1:00 PM",
         "classSchedules": [
           {
-            "startTime": "11:00:00",
+            "day": "SATURDAY",
             "endTime": "12:20:00",
-            "day": "SATURDAY"
+            "startTime": "11:00:00"
           },
           {
-            "startTime": "11:00:00",
+            "day": "THURSDAY",
             "endTime": "12:20:00",
-            "day": "THURSDAY"
+            "startTime": "11:00:00"
           }
-        ]
+        ],
+        "classStartDate": "2026-10-03",
+        "midExamEndTime": "13:00:00",
+        "finalExamDetail": "Wednesday, January 13, 2027 11:00 AM - 1:00 PM",
+        "finalExamEndTime": "13:00:00",
+        "midExamStartTime": "11:00:00",
+        "finalExamStartTime": "11:00:00"
       },
       "sectionType": "OTHER",
       "semesterSessionId": 20263,
@@ -61915,7 +61915,7 @@
     {
       "academicDegree": "UNDERGRADUATE",
       "capacity": 40,
-      "consumedSeat": 38,
+      "consumedSeat": 39,
       "courseCode": "STA101",
       "courseCredit": 3,
       "courseId": 1003,
@@ -62186,7 +62186,7 @@
     {
       "academicDegree": "UNDERGRADUATE",
       "capacity": 35,
-      "consumedSeat": 30,
+      "consumedSeat": 29,
       "courseCode": "MSC221",
       "courseCredit": 3,
       "courseId": 1809,
@@ -62998,28 +62998,28 @@
       "sectionSchedule": {
         "classPairId": null,
         "classSlotId": null,
-        "finalExamDate": "2027-01-07",
-        "finalExamStartTime": "16:30:00",
-        "finalExamEndTime": "18:30:00",
         "midExamDate": "2026-11-21",
-        "midExamStartTime": "16:30:00",
-        "midExamEndTime": "18:30:00",
-        "finalExamDetail": "Jan 7, 2027 4:30 PM - 6:30 PM",
-        "midExamDetail": "Nov 21, 2026 4:30 PM - 6:30 PM",
-        "classStartDate": "2026-10-03",
         "classEndDate": "2027-01-04",
+        "finalExamDate": "2027-01-07",
+        "midExamDetail": "Nov 21, 2026 4:30 PM - 6:30 PM",
         "classSchedules": [
           {
-            "startTime": "12:30:00",
+            "day": "SATURDAY",
             "endTime": "13:50:00",
-            "day": "SATURDAY"
+            "startTime": "12:30:00"
           },
           {
-            "startTime": "12:30:00",
+            "day": "THURSDAY",
             "endTime": "13:50:00",
-            "day": "THURSDAY"
+            "startTime": "12:30:00"
           }
-        ]
+        ],
+        "classStartDate": "2026-10-03",
+        "midExamEndTime": "18:30:00",
+        "finalExamDetail": "Jan 7, 2027 4:30 PM - 6:30 PM",
+        "finalExamEndTime": "18:30:00",
+        "midExamStartTime": "16:30:00",
+        "finalExamStartTime": "16:30:00"
       },
       "sectionType": "OTHER",
       "semesterSessionId": 20263,
@@ -63675,28 +63675,28 @@
       "sectionSchedule": {
         "classPairId": null,
         "classSlotId": null,
-        "finalExamDate": "2027-01-07",
-        "finalExamStartTime": "11:00:00",
-        "finalExamEndTime": "13:00:00",
         "midExamDate": "2026-11-21",
-        "midExamStartTime": "11:00:00",
-        "midExamEndTime": "13:00:00",
-        "finalExamDetail": "Jan 7, 2027 11:00 AM - 1:00 PM",
-        "midExamDetail": "Nov 21, 2026 11:00 AM - 1:00 PM",
-        "classStartDate": "2026-10-03",
         "classEndDate": "2027-01-04",
+        "finalExamDate": "2027-01-07",
+        "midExamDetail": "Nov 21, 2026 11:00 AM - 1:00 PM",
         "classSchedules": [
           {
-            "startTime": "11:00:00",
+            "day": "SATURDAY",
             "endTime": "12:20:00",
-            "day": "SATURDAY"
+            "startTime": "11:00:00"
           },
           {
-            "startTime": "11:00:00",
+            "day": "THURSDAY",
             "endTime": "12:20:00",
-            "day": "THURSDAY"
+            "startTime": "11:00:00"
           }
-        ]
+        ],
+        "classStartDate": "2026-10-03",
+        "midExamEndTime": "13:00:00",
+        "finalExamDetail": "Jan 7, 2027 11:00 AM - 1:00 PM",
+        "finalExamEndTime": "13:00:00",
+        "midExamStartTime": "11:00:00",
+        "finalExamStartTime": "11:00:00"
       },
       "sectionType": "OTHER",
       "semesterSessionId": 20263,
@@ -67489,7 +67489,7 @@
     {
       "academicDegree": "UNDERGRADUATE",
       "capacity": 0,
-      "consumedSeat": 31,
+      "consumedSeat": 32,
       "courseCode": "EMB101",
       "courseCredit": 3,
       "courseId": 1562,
@@ -69566,7 +69566,7 @@
     {
       "academicDegree": "UNDERGRADUATE",
       "capacity": 36,
-      "consumedSeat": 36,
+      "consumedSeat": 35,
       "courseCode": "CSE250",
       "courseCredit": 3,
       "courseId": 1670,
@@ -69837,7 +69837,7 @@
     {
       "academicDegree": "UNDERGRADUATE",
       "capacity": 37,
-      "consumedSeat": 36,
+      "consumedSeat": 34,
       "courseCode": "MSC321",
       "courseCredit": 3,
       "courseId": 1737,
@@ -71340,7 +71340,7 @@
     {
       "academicDegree": "UNDERGRADUATE",
       "capacity": 38,
-      "consumedSeat": 35,
+      "consumedSeat": 34,
       "courseCode": "CSE423",
       "courseCredit": 3,
       "courseId": 646,
@@ -72054,7 +72054,7 @@
     {
       "academicDegree": "UNDERGRADUATE",
       "capacity": 30,
-      "consumedSeat": 35,
+      "consumedSeat": 36,
       "courseCode": "ANT204",
       "courseCredit": 3,
       "courseId": 2938,
@@ -72219,7 +72219,7 @@
     {
       "academicDegree": "UNDERGRADUATE",
       "capacity": 25,
-      "consumedSeat": 25,
+      "consumedSeat": 24,
       "courseCode": "FIN201",
       "courseCredit": 3,
       "courseId": 1639,
@@ -72325,7 +72325,7 @@
     {
       "academicDegree": "UNDERGRADUATE",
       "capacity": 30,
-      "consumedSeat": 31,
+      "consumedSeat": 30,
       "courseCode": "POL101",
       "courseCredit": 3,
       "courseId": 1525,
@@ -74086,28 +74086,28 @@
       "sectionSchedule": {
         "classPairId": null,
         "classSlotId": null,
-        "finalExamDate": "2027-01-10",
-        "finalExamStartTime": "08:30:00",
-        "finalExamEndTime": "10:30:00",
         "midExamDate": "2026-11-24",
-        "midExamStartTime": "08:30:00",
-        "midExamEndTime": "10:30:00",
-        "finalExamDetail": "Jan 10, 2027 8:30 AM - 10:30 AM",
-        "midExamDetail": "Nov 24, 2026 8:30 AM - 10:30 AM",
-        "classStartDate": "2026-10-03",
         "classEndDate": "2027-01-04",
+        "finalExamDate": "2027-01-10",
+        "midExamDetail": "Nov 24, 2026 8:30 AM - 10:30 AM",
         "classSchedules": [
           {
-            "startTime": "12:30:00",
+            "day": "SATURDAY",
             "endTime": "13:50:00",
-            "day": "SATURDAY"
+            "startTime": "12:30:00"
           },
           {
-            "startTime": "12:30:00",
+            "day": "THURSDAY",
             "endTime": "13:50:00",
-            "day": "THURSDAY"
+            "startTime": "12:30:00"
           }
-        ]
+        ],
+        "classStartDate": "2026-10-03",
+        "midExamEndTime": "10:30:00",
+        "finalExamDetail": "Jan 10, 2027 8:30 AM - 10:30 AM",
+        "finalExamEndTime": "10:30:00",
+        "midExamStartTime": "08:30:00",
+        "finalExamStartTime": "08:30:00"
       },
       "sectionType": "OTHER",
       "semesterSessionId": 20263,
@@ -74385,7 +74385,7 @@
     {
       "academicDegree": "UNDERGRADUATE",
       "capacity": 40,
-      "consumedSeat": 41,
+      "consumedSeat": 40,
       "courseCode": "PHY111",
       "courseCredit": 3,
       "courseId": 1270,
@@ -75496,7 +75496,7 @@
     {
       "academicDegree": "UNDERGRADUATE",
       "capacity": 38,
-      "consumedSeat": 40,
+      "consumedSeat": 39,
       "courseCode": "CSE220",
       "courseCredit": 3,
       "courseId": 2052,
@@ -75756,7 +75756,7 @@
     {
       "academicDegree": "UNDERGRADUATE",
       "capacity": 40,
-      "consumedSeat": 38,
+      "consumedSeat": 37,
       "courseCode": "BTE311",
       "courseCredit": 3,
       "courseId": 674,
@@ -75770,28 +75770,28 @@
       "sectionSchedule": {
         "classPairId": 1,
         "classSlotId": 13090,
-        "finalExamDate": "2027-01-13",
-        "finalExamStartTime": "08:30:00",
-        "finalExamEndTime": "10:30:00",
         "midExamDate": "2026-11-28",
-        "midExamStartTime": "08:30:00",
-        "midExamEndTime": "10:30:00",
-        "finalExamDetail": "Wednesday, January 13, 2027 8:30 AM - 10:30 AM",
-        "midExamDetail": "Saturday, November 28, 2026 8:30 AM - 10:30 AM",
-        "classStartDate": "2026-10-03",
         "classEndDate": "2027-01-04",
+        "finalExamDate": "2027-01-13",
+        "midExamDetail": "Saturday, November 28, 2026 8:30 AM - 10:30 AM",
         "classSchedules": [
           {
-            "startTime": "08:00:00",
+            "day": "SATURDAY",
             "endTime": "09:20:00",
-            "day": "SATURDAY"
+            "startTime": "08:00:00"
           },
           {
-            "startTime": "08:00:00",
+            "day": "THURSDAY",
             "endTime": "09:20:00",
-            "day": "THURSDAY"
+            "startTime": "08:00:00"
           }
-        ]
+        ],
+        "classStartDate": "2026-10-03",
+        "midExamEndTime": "10:30:00",
+        "finalExamDetail": "Wednesday, January 13, 2027 8:30 AM - 10:30 AM",
+        "finalExamEndTime": "10:30:00",
+        "midExamStartTime": "08:30:00",
+        "finalExamStartTime": "08:30:00"
       },
       "sectionType": "OTHER",
       "semesterSessionId": 20263,
@@ -77219,7 +77219,7 @@
       "courseCredit": 3,
       "courseId": 1362,
       "courseType": "THEORY",
-      "faculties": "TBA",
+      "faculties": "AKHN",
       "parentSectionId": null,
       "roomName": "12A-11C",
       "roomNumber": "12A-11C",
@@ -77228,28 +77228,28 @@
       "sectionSchedule": {
         "classPairId": null,
         "classSlotId": null,
-        "finalExamDate": "2027-01-07",
-        "finalExamStartTime": "08:30:00",
-        "finalExamEndTime": "10:30:00",
         "midExamDate": "2026-11-21",
-        "midExamStartTime": "08:30:00",
-        "midExamEndTime": "10:30:00",
-        "finalExamDetail": "Jan 7, 2027 8:30 AM - 10:30 AM",
-        "midExamDetail": "Nov 21, 2026 8:30 AM - 10:30 AM",
-        "classStartDate": "2026-10-03",
         "classEndDate": "2027-01-04",
+        "finalExamDate": "2027-01-07",
+        "midExamDetail": "Nov 21, 2026 8:30 AM - 10:30 AM",
         "classSchedules": [
           {
-            "startTime": "11:00:00",
+            "day": "SATURDAY",
             "endTime": "12:20:00",
-            "day": "SATURDAY"
+            "startTime": "11:00:00"
           },
           {
-            "startTime": "11:00:00",
+            "day": "THURSDAY",
             "endTime": "12:20:00",
-            "day": "THURSDAY"
+            "startTime": "11:00:00"
           }
-        ]
+        ],
+        "classStartDate": "2026-10-03",
+        "midExamEndTime": "10:30:00",
+        "finalExamDetail": "Jan 7, 2027 8:30 AM - 10:30 AM",
+        "finalExamEndTime": "10:30:00",
+        "midExamStartTime": "08:30:00",
+        "finalExamStartTime": "08:30:00"
       },
       "sectionType": "OTHER",
       "semesterSessionId": 20263,
@@ -77387,28 +77387,28 @@
       "sectionSchedule": {
         "classPairId": null,
         "classSlotId": null,
-        "finalExamDate": "2027-01-11",
-        "finalExamStartTime": "14:00:00",
-        "finalExamEndTime": "16:00:00",
         "midExamDate": "2026-11-25",
-        "midExamStartTime": "14:00:00",
-        "midExamEndTime": "16:00:00",
-        "finalExamDetail": "Jan 11, 2027 2:00 PM - 4:00 PM",
-        "midExamDetail": "Nov 25, 2026 2:00 PM - 4:00 PM",
-        "classStartDate": "2026-10-03",
         "classEndDate": "2027-01-04",
+        "finalExamDate": "2027-01-11",
+        "midExamDetail": "Nov 25, 2026 2:00 PM - 4:00 PM",
         "classSchedules": [
           {
-            "startTime": "09:30:00",
+            "day": "SATURDAY",
             "endTime": "10:50:00",
-            "day": "SATURDAY"
+            "startTime": "09:30:00"
           },
           {
-            "startTime": "09:30:00",
+            "day": "THURSDAY",
             "endTime": "10:50:00",
-            "day": "THURSDAY"
+            "startTime": "09:30:00"
           }
-        ]
+        ],
+        "classStartDate": "2026-10-03",
+        "midExamEndTime": "16:00:00",
+        "finalExamDetail": "Jan 11, 2027 2:00 PM - 4:00 PM",
+        "finalExamEndTime": "16:00:00",
+        "midExamStartTime": "14:00:00",
+        "finalExamStartTime": "14:00:00"
       },
       "sectionType": "OTHER",
       "semesterSessionId": 20263,
@@ -77549,7 +77549,7 @@
       "courseCredit": 3,
       "courseId": 1362,
       "courseType": "THEORY",
-      "faculties": "TBA",
+      "faculties": "HKBR",
       "parentSectionId": null,
       "roomName": "12A-11C",
       "roomNumber": "12A-11C",
@@ -77751,7 +77751,7 @@
     {
       "academicDegree": "UNDERGRADUATE",
       "capacity": 20,
-      "consumedSeat": 20,
+      "consumedSeat": 19,
       "courseCode": "BTE255",
       "courseCredit": 3,
       "courseId": 849,
@@ -78949,7 +78949,7 @@
     {
       "academicDegree": "UNDERGRADUATE",
       "capacity": 38,
-      "consumedSeat": 38,
+      "consumedSeat": 37,
       "courseCode": "CSE425",
       "courseCredit": 3,
       "courseId": 611,
@@ -79167,7 +79167,7 @@
     {
       "academicDegree": "UNDERGRADUATE",
       "capacity": 40,
-      "consumedSeat": 38,
+      "consumedSeat": 39,
       "courseCode": "STA201",
       "courseCredit": 3,
       "courseId": 1540,
@@ -81117,7 +81117,7 @@
       "courseCredit": 3,
       "courseId": 1535,
       "courseType": "THEORY",
-      "faculties": "TBA",
+      "faculties": "NPRV",
       "parentSectionId": null,
       "roomName": "12A-09C",
       "roomNumber": "12A-09C",
@@ -82085,7 +82085,7 @@
     {
       "academicDegree": "UNDERGRADUATE",
       "capacity": 40,
-      "consumedSeat": 41,
+      "consumedSeat": 40,
       "courseCode": "MAT110",
       "courseCredit": 3,
       "courseId": 1439,
@@ -85185,7 +85185,7 @@
     {
       "academicDegree": "UNDERGRADUATE",
       "capacity": 40,
-      "consumedSeat": 16,
+      "consumedSeat": 17,
       "courseCode": "MAT123",
       "courseCredit": 3,
       "courseId": 725,
@@ -85238,7 +85238,7 @@
     {
       "academicDegree": "UNDERGRADUATE",
       "capacity": 40,
-      "consumedSeat": 39,
+      "consumedSeat": 38,
       "courseCode": "STA201",
       "courseCredit": 3,
       "courseId": 1540,
@@ -85397,7 +85397,7 @@
     {
       "academicDegree": "UNDERGRADUATE",
       "capacity": 40,
-      "consumedSeat": 40,
+      "consumedSeat": 41,
       "courseCode": "MAT120",
       "courseCredit": 3,
       "courseId": 865,
@@ -85828,7 +85828,7 @@
     {
       "academicDegree": "UNDERGRADUATE",
       "capacity": 38,
-      "consumedSeat": 38,
+      "consumedSeat": 39,
       "courseCode": "CSE110",
       "courseCredit": 3,
       "courseId": 1510,
@@ -85887,7 +85887,7 @@
     {
       "academicDegree": "UNDERGRADUATE",
       "capacity": 40,
-      "consumedSeat": 41,
+      "consumedSeat": 40,
       "courseCode": "MAT110",
       "courseCredit": 3,
       "courseId": 1439,
@@ -87814,7 +87814,7 @@
     {
       "academicDegree": "UNDERGRADUATE",
       "capacity": 40,
-      "consumedSeat": 41,
+      "consumedSeat": 42,
       "courseCode": "ANT211",
       "courseCredit": 3,
       "courseId": 2005,
@@ -88691,7 +88691,7 @@
       "courseCredit": 3,
       "courseId": 1362,
       "courseType": "THEORY",
-      "faculties": "TBA",
+      "faculties": "MMHA",
       "parentSectionId": null,
       "roomName": "12A-11C",
       "roomNumber": "12A-11C",
@@ -89682,7 +89682,7 @@
     {
       "academicDegree": "UNDERGRADUATE",
       "capacity": 38,
-      "consumedSeat": 37,
+      "consumedSeat": 35,
       "courseCode": "CSE230",
       "courseCredit": 3,
       "courseId": 1128,
@@ -90805,7 +90805,7 @@
     {
       "academicDegree": "UNDERGRADUATE",
       "capacity": 30,
-      "consumedSeat": 23,
+      "consumedSeat": 22,
       "courseCode": "ARC301",
       "courseCredit": 8,
       "courseId": 426,
@@ -91081,7 +91081,7 @@
     {
       "academicDegree": "UNDERGRADUATE",
       "capacity": 40,
-      "consumedSeat": 42,
+      "consumedSeat": 43,
       "courseCode": "ECO101",
       "courseCredit": 3,
       "courseId": 1527,
@@ -91134,7 +91134,7 @@
     {
       "academicDegree": "UNDERGRADUATE",
       "capacity": 40,
-      "consumedSeat": 40,
+      "consumedSeat": 39,
       "courseCode": "HST103",
       "courseCredit": 3,
       "courseId": 1515,
@@ -91637,28 +91637,28 @@
       "sectionSchedule": {
         "classPairId": null,
         "classSlotId": null,
-        "finalExamDate": "2027-01-11",
-        "finalExamStartTime": "08:30:00",
-        "finalExamEndTime": "10:30:00",
         "midExamDate": "2026-11-25",
-        "midExamStartTime": "08:30:00",
-        "midExamEndTime": "10:30:00",
-        "finalExamDetail": "Jan 11, 2027 8:30 AM - 10:30 AM",
-        "midExamDetail": "Nov 25, 2026 8:30 AM - 10:30 AM",
-        "classStartDate": "2026-10-03",
         "classEndDate": "2027-01-04",
+        "finalExamDate": "2027-01-11",
+        "midExamDetail": "Nov 25, 2026 8:30 AM - 10:30 AM",
         "classSchedules": [
           {
-            "startTime": "12:30:00",
+            "day": "SATURDAY",
             "endTime": "13:50:00",
-            "day": "SATURDAY"
+            "startTime": "12:30:00"
           },
           {
-            "startTime": "12:30:00",
+            "day": "THURSDAY",
             "endTime": "13:50:00",
-            "day": "THURSDAY"
+            "startTime": "12:30:00"
           }
-        ]
+        ],
+        "classStartDate": "2026-10-03",
+        "midExamEndTime": "10:30:00",
+        "finalExamDetail": "Jan 11, 2027 8:30 AM - 10:30 AM",
+        "finalExamEndTime": "10:30:00",
+        "midExamStartTime": "08:30:00",
+        "finalExamStartTime": "08:30:00"
       },
       "sectionType": "OTHER",
       "semesterSessionId": 20263,
@@ -92389,7 +92389,7 @@
     {
       "academicDegree": "UNDERGRADUATE",
       "capacity": 37,
-      "consumedSeat": 32,
+      "consumedSeat": 31,
       "courseCode": "BUS301",
       "courseCredit": 3,
       "courseId": 1001,
@@ -92442,7 +92442,7 @@
     {
       "academicDegree": "UNDERGRADUATE",
       "capacity": 35,
-      "consumedSeat": 36,
+      "consumedSeat": 35,
       "courseCode": "EEE203",
       "courseCredit": 3,
       "courseId": 145,
@@ -93243,7 +93243,7 @@
     {
       "academicDegree": "UNDERGRADUATE",
       "capacity": 30,
-      "consumedSeat": 30,
+      "consumedSeat": 29,
       "courseCode": "HUM101",
       "courseCredit": 3,
       "courseId": 1097,
@@ -93992,7 +93992,7 @@
     {
       "academicDegree": "UNDERGRADUATE",
       "capacity": 38,
-      "consumedSeat": 31,
+      "consumedSeat": 30,
       "courseCode": "CSE111",
       "courseCredit": 3,
       "courseId": 2054,
@@ -94688,7 +94688,7 @@
     {
       "academicDegree": "UNDERGRADUATE",
       "capacity": 37,
-      "consumedSeat": 37,
+      "consumedSeat": 36,
       "courseCode": "ACT201",
       "courseCredit": 3,
       "courseId": 1276,
@@ -95335,7 +95335,7 @@
     {
       "academicDegree": "UNDERGRADUATE",
       "capacity": 37,
-      "consumedSeat": 37,
+      "consumedSeat": 36,
       "courseCode": "ACT201",
       "courseCredit": 3,
       "courseId": 1276,
@@ -101743,7 +101743,7 @@
     {
       "academicDegree": "UNDERGRADUATE",
       "capacity": 40,
-      "consumedSeat": 40,
+      "consumedSeat": 39,
       "courseCode": "STA201",
       "courseCredit": 3,
       "courseId": 1540,
@@ -102120,7 +102120,7 @@
     {
       "academicDegree": "UNDERGRADUATE",
       "capacity": 40,
-      "consumedSeat": 38,
+      "consumedSeat": 39,
       "courseCode": "MAT121",
       "courseCredit": 3,
       "courseId": 1172,
@@ -102544,12 +102544,12 @@
     {
       "academicDegree": "UNDERGRADUATE",
       "capacity": 40,
-      "consumedSeat": 41,
+      "consumedSeat": 40,
       "courseCode": "MAT120",
       "courseCredit": 3,
       "courseId": 865,
       "courseType": "THEORY",
-      "faculties": "TBA",
+      "faculties": "MEHD",
       "parentSectionId": null,
       "roomName": "12A-09C",
       "roomNumber": "12A-09C",
@@ -102594,7 +102594,7 @@
       ],
       "labSectionId": 191379,
       "labCourseCode": "MAT120L",
-      "labFaculties": "TBA",
+      "labFaculties": "MEHD",
       "labName": "MATHEMATICS II: INTEGRAL CALCULUS & DIFFERENTIAL EQUATIONS LAB",
       "labRoomName": "10E-26L",
       "preRegLabSchedule": "WEDNESDAY(8:00 AM-9:20 AM-10E-26L)",
@@ -103295,7 +103295,7 @@
     {
       "academicDegree": "UNDERGRADUATE",
       "capacity": 30,
-      "consumedSeat": 30,
+      "consumedSeat": 31,
       "courseCode": "CST304",
       "courseCredit": 3,
       "courseId": 1698,
@@ -103985,7 +103985,7 @@
     {
       "academicDegree": "UNDERGRADUATE",
       "capacity": 30,
-      "consumedSeat": 25,
+      "consumedSeat": 24,
       "courseCode": "HUM101",
       "courseCredit": 3,
       "courseId": 1097,
@@ -104038,7 +104038,7 @@
     {
       "academicDegree": "UNDERGRADUATE",
       "capacity": 37,
-      "consumedSeat": 37,
+      "consumedSeat": 36,
       "courseCode": "MGT423",
       "courseCredit": 3,
       "courseId": 1165,
@@ -105765,7 +105765,7 @@
     {
       "academicDegree": "UNDERGRADUATE",
       "capacity": 33,
-      "consumedSeat": 34,
+      "consumedSeat": 35,
       "courseCode": "ENG101",
       "courseCredit": 3,
       "courseId": 1503,
@@ -107549,7 +107549,7 @@
     {
       "academicDegree": "UNDERGRADUATE",
       "capacity": 33,
-      "consumedSeat": 33,
+      "consumedSeat": 32,
       "courseCode": "ENG101",
       "courseCredit": 3,
       "courseId": 1503,
@@ -107820,7 +107820,7 @@
     {
       "academicDegree": "UNDERGRADUATE",
       "capacity": 38,
-      "consumedSeat": 38,
+      "consumedSeat": 37,
       "courseCode": "CSE320",
       "courseCredit": 3,
       "courseId": 1326,
@@ -108097,7 +108097,7 @@
     {
       "academicDegree": "UNDERGRADUATE",
       "capacity": 0,
-      "consumedSeat": 28,
+      "consumedSeat": 27,
       "courseCode": "CSE220",
       "courseCredit": 3,
       "courseId": 2052,
@@ -110671,7 +110671,7 @@
     {
       "academicDegree": "UNDERGRADUATE",
       "capacity": 40,
-      "consumedSeat": 37,
+      "consumedSeat": 36,
       "courseCode": "ECO201",
       "courseCredit": 3,
       "courseId": 685,
@@ -110979,7 +110979,7 @@
     {
       "academicDegree": "UNDERGRADUATE",
       "capacity": 19,
-      "consumedSeat": 16,
+      "consumedSeat": 15,
       "courseCode": "EEE305L",
       "courseCredit": 1,
       "courseId": 1895,
@@ -113207,7 +113207,7 @@
     {
       "academicDegree": "UNDERGRADUATE",
       "capacity": 80,
-      "consumedSeat": 72,
+      "consumedSeat": 70,
       "courseCode": "EEE499P",
       "courseCredit": 1,
       "courseId": 1812,
@@ -113249,7 +113249,7 @@
     {
       "academicDegree": "UNDERGRADUATE",
       "capacity": 38,
-      "consumedSeat": 38,
+      "consumedSeat": 39,
       "courseCode": "CSE110",
       "courseCredit": 3,
       "courseId": 1510,
