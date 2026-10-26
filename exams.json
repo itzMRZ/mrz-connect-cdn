@@ -5,7 +5,7 @@
     "midExamEndDate": "2026-11-29",
     "finalExamStartDate": "2026-12-28",
     "finalExamEndDate": "2027-01-15",
-    "lastUpdated": "2026-10-25T10:52:32.562847+00:00",
+    "lastUpdated": "2026-10-26T12:23:23.748896+00:00",
     "semester": "Fall2026",
     "sources": {
       "midterm": {
@@ -18116,20 +18116,6 @@
       "finalExamSource": "cdn"
     },
     {
-      "courseCode": "CST301",
-      "sectionName": "07",
-      "sectionId": 190246,
-      "sectionType": "THEORY",
-      "midExamDate": "2026-11-26",
-      "midExamTime": "11:00:00",
-      "midExamRoom": null,
-      "midExamSource": "cdn",
-      "finalExamDate": "2027-01-12",
-      "finalExamTime": "11:00:00",
-      "finalExamRoom": null,
-      "finalExamSource": "cdn"
-    },
-    {
       "courseCode": "CSE423",
       "sectionName": "09",
       "sectionId": 189946,
@@ -25372,11 +25358,11 @@
       "sectionName": "07",
       "sectionId": 189524,
       "sectionType": "THEORY",
-      "midExamDate": "2026-11-21",
+      "midExamDate": "2026-11-22",
       "midExamTime": "08:30:00",
       "midExamRoom": null,
       "midExamSource": "cdn",
-      "finalExamDate": "2027-01-07",
+      "finalExamDate": "2027-01-08",
       "finalExamTime": "08:30:00",
       "finalExamRoom": null,
       "finalExamSource": "cdn"
@@ -25428,11 +25414,11 @@
       "sectionName": "10",
       "sectionId": 190969,
       "sectionType": "THEORY",
-      "midExamDate": "2026-11-20",
+      "midExamDate": "2026-11-21",
       "midExamTime": "16:30:00",
       "midExamRoom": null,
       "midExamSource": "cdn",
-      "finalExamDate": "2027-01-06",
+      "finalExamDate": "2027-01-07",
       "finalExamTime": "16:30:00",
       "finalExamRoom": null,
       "finalExamSource": "cdn"
@@ -25606,16 +25592,16 @@
       "finalExamSource": "cdn"
     },
     {
-      "courseCode": "CSE341",
-      "sectionName": "04",
-      "sectionId": 189722,
+      "courseCode": "CST301",
+      "sectionName": "07",
+      "sectionId": 190246,
       "sectionType": "THEORY",
-      "midExamDate": "2026-11-23",
-      "midExamTime": "16:30:00",
+      "midExamDate": "2026-11-26",
+      "midExamTime": "11:00:00",
       "midExamRoom": null,
       "midExamSource": "cdn",
-      "finalExamDate": "2027-01-09",
-      "finalExamTime": "16:30:00",
+      "finalExamDate": "2027-01-12",
+      "finalExamTime": "11:00:00",
       "finalExamRoom": null,
       "finalExamSource": "cdn"
     },
@@ -25630,6 +25616,20 @@
       "midExamSource": "cdn",
       "finalExamDate": "2027-01-07",
       "finalExamTime": "14:00:00",
+      "finalExamRoom": null,
+      "finalExamSource": "cdn"
+    },
+    {
+      "courseCode": "CSE341",
+      "sectionName": "04",
+      "sectionId": 189722,
+      "sectionType": "THEORY",
+      "midExamDate": "2026-11-23",
+      "midExamTime": "16:30:00",
+      "midExamRoom": null,
+      "midExamSource": "cdn",
+      "finalExamDate": "2027-01-09",
+      "finalExamTime": "16:30:00",
       "finalExamRoom": null,
       "finalExamSource": "cdn"
     },
