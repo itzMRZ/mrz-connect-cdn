@@ -5,7 +5,7 @@
     "midExamEndDate": "2026-11-29",
     "finalExamStartDate": "2026-12-28",
     "finalExamEndDate": "2027-01-15",
-    "lastUpdated": "2026-11-06T13:50:23.483381+00:00",
+    "lastUpdated": "2026-11-07T12:34:40.194325+00:00",
     "semester": "Fall2026",
     "sources": {
       "midterm": {
@@ -3920,20 +3920,6 @@
       "finalExamSource": "cdn"
     },
     {
-      "courseCode": "PSY101",
-      "sectionName": "08",
-      "sectionId": 190561,
-      "sectionType": "THEORY",
-      "midExamDate": "2026-11-24",
-      "midExamTime": "08:30:00",
-      "midExamRoom": null,
-      "midExamSource": "cdn",
-      "finalExamDate": "2027-01-10",
-      "finalExamTime": "08:30:00",
-      "finalExamRoom": null,
-      "finalExamSource": "cdn"
-    },
-    {
       "courseCode": "SOC204",
       "sectionName": "01",
       "sectionId": 189244,
@@ -7709,6 +7695,20 @@
       "midExamRoom": null,
       "midExamSource": "cdn",
       "finalExamDate": "2027-01-09",
+      "finalExamTime": "08:30:00",
+      "finalExamRoom": null,
+      "finalExamSource": "cdn"
+    },
+    {
+      "courseCode": "PSY101",
+      "sectionName": "08",
+      "sectionId": 190561,
+      "sectionType": "THEORY",
+      "midExamDate": "2026-11-24",
+      "midExamTime": "08:30:00",
+      "midExamRoom": null,
+      "midExamSource": "cdn",
+      "finalExamDate": "2027-01-10",
       "finalExamTime": "08:30:00",
       "finalExamRoom": null,
       "finalExamSource": "cdn"
