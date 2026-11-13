@@ -3,14 +3,14 @@
     "firstSectionId": 188960,
     "lastSectionId": 192009,
     "totalSections": 2133,
-    "totalConsumedSeats": 64432,
-    "totalEmptySeats": 6958,
+    "totalConsumedSeats": 64431,
+    "totalEmptySeats": 6959,
     "totalCapacity": 71390,
     "midExamStartDate": "2026-11-07",
     "midExamEndDate": "2026-11-29",
     "finalExamStartDate": "2026-12-28",
     "finalExamEndDate": "2027-01-15",
-    "lastUpdated": "2026-11-12T14:44:34.318375+00:00"
+    "lastUpdated": "2026-11-13T14:01:25.150145+00:00"
   },
   "sections": [
     {
@@ -40554,7 +40554,7 @@
       ],
       "labSectionId": 190872,
       "labCourseCode": "EEE103L",
-      "labFaculties": "THMD,IAA",
+      "labFaculties": "THMD,ASYD",
       "labName": "COMPUTER PROGRAMMING LABORATORY",
       "labRoomName": "11B-22L",
       "preRegLabSchedule": "MONDAY(2:00 PM-4:50 PM-11B-22L)",
@@ -41939,28 +41939,28 @@
       "sectionSchedule": {
         "classPairId": 3,
         "classSlotId": 13093,
-        "finalExamDate": "2027-01-12",
-        "finalExamStartTime": "11:00:00",
-        "finalExamEndTime": "13:00:00",
         "midExamDate": "2026-11-26",
-        "midExamStartTime": "11:00:00",
-        "midExamEndTime": "13:00:00",
-        "finalExamDetail": "Tuesday, January 12, 2027 11:00 AM - 1:00 PM",
-        "midExamDetail": "Thursday, November 26, 2026 11:00 AM - 1:00 PM",
-        "classStartDate": "2026-10-03",
         "classEndDate": "2027-01-04",
+        "finalExamDate": "2027-01-12",
+        "midExamDetail": "Thursday, November 26, 2026 11:00 AM - 1:00 PM",
         "classSchedules": [
           {
-            "startTime": "12:30:00",
+            "day": "MONDAY",
             "endTime": "13:50:00",
-            "day": "MONDAY"
+            "startTime": "12:30:00"
           },
           {
-            "startTime": "12:30:00",
+            "day": "WEDNESDAY",
             "endTime": "13:50:00",
-            "day": "WEDNESDAY"
+            "startTime": "12:30:00"
           }
-        ]
+        ],
+        "classStartDate": "2026-10-03",
+        "midExamEndTime": "13:00:00",
+        "finalExamDetail": "Tuesday, January 12, 2027 11:00 AM - 1:00 PM",
+        "finalExamEndTime": "13:00:00",
+        "midExamStartTime": "11:00:00",
+        "finalExamStartTime": "11:00:00"
       },
       "sectionType": "OTHER",
       "semesterSessionId": 20263,
@@ -57050,59 +57050,6 @@
     },
     {
       "academicDegree": "UNDERGRADUATE",
-      "capacity": 40,
-      "consumedSeat": 31,
-      "courseCode": "ENG213",
-      "courseCredit": 3,
-      "courseId": 893,
-      "courseType": "THEORY",
-      "faculties": "MHAJ",
-      "parentSectionId": null,
-      "roomName": "AN2-06C",
-      "roomNumber": "AN2-06C",
-      "sectionId": 190694,
-      "sectionName": "02",
-      "sectionSchedule": {
-        "classPairId": 2,
-        "classSlotId": 13094,
-        "midExamDate": "2026-11-23",
-        "classEndDate": "2027-01-04",
-        "finalExamDate": "2027-01-09",
-        "midExamDetail": "Monday, November 23, 2026 2:00 PM - 4:00 PM",
-        "classSchedules": [
-          {
-            "day": "SUNDAY",
-            "endTime": "15:20:00",
-            "startTime": "14:00:00"
-          },
-          {
-            "day": "TUESDAY",
-            "endTime": "15:20:00",
-            "startTime": "14:00:00"
-          }
-        ],
-        "classStartDate": "2026-10-03",
-        "midExamEndTime": "16:00:00",
-        "finalExamDetail": "Saturday, January 9, 2027 2:00 PM - 4:00 PM",
-        "finalExamEndTime": "16:00:00",
-        "midExamStartTime": "14:00:00",
-        "finalExamStartTime": "14:00:00"
-      },
-      "sectionType": "OTHER",
-      "semesterSessionId": 20263,
-      "courseName": "SURVEY OF ENGLISH LITERATURE I",
-      "prerequisiteCourses": "(ENG113 AND ENG114) OR (ENG113 AND ENG115) OR (ENG114 AND ENG115)",
-      "labSchedules": null,
-      "labSectionId": null,
-      "labCourseCode": null,
-      "labFaculties": null,
-      "labName": null,
-      "labRoomName": null,
-      "preRegLabSchedule": null,
-      "preRegSchedule": "SUNDAY(2:00 PM-3:20 PM-AN2-06C)\nTUESDAY(2:00 PM-3:20 PM-AN2-06C)"
-    },
-    {
-      "academicDegree": "UNDERGRADUATE",
       "capacity": 30,
       "consumedSeat": 29,
       "courseCode": "CHN101",
@@ -59219,6 +59166,59 @@
       "labRoomName": null,
       "preRegLabSchedule": null,
       "preRegSchedule": "SUNDAY(9:30 AM-10:50 AM-08A-06C)\nTUESDAY(9:30 AM-10:50 AM-08A-06C)"
+    },
+    {
+      "academicDegree": "UNDERGRADUATE",
+      "capacity": 40,
+      "consumedSeat": 31,
+      "courseCode": "ENG213",
+      "courseCredit": 3,
+      "courseId": 893,
+      "courseType": "THEORY",
+      "faculties": "MHAJ",
+      "parentSectionId": null,
+      "roomName": "AN2-06C",
+      "roomNumber": "AN2-06C",
+      "sectionId": 190694,
+      "sectionName": "02",
+      "sectionSchedule": {
+        "classPairId": 2,
+        "classSlotId": 13094,
+        "midExamDate": "2026-11-23",
+        "classEndDate": "2027-01-04",
+        "finalExamDate": "2027-01-09",
+        "midExamDetail": "Monday, November 23, 2026 2:00 PM - 4:00 PM",
+        "classSchedules": [
+          {
+            "day": "SUNDAY",
+            "endTime": "15:20:00",
+            "startTime": "14:00:00"
+          },
+          {
+            "day": "TUESDAY",
+            "endTime": "15:20:00",
+            "startTime": "14:00:00"
+          }
+        ],
+        "classStartDate": "2026-10-03",
+        "midExamEndTime": "16:00:00",
+        "finalExamDetail": "Saturday, January 9, 2027 2:00 PM - 4:00 PM",
+        "finalExamEndTime": "16:00:00",
+        "midExamStartTime": "14:00:00",
+        "finalExamStartTime": "14:00:00"
+      },
+      "sectionType": "OTHER",
+      "semesterSessionId": 20263,
+      "courseName": "SURVEY OF ENGLISH LITERATURE I",
+      "prerequisiteCourses": "(ENG113 AND ENG114) OR (ENG113 AND ENG115) OR (ENG114 AND ENG115)",
+      "labSchedules": null,
+      "labSectionId": null,
+      "labCourseCode": null,
+      "labFaculties": null,
+      "labName": null,
+      "labRoomName": null,
+      "preRegLabSchedule": null,
+      "preRegSchedule": "SUNDAY(2:00 PM-3:20 PM-AN2-06C)\nTUESDAY(2:00 PM-3:20 PM-AN2-06C)"
     },
     {
       "academicDegree": "UNDERGRADUATE",
@@ -64242,23 +64242,23 @@
       "sectionSchedule": {
         "classPairId": null,
         "classSlotId": null,
-        "finalExamDate": null,
-        "finalExamStartTime": null,
-        "finalExamEndTime": null,
         "midExamDate": null,
-        "midExamStartTime": null,
-        "midExamEndTime": null,
-        "finalExamDetail": null,
-        "midExamDetail": null,
-        "classStartDate": "2026-10-03",
         "classEndDate": "2027-01-04",
+        "finalExamDate": null,
+        "midExamDetail": null,
         "classSchedules": [
           {
-            "startTime": "14:00:00",
+            "day": "TUESDAY",
             "endTime": "16:50:00",
-            "day": "TUESDAY"
+            "startTime": "14:00:00"
           }
-        ]
+        ],
+        "classStartDate": "2026-10-03",
+        "midExamEndTime": null,
+        "finalExamDetail": null,
+        "finalExamEndTime": null,
+        "midExamStartTime": null,
+        "finalExamStartTime": null
       },
       "sectionType": "LAB",
       "semesterSessionId": 20263,
@@ -71024,7 +71024,7 @@
       "courseCredit": 3,
       "courseId": 145,
       "courseType": "THEORY",
-      "faculties": "NHD",
+      "faculties": "SKBR",
       "parentSectionId": null,
       "roomName": "08A-04C",
       "roomNumber": "08A-04C",
@@ -91655,7 +91655,7 @@
       "courseCredit": 3,
       "courseId": 145,
       "courseType": "THEORY",
-      "faculties": "NHD",
+      "faculties": "IAA",
       "parentSectionId": null,
       "roomName": "08A-04C",
       "roomNumber": "08A-04C",
@@ -91664,28 +91664,28 @@
       "sectionSchedule": {
         "classPairId": 3,
         "classSlotId": 13095,
-        "finalExamDate": "2027-01-12",
-        "finalExamStartTime": "14:00:00",
-        "finalExamEndTime": "16:00:00",
         "midExamDate": "2026-11-26",
-        "midExamStartTime": "14:00:00",
-        "midExamEndTime": "16:00:00",
-        "finalExamDetail": "Tuesday, January 12, 2027 2:00 PM - 4:00 PM",
-        "midExamDetail": "Thursday, November 26, 2026 2:00 PM - 4:00 PM",
-        "classStartDate": "2026-10-03",
         "classEndDate": "2027-01-04",
+        "finalExamDate": "2027-01-12",
+        "midExamDetail": "Thursday, November 26, 2026 2:00 PM - 4:00 PM",
         "classSchedules": [
           {
-            "startTime": "15:30:00",
+            "day": "MONDAY",
             "endTime": "16:50:00",
-            "day": "MONDAY"
+            "startTime": "15:30:00"
           },
           {
-            "startTime": "15:30:00",
+            "day": "WEDNESDAY",
             "endTime": "16:50:00",
-            "day": "WEDNESDAY"
+            "startTime": "15:30:00"
           }
-        ]
+        ],
+        "classStartDate": "2026-10-03",
+        "midExamEndTime": "16:00:00",
+        "finalExamDetail": "Tuesday, January 12, 2027 2:00 PM - 4:00 PM",
+        "finalExamEndTime": "16:00:00",
+        "midExamStartTime": "14:00:00",
+        "finalExamStartTime": "14:00:00"
       },
       "sectionType": "OTHER",
       "semesterSessionId": 20263,
@@ -99391,7 +99391,7 @@
     {
       "academicDegree": "UNDERGRADUATE",
       "capacity": 40,
-      "consumedSeat": 39,
+      "consumedSeat": 38,
       "courseCode": "STA201",
       "courseCredit": 3,
       "courseId": 1540,
@@ -105477,7 +105477,7 @@
       "courseCredit": 3,
       "courseId": 1674,
       "courseType": "THEORY",
-      "faculties": "NHD",
+      "faculties": "SMC",
       "parentSectionId": null,
       "roomName": "08A-01C",
       "roomNumber": "08A-01C",
@@ -106123,23 +106123,23 @@
       "sectionSchedule": {
         "classPairId": null,
         "classSlotId": null,
-        "finalExamDate": null,
-        "finalExamStartTime": null,
-        "finalExamEndTime": null,
         "midExamDate": null,
-        "midExamStartTime": null,
-        "midExamEndTime": null,
-        "finalExamDetail": null,
-        "midExamDetail": null,
-        "classStartDate": "2026-10-03",
         "classEndDate": "2027-01-04",
+        "finalExamDate": null,
+        "midExamDetail": null,
         "classSchedules": [
           {
-            "startTime": "11:00:00",
+            "day": "TUESDAY",
             "endTime": "13:50:00",
-            "day": "TUESDAY"
+            "startTime": "11:00:00"
           }
-        ]
+        ],
+        "classStartDate": "2026-10-03",
+        "midExamEndTime": null,
+        "finalExamDetail": null,
+        "finalExamEndTime": null,
+        "midExamStartTime": null,
+        "finalExamStartTime": null
       },
       "sectionType": "LAB",
       "semesterSessionId": 20263,
@@ -109859,7 +109859,7 @@
       "courseCredit": 3,
       "courseId": 1672,
       "courseType": "THEORY",
-      "faculties": "NHD",
+      "faculties": "SMC",
       "parentSectionId": null,
       "roomName": "08A-01C",
       "roomNumber": "08A-01C",
@@ -111596,23 +111596,23 @@
       "sectionSchedule": {
         "classPairId": null,
         "classSlotId": null,
-        "finalExamDate": null,
-        "finalExamStartTime": null,
-        "finalExamEndTime": null,
         "midExamDate": null,
-        "midExamStartTime": null,
-        "midExamEndTime": null,
-        "finalExamDetail": null,
-        "midExamDetail": null,
-        "classStartDate": "2026-10-03",
         "classEndDate": "2027-01-04",
+        "finalExamDate": null,
+        "midExamDetail": null,
         "classSchedules": [
           {
-            "startTime": "14:00:00",
+            "day": "SUNDAY",
             "endTime": "16:50:00",
-            "day": "SUNDAY"
+            "startTime": "14:00:00"
           }
-        ]
+        ],
+        "classStartDate": "2026-10-03",
+        "midExamEndTime": null,
+        "finalExamDetail": null,
+        "finalExamEndTime": null,
+        "midExamStartTime": null,
+        "finalExamStartTime": null
       },
       "sectionType": "LAB",
       "semesterSessionId": 20263,

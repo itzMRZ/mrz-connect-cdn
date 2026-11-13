@@ -5,7 +5,7 @@
     "midExamEndDate": "2026-11-29",
     "finalExamStartDate": "2026-12-28",
     "finalExamEndDate": "2027-01-15",
-    "lastUpdated": "2026-11-12T14:44:34.826393+00:00",
+    "lastUpdated": "2026-11-13T14:01:25.722625+00:00",
     "semester": "Fall2026",
     "sources": {
       "midterm": {
@@ -13636,20 +13636,6 @@
       "finalExamSource": "cdn"
     },
     {
-      "courseCode": "ENG213",
-      "sectionName": "02",
-      "sectionId": 190694,
-      "sectionType": "THEORY",
-      "midExamDate": "2026-11-23",
-      "midExamTime": "14:00:00",
-      "midExamRoom": null,
-      "midExamSource": "cdn",
-      "finalExamDate": "2027-01-09",
-      "finalExamTime": "14:00:00",
-      "finalExamRoom": null,
-      "finalExamSource": "cdn"
-    },
-    {
       "courseCode": "CHN101",
       "sectionName": "05",
       "sectionId": 189202,
@@ -14164,6 +14150,20 @@
       "midExamSource": "cdn",
       "finalExamDate": "2027-01-10",
       "finalExamTime": "08:30:00",
+      "finalExamRoom": null,
+      "finalExamSource": "cdn"
+    },
+    {
+      "courseCode": "ENG213",
+      "sectionName": "02",
+      "sectionId": 190694,
+      "sectionType": "THEORY",
+      "midExamDate": "2026-11-23",
+      "midExamTime": "14:00:00",
+      "midExamRoom": null,
+      "midExamSource": "cdn",
+      "finalExamDate": "2027-01-09",
+      "finalExamTime": "14:00:00",
       "finalExamRoom": null,
       "finalExamSource": "cdn"
     },
