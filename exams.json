@@ -5,7 +5,7 @@
     "midExamEndDate": "2026-11-29",
     "finalExamStartDate": "2026-12-28",
     "finalExamEndDate": "2027-01-15",
-    "lastUpdated": "2026-11-15T13:32:53.130707+00:00",
+    "lastUpdated": "2026-11-16T15:00:12.316668+00:00",
     "semester": "Fall2026",
     "sources": {
       "midterm": {
@@ -10094,20 +10094,6 @@
       "finalExamSource": "cdn"
     },
     {
-      "courseCode": "CSE472",
-      "sectionName": "02",
-      "sectionId": 190089,
-      "sectionType": "THEORY",
-      "midExamDate": "2026-11-26",
-      "midExamTime": "14:00:00",
-      "midExamRoom": null,
-      "midExamSource": "cdn",
-      "finalExamDate": "2027-01-12",
-      "finalExamTime": "14:00:00",
-      "finalExamRoom": null,
-      "finalExamSource": "cdn"
-    },
-    {
       "courseCode": "BTE202",
       "sectionName": "03",
       "sectionId": 190114,
@@ -11056,20 +11042,6 @@
       "midExamSource": "cdn",
       "finalExamDate": "2027-01-13",
       "finalExamTime": "14:00:00",
-      "finalExamRoom": null,
-      "finalExamSource": "cdn"
-    },
-    {
-      "courseCode": "LAW434",
-      "sectionName": "01",
-      "sectionId": 189049,
-      "sectionType": "THEORY",
-      "midExamDate": "2026-11-09",
-      "midExamTime": "08:30:00",
-      "midExamRoom": null,
-      "midExamSource": "cdn",
-      "finalExamDate": "2027-01-03",
-      "finalExamTime": "08:30:00",
       "finalExamRoom": null,
       "finalExamSource": "cdn"
     },
@@ -13734,20 +13706,6 @@
       "finalExamSource": "cdn"
     },
     {
-      "courseCode": "STA201",
-      "sectionName": "08",
-      "sectionId": 190825,
-      "sectionType": "THEORY",
-      "midExamDate": "2026-11-26",
-      "midExamTime": "08:30:00",
-      "midExamRoom": null,
-      "midExamSource": "cdn",
-      "finalExamDate": "2027-01-12",
-      "finalExamTime": "08:30:00",
-      "finalExamRoom": null,
-      "finalExamSource": "cdn"
-    },
-    {
       "courseCode": "MIC203",
       "sectionName": "01",
       "sectionId": 189122,
@@ -13832,20 +13790,6 @@
       "finalExamSource": "cdn"
     },
     {
-      "courseCode": "CSE250",
-      "sectionName": "09",
-      "sectionId": 190930,
-      "sectionType": "THEORY",
-      "midExamDate": "2026-11-28",
-      "midExamTime": "08:30:00",
-      "midExamRoom": null,
-      "midExamSource": "cdn",
-      "finalExamDate": "2027-01-13",
-      "finalExamTime": "08:30:00",
-      "finalExamRoom": null,
-      "finalExamSource": "cdn"
-    },
-    {
       "courseCode": "CHE110",
       "sectionName": "02",
       "sectionId": 191202,
@@ -13912,20 +13856,6 @@
       "midExamSource": "cdn",
       "finalExamDate": "2027-01-11",
       "finalExamTime": "14:00:00",
-      "finalExamRoom": null,
-      "finalExamSource": "cdn"
-    },
-    {
-      "courseCode": "ENG101",
-      "sectionName": "10",
-      "sectionId": 189227,
-      "sectionType": "THEORY",
-      "midExamDate": "2026-11-21",
-      "midExamTime": "08:30:00",
-      "midExamRoom": null,
-      "midExamSource": "cdn",
-      "finalExamDate": "2027-01-07",
-      "finalExamTime": "08:30:00",
       "finalExamRoom": null,
       "finalExamSource": "cdn"
     },
@@ -14252,6 +14182,48 @@
       "finalExamSource": "cdn"
     },
     {
+      "courseCode": "LAW434",
+      "sectionName": "01",
+      "sectionId": 189049,
+      "sectionType": "THEORY",
+      "midExamDate": "2026-11-09",
+      "midExamTime": "08:30:00",
+      "midExamRoom": null,
+      "midExamSource": "cdn",
+      "finalExamDate": "2027-01-03",
+      "finalExamTime": "08:30:00",
+      "finalExamRoom": null,
+      "finalExamSource": "cdn"
+    },
+    {
+      "courseCode": "CSE472",
+      "sectionName": "02",
+      "sectionId": 190089,
+      "sectionType": "THEORY",
+      "midExamDate": "2026-11-26",
+      "midExamTime": "14:00:00",
+      "midExamRoom": null,
+      "midExamSource": "cdn",
+      "finalExamDate": "2027-01-12",
+      "finalExamTime": "14:00:00",
+      "finalExamRoom": null,
+      "finalExamSource": "cdn"
+    },
+    {
+      "courseCode": "CSE250",
+      "sectionName": "09",
+      "sectionId": 190930,
+      "sectionType": "THEORY",
+      "midExamDate": "2026-11-28",
+      "midExamTime": "08:30:00",
+      "midExamRoom": null,
+      "midExamSource": "cdn",
+      "finalExamDate": "2027-01-13",
+      "finalExamTime": "08:30:00",
+      "finalExamRoom": null,
+      "finalExamSource": "cdn"
+    },
+    {
       "courseCode": "CSE482",
       "sectionName": "01",
       "sectionId": 191095,
@@ -14262,6 +14234,34 @@
       "midExamSource": "cdn",
       "finalExamDate": "2027-01-11",
       "finalExamTime": "14:00:00",
+      "finalExamRoom": null,
+      "finalExamSource": "cdn"
+    },
+    {
+      "courseCode": "STA201",
+      "sectionName": "08",
+      "sectionId": 190825,
+      "sectionType": "THEORY",
+      "midExamDate": "2026-11-26",
+      "midExamTime": "08:30:00",
+      "midExamRoom": null,
+      "midExamSource": "cdn",
+      "finalExamDate": "2027-01-12",
+      "finalExamTime": "08:30:00",
+      "finalExamRoom": null,
+      "finalExamSource": "cdn"
+    },
+    {
+      "courseCode": "ENG101",
+      "sectionName": "10",
+      "sectionId": 189227,
+      "sectionType": "THEORY",
+      "midExamDate": "2026-11-21",
+      "midExamTime": "08:30:00",
+      "midExamRoom": null,
+      "midExamSource": "cdn",
+      "finalExamDate": "2027-01-07",
+      "finalExamTime": "08:30:00",
       "finalExamRoom": null,
       "finalExamSource": "cdn"
     },
