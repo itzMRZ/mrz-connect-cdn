@@ -4,7 +4,7 @@
   "currentSemesterKey": "fall2026",
   "liveDataUrl": "https://usis-cdn.eniamza.com/connect.json",
   "stableDataUrl": "https://connect-cdn.itzmrz.xyz/stable.json",
-  "lastUpdated": "2026-11-17T15:36:01.711338+00:00",
+  "lastUpdated": "2026-11-18T15:13:23.826552+00:00",
   "semesters": {
     "summer2026": {
       "final": {
@@ -14,6 +14,16 @@
         "updatedAt": "2026-09-09T09:35:35Z",
         "midExamStartDate": "2026-07-25",
         "midExamEndDate": "2026-08-02"
+      }
+    },
+    "fall2026": {
+      "midterm": {
+        "confirmed": true,
+        "source": "official-pdf",
+        "dataUrl": "https://bracu-exam-routine.itzmrz.xyz/exam_data.json",
+        "updatedAt": "2026-11-18T13:35:00Z",
+        "midExamStartDate": "2026-11-21",
+        "midExamEndDate": "2026-11-29"
       }
     }
   }
