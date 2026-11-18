@@ -26,6 +26,7 @@ For a `final` record, optionally add `midExamStartDate` / `midExamEndDate` (the 
 
 The exam-routine site tries this endpoint only after loading its local data. If the endpoint or official URL fails, it keeps using the local file.
 
+A confirmed record outranks an unconfirmed CDN payload on the site, including a `mixed` one: `update_cdn.py` can only stamp `source: "pdf"` when the PDF covers every CDN entry for that phase, so a partial overlap is reported as `mixed`, and the site still prefers the confirmed official PDF for that phase. Look up the record under the semester named in `exams.json` metadata, not only `status.json`'s current semester (USIS publishes the next semester early).
 ### Active-window serving (semester transitions)
 
 `generate_exams_json()` normally derives the semester from the current USIS snapshot and merges confirmed records under that semester key only. When USIS publishes the next semester early (it does), confirmed records for the still-active semester would be ignored. To cover that window, the generator also scans **all** confirmed records and, if one's official exam window (payload dates) is active or imminent (grace: 14 days before start, 2 days after end) and its semester differs from the USIS semester, it serves that official payload as `exams.json` (all entries `source: "pdf"`). This keeps the site on the real exam period automatically and reverts to USIS data once the window ends — no manual flip of `exams.json` or `status.json` needed.

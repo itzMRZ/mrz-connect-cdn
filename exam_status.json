@@ -10,6 +10,16 @@
         "midExamStartDate": "2026-07-25",
         "midExamEndDate": "2026-08-02"
       }
+    },
+    "fall2026": {
+      "midterm": {
+        "confirmed": true,
+        "source": "official-pdf",
+        "dataUrl": "https://bracu-exam-routine.itzmrz.xyz/exam_data.json",
+        "updatedAt": "2026-11-18T13:35:00Z",
+        "midExamStartDate": "2026-11-21",
+        "midExamEndDate": "2026-11-29"
+      }
     }
   }
 }
