@@ -5,7 +5,7 @@
     "midExamEndDate": "2026-11-29",
     "finalExamStartDate": "2026-12-28",
     "finalExamEndDate": "2027-01-15",
-    "lastUpdated": "2026-11-18T15:13:24.665589+00:00",
+    "lastUpdated": "2026-11-19T15:21:08.750173+00:00",
     "semester": "Fall2026",
     "sources": {
       "midterm": {
@@ -12880,20 +12880,6 @@
       "finalExamSource": "cdn"
     },
     {
-      "courseCode": "PHY101",
-      "sectionName": "02",
-      "sectionId": 191291,
-      "sectionType": "THEORY",
-      "midExamDate": "2026-11-23",
-      "midExamTime": "08:30-10:00",
-      "midExamRoom": "10H-38C",
-      "midExamSource": "pdf",
-      "finalExamDate": "2027-01-09",
-      "finalExamTime": "08:30:00",
-      "finalExamRoom": null,
-      "finalExamSource": "cdn"
-    },
-    {
       "courseCode": "HUM101",
       "sectionName": "08",
       "sectionId": 190404,
@@ -13734,20 +13720,6 @@
       "finalExamSource": "cdn"
     },
     {
-      "courseCode": "MIC308",
-      "sectionName": "03",
-      "sectionId": 189345,
-      "sectionType": "THEORY",
-      "midExamDate": "2026-11-28",
-      "midExamTime": "12:30-14:00",
-      "midExamRoom": "07H-29C",
-      "midExamSource": "pdf",
-      "finalExamDate": "2027-01-13",
-      "finalExamTime": "14:00:00",
-      "finalExamRoom": null,
-      "finalExamSource": "cdn"
-    },
-    {
       "courseCode": "ACT201",
       "sectionName": "12",
       "sectionId": 190262,
@@ -13995,20 +13967,6 @@
       "midExamRoom": null,
       "midExamSource": "cdn",
       "finalExamDate": "2027-01-14",
-      "finalExamTime": "14:00:00",
-      "finalExamRoom": null,
-      "finalExamSource": "cdn"
-    },
-    {
-      "courseCode": "EEE441",
-      "sectionName": "01",
-      "sectionId": 191047,
-      "sectionType": "THEORY",
-      "midExamDate": "2026-11-28",
-      "midExamTime": "12:30-14:00",
-      "midExamRoom": "08A-01C",
-      "midExamSource": "pdf",
-      "finalExamDate": "2027-01-13",
       "finalExamTime": "14:00:00",
       "finalExamRoom": null,
       "finalExamSource": "cdn"
@@ -14784,20 +14742,6 @@
       "finalExamSource": "cdn"
     },
     {
-      "courseCode": "BUS204",
-      "sectionName": "03",
-      "sectionId": 190325,
-      "sectionType": "THEORY",
-      "midExamDate": "2026-11-23",
-      "midExamTime": "14:30-16:00",
-      "midExamRoom": "07A-03C",
-      "midExamSource": "pdf",
-      "finalExamDate": "2027-01-09",
-      "finalExamTime": "16:30:00",
-      "finalExamRoom": null,
-      "finalExamSource": "cdn"
-    },
-    {
       "courseCode": "PHY112",
       "sectionName": "04",
       "sectionId": 191289,
@@ -14948,20 +14892,6 @@
       "midExamSource": "pdf",
       "finalExamDate": "2027-01-11",
       "finalExamTime": "16:30:00",
-      "finalExamRoom": null,
-      "finalExamSource": "cdn"
-    },
-    {
-      "courseCode": "MAT110",
-      "sectionName": "02",
-      "sectionId": 191341,
-      "sectionType": "THEORY",
-      "midExamDate": "2026-11-22",
-      "midExamTime": "12:30-14:00",
-      "midExamRoom": "10A-05C",
-      "midExamSource": "pdf",
-      "finalExamDate": "2027-01-08",
-      "finalExamTime": "14:30:00",
       "finalExamRoom": null,
       "finalExamSource": "cdn"
     },
@@ -15316,6 +15246,20 @@
       "finalExamSource": "cdn"
     },
     {
+      "courseCode": "PHY101",
+      "sectionName": "02",
+      "sectionId": 191291,
+      "sectionType": "THEORY",
+      "midExamDate": "2026-11-23",
+      "midExamTime": "08:30-10:00",
+      "midExamRoom": "10H-38C",
+      "midExamSource": "pdf",
+      "finalExamDate": "2027-01-09",
+      "finalExamTime": "08:30:00",
+      "finalExamRoom": null,
+      "finalExamSource": "cdn"
+    },
+    {
       "courseCode": "BUS204",
       "sectionName": "07",
       "sectionId": 190329,
@@ -15340,6 +15284,62 @@
       "midExamSource": "pdf",
       "finalExamDate": "2027-01-07",
       "finalExamTime": "14:00:00",
+      "finalExamRoom": null,
+      "finalExamSource": "cdn"
+    },
+    {
+      "courseCode": "BUS204",
+      "sectionName": "03",
+      "sectionId": 190325,
+      "sectionType": "THEORY",
+      "midExamDate": "2026-11-23",
+      "midExamTime": "14:30-16:00",
+      "midExamRoom": "07A-03C",
+      "midExamSource": "pdf",
+      "finalExamDate": "2027-01-09",
+      "finalExamTime": "16:30:00",
+      "finalExamRoom": null,
+      "finalExamSource": "cdn"
+    },
+    {
+      "courseCode": "MIC308",
+      "sectionName": "03",
+      "sectionId": 189345,
+      "sectionType": "THEORY",
+      "midExamDate": "2026-11-28",
+      "midExamTime": "12:30-14:00",
+      "midExamRoom": "07H-29C",
+      "midExamSource": "pdf",
+      "finalExamDate": "2027-01-13",
+      "finalExamTime": "14:00:00",
+      "finalExamRoom": null,
+      "finalExamSource": "cdn"
+    },
+    {
+      "courseCode": "EEE441",
+      "sectionName": "01",
+      "sectionId": 191047,
+      "sectionType": "THEORY",
+      "midExamDate": "2026-11-28",
+      "midExamTime": "12:30-14:00",
+      "midExamRoom": "08A-01C",
+      "midExamSource": "pdf",
+      "finalExamDate": "2027-01-13",
+      "finalExamTime": "14:00:00",
+      "finalExamRoom": null,
+      "finalExamSource": "cdn"
+    },
+    {
+      "courseCode": "MAT110",
+      "sectionName": "02",
+      "sectionId": 191341,
+      "sectionType": "THEORY",
+      "midExamDate": "2026-11-22",
+      "midExamTime": "12:30-14:00",
+      "midExamRoom": "10A-05C",
+      "midExamSource": "pdf",
+      "finalExamDate": "2027-01-08",
+      "finalExamTime": "14:30:00",
       "finalExamRoom": null,
       "finalExamSource": "cdn"
     },
